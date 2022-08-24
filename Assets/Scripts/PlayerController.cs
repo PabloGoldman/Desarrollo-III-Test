@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] GameObject slideDust;
 
+    private SpriteRenderer spriteRenderer;
+
     private Rigidbody2D rb;
     private Sensor_HeroKnight groundSensor;
     private Sensor_HeroKnight wallSensorR1;
@@ -35,8 +37,7 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded { get; private set; }
     public bool isRolling { get; private set; }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<PlayerAnimatorController>();
@@ -46,6 +47,14 @@ public class PlayerController : MonoBehaviour
         wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<Sensor_HeroKnight>();
         wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<Sensor_HeroKnight>();
         wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<Sensor_HeroKnight>();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
     }
 
     void Update()
@@ -97,7 +106,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //Run
-        else if (Mathf.Abs(inputX) > Mathf.Epsilon)
+        else if (Mathf.Abs(rb.velocity.x) > Mathf.Epsilon)
         {
             Run();
         }
@@ -146,15 +155,15 @@ public class PlayerController : MonoBehaviour
         inputX = Input.GetAxis("Horizontal");
 
         // Swap direction of sprite depending on walk direction
-        if (inputX > 0)
+        if (rb.velocity.x > 0)
         {
-            GetComponent<SpriteRenderer>().flipX = false;
+            transform.localScale = new Vector2(1, transform.localScale.y);
             facingDirection = 1;
         }
 
-        else if (inputX < 0)
+        else if (rb.velocity.x < 0)
         {
-            GetComponent<SpriteRenderer>().flipX = true;
+            transform.localScale = new Vector2(-1, transform.localScale.y);
             facingDirection = -1;
         }
 
