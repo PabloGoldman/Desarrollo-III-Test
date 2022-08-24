@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -6,7 +7,6 @@ public class EnemyMove : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private Transform checkGround;
     [SerializeField] private float distance;
-    [SerializeField] private bool flip;
     private Rigidbody2D rb;
 
     private void Awake()
@@ -14,15 +14,13 @@ public class EnemyMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-
-    private void FixedUpdate()
+    private void Update()
     {
         RaycastHit2D hit = Physics2D.Raycast(checkGround.position, Vector2.down, distance);
-
-        rb.velocity = new Vector2(speed, rb.velocity.y);
+        
+        rb.MovePosition(new Vector2(rb.position.x +speed*Time.deltaTime,rb.position.y));
 
         if (hit) return;
-        flip = !flip;
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
         speed *= -1;
     }
