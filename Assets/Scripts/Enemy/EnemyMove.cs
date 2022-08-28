@@ -19,9 +19,15 @@ public class EnemyMove : MonoBehaviour
 
     private void Update()
     {
-        RaycastHit2D hit = Physics2D.Raycast(checkGround.position, Vector2.down, distance);
-
+        if (enemyData.IsAttack) return;
+        Patrol();
         rb.MovePosition(new Vector2(rb.position.x +enemyData.Speed*Time.deltaTime,rb.position.y));
+        
+    }
+
+    private void Patrol()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(checkGround.position, Vector2.down, distance);
 
         if (hit) return;
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
