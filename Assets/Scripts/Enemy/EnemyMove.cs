@@ -2,7 +2,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemyMove : MonoBehaviour
+public class EnemyMove : EnemyBase
 {
     [SerializeField] private float speed;
     [SerializeField] private Transform checkGround;
@@ -29,6 +29,5 @@ public class EnemyMove : MonoBehaviour
     {
         Gizmos.color= Color.red;
         Gizmos.DrawLine(checkGround.transform.position,checkGround.transform.position + Vector3.down* distance );
-        
     }
 }

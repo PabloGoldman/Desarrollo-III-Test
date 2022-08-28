@@ -11,12 +11,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed = 4.0f;
     [SerializeField] float jumpForce = 7.5f;
     [SerializeField] float rollForce = 6.0f;
+    [SerializeField] float attackDamage = 50f;
+    [SerializeField] float attackRate = 2f;
+
+    [SerializeField] Transform attackPoint;
+    [SerializeField] float attackRange = 0.5f;
+    [SerializeField] LayerMask enemyLayers;
 
     public bool noBlood = false;
 
     [SerializeField] GameObject slideDust;
-
-    private SpriteRenderer spriteRenderer;
 
     private Rigidbody2D rb;
     private Sensor_HeroKnight groundSensor;
@@ -24,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private Sensor_HeroKnight wallSensorR2;
     private Sensor_HeroKnight wallSensorL1;
     private Sensor_HeroKnight wallSensorL2;
+
     private int facingDirection = 1;
     private float timeSinceAttack = 0.0f;
     private float rollDuration = 8.0f / 14.0f;
@@ -47,8 +52,6 @@ public class PlayerController : MonoBehaviour
         wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<Sensor_HeroKnight>();
         wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<Sensor_HeroKnight>();
         wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<Sensor_HeroKnight>();
-
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Start is called before the first frame update
@@ -100,7 +103,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //Jump
-        else if (Input.GetKeyDown("space") && isGrounded && !isRolling)
+        else if (Input.GetKeyDown("space") && (isGrounded || isWallSliding) && !isRolling)
         {
             Jump();
         }
@@ -155,13 +158,13 @@ public class PlayerController : MonoBehaviour
         inputX = Input.GetAxis("Horizontal");
 
         // Swap direction of sprite depending on walk direction
-        if (rb.velocity.x > 0)
+        if (inputX > 0)
         {
             transform.localScale = new Vector2(1, transform.localScale.y);
             facingDirection = 1;
         }
 
-        else if (rb.velocity.x < 0)
+        else if (inputX < 0)
         {
             transform.localScale = new Vector2(-1, transform.localScale.y);
             facingDirection = -1;
@@ -206,6 +209,13 @@ public class PlayerController : MonoBehaviour
 
         // Reset timer
         timeSinceAttack = 0.0f;
+
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<EnemyBase>().TakeDamage(attackDamage);
+        }
     }
 
     void Block()
@@ -249,7 +259,15 @@ public class PlayerController : MonoBehaviour
             animator.Idle();
     }
 
-    
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+        {
+            return;
+        }
+
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
 
     // Animation Events
     // Called in slide animation.
