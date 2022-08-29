@@ -8,48 +8,31 @@ public class EnemyData : MonoBehaviour
     [SerializeField] private float groundDistance;
     [SerializeField] private float fieldOfView;
     [SerializeField] private float distanceToAttack;
+    [SerializeField] private float timeToAttack;
 
-    private Transform groundChecker;
-    private float currentHealth;
-    private int rayDirection;
-    private bool isAttacking;
-
+    public float CurrentHealth { get; set; }
+    public int RayDirection { get; set; }
+    public bool IsAttack { get; set; }
+    public Transform GroundChecker { get; private set; }
+    public bool IsDie { get; set; }
+    
     private void Awake()
     { 
-        currentHealth = maxHealth;
-        rayDirection = 1;
-        isAttacking = false;
-        groundChecker = transform.Find("CheckGround");
+        CurrentHealth = maxHealth;
+        RayDirection = 1;
+        IsAttack = false;
+        GroundChecker = transform.Find("CheckGround");
     }
 
-    public Transform GroundChecker => groundChecker;
+    public float TimeToAttack=> timeToAttack;
     public float DistanceToAttack => distanceToAttack;
     public float GroundDistance => groundDistance;
     public float FieldOfView=> fieldOfView;
     public LayerMask Layer => layer;
-
     public float Speed
     {
         get => speed;
         set => speed= value;
     }
-    public float CurrentHealth
-    {
-        get => currentHealth;
-        set => currentHealth = value;
-    }
-
-    public int RayDirection
-    {
-        get => rayDirection;
-        set => rayDirection= value;
-    }
-
-    public bool IsAttacking
-    {
-        get => isAttacking;
-        set => isAttacking= value;
-    }
     
-   
 }

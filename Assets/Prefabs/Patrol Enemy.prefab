@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 1366740197}
   - component: {fileID: 1366740198}
   - component: {fileID: 1366740199}
+  - component: {fileID: 2293096235462180710}
   m_Layer: 6
   m_Name: Patrol Enemy
   m_TagString: Untagged
@@ -206,8 +207,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   groundDistance: 1.5
-  fieldOfView: 5
-  distanceToAttack: 1.5
+  fieldOfView: 0
+  distanceToAttack: 0
+  timeToAttack: 3
 --- !u!114 &1366740199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,3 +224,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeOfMovement: 0
   typeOfAttack: 0
+--- !u!114 &2293096235462180710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8937078212336127483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6db9d5f269e04efa0f7c5ca608f083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -4,10 +4,12 @@ public class PatrolEnemy : MonoBehaviour
 {
     private Rigidbody2D rb;
     private EnemyData enemyData;
+    private Animator animator;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -17,7 +19,7 @@ public class PatrolEnemy : MonoBehaviour
 
     private void Update()
     {
-        if (enemyData.IsAttacking) return;
+        if (enemyData.IsAttack || enemyData.IsDie) return;
         Patrol();
         rb.MovePosition(new Vector2(rb.position.x + enemyData.Speed * Time.deltaTime, rb.position.y));
     }

@@ -1,15 +1,17 @@
 using UnityEngine;
 
-public class MeleeAttack : MonoBehaviour, IDamageable
+public class MeleeAttack : MonoBehaviour
 {
     private Transform checkPlayer;
     private EnemyData enemyData;
     private Animator animator;
-    Collider2D col2D;
+    private float time;
+    private bool attack;
     
     private void Start()
     {
-        col2D = GetComponent<Collider2D>();
+        attack = false;
+        time = 0;
         enemyData = GetComponent<EnemyData>();
         animator = GetComponent<Animator>();
         checkPlayer = enemyData.GroundChecker;
@@ -17,6 +19,7 @@ public class MeleeAttack : MonoBehaviour, IDamageable
     
     private void Update()
     {
+        if (enemyData.IsDie) return;
         Follow();
         Attack();
     }
@@ -24,41 +27,33 @@ public class MeleeAttack : MonoBehaviour, IDamageable
     private void Attack()
     {
         RaycastHit2D hit = Physics2D.Raycast(checkPlayer.position, Vector2.right * enemyData.RayDirection, enemyData.DistanceToAttack, enemyData.Layer);
+       
+        enemyData.IsAttack = hit;
+        animator.SetBool("run",!hit);
+        
+        if(attack) time += Time.deltaTime;
+        
+        if (time >= enemyData.TimeToAttack)
+        {
+            time = 0;
+            attack = false;
+        }
 
         if (!hit) return;
-        enemyData.IsAttacking = true;
-        animator.SetTrigger("attack");
+        attack = true;
+        if(time == 0 )  animator.SetTrigger("attack");
     }
 
     private void Follow()
     {
-        RaycastHit2D hit = Physics2D.Raycast(checkPlayer.position, (Vector2.left * enemyData.RayDirection), enemyData.FieldOfView, enemyData.Layer);
+       RaycastHit2D hit = Physics2D.Raycast(checkPlayer.position, (Vector2.left * enemyData.RayDirection), enemyData.FieldOfView, enemyData.Layer);
 
         if (!hit) return;
         enemyData.RayDirection *= -1;
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
         enemyData.Speed *= -1;
     }
-    public void TakeDamage(float damage)
-    {
-        enemyData.CurrentHealth -= damage;
-
-        //Animacion de que recibe daño
-
-        if (enemyData.CurrentHealth <= 0)
-        {
-            Die();
-        }
-    }
-
-    void Die()
-    {
-        //Animacion de morir 
-        gameObject.SetActive(false);
-
-        col2D.enabled = false;
-        this.enabled = false;
-    }
+    
     
     private void OnDrawGizmos()
     {
