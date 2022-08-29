@@ -210,8 +210,8 @@ public class PlayerController : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            var obj = enemy.gameObject.GetComponent<Ikillable>();
-            obj?.Die();
+            var obj = enemy.gameObject.GetComponent<IDamageable>();
+            obj?.TakeDamage(attackDamage);
         }
     }
 

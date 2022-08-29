@@ -1,28 +1,39 @@
-using System;
+﻿using System;
 using UnityEngine;
 
-public class EnemyData: MonoBehaviour, Ikillable
+public class EnemyData : MonoBehaviour
 {
     [SerializeField] private float speed;
-    [SerializeField] private int maxHealth;
-    private int currentHealth;
+    [SerializeField] private float maxHealth;
+
+    [HideInInspector]
+    public Transform groundChecker;
+
+    private float currentHealth;
+
     private int rayDirection;
-    private bool isAttack;
+
+    private bool isAttacking;
 
     private void Awake()
     {
+        
+    }
+
+    private void Start()
+    {
         currentHealth = maxHealth;
         rayDirection = 1;
-        isAttack = false;
+        isAttacking = false;
     }
-    
+
     public float Speed
     {
         get => speed;
         set => speed = value;
     }
     
-    public int CurrenHealth
+    public float CurrentHealth
     {
         get => currentHealth;
         set => currentHealth = value;
@@ -34,14 +45,9 @@ public class EnemyData: MonoBehaviour, Ikillable
         set => rayDirection= value;
     }
 
-    public bool IsAttack
+    public bool IsAttacking
     {
-        get => isAttack;
-        set => isAttack= value;
-    }
-
-    public void Die()
-    {
-        Debug.Log("hacer algo ");
+        get => isAttacking;
+        set => isAttacking= value;
     }
 }
