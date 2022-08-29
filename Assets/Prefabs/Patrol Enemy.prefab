@@ -202,7 +202,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   maxHealth: 100
-  groundChecker: {fileID: 0}
+  layer:
+    serializedVersion: 2
+    m_Bits: 128
+  groundDistance: 1.5
+  fieldOfView: 5
+  distanceToAttack: 1.5
 --- !u!114 &1366740199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,10 +220,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1bdd3bf1f17c082b634e7b22ab51ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkPlayer: {fileID: 785981971874231807}
-  distance: 5
-  distanceToAttack: 1.5
-  layer:
-    serializedVersion: 2
-    m_Bits: 128
   typeOfMovement: 0
+  typeOfAttack: 0

@@ -1,18 +1,17 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyData : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float maxHealth;
+    [SerializeField] private LayerMask layer;
+    [SerializeField] private float groundDistance;
+    [SerializeField] private float fieldOfView;
+    [SerializeField] private float distanceToAttack;
 
-    [HideInInspector]
-    public Transform groundChecker;
-
+    private Transform groundChecker;
     private float currentHealth;
-
     private int rayDirection;
-
     private bool isAttacking;
 
     private void Awake()
@@ -23,13 +22,17 @@ public class EnemyData : MonoBehaviour
         groundChecker = transform.Find("CheckGround");
     }
 
+    public Transform GroundChecker => groundChecker;
+    public float DistanceToAttack => distanceToAttack;
+    public float GroundDistance => groundDistance;
+    public float FieldOfView=> fieldOfView;
+    public LayerMask Layer => layer;
 
     public float Speed
     {
         get => speed;
-        set => speed = value;
+        set => speed= value;
     }
-    
     public float CurrentHealth
     {
         get => currentHealth;
@@ -47,4 +50,6 @@ public class EnemyData : MonoBehaviour
         get => isAttacking;
         set => isAttacking= value;
     }
+    
+   
 }
