@@ -97,13 +97,9 @@ public class EnemyBehaviour : MonoBehaviour, IDamageable
 
     private void OnDrawGizmos()
     {
-        if (checkPlayer == null)
-        {
-            return;
-        }
-
-        //Gizmos.color = Color.green;
-        //Gizmos.DrawLine(checkPlayer.transform.position, checkPlayer.transform.position + (Vector3.left * enemyData.RayDirection) * distance);
-        //Gizmos.DrawLine(checkPlayer.transform.position, checkPlayer.transform.position + (Vector3.right * enemyData.RayDirection) * distanceToAttack);
+        //if (checkPlayer == null || enemyData.RayDirection == null) return;
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(checkPlayer.transform.position, checkPlayer.transform.position + (Vector3.left * enemyData.RayDirection) * distance);
+        Gizmos.DrawLine(checkPlayer.transform.position, checkPlayer.transform.position + (Vector3.right * enemyData.RayDirection) * distanceToAttack);
     }
 }

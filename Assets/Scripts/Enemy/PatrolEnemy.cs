@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class PatrolEnemy : MonoBehaviour
 {
-    [SerializeField] private float distance;
+    private float distance = 1.5f;
 
     private Rigidbody2D rb;
 
@@ -46,3 +46,4 @@ public class PatrolEnemy : MonoBehaviour
         Gizmos.DrawLine(enemyData.groundChecker.transform.position, enemyData.groundChecker.transform.position + Vector3.down * distance);
     }
 }
+

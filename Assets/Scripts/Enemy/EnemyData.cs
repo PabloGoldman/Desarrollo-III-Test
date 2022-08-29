@@ -16,16 +16,13 @@ public class EnemyData : MonoBehaviour
     private bool isAttacking;
 
     private void Awake()
-    {
-        
-    }
-
-    private void Start()
-    {
+    { 
         currentHealth = maxHealth;
         rayDirection = 1;
         isAttacking = false;
+        groundChecker = transform.Find("CheckGround");
     }
+
 
     public float Speed
     {

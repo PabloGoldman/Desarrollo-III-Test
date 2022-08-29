@@ -128,11 +128,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5763610321687589320, guid: d5cc24a0f6e9dd641afe6547dfff90d3, type: 3}
   m_PrefabInstance: {fileID: 419336023}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!4 &184589155 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 785981971874231807, guid: 03143f3f9e069ed4baa4627147d0099d, type: 3}
   m_PrefabInstance: {fileID: 621012453}
   m_PrefabAsset: {fileID: 0}
+=======
+--- !u!1001 &210819209
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8937078212336127483, guid: 03143f3f9e069ed4baa4627147d0099d, type: 3}
+      propertyPath: m_Name
+      value: Patrol Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937078212336127487, guid: 03143f3f9e069ed4baa4627147d0099d, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937078212336127487, guid: 03143f3f9e069ed4baa4627147d0099d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937078212336127487, guid: 03143f3f9e069ed4baa4627147d0099d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.051
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937078212336127487, guid: 03143f3f9e069ed4baa4627147d0099d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937078212336127487, guid: 03143f3f9e069ed4baa4627147d0099d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937078212336127487, guid: 03143f3f9e069ed4baa4627147d0099d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937078212336127487, guid: 03143f3f9e069ed4baa4627147d0099d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937078212336127487, guid: 03143f3f9e069ed4baa4627147d0099d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937078212336127487, guid: 03143f3f9e069ed4baa4627147d0099d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937078212336127487, guid: 03143f3f9e069ed4baa4627147d0099d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937078212336127487, guid: 03143f3f9e069ed4baa4627147d0099d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 03143f3f9e069ed4baa4627147d0099d, type: 3}
+>>>>>>> Stashed changes
 --- !u!1 &324350425
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +355,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5763610321687589320, guid: d5cc24a0f6e9dd641afe6547dfff90d3, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5763610321687589320, guid: d5cc24a0f6e9dd641afe6547dfff90d3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -343,6 +403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5cc24a0f6e9dd641afe6547dfff90d3, type: 3}
+<<<<<<< Updated upstream
 --- !u!1001 &621012453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -409,6 +470,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1555442534, guid: 03143f3f9e069ed4baa4627147d0099d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 03143f3f9e069ed4baa4627147d0099d, type: 3}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1175667342
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +518,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.0079745, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
