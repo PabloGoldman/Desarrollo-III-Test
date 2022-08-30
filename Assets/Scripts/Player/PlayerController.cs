@@ -2,19 +2,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public PlayerData playerData { get; private set; }
+
     PlayerAnimatorController animator;
 
-    [SerializeField] float speed = 4.0f;
-    [SerializeField] float jumpForce = 7.5f;
-    [SerializeField] float rollForce = 6.0f;
-    [SerializeField] float attackDamage = 50f;
-    [SerializeField] float attackRate = 2f;
-
     [SerializeField] Transform attackPoint;
-    [SerializeField] float attackRange = 0.5f;
-    [SerializeField] LayerMask enemyLayers;
-
-    public bool noBlood = false;
 
     [SerializeField] GameObject slideDust;
 
@@ -168,7 +160,7 @@ public class PlayerController : MonoBehaviour
 
         // Move
         if (!isRolling)
-            rb.velocity = new Vector2(inputX * speed, rb.velocity.y);
+            rb.velocity = new Vector2(inputX * playerData.speed, rb.velocity.y);
     }
 
     void Death()
@@ -206,12 +198,12 @@ public class PlayerController : MonoBehaviour
         // Reset timer
         timeSinceAttack = 0.0f;
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, playerData.attackRange, playerData.enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
             var obj = enemy.gameObject.GetComponent<IDamageable>();
-            obj?.TakeDamage(attackDamage);
+            obj?.TakeDamage(playerData.attackDamage);
         }
     }
 
@@ -229,7 +221,7 @@ public class PlayerController : MonoBehaviour
     {
         isRolling = true;
         animator.Roll();
-        rb.velocity = new Vector2(facingDirection * rollForce, rb.velocity.y);
+        rb.velocity = new Vector2(facingDirection * playerData.rollForce, rb.velocity.y);
     }
 
     void Jump()
@@ -237,7 +229,7 @@ public class PlayerController : MonoBehaviour
         animator.Jump();
         isGrounded = false;
         animator.OnGround();
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        rb.velocity = new Vector2(rb.velocity.x, playerData.jumpForce);
         groundSensor.Disable(0.2f);
     }
 
@@ -263,7 +255,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawWireSphere(attackPoint.position, playerData.attackRange);
     }
 
     // Animation Events

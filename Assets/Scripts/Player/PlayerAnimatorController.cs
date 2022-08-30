@@ -51,7 +51,7 @@ public class PlayerAnimatorController : MonoBehaviour
 
     public void Death()
     {
-        animator.SetBool("noBlood", playerController.noBlood);
+        animator.SetBool("playerData.noBlood", playerController.playerData.noBlood);
         animator.SetTrigger("Death");
     }
 

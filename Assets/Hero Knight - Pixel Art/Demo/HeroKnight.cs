@@ -6,7 +6,6 @@ public class HeroKnight : MonoBehaviour {
     [SerializeField] float      speed = 4.0f;
     [SerializeField] float      jumpForce = 7.5f;
     [SerializeField] float      rollForce = 6.0f;
-    [SerializeField] bool       noBlood = false;
 
     [SerializeField] GameObject slideDust;
 
@@ -99,7 +98,6 @@ public class HeroKnight : MonoBehaviour {
         //Death
         if (Input.GetKeyDown("e") && !rolling)
         {
-            animator.SetBool("noBlood", noBlood);
             animator.SetTrigger("Death");
         }
             
