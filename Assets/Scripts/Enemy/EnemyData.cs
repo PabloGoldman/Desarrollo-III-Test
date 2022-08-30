@@ -50,3 +50,8 @@ public class EnemyData : ScriptableObject
     }
     
 }
+
+public class Data
+{
+    
+}

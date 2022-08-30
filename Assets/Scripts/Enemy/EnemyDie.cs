@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class EnemyDie : MonoBehaviour, IDamageable
@@ -12,11 +11,7 @@ public class EnemyDie : MonoBehaviour, IDamageable
     {
         col2D = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
-    }
-    
-    public void Init(EnemyData newEnemyData)
-    {
-        enemyData = newEnemyData;
+        enemyData= GetComponent<EnemyBehaviour>()._enemyData;
     }
 
     public void TakeDamage(float damage)

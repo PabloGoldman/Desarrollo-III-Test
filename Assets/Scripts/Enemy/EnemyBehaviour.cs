@@ -2,7 +2,7 @@
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    [SerializeField] private EnemyData _enemyData; 
+    public EnemyData _enemyData;
 
     private void Awake()
     {
@@ -19,7 +19,7 @@ public class EnemyBehaviour : MonoBehaviour
         switch (_enemyData.TypeOfMovement)
         {
             case TypeOfMovement.Patrol:
-                gameObject.AddComponent<PatrolEnemy>().Init(_enemyData);;
+                gameObject.AddComponent<PatrolEnemy>().Init(_enemyData);
                 break;
             
             case TypeOfMovement.Flying:
