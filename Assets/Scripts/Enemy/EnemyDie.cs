@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class EnemyDie : MonoBehaviour, IDamageable
@@ -21,7 +22,7 @@ public class EnemyDie : MonoBehaviour, IDamageable
         if (enemyData.CurrentHealth <= 0) Die();
     }
 
-    void Die()
+    private void Die()
     {
         animator.SetTrigger("die");
         col2D.enabled = false;

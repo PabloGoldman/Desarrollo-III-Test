@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 enum TypeOfMovement { Patrol, Flying}
-enum TypeOfAttack { Melee, Distance}
+enum TypeOfAttack { Melee, Distance, Burst}
     
 public class EnemyBehaviour : MonoBehaviour
 {
@@ -38,6 +38,10 @@ public class EnemyBehaviour : MonoBehaviour
             
             case TypeOfAttack.Distance:
                 //en desarrollo
+                break;
+            
+            case TypeOfAttack.Burst:
+                gameObject.AddComponent<BurstAttack>();
                 break;
         }
     }

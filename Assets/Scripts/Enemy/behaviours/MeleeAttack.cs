@@ -3,7 +3,7 @@ using UnityEngine;
 public class MeleeAttack : MonoBehaviour
 {
     private Transform checkPlayer;
-    private Transform attackController;
+    private Transform attackPoint;
     private EnemyData enemyData;
     private Animator animator;
     private float RadiusPunch;
@@ -18,7 +18,7 @@ public class MeleeAttack : MonoBehaviour
         enemyData = GetComponent<EnemyData>();
         animator = GetComponent<Animator>();
         checkPlayer = enemyData.GroundChecker;
-        attackController = transform.Find("AttackController");
+        attackPoint = transform.Find("AttackPoint");
 
     }
     
@@ -30,7 +30,7 @@ public class MeleeAttack : MonoBehaviour
 
     private void Attack()
     {
-        RaycastHit2D hit = Physics2D.Raycast(checkPlayer.position, Vector2.right * enemyData.RayDirection, enemyData.DistanceToAttack, enemyData.Layer);
+        RaycastHit2D hit = Physics2D.Raycast(checkPlayer.position, Vector2.right * enemyData.RayDirection, enemyData.DistanceToAttack, enemyData.EnemyLayer);
         
         enemyData.IsAttack = hit;
         animator.SetBool("run",!hit);
@@ -54,7 +54,7 @@ public class MeleeAttack : MonoBehaviour
 
     private void CheckCollision()
     {
-        Collider2D hit = Physics2D.OverlapCircle(attackController.transform.position,RadiusPunch,enemyData.Layer);
+        Collider2D hit = Physics2D.OverlapCircle(attackPoint.transform.position,RadiusPunch,enemyData.EnemyLayer);
 
         if (!hit) return;
         var obj = hit.gameObject.GetComponent<IDamageable>();
@@ -68,7 +68,7 @@ public class MeleeAttack : MonoBehaviour
     {
         if (checkPlayer == null || enemyData.RayDirection == null) return;
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(attackController.position,RadiusPunch);
+        Gizmos.DrawWireSphere(attackPoint.position,RadiusPunch);
         Gizmos.DrawLine(checkPlayer.position, checkPlayer.position + (Vector3.right * enemyData.RayDirection) * enemyData.DistanceToAttack);
     }
 }

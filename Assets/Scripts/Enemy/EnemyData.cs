@@ -4,7 +4,8 @@ public class EnemyData : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float maxHealth;
-    [SerializeField] private LayerMask layer;
+    [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float groundDistance;
     [SerializeField] private float fieldOfView;
     [SerializeField] private float distanceToAttack;
@@ -30,7 +31,8 @@ public class EnemyData : MonoBehaviour
     public float DistanceToAttack => distanceToAttack;
     public float GroundDistance => groundDistance;
     public float FieldOfView=> fieldOfView;
-    public LayerMask Layer => layer;
+    public LayerMask EnemyLayer => enemyLayer;
+    public LayerMask GroundLayer => groundLayer;
     public float Speed
     {
         get => speed;
