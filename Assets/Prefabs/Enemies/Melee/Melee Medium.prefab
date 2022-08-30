@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 1366740197}
   - component: {fileID: 1366740199}
   - component: {fileID: 2293096235462180710}
+  - component: {fileID: -3532411476933994669}
   m_Layer: 6
   m_Name: Melee Medium
   m_TagString: Untagged
@@ -264,7 +265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1bdd3bf1f17c082b634e7b22ab51ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyData: {fileID: 11400000, guid: 1a199d5a92333ee5b9de1957d8445ce7, type: 2}
+  typeOfMovement: 0
+  typeOfAttack: 0
 --- !u!114 &2293096235462180710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,3 +279,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c6db9d5f269e04efa0f7c5ca608f083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3532411476933994669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8937078212336127483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c70ec2c87cacc840a1f812bcfb43a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 384
+  maxHealth: 150
+  speed: 3
+  fieldOfView: 4
+  distanceToAttack: 0.7
+  timeToAttack: 3
+  damage: 40

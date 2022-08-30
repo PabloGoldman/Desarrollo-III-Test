@@ -11,7 +11,7 @@ public class EnemyDie : MonoBehaviour, IDamageable
     {
         col2D = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
-        enemyData= GetComponent<EnemyBehaviour>()._enemyData;
+        enemyData = GetComponent<EnemyData>();
     }
 
     public void TakeDamage(float damage)

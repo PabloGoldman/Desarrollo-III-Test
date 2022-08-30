@@ -2,24 +2,21 @@
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    public EnemyData _enemyData;
+    [SerializeField] private TypeOfMovement typeOfMovement;
+    [SerializeField] private TypeOfAttack  typeOfAttack;
 
     private void Awake()
     {
-        _enemyData.Init();
-        _enemyData.GroundChecker = transform.Find("CheckGround");
-        _enemyData.PointOfView= transform.Find("FieldOfView");
-        
-        SetTypeOfMovement();
+       SetTypeOfMovement();
         SetTypeOfAttack();
     }
 
     private void SetTypeOfMovement()
     {
-        switch (_enemyData.TypeOfMovement)
+        switch (typeOfMovement)
         {
             case TypeOfMovement.Patrol:
-                gameObject.AddComponent<PatrolEnemy>().Init(_enemyData);
+                gameObject.AddComponent<PatrolEnemy>();
                 break;
             
             case TypeOfMovement.Flying:
@@ -30,10 +27,10 @@ public class EnemyBehaviour : MonoBehaviour
     
     private void SetTypeOfAttack()
     {
-        switch (_enemyData.TypeOfAttack)
+        switch (typeOfAttack)
         {
             case TypeOfAttack.Melee:
-                gameObject.AddComponent<MeleeAttack>().Init(_enemyData);
+                gameObject.AddComponent<MeleeAttack>();
                 break;
             
             case TypeOfAttack.Distance:
@@ -41,7 +38,7 @@ public class EnemyBehaviour : MonoBehaviour
                 break;
             
             case TypeOfAttack.Burst:
-                gameObject.AddComponent<BurstAttack>().Init(_enemyData);;
+                gameObject.AddComponent<BurstAttack>();
                 break;
         }
     }

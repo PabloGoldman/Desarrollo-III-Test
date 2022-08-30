@@ -9,23 +9,20 @@ public class MeleeAttack : MonoBehaviour
     private float RadiusPunch;
     private float time;
     private bool attack;
+    private float rayDirection; 
 
     private void Awake()
     {
         RadiusPunch = 0.7f;
+        rayDirection = 1;
         attack = false;
         time = 0;
         animator = GetComponent<Animator>();
+        enemyData = GetComponent<EnemyData>();
         attackPoint = transform.Find("AttackPoint");
-
+        checkPlayer= transform.Find("CheckGround");
     }
 
-    public void Init(EnemyData newEnemyData)
-    {
-        enemyData = newEnemyData;
-        checkPlayer = enemyData.GroundChecker;
-    }
-    
     private void Update()
     {
         if (enemyData.IsDie) return;
@@ -34,7 +31,7 @@ public class MeleeAttack : MonoBehaviour
 
     private void Attack()
     {
-        RaycastHit2D hit = Physics2D.Raycast(checkPlayer.position, Vector2.right * enemyData.RayDirection, enemyData.DistanceToAttack, enemyData.PlayerLayer);
+        RaycastHit2D hit = Physics2D.Raycast(checkPlayer.position, Vector2.right * rayDirection, enemyData.DistanceToAttack, enemyData.PlayerLayer);
         
         enemyData.IsAttack = hit;
         animator.SetBool("run",!hit);
@@ -70,9 +67,8 @@ public class MeleeAttack : MonoBehaviour
     
     private void OnDrawGizmos()
     {
-        if (checkPlayer == null || enemyData.RayDirection == null) return;
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(attackPoint.position,RadiusPunch);
-        Gizmos.DrawLine(checkPlayer.position, checkPlayer.position + (Vector3.right * enemyData.RayDirection) * enemyData.DistanceToAttack);
+       Gizmos.color = Color.green;
+       Gizmos.DrawWireSphere(attackPoint.position,RadiusPunch);
+       Gizmos.DrawLine(checkPlayer.position, checkPlayer.position + (Vector3.right * rayDirection) * enemyData.DistanceToAttack);
     }
 }

@@ -1,12 +1,13 @@
+using System;
 using UnityEngine;
 
 public class BurstAttack : MonoBehaviour
 {
    private EnemyData enemyData;
 
-   public void Init(EnemyData newEnemyData)
+   private void Awake()
    {
-      enemyData = newEnemyData;
+      enemyData = GetComponent<EnemyData>();
    }
 
    private void OnCollisionEnter2D(Collision2D c)
