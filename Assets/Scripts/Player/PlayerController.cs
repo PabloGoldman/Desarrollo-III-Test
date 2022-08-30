@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public PlayerData playerData { get; private set; }
+    public PlayerData playerData;
 
     PlayerAnimatorController animator;
 
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerData.Start();
     }
 
     void Update()
@@ -250,7 +250,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        if (attackPoint == null)
+        if (attackPoint == null || playerData == null)
         {
             return;
         }
