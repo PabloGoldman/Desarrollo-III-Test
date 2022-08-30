@@ -1,25 +1,25 @@
 ﻿using UnityEngine;
 
-enum TypeOfMovement { Patrol, Flying}
-enum TypeOfAttack { Melee, Distance, Burst}
-    
 public class EnemyBehaviour : MonoBehaviour
 {
-   [SerializeField] private TypeOfMovement typeOfMovement;
-   [SerializeField] private TypeOfAttack  typeOfAttack;
+    [SerializeField] private EnemyData _enemyData; 
 
     private void Awake()
     {
+        _enemyData.Init();
+        _enemyData.GroundChecker = transform.Find("CheckGround");
+        _enemyData.PointOfView= transform.Find("FieldOfView");
+        
         SetTypeOfMovement();
         SetTypeOfAttack();
     }
 
     private void SetTypeOfMovement()
     {
-        switch (typeOfMovement)
+        switch (_enemyData.TypeOfMovement)
         {
             case TypeOfMovement.Patrol:
-                gameObject.AddComponent<PatrolEnemy>();
+                gameObject.AddComponent<PatrolEnemy>().Init(_enemyData);;
                 break;
             
             case TypeOfMovement.Flying:
@@ -30,10 +30,10 @@ public class EnemyBehaviour : MonoBehaviour
     
     private void SetTypeOfAttack()
     {
-        switch (typeOfAttack)
+        switch (_enemyData.TypeOfAttack)
         {
             case TypeOfAttack.Melee:
-                gameObject.AddComponent<MeleeAttack>();
+                gameObject.AddComponent<MeleeAttack>().Init(_enemyData);
                 break;
             
             case TypeOfAttack.Distance:
@@ -41,7 +41,7 @@ public class EnemyBehaviour : MonoBehaviour
                 break;
             
             case TypeOfAttack.Burst:
-                gameObject.AddComponent<BurstAttack>();
+                gameObject.AddComponent<BurstAttack>().Init(_enemyData);;
                 break;
         }
     }

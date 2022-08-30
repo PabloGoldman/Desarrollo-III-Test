@@ -8,11 +8,15 @@ public class EnemyDie : MonoBehaviour, IDamageable
     Collider2D col2D;
     private float timeToDestroy = 2.0f;
 
-    private void Start()
+    private void Awake()
     {
         col2D = GetComponent<Collider2D>();
-        enemyData = GetComponent<EnemyData>();
         animator = GetComponent<Animator>();
+    }
+    
+    public void Init(EnemyData newEnemyData)
+    {
+        enemyData = newEnemyData;
     }
 
     public void TakeDamage(float damage)

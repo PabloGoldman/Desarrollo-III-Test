@@ -10,16 +10,20 @@ public class MeleeAttack : MonoBehaviour
     private float time;
     private bool attack;
 
-    private void Start()
+    private void Awake()
     {
         RadiusPunch = 0.7f;
         attack = false;
         time = 0;
-        enemyData = GetComponent<EnemyData>();
         animator = GetComponent<Animator>();
-        checkPlayer = enemyData.GroundChecker;
         attackPoint = transform.Find("AttackPoint");
 
+    }
+
+    public void Init(EnemyData newEnemyData)
+    {
+        enemyData = newEnemyData;
+        checkPlayer = enemyData.GroundChecker;
     }
     
     private void Update()
@@ -30,7 +34,7 @@ public class MeleeAttack : MonoBehaviour
 
     private void Attack()
     {
-        RaycastHit2D hit = Physics2D.Raycast(checkPlayer.position, Vector2.right * enemyData.RayDirection, enemyData.DistanceToAttack, enemyData.EnemyLayer);
+        RaycastHit2D hit = Physics2D.Raycast(checkPlayer.position, Vector2.right * enemyData.RayDirection, enemyData.DistanceToAttack, enemyData.PlayerLayer);
         
         enemyData.IsAttack = hit;
         animator.SetBool("run",!hit);
@@ -54,7 +58,7 @@ public class MeleeAttack : MonoBehaviour
 
     private void CheckCollision()
     {
-        Collider2D hit = Physics2D.OverlapCircle(attackPoint.transform.position,RadiusPunch,enemyData.EnemyLayer);
+        Collider2D hit = Physics2D.OverlapCircle(attackPoint.transform.position,RadiusPunch,enemyData.PlayerLayer);
 
         if (!hit) return;
         var obj = hit.gameObject.GetComponent<IDamageable>();

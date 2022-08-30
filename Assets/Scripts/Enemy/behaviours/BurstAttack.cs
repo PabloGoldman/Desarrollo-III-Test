@@ -4,9 +4,9 @@ public class BurstAttack : MonoBehaviour
 {
    private EnemyData enemyData;
 
-   private void Start()
+   public void Init(EnemyData newEnemyData)
    {
-      enemyData = GetComponent<EnemyData>();
+      enemyData = newEnemyData;
    }
 
    private void OnCollisionEnter2D(Collision2D c)

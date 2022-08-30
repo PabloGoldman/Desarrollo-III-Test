@@ -5,18 +5,16 @@ public class PatrolEnemy : MonoBehaviour
     private Rigidbody2D rb;
     private EnemyData enemyData;
     private Animator animator;
-    private Transform fieldOfView;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        fieldOfView = transform.Find("FieldOfView");
     }
-
-    private void Start()
+    
+    public void Init(EnemyData newEnemyData)
     {
-        enemyData = GetComponent<EnemyData>();
+        enemyData = newEnemyData;
     }
 
     private void Update()
@@ -38,7 +36,7 @@ public class PatrolEnemy : MonoBehaviour
     }
     private void Follow()
     {
-        RaycastHit2D hit = Physics2D.Raycast(fieldOfView.position, (Vector2.left * enemyData.RayDirection), enemyData.FieldOfView, enemyData.EnemyLayer);
+        RaycastHit2D hit = Physics2D.Raycast(enemyData.PointOfView.position, (Vector2.left * enemyData.RayDirection), enemyData.FieldOfView, enemyData.PlayerLayer);
 
         if (!hit) return;
         enemyData.RayDirection *= -1;
@@ -50,7 +48,7 @@ public class PatrolEnemy : MonoBehaviour
     {
         if (enemyData.GroundChecker == null || enemyData.RayDirection == null) return;
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(fieldOfView.position, fieldOfView.position + (Vector3.left * enemyData.RayDirection) * enemyData.FieldOfView);
+        Gizmos.DrawLine(enemyData.PointOfView.position, enemyData.PointOfView.position + (Vector3.left * enemyData.RayDirection) * enemyData.FieldOfView);
         Gizmos.DrawLine(enemyData.GroundChecker.position, enemyData.GroundChecker.position + Vector3.down * enemyData.GroundDistance);
     }
 }

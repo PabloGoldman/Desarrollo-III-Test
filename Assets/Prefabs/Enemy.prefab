@@ -106,11 +106,10 @@ GameObject:
   - component: {fileID: 8937078212336127481}
   - component: {fileID: 8937078212336127480}
   - component: {fileID: 1366740197}
-  - component: {fileID: 1366740198}
   - component: {fileID: 1366740199}
   - component: {fileID: 2293096235462180710}
   m_Layer: 6
-  m_Name: Patrol Enemy
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,31 +252,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1366740198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8937078212336127483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c70ec2c87cacc840a1f812bcfb43a0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  maxHealth: 100
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 384
-  groundDistance: 1.5
-  fieldOfView: 3
-  distanceToAttack: 2
-  timeToAttack: 3
-  damage: 20
 --- !u!114 &1366740199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,8 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1bdd3bf1f17c082b634e7b22ab51ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeOfMovement: 0
-  typeOfAttack: 0
+  _enemyData: {fileID: 11400000, guid: 1a199d5a92333ee5b9de1957d8445ce7, type: 2}
 --- !u!114 &2293096235462180710
 MonoBehaviour:
   m_ObjectHideFlags: 0
