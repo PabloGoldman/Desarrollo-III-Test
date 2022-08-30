@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
 public class EnemyDie : MonoBehaviour, IDamageable
@@ -32,5 +30,5 @@ public class EnemyDie : MonoBehaviour, IDamageable
         Destroy(gameObject,timeToDestroy);
     }
 
-   
+
 }

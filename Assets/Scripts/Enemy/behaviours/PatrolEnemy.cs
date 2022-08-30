@@ -33,11 +33,21 @@ public class PatrolEnemy : MonoBehaviour
         enemyData.RayDirection *= -1;
         enemyData.Speed *= -1;
     }
+    private void Follow()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(enemyData.GroundChecker.position, (Vector2.left * enemyData.RayDirection), enemyData.FieldOfView, enemyData.Layer);
+
+        if (!hit) return;
+        enemyData.RayDirection *= -1;
+        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
+        enemyData.Speed *= -1;
+    }
 
     private void OnDrawGizmos()
     {
         if (enemyData.GroundChecker == null || enemyData.RayDirection == null) return;
         Gizmos.color = Color.red;
+        Gizmos.DrawLine(enemyData.GroundChecker.position, enemyData.GroundChecker.position + (Vector3.left * enemyData.RayDirection) * enemyData.FieldOfView);
         Gizmos.DrawLine(enemyData.GroundChecker.position, enemyData.GroundChecker.position + Vector3.down * enemyData.GroundDistance);
     }
 }

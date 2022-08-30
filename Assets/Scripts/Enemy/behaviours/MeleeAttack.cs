@@ -25,7 +25,6 @@ public class MeleeAttack : MonoBehaviour
     private void Update()
     {
         if (enemyData.IsDie) return;
-        Follow();
         Attack();
     }
 
@@ -62,15 +61,7 @@ public class MeleeAttack : MonoBehaviour
         obj?.TakeDamage(enemyData.Damage);
     }
 
-    private void Follow()
-    {
-       RaycastHit2D hit = Physics2D.Raycast(checkPlayer.position, (Vector2.left * enemyData.RayDirection), enemyData.FieldOfView, enemyData.Layer);
-
-        if (!hit) return;
-        enemyData.RayDirection *= -1;
-        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
-        enemyData.Speed *= -1;
-    }
+   
     
     
     private void OnDrawGizmos()
@@ -78,7 +69,6 @@ public class MeleeAttack : MonoBehaviour
         if (checkPlayer == null || enemyData.RayDirection == null) return;
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(attackController.position,RadiusPunch);
-        Gizmos.DrawLine(checkPlayer.position, checkPlayer.position + (Vector3.left * enemyData.RayDirection) * enemyData.FieldOfView);
         Gizmos.DrawLine(checkPlayer.position, checkPlayer.position + (Vector3.right * enemyData.RayDirection) * enemyData.DistanceToAttack);
     }
 }
