@@ -14,7 +14,6 @@ public class EnemyData: MonoBehaviour
     [SerializeField] private float timeToAttack;
     [SerializeField] private float damage;
 
-    
     public float Speed
     {
         get => speed;
@@ -23,12 +22,10 @@ public class EnemyData: MonoBehaviour
     public float FieldOfView=> fieldOfView;
     public LayerMask GroundLayer => groundLayer;
     
-    
-    
     public float DistanceToAttack => distanceToAttack;
     public float CurrentHealth { get; set; }
     public float TimeToAttack=> timeToAttack;
-    public float Damage=> damage;
+    public float AttackDamage=> damage;
     public LayerMask PlayerLayer => playerLayer;
     public bool IsAttack { get; set;}
     public bool IsDie { get; set; }

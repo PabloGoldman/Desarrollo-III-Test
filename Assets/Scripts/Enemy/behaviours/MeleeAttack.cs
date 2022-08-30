@@ -55,15 +55,14 @@ public class MeleeAttack : MonoBehaviour
 
     private void CheckCollision()
     {
-        Collider2D hit = Physics2D.OverlapCircle(attackPoint.transform.position,RadiusPunch,enemyData.PlayerLayer);
+        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, RadiusPunch, enemyData.PlayerLayer);
 
-        if (!hit) return;
-        var obj = hit.gameObject.GetComponent<IDamageable>();
-        obj?.TakeDamage(enemyData.Damage);
+        foreach (Collider2D player in hitPlayer)
+        {
+            var obj = player.gameObject.GetComponent<IDamageable>();
+            obj?.TakeDamage(enemyData.AttackDamage);
+        }
     }
-
-   
-    
     
     private void OnDrawGizmos()
     {

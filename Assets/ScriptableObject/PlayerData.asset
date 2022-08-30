@@ -17,9 +17,10 @@ MonoBehaviour:
   rollForce: 6
   attackDamage: 50
   attackRate: 2
-  maxLifePoints: 100
+  maxHealth: 1
   attackRange: 0.5
+  noBlood: 0
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
-  lifePoints: 0
+  currentHealth: -40

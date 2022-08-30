@@ -15,7 +15,7 @@ public class BurstAttack : MonoBehaviour
       var obj = c.gameObject.GetComponent<IDamageable>();
       
       if (obj == null) return;
-      obj.TakeDamage(enemyData.Damage);
+      obj.TakeDamage(enemyData.AttackDamage);
       gameObject.GetComponent<IDamageable>().TakeDamage(enemyData.CurrentHealth);
       
    }

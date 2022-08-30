@@ -1,10 +1,14 @@
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IDamageable
 {
     public PlayerData playerData;
 
     PlayerAnimatorController animator;
+
+    Collider2D col2D;
+
+    private float timeToDestroy = 2.0f;
 
     [SerializeField] Transform attackPoint;
 
@@ -33,6 +37,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
         animator = GetComponent<PlayerAnimatorController>();
 
         groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_HeroKnight>();
@@ -40,6 +45,7 @@ public class PlayerController : MonoBehaviour
         wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<Sensor_HeroKnight>();
         wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<Sensor_HeroKnight>();
         wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<Sensor_HeroKnight>();
+
     }
 
     // Start is called before the first frame update
@@ -55,16 +61,9 @@ public class PlayerController : MonoBehaviour
         HandleInputAndMovement();
         WallSlide();
 
-        //Death
-        if (Input.GetKeyDown("e") && !isRolling)
+        if (playerData.currentHealth <= 0)
         {
             Death();
-        }
-
-        //Hurt
-        else if (Input.GetKeyDown("q") && !isRolling)
-        {
-            Hurt();
         }
 
         //Attack
@@ -175,11 +174,6 @@ public class PlayerController : MonoBehaviour
         animator.WallSlide();
     }
 
-    void Hurt()
-    {
-        animator.Hurt();
-    }
-
     void Attack()
     {
         currentAttack++;
@@ -246,6 +240,20 @@ public class PlayerController : MonoBehaviour
         delayToIdle -= Time.deltaTime;
         if (delayToIdle < 0)
             animator.Idle();
+    }
+
+    public void TakeDamage(float damage)
+    {
+        Debug.Log("Recibi daño");
+        animator.Hurt();
+
+        playerData.currentHealth -= damage;
+        if (playerData.currentHealth <= 0) Die();
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject, timeToDestroy);
     }
 
     private void OnDrawGizmosSelected()

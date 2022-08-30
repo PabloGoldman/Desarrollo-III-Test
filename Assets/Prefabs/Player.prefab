@@ -351,9 +351,8 @@ GameObject:
   - component: {fileID: 1423688949632124448}
   - component: {fileID: 5126519773818766506}
   - component: {fileID: 5023802927324557449}
-  - component: {fileID: 2825607953527814296}
   m_Layer: 7
-  m_Name: HeroKnight
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -424,17 +423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cbb3b7647a54634fb5564f50d1557b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  jumpForce: 9.2
-  rollForce: 6
-  attackDamage: 50
-  attackRate: 2
+  playerData: {fileID: 11400000, guid: 1446536fa21ed394a9906e825921cbf5, type: 2}
   attackPoint: {fileID: 254506222}
-  attackRange: 0.73
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 64
-  noBlood: 0
   slideDust: {fileID: 1038168246061390451, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
 --- !u!212 &1423688949632124448
 SpriteRenderer:
@@ -535,15 +525,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.73, y: 1.2}
   m_EdgeRadius: 0
---- !u!114 &2825607953527814296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7853420146243517855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b78a2382381420db851414be0e899d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
