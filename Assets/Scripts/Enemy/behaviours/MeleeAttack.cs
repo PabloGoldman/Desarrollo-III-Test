@@ -3,18 +3,23 @@ using UnityEngine;
 public class MeleeAttack : MonoBehaviour
 {
     private Transform checkPlayer;
+    private Transform attackController;
     private EnemyData enemyData;
     private Animator animator;
+    private float RadiusPunch;
     private float time;
     private bool attack;
-    
+
     private void Start()
     {
+        RadiusPunch = 0.7f;
         attack = false;
         time = 0;
         enemyData = GetComponent<EnemyData>();
         animator = GetComponent<Animator>();
         checkPlayer = enemyData.GroundChecker;
+        attackController = transform.Find("AttackController");
+
     }
     
     private void Update()
@@ -27,7 +32,7 @@ public class MeleeAttack : MonoBehaviour
     private void Attack()
     {
         RaycastHit2D hit = Physics2D.Raycast(checkPlayer.position, Vector2.right * enemyData.RayDirection, enemyData.DistanceToAttack, enemyData.Layer);
-       
+        
         enemyData.IsAttack = hit;
         animator.SetBool("run",!hit);
         
@@ -41,7 +46,20 @@ public class MeleeAttack : MonoBehaviour
 
         if (!hit) return;
         attack = true;
-        if(time == 0 )  animator.SetTrigger("attack");
+        if (time == 0)
+        {
+            animator.SetTrigger("attack");
+            CheckCollision();
+        }
+    }
+
+    private void CheckCollision()
+    {
+        Collider2D hit = Physics2D.OverlapCircle(attackController.transform.position,RadiusPunch,enemyData.Layer);
+
+        if (!hit) return;
+        var obj = hit.gameObject.GetComponent<IDamageable>();
+        obj?.TakeDamage(enemyData.Damage);
     }
 
     private void Follow()
@@ -59,7 +77,8 @@ public class MeleeAttack : MonoBehaviour
     {
         if (checkPlayer == null || enemyData.RayDirection == null) return;
         Gizmos.color = Color.green;
-        Gizmos.DrawLine(checkPlayer.transform.position, checkPlayer.transform.position + (Vector3.left * enemyData.RayDirection) * enemyData.FieldOfView);
-        Gizmos.DrawLine(checkPlayer.transform.position, checkPlayer.transform.position + (Vector3.right * enemyData.RayDirection) * enemyData.DistanceToAttack);
+        Gizmos.DrawWireSphere(attackController.position,RadiusPunch);
+        Gizmos.DrawLine(checkPlayer.position, checkPlayer.position + (Vector3.left * enemyData.RayDirection) * enemyData.FieldOfView);
+        Gizmos.DrawLine(checkPlayer.position, checkPlayer.position + (Vector3.right * enemyData.RayDirection) * enemyData.DistanceToAttack);
     }
 }

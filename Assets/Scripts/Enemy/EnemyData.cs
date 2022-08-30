@@ -9,6 +9,7 @@ public class EnemyData : MonoBehaviour
     [SerializeField] private float fieldOfView;
     [SerializeField] private float distanceToAttack;
     [SerializeField] private float timeToAttack;
+    [SerializeField] private float damage;
 
     public float CurrentHealth { get; set; }
     public int RayDirection { get; set; }
@@ -24,6 +25,7 @@ public class EnemyData : MonoBehaviour
         GroundChecker = transform.Find("CheckGround");
     }
 
+    public float Damage=> damage;
     public float TimeToAttack=> timeToAttack;
     public float DistanceToAttack => distanceToAttack;
     public float GroundDistance => groundDistance;

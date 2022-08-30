@@ -38,7 +38,7 @@ public class PatrolEnemy : MonoBehaviour
     {
         if (enemyData.GroundChecker == null || enemyData.RayDirection == null) return;
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(enemyData.GroundChecker.transform.position, enemyData.GroundChecker.transform.position + Vector3.down * enemyData.GroundDistance);
+        Gizmos.DrawLine(enemyData.GroundChecker.position, enemyData.GroundChecker.position + Vector3.down * enemyData.GroundDistance);
     }
 }
 

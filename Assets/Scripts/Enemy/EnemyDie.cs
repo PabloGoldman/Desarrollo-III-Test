@@ -7,7 +7,7 @@ public class EnemyDie : MonoBehaviour, IDamageable
     private EnemyData enemyData;
     private Animator animator;
     Collider2D col2D;
-    private int timeToDestroy = 2;
+    private float timeToDestroy = 2.0f;
 
     private void Start()
     {
@@ -29,13 +29,8 @@ public class EnemyDie : MonoBehaviour, IDamageable
         col2D.enabled = false;
         enemyData.IsDie = true;
         
-        StartCoroutine(Destroy());
+        Destroy(gameObject,timeToDestroy);
     }
 
-    private IEnumerator Destroy()
-    {
-        yield return new WaitForSeconds(timeToDestroy);
-        gameObject.SetActive(false);        
-        
-    }
+   
 }
