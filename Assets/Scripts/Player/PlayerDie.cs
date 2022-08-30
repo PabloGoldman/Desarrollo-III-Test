@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerDie : MonoBehaviour, IDamageable
 {
+    PlayerData playerData;
+
     Collider2D col2D;
 
     private float timeToDestroy = 2.0f;
@@ -9,6 +11,11 @@ public class PlayerDie : MonoBehaviour, IDamageable
     private void Start()
     {
         col2D = GetComponent<Collider2D>();
+    }
+
+    public void Init(PlayerData newPlayerData)
+    {
+        playerData = newPlayerData;
     }
 
     public void TakeDamage(float damage)

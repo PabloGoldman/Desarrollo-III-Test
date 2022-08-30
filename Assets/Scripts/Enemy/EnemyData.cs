@@ -3,7 +3,7 @@
  public enum TypeOfMovement { Patrol, Flying}
  public enum TypeOfAttack { Melee, Distance, Burst}
 
-[CreateAssetMenu(fileName = "new Enemy",menuName = "ScriptableObject/enemy")]
+[CreateAssetMenu(fileName = "new Enemy",menuName = "ScriptableObject/Enemy")]
 public class EnemyData : ScriptableObject
 {   
     [SerializeField] private TypeOfMovement typeOfMovement;
