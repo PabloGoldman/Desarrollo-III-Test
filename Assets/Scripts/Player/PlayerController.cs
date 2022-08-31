@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour, IDamageable
 
     Collider2D col2D;
 
+    bool isDead;
+
     private float timeToDestroy = 2.0f;
 
     [SerializeField] Transform attackPoint;
@@ -45,7 +47,6 @@ public class PlayerController : MonoBehaviour, IDamageable
         wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<Sensor_HeroKnight>();
         wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<Sensor_HeroKnight>();
         wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<Sensor_HeroKnight>();
-
     }
 
     // Start is called before the first frame update
@@ -56,55 +57,53 @@ public class PlayerController : MonoBehaviour, IDamageable
 
     void Update()
     {
-        HandleTimers();
-        CheckIsGrounded();
-        HandleInputAndMovement();
-        WallSlide();
-
-        if (playerData.currentHealth <= 0)
+        if (!isDead)
         {
-            Death();
-        }
+            HandleTimers();
+            CheckIsGrounded();
+            HandleInputAndMovement();
+            WallSlide();
 
-        //Attack
-        else if (Input.GetMouseButtonDown(0) && timeSinceAttack > 0.25f && !isRolling)
-        {
-            Attack();
-        }
+            //Attack
+            if (Input.GetMouseButtonDown(0) && timeSinceAttack > 0.25f && !isRolling)
+            {
+                Attack();
+            }
 
-        // Block
-        else if (Input.GetMouseButtonDown(1) && !isRolling)
-        {
-            Block();
-        }
+            // Block
+            else if (Input.GetMouseButtonDown(1) && !isRolling)
+            {
+                Block();
+            }
 
-        else if (Input.GetMouseButtonUp(1))
-        {
-            StopBlocking();
-        }
+            else if (Input.GetMouseButtonUp(1))
+            {
+                StopBlocking();
+            }
 
-        // Roll
-        else if (Input.GetKeyDown("left shift") && !isRolling && !isWallSliding)
-        {
-            Roll();
-        }
+            // Roll
+            else if (Input.GetKeyDown("left shift") && !isRolling && !isWallSliding)
+            {
+                Roll();
+            }
 
-        //Jump
-        else if (Input.GetKeyDown("space") && (isGrounded || isWallSliding) && !isRolling)
-        {
-            Jump();
-        }
+            //Jump
+            else if (Input.GetKeyDown("space") && (isGrounded || isWallSliding) && !isRolling)
+            {
+                Jump();
+            }
 
-        //Run
-        else if (Mathf.Abs(rb.velocity.x) > Mathf.Epsilon)
-        {
-            Run();
-        }
+            //Run
+            else if (Mathf.Abs(rb.velocity.x) > Mathf.Epsilon)
+            {
+                Run();
+            }
 
-        //Idle
-        else
-        {
-            Idle();
+            //Idle
+            else
+            {
+                Idle();
+            }
         }
     }
 
@@ -160,11 +159,6 @@ public class PlayerController : MonoBehaviour, IDamageable
         // Move
         if (!isRolling)
             rb.velocity = new Vector2(inputX * playerData.speed, rb.velocity.y);
-    }
-
-    void Death()
-    {
-        animator.Death();
     }
 
     void WallSlide()
@@ -244,15 +238,19 @@ public class PlayerController : MonoBehaviour, IDamageable
 
     public void TakeDamage(float damage)
     {
-        Debug.Log("Recibi daño");
-        animator.Hurt();
+        if (!isDead)
+        {
+            animator.Hurt();
 
-        playerData.currentHealth -= damage;
-        if (playerData.currentHealth <= 0) Die();
+            playerData.currentHealth -= damage;
+            if (playerData.currentHealth <= 0) Die();
+        }
     }
 
-    private void Die()
+    void Die()
     {
+        animator.Death();
+        isDead = true;
         Destroy(gameObject, timeToDestroy);
     }
 
