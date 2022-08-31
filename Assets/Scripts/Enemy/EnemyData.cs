@@ -13,6 +13,7 @@ public class EnemyData: MonoBehaviour
     [SerializeField] private float distanceToAttack;
     [SerializeField] private float timeToAttack;
     [SerializeField] private float damage;
+    
 
     public float Speed
     {
@@ -29,9 +30,12 @@ public class EnemyData: MonoBehaviour
     public LayerMask PlayerLayer => playerLayer;
     public bool IsAttack { get; set;}
     public bool IsDie { get; set; }
+    
+    public  int RayDirection { get; set; }
 
     public void Awake()
     {
+        RayDirection = 1;
         CurrentHealth = maxHealth;
         IsAttack = false;
         IsDie = false;
