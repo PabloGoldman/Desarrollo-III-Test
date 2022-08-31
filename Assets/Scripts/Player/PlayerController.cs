@@ -244,6 +244,7 @@ public class PlayerController : MonoBehaviour, IDamageable
 
             playerData.currentHealth -= damage;
             if (playerData.currentHealth <= 0) Die();
+            Debug.Log("entro"+playerData.currentHealth);
         }
     }
 
