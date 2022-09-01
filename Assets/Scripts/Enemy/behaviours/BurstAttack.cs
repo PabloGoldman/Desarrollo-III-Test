@@ -35,6 +35,13 @@ public class BurstAttack : MonoBehaviour
       StartCoroutine(ActiveBurst());
    }
 
+    private void ActiveBurstImmeadiate()
+    {
+        BurstCollision();
+        animator.SetTrigger("Destroy");
+        Destroy(gameObject, 0.4f);
+    }
+
    private IEnumerator ActiveBurst()
    {
       yield return new WaitForSeconds(enemyData.TimeToAttack);
@@ -58,9 +65,11 @@ public class BurstAttack : MonoBehaviour
       
       if (obj == null) return;
       obj.TakeDamage(enemyData.AttackDamage);
-
+      ActiveBurstImmeadiate();
    }
+
    
+
    private void OnDrawGizmos()
    {
       Gizmos.color = Color.red;
