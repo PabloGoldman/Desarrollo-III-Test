@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour, IDamageable
 {
     public PlayerData playerData;
 
     PlayerAnimatorController animator;
+
+    public UnityEvent onThirdAttack;
 
     Collider2D col2D;
 
@@ -172,9 +175,16 @@ public class PlayerController : MonoBehaviour, IDamageable
     {
         currentAttack++;
 
+        if (currentAttack == 3)
+        {
+            onThirdAttack?.Invoke();
+        }
+
         // Loop back to one after third attack
-        if (currentAttack > 3)
+        else if (currentAttack > 3)
+        {
             currentAttack = 1;
+        }
 
         // Reset Attack combo if time since last attack is too large
         if (timeSinceAttack > 1.0f)
@@ -244,7 +254,7 @@ public class PlayerController : MonoBehaviour, IDamageable
 
             playerData.currentHealth -= damage;
             if (playerData.currentHealth <= 0) Die();
-            Debug.Log("entro"+playerData.currentHealth);
+            Debug.Log("entro" + playerData.currentHealth);
         }
     }
 
