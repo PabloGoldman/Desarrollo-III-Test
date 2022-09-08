@@ -37,10 +37,10 @@ public class PlayerAnimatorController : MonoBehaviour
         animator.SetBool("Grounded", playerController.isGrounded);
     }
 
-    public void Attack()
+    public void Attack(int currentAttack)
     {
         // Call one of three attack animations "Attack1", "Attack2", "Attack3"
-        animator.SetTrigger("Attack" + playerController.currentAttack);
+        animator.SetTrigger("Attack" + currentAttack);
     }
 
     public void Jump()
