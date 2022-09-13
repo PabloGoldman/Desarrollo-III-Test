@@ -4,6 +4,11 @@ using UnityEngine;
 
 public abstract class CharacterState : MonoBehaviour
 {
+    //HAY QUE ARMAR 1 SCRIPTABLE OBJECT DE LO BASE DEL PLAYER, Y DESPUES LOS OTROS DOS DE:
+    //HUMANO: DAÑO DE ATAQUE, VELOCIDAD
+    //ZORRO: VELOCIDAD DE ROLL, VELOCIDAD NORMAL
+    //EL ZORRO TIENE Q TENER DOBLE SALTO
+
     [HideInInspector] public Sensor_HeroKnight groundSensor;
     [HideInInspector] public Sensor_HeroKnight wallSensorR1;
     [HideInInspector] public Sensor_HeroKnight wallSensorR2;

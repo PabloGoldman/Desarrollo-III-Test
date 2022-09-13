@@ -47,6 +47,7 @@ public class FoxState : CharacterState, IDamageable
             {
                 Run();
             }
+
             CheckIsGrounded();
             HandleInputAndMovement();
             HandleTimers();
