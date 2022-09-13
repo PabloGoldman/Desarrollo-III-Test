@@ -9,5 +9,5 @@ public class FoxData : ScriptableObject
     public float jumpForce = 7.5f;
     public float rollForce = 6.0f;
 
-    public float increasedDamageDone = 20f;
+    public float damageTakenMultiplier = 2f;
 }

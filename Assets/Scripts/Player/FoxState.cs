@@ -146,7 +146,7 @@ public class FoxState : CharacterState, IDamageable
         {
             animator.Hurt();
 
-            playerManager.TakeDamage(damage + foxData.increasedDamageDone);
+            playerManager.TakeDamage(damage * foxData.damageTakenMultiplier);
             if (playerManager.currentHealth <= 0) Die();
             Debug.Log("entro" + playerManager.currentHealth);
         }
