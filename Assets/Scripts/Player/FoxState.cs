@@ -32,7 +32,7 @@ public class FoxState : CharacterState, IDamageable
         {
             rb.velocity = new Vector2(inputX * foxData.speed, rb.velocity.y);
 
-            if (Input.GetKeyDown("space") /*&& (!isWallSliding)*/ && jumpCount < maxJumpsAvailable)
+            if (Input.GetKeyDown("space") && jumpCount < maxJumpsAvailable)
             {
                 Jump();
             }
@@ -90,7 +90,7 @@ public class FoxState : CharacterState, IDamageable
     void Roll()
     {
         animator.Roll();
-        rb.velocity = new Vector2(1.5f * foxData.rollForce, rb.velocity.y);
+        rb.velocity = new Vector2(100, rb.velocity.y);
     }
 
     void CheckIsGrounded()
@@ -115,6 +115,12 @@ public class FoxState : CharacterState, IDamageable
     {
         //Wall Slide
         isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding());
+
+        if (isWallSliding)
+        {
+            jumpCount = 0;
+        }
+
         animator.WallSlide(isWallSliding);
     }
 
