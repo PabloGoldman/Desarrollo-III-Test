@@ -20,6 +20,11 @@ public class FoxState : CharacterState, IDamageable
         OnAwake();
     }
 
+    void Star()
+    {
+        foxData.Start();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -111,6 +116,7 @@ public class FoxState : CharacterState, IDamageable
 
     void Die()
     {
+        rb.velocity = Vector2.zero;
         animator.Death();
         isDead = true;
 
@@ -133,5 +139,7 @@ public class FoxState : CharacterState, IDamageable
         transform.position = Vector3.zero;
         isDead = false;
         animator.Idle();
+        foxData.Start();
+        ResetVariables();
     }
 }

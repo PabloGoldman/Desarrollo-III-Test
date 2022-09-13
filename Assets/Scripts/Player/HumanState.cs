@@ -25,6 +25,11 @@ public class HumanState : CharacterState, IDamageable
         OnAwake();
     }
 
+    void Start()
+    {
+        humanData.Start();
+    }
+
     // Update is called once per frame
     private void Update()
     {
@@ -142,6 +147,8 @@ public class HumanState : CharacterState, IDamageable
 
     void CheckIsGrounded()
     {
+        Debug.Log(groundSensor.IsColliding());
+
         //Check if character just landed on the ground
         if (!isGrounded && groundSensor.IsColliding())
         {
@@ -164,13 +171,15 @@ public class HumanState : CharacterState, IDamageable
             animator.Hurt();
 
             humanData.currentHealth -= damage;
+
             if (humanData.currentHealth <= 0) Die();
-            Debug.Log("entro" + humanData.currentHealth);
+            Debug.Log("morir" + humanData.currentHealth);
         }
     }
 
     void Die()
     {
+        rb.velocity = Vector2.zero;
         animator.Death();
         isDead = true;
 
@@ -179,9 +188,13 @@ public class HumanState : CharacterState, IDamageable
 
     public override void Respawn()
     {
+        isGrounded = true;
         transform.position = Vector3.zero;
         isDead = false;
         animator.Idle();
+        humanData.Start();
+
+        ResetVariables();
     }
 
     private void OnDrawGizmosSelected()

@@ -14,6 +14,11 @@ public class PlayerData : ScriptableObject
     public bool noBlood = false;
 
     public LayerMask enemyLayers;
+    
+    public float currentHealth;
 
-    public float currentHealth = 100;
+    public void Start()
+    {
+        currentHealth = 100;
+    }
 }
