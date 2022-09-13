@@ -945,6 +945,57 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2629861454347886104, guid: 28cd4df52991d0c43ab65c2a02eff0de, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 28cd4df52991d0c43ab65c2a02eff0de, type: 3}
+--- !u!4 &171796023 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 254506222, guid: d5cc24a0f6e9dd641afe6547dfff90d3, type: 3}
+  m_PrefabInstance: {fileID: 1253672771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &461892949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 461892951}
+  - component: {fileID: 461892950}
+  m_Layer: 0
+  m_Name: PlayerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &461892950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461892949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cbb3b7647a54634fb5564f50d1557b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foxState: {fileID: 0}
+  humanState: {fileID: 0}
+--- !u!4 &461892951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461892949}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.4486182, y: 1.5803802, z: 0.41675416}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,15 +1369,70 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7853420146243517855, guid: d5cc24a0f6e9dd641afe6547dfff90d3, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: HumanPlayer
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4307136496465278488, guid: d5cc24a0f6e9dd641afe6547dfff90d3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d5cc24a0f6e9dd641afe6547dfff90d3, type: 3}
+--- !u!1 &1253672772 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7853420146243517855, guid: d5cc24a0f6e9dd641afe6547dfff90d3, type: 3}
+  m_PrefabInstance: {fileID: 1253672771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1253672773 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2071747754, guid: d5cc24a0f6e9dd641afe6547dfff90d3, type: 3}
+  m_PrefabInstance: {fileID: 1253672771}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253672772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2071747747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5763610321687589320, guid: d5cc24a0f6e9dd641afe6547dfff90d3, type: 3}
   m_PrefabInstance: {fileID: 1253672771}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2071747748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253672772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb168dfbb675de4da7c3e9963cce693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundSensor: {fileID: 0}
+  wallSensorR1: {fileID: 0}
+  wallSensorR2: {fileID: 0}
+  wallSensorL1: {fileID: 0}
+  wallSensorL2: {fileID: 0}
+  isGrounded: 0
+  delayToIdle: 0
+  facingDirection: 1
+  animator: {fileID: 0}
+  humanData: {fileID: 11400000, guid: 1446536fa21ed394a9906e825921cbf5, type: 2}
+  attackPoint: {fileID: 171796023}
+  onThirdAttack:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1253672773}
+        m_TargetAssemblyTypeName: Cinemachine.CinemachineImpulseSource, Cinemachine
+        m_MethodName: GenerateImpulse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &2192041988181762014
 PrefabInstance:
   m_ObjectHideFlags: 0

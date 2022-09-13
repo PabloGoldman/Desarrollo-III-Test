@@ -15,10 +15,5 @@ public class PlayerData : ScriptableObject
 
     public LayerMask enemyLayers;
 
-    public float currentHealth;
-
-    public void Start()
-    {
-        currentHealth = maxHealth;
-    }
+    public float currentHealth = 100;
 }

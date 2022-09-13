@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class PlayerAnimatorController : MonoBehaviour
 {
-    private PlayerController playerController;
     private Animator animator;
     private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerController = GetComponent<PlayerController>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -27,14 +25,14 @@ public class PlayerAnimatorController : MonoBehaviour
         animator.SetFloat("AirSpeedY", rb.velocity.y);
     }
 
-    public void WallSlide()
+    public void WallSlide(bool wallSliding)
     {
-        animator.SetBool("WallSlide", playerController.isWallSliding);
+        animator.SetBool("WallSlide", wallSliding);
     }
 
-    public void OnGround()
+    public void OnGround(bool isGrounded)
     {
-        animator.SetBool("Grounded", playerController.isGrounded);
+        animator.SetBool("Grounded", isGrounded);
     }
 
     public void Attack(int currentAttack)
@@ -43,21 +41,21 @@ public class PlayerAnimatorController : MonoBehaviour
         animator.SetTrigger("Attack" + currentAttack);
     }
 
-    public void Jump()
+    public void Jump(bool isGrounded)
     {
         animator.SetTrigger("Jump");
-        animator.SetBool("Grounded", playerController.isGrounded);
+        animator.SetBool("Grounded", isGrounded);
     }
 
     public void Death()
     {
-        animator.SetBool("noBlood", playerController.playerData.noBlood);
+        animator.SetBool("noBlood", false);
         animator.SetTrigger("Death");
     }
 
-    public void WallSliding()
+    public void WallSliding(bool wallSliding)
     {
-        animator.SetBool("WallSlide", playerController.isWallSliding);
+        animator.SetBool("WallSlide", wallSliding);
     }
 
     public void Run()

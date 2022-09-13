@@ -2,43 +2,74 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [Serializable]
-public class HumanState : CharacterState
+public class HumanState : CharacterState, IDamageable
 {
+    [HideInInspector] public PlayerAnimatorController animator;
+
+    [SerializeField] PlayerData humanData;
+
+    [SerializeField] Transform attackPoint;
+
+    public UnityEvent onThirdAttack;
+
     private float timeSinceAttack = 0.0f;
 
     private int currentAttack;
 
-    // Update is called once per frame
-    public override void Update()
+    private void Awake()
     {
-        // Increase timer that controls attack combo
-        timeSinceAttack += Time.deltaTime;
+        animator = GetComponent<PlayerAnimatorController>();
+        OnAwake();
+    }
 
-        //Attack
-        if (Input.GetMouseButtonDown(0) && timeSinceAttack > 0.25f)
+    // Update is called once per frame
+    private void Update()
+    {
+        if (!isDead)
         {
-            Attack();
-        }
+            HandleInputAndMovement();
+            CheckIsGrounded();
+            WallSlide();
 
-        //Jump
-        else if (Input.GetKeyDown("space") && (playerController.isGrounded) && (!playerController.isWallSliding))
-        {
-            Jump();
-        }
+            rb.velocity = new Vector2(inputX * humanData.speed, rb.velocity.y);
 
-        //Run
-        else if (Mathf.Abs(rb.velocity.x) > Mathf.Epsilon)
-        {
-            Run();
-        }
+            // Increase timer that controls attack combo
+            timeSinceAttack += Time.deltaTime;
 
-        //Idle
-        else
-        {
-            Idle();
+            //Attack
+            if (Input.GetMouseButtonDown(0) && timeSinceAttack > 0.25f)
+            {
+                Attack();
+            }
+
+            //Jump
+            else if (Input.GetKeyDown("space") && (isGrounded) && (!isWallSliding))
+            {
+                Jump();
+            }
+
+            //Run
+            else if (Mathf.Abs(rb.velocity.x) > 0.15)
+            {
+                Run();
+            }
+
+            //Idle
+            else
+            {
+                Idle();
+            }
         }
+    }
+
+    void WallSlide()
+    {
+        //Wall Slide
+        isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding());
+        animator.WallSlide(isWallSliding);
     }
 
     public override void SwitchState()
@@ -52,7 +83,7 @@ public class HumanState : CharacterState
 
         if (currentAttack == 3)
         {
-            playerController.TriggerThirdAttack();
+            TriggerThirdAttack();
         }
 
         // Loop back to one after third attack
@@ -66,52 +97,100 @@ public class HumanState : CharacterState
             currentAttack = 1;
 
         // Call one of three attack animations "Attack1", "Attack2", "Attack3"
-       playerController.animator.Attack(currentAttack);
+        animator.Attack(currentAttack);
 
         // Reset time
         timeSinceAttack = 0.0f;
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(playerController.attackPoint.position, playerController.playerData.attackRange, playerController.playerData.enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, humanData.attackRange, humanData.enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
             var obj = enemy.gameObject.GetComponent<IDamageable>();
-            obj?.TakeDamage(playerController.playerData.attackDamage);
+            obj?.TakeDamage(humanData.attackDamage);
         }
     }
 
-    
+    public void TriggerThirdAttack()
+    {
+        onThirdAttack?.Invoke();
+    }
+
     void Jump()
     {
-        playerController.animator.Jump();
-        playerController.isGrounded = false;
-        playerController.animator.OnGround();
-        rb.velocity = new Vector2(rb.velocity.x, playerController.playerData.jumpForce);
-        playerController.groundSensor.Disable(0.2f);
+        animator.Jump(isGrounded);
+        isGrounded = false;
+        animator.OnGround(isGrounded);
+        rb.velocity = new Vector2(rb.velocity.x, humanData.jumpForce);
+        groundSensor.Disable(0.2f);
     }
 
     void Run()
     {
         // Reset timer
-        playerController.delayToIdle = 0.05f;
-        playerController.animator.Run();
+        delayToIdle = 0.05f;
+        animator.Run();
     }
 
     void Idle()
     {
         // Prevents flickering transitions to idle
-        playerController.delayToIdle -= Time.deltaTime;
-        if (playerController.delayToIdle < 0)
-            playerController.animator.Idle();
+        delayToIdle -= Time.deltaTime;
+        if (delayToIdle < 0)
+            animator.Idle();
+    }
+
+    void CheckIsGrounded()
+    {
+        //Check if character just landed on the ground
+        if (!isGrounded && groundSensor.IsColliding())
+        {
+            isGrounded = true;
+            animator.OnGround(isGrounded);
+        }
+
+        //Check if character just started falling
+        if (isGrounded && !groundSensor.IsColliding())
+        {
+            isGrounded = false;
+            animator.OnGround(isGrounded);
+        }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        if (!isDead)
+        {
+            animator.Hurt();
+
+            humanData.currentHealth -= damage;
+            if (humanData.currentHealth <= 0) Die();
+            Debug.Log("entro" + humanData.currentHealth);
+        }
     }
 
     void Die()
     {
-        playerController.Die();
+        animator.Death();
+        isDead = true;
+
+        Invoke(nameof(Respawn), timeToRespawn);
     }
 
     public override void Respawn()
     {
-        throw new NotImplementedException();
+        transform.position = Vector3.zero;
+        isDead = false;
+        animator.Idle();
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null || humanData == null)
+        {
+            return;
+        }
+
+        Gizmos.DrawWireSphere(attackPoint.position, humanData.attackRange);
     }
 }
