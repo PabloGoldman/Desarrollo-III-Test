@@ -9,6 +9,8 @@ public abstract class CharacterState : MonoBehaviour
     //ZORRO: VELOCIDAD DE ROLL, VELOCIDAD NORMAL
     //EL ZORRO TIENE Q TENER DOBLE SALTO
 
+    protected PlayerManager playerManager;
+
     [HideInInspector] public Sensor_HeroKnight groundSensor;
     [HideInInspector] public Sensor_HeroKnight wallSensorR1;
     [HideInInspector] public Sensor_HeroKnight wallSensorR2;
@@ -39,13 +41,19 @@ public abstract class CharacterState : MonoBehaviour
 
     protected void OnAwake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        if (!rb)
+        {
+            rb = GetComponent<Rigidbody2D>();
 
-        groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_HeroKnight>();
-        wallSensorR1 = transform.Find("WallSensor_R1").GetComponent<Sensor_HeroKnight>();
-        wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<Sensor_HeroKnight>();
-        wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<Sensor_HeroKnight>();
-        wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<Sensor_HeroKnight>();
+            playerManager = GetComponentInParent<PlayerManager>();
+
+            groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_HeroKnight>();
+            wallSensorR1 = transform.Find("WallSensor_R1").GetComponent<Sensor_HeroKnight>();
+            wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<Sensor_HeroKnight>();
+            wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<Sensor_HeroKnight>();
+            wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<Sensor_HeroKnight>();
+        }
+        
     }
 
     protected void HandleInputAndMovement()

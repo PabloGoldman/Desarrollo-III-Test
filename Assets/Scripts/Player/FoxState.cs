@@ -8,7 +8,7 @@ public class FoxState : CharacterState, IDamageable
 {
     [HideInInspector] public PlayerAnimatorController animator;
 
-    [SerializeField] PlayerData foxData;
+    [SerializeField] FoxData foxData;
 
     public bool isRolling { get; private set; }
 
@@ -19,11 +19,6 @@ public class FoxState : CharacterState, IDamageable
     {
         animator = GetComponent<PlayerAnimatorController>();
         OnAwake();
-    }
-
-    void Start()
-    {
-        foxData.Start();
     }
 
     // Update is called once per frame
@@ -123,9 +118,9 @@ public class FoxState : CharacterState, IDamageable
         {
             animator.Hurt();
 
-            foxData.currentHealth -= damage;
-            if (foxData.currentHealth <= 0) Die();
-            Debug.Log("entro" + foxData.currentHealth);
+            playerManager.TakeDamage(damage);
+            if (playerManager.currentHealth <= 0) Die();
+            Debug.Log("entro" + playerManager.currentHealth);
         }
     }
 
@@ -154,7 +149,6 @@ public class FoxState : CharacterState, IDamageable
         transform.position = Vector3.zero;
         isDead = false;
         animator.Idle();
-        foxData.Start();
         ResetVariables();
     }
 }

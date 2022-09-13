@@ -9,7 +9,7 @@ public class HumanState : CharacterState, IDamageable
 {
     [HideInInspector] public PlayerAnimatorController animator;
 
-    [SerializeField] PlayerData humanData;
+    [SerializeField] HumanData humanData;
 
     [SerializeField] Transform attackPoint;
 
@@ -25,12 +25,6 @@ public class HumanState : CharacterState, IDamageable
         OnAwake();
     }
 
-    void Start()
-    {
-        humanData.Start();
-    }
-
-    // Update is called once per frame
     private void Update()
     {
         if (!isDead)
@@ -107,7 +101,7 @@ public class HumanState : CharacterState, IDamageable
         // Reset time
         timeSinceAttack = 0.0f;
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, humanData.attackRange, humanData.enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, humanData.attackRange, playerManager.playerData.enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
@@ -168,12 +162,11 @@ public class HumanState : CharacterState, IDamageable
     {
         if (!isDead)
         {
+            playerManager.TakeDamage(damage);
             animator.Hurt();
 
-            humanData.currentHealth -= damage;
-
-            if (humanData.currentHealth <= 0) Die();
-            Debug.Log("morir" + humanData.currentHealth);
+            if (playerManager.currentHealth <= 0) Die();
+            Debug.Log("morir" + playerManager.currentHealth);
         }
     }
 
@@ -192,7 +185,6 @@ public class HumanState : CharacterState, IDamageable
         transform.position = Vector3.zero;
         isDead = false;
         animator.Idle();
-        humanData.Start();
 
         ResetVariables();
     }

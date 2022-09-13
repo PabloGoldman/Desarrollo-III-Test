@@ -3,8 +3,23 @@ using UnityEngine.Events;
 
 public class PlayerManager : MonoBehaviour
 {
+
     [SerializeField] FoxState foxState;
     [SerializeField] HumanState humanState;
+
+    public PlayerData playerData;
+
+    public float currentHealth { get; set; }
+
+    private void Awake()
+    {
+        currentHealth = playerData.maxHealth;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+    }
 
     private void Update()
     {
