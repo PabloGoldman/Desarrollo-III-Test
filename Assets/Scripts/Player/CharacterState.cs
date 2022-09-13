@@ -53,7 +53,6 @@ public abstract class CharacterState : MonoBehaviour
             wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<Sensor_HeroKnight>();
             wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<Sensor_HeroKnight>();
         }
-        
     }
 
     protected void HandleInputAndMovement()
