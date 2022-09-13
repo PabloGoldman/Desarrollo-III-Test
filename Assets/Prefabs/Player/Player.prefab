@@ -404,7 +404,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550829637812236295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0.00000023841858, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -937,6 +937,7 @@ MonoBehaviour:
   facingDirection: 1
   animator: {fileID: 0}
   foxData: {fileID: 11400000, guid: f077a8dadbce08e43ae996ff3c646415, type: 2}
+  timeBetweenJumps: 0.8
 --- !u!1 &6029751198913930119
 GameObject:
   m_ObjectHideFlags: 0
