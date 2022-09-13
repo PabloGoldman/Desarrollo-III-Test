@@ -10,6 +10,10 @@ public class FoxState : CharacterState, IDamageable
 
     [SerializeField] FoxData foxData;
 
+    int jumpCount = 0;
+
+    int maxJumpsAvailable = 2;
+
     public bool isRolling { get; private set; }
 
     private float rollDuration = 8.0f / 14.0f;
@@ -28,7 +32,7 @@ public class FoxState : CharacterState, IDamageable
         {
             rb.velocity = new Vector2(inputX * foxData.speed, rb.velocity.y);
 
-            if (Input.GetKeyDown("space") && (isGrounded) && (!isWallSliding))
+            if (Input.GetKeyDown("space") /*&& (!isWallSliding)*/ && jumpCount < maxJumpsAvailable)
             {
                 Jump();
             }
@@ -65,6 +69,7 @@ public class FoxState : CharacterState, IDamageable
         animator.OnGround(isGrounded);
         rb.velocity = new Vector2(rb.velocity.x, foxData.jumpForce);
         groundSensor.Disable(0.2f);
+        jumpCount++;
     }
 
     void Run()
@@ -94,6 +99,7 @@ public class FoxState : CharacterState, IDamageable
         if (!isGrounded && groundSensor.IsColliding())
         {
             isGrounded = true;
+            jumpCount = 0;
             animator.OnGround(isGrounded);
         }
 
