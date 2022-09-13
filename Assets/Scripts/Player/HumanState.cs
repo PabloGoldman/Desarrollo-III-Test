@@ -141,8 +141,6 @@ public class HumanState : CharacterState, IDamageable
 
     void CheckIsGrounded()
     {
-        Debug.Log(groundSensor.IsColliding());
-
         //Check if character just landed on the ground
         if (!isGrounded && groundSensor.IsColliding())
         {
