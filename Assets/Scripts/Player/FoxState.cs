@@ -90,7 +90,7 @@ public class FoxState : CharacterState, IDamageable
     void Roll()
     {
         animator.Roll();
-        rb.velocity = new Vector2(facingDirection * foxData.rollForce, rb.velocity.y);
+        rb.velocity = new Vector2(1.5f * foxData.rollForce, rb.velocity.y);
     }
 
     void CheckIsGrounded()
