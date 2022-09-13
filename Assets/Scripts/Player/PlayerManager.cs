@@ -23,7 +23,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             if (humanState.gameObject.activeInHierarchy)
             {

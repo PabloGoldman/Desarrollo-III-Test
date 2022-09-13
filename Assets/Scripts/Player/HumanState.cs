@@ -73,7 +73,7 @@ public class HumanState : CharacterState, IDamageable
 
     public override void SwitchState()
     {
-        //throw new System.NotImplementedException();
+        animator.Idle();
     }
 
     void Attack()
