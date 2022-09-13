@@ -17,10 +17,11 @@ public class FoxState : CharacterState, IDamageable
 
     private void Awake()
     {
+        animator = GetComponent<PlayerAnimatorController>();
         OnAwake();
     }
 
-    void Star()
+    void Start()
     {
         foxData.Start();
     }
@@ -32,10 +33,23 @@ public class FoxState : CharacterState, IDamageable
         {
             rb.velocity = new Vector2(inputX * foxData.speed, rb.velocity.y);
 
+            if (Input.GetKeyDown("space") && (isGrounded) && (!isWallSliding))
+            {
+                Jump();
+            }
+
+            else if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                Roll();
+            }
+
+            else if (Mathf.Abs(rb.velocity.x) > 0.15)
+            {
+                Run();
+            }
             CheckIsGrounded();
             HandleInputAndMovement();
             HandleTimers();
-            Jump();
             WallSlide();
 
             if (!isRolling)
