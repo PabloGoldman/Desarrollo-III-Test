@@ -38,7 +38,7 @@ public class FoxState : CharacterState, IDamageable
                 Jump();
             }
 
-            else if (Input.GetKeyDown(KeyCode.LeftShift))
+            else if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.E))
             {
                 Roll();
             }

@@ -8,7 +8,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             if (humanState.gameObject.activeInHierarchy)
             {
@@ -28,7 +28,7 @@ public class PlayerManager : MonoBehaviour
 
                 humanState.gameObject.SetActive(true);
 
-                humanState.gameObject.transform.position = humanState.gameObject.transform.position;
+                humanState.gameObject.transform.position = foxState.gameObject.transform.position;
             }
         }
     }
