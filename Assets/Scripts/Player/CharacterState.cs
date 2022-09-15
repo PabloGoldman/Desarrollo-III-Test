@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class CharacterState : MonoBehaviour
 {
     //HAY QUE ARMAR 1 SCRIPTABLE OBJECT DE LO BASE DEL PLAYER, Y DESPUES LOS OTROS DOS DE:
-    //HUMANO: DAÑO DE ATAQUE, VELOCIDAD
+    //HUMANO: DAï¿½O DE ATAQUE, VELOCIDAD
     //ZORRO: VELOCIDAD DE ROLL, VELOCIDAD NORMAL
     //EL ZORRO TIENE Q TENER DOBLE SALTO
 
@@ -76,6 +76,7 @@ public abstract class CharacterState : MonoBehaviour
 
     protected void ResetVariables()
     {
+        playerManager.currentHealth = playerManager.playerData.maxHealth;
         gameObject.SetActive(false);
         gameObject.SetActive(true);
     }
