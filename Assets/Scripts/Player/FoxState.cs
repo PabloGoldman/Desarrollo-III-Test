@@ -55,6 +55,11 @@ public class FoxState : CharacterState, IDamageable
                 Run();
             }
 
+            else
+            {
+                Idle();
+            }
+
             CheckIsGrounded();
             HandleInputAndMovement();
             HandleTimers();
@@ -103,7 +108,7 @@ public class FoxState : CharacterState, IDamageable
     void Roll()
     {
         animator.Roll();
-        rb.velocity = new Vector2(100, rb.velocity.y);
+        //rb.velocity = new Vector2(100, rb.velocity.y);
     }
 
     void CheckIsGrounded()
@@ -129,15 +134,28 @@ public class FoxState : CharacterState, IDamageable
 
     void WallSlide()
     {
-        //Wall Slide
-        isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding());
-
         if (isWallSliding)
         {
             jumpCount = 1;
         }
 
-        animator.WallSlide(isWallSliding);
+        if (facingDirection > 0 && Input.GetKey(KeyCode.D))
+        {
+            //Wall Slide
+            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding());
+            animator.WallSlide(isWallSliding);
+        }
+        else if (facingDirection < 0 && Input.GetKey(KeyCode.A))
+        {
+            //Wall Slide
+            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding());
+            animator.WallSlide(isWallSliding);
+        }
+        else
+        {
+            isWallSliding = false;
+            animator.WallSlide(isWallSliding);
+        }
     }
 
     public void TakeDamage(float damage)

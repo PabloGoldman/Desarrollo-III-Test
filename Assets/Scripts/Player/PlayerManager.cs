@@ -3,7 +3,6 @@ using UnityEngine.Events;
 
 public class PlayerManager : MonoBehaviour
 {
-
     [SerializeField] FoxState foxState;
     [SerializeField] HumanState humanState;
 

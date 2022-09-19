@@ -66,9 +66,24 @@ public class HumanState : CharacterState, IDamageable
 
     void WallSlide()
     {
-        //Wall Slide
-        isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding());
-        animator.WallSlide(isWallSliding);
+        if (facingDirection > 0 && Input.GetKey(KeyCode.D))
+        {
+            //Wall Slide
+            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding());
+            animator.WallSlide(isWallSliding);
+        }
+        else if (facingDirection < 0 && Input.GetKey(KeyCode.A))
+        {
+            //Wall Slide
+            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding());
+            animator.WallSlide(isWallSliding);
+        }
+        else
+        {
+            isWallSliding = false;
+            animator.WallSlide(isWallSliding);
+        }
+
     }
 
     public override void SwitchState()
