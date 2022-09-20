@@ -36,8 +36,6 @@ public class FoxState : CharacterState, IDamageable
     {
         if (!isDead)
         {
-            rb.velocity = new Vector2(inputX * foxData.speed, rb.velocity.y);
-
             jumpDelay -= Time.deltaTime;
 
             if (Input.GetKeyDown("space") && jumpCount < maxJumpsAvailable && jumpDelay <= 0)
@@ -108,7 +106,12 @@ public class FoxState : CharacterState, IDamageable
     void Roll()
     {
         animator.Roll();
-        //rb.velocity = new Vector2(100, rb.velocity.y);
+
+        isRolling = true;
+
+        rb.velocity = new Vector2(facingDirection * foxData.rollForce, rb.velocity.y);
+
+        rollCurrentTime = 0;
     }
 
     void CheckIsGrounded()
