@@ -72,7 +72,7 @@ public class FoxState : CharacterState, IDamageable
 
     public override void SwitchState()
     {
-        animator.Idle();
+        animator.OnGround(isGrounded);
     }
 
     void Jump()

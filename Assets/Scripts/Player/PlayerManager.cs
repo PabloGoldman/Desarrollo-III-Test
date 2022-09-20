@@ -32,21 +32,23 @@ public class PlayerManager : MonoBehaviour
             {
                 if (humanState.gameObject.activeInHierarchy)
                 {
-                    humanState.SwitchState();
 
                     humanState.gameObject.SetActive(false);
 
                     foxState.gameObject.SetActive(true);
 
+                    foxState.SwitchState();
+
                     foxState.gameObject.transform.position = humanState.gameObject.transform.position;
                 }
                 else
                 {
-                    foxState.SwitchState();
 
                     foxState.gameObject.SetActive(false);
 
                     humanState.gameObject.SetActive(true);
+
+                    humanState.SwitchState();
 
                     humanState.gameObject.transform.position = foxState.gameObject.transform.position;
                 }

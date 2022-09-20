@@ -87,7 +87,8 @@ public class HumanState : CharacterState, IDamageable
 
     public override void SwitchState()
     {
-        animator.Idle();
+        animator.OnGround(isGrounded);
+        //animator.Idle();
     }
 
     void Attack()
