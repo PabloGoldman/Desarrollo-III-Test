@@ -83,7 +83,6 @@ public class HumanState : CharacterState, IDamageable
             isWallSliding = false;
             animator.WallSlide(isWallSliding);
         }
-
     }
 
     public override void SwitchState()
