@@ -17,13 +17,17 @@ public class FoxState : CharacterState, IDamageable
     int maxJumpsAvailable = 2;
 
     [SerializeField] float timeBetweenJumps = 0.3f;
-
     float jumpDelay;
+
+    [SerializeField] float timeBetweenRolls = 1f;
+
+    float rollTimer = 1; //Tiempo para que te deje rollear de nuevo
 
     public bool isRolling { get; private set; }
 
     private float rollDuration = 8.0f / 14.0f;
-    private float rollCurrentTime;
+    private float rollCurrentTime; //Tiempo en el que estas en el roll
+    
 
     private void Awake()
     {
@@ -43,7 +47,7 @@ public class FoxState : CharacterState, IDamageable
                 Jump();
             }
 
-            else if (Input.GetKeyDown(KeyCode.LeftShift))
+            else if (Input.GetKeyDown(KeyCode.LeftShift) && rollTimer >= timeBetweenRolls)
             {
                 Roll();
             }
@@ -110,6 +114,8 @@ public class FoxState : CharacterState, IDamageable
         isRolling = true;
 
         rb.velocity = new Vector2(facingDirection * foxData.rollForce, rb.velocity.y);
+
+        rollTimer = 0;
 
         rollCurrentTime = 0;
     }
@@ -187,6 +193,9 @@ public class FoxState : CharacterState, IDamageable
         // Increase timer that checks roll duration
         if (isRolling)
             rollCurrentTime += Time.deltaTime;
+
+        if (!isRolling)
+            rollTimer += Time.deltaTime;
 
         // Disable rolling if timer extends duration
         if (rollCurrentTime > rollDuration)
