@@ -40,6 +40,8 @@ public class PlayerManager : MonoBehaviour
                     foxState.SwitchState();
 
                     foxState.gameObject.transform.position = humanState.gameObject.transform.position;
+
+                    foxState.gameObject.transform.localScale = humanState.gameObject.transform.localScale;
                 }
                 else
                 {
@@ -51,6 +53,8 @@ public class PlayerManager : MonoBehaviour
                     humanState.SwitchState();
 
                     humanState.gameObject.transform.position = foxState.gameObject.transform.position;
+
+                    humanState.gameObject.transform.localScale = foxState.gameObject.transform.localScale;
                 }
 
                 switchTimer = timePerSwitch;
