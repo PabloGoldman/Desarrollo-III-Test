@@ -47,7 +47,7 @@ public class FoxState : CharacterState, IDamageable
                 Jump();
             }
 
-            else if (Input.GetKeyDown(KeyCode.LeftShift) && rollTimer >= timeBetweenRolls)
+            else if (Input.GetMouseButtonDown(0) && rollTimer >= timeBetweenRolls)
             {
                 Roll();
             }
@@ -68,7 +68,15 @@ public class FoxState : CharacterState, IDamageable
             WallSlide();
 
             if (!isRolling)
+            {
                 rb.velocity = new Vector2(inputX * foxData.speed, rb.velocity.y);
+                rb.gravityScale = 1;
+            }
+            else
+            {
+                rb.gravityScale = 0;
+            }
+
         }
     }
 
@@ -113,7 +121,8 @@ public class FoxState : CharacterState, IDamageable
 
         isRolling = true;
 
-        rb.velocity = new Vector2(facingDirection * foxData.rollForce, rb.velocity.y);
+        rb.velocity = new Vector2(facingDirection * foxData.rollForce, 0.0f);
+       
 
         rollTimer = 0;
 

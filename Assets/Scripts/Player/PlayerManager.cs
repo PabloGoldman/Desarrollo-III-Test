@@ -28,7 +28,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (switchTimer < 0)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+            if (Input.GetKeyDown(KeyCode.LeftAlt))
             {
                 if (humanState.gameObject.activeInHierarchy)
                 {
