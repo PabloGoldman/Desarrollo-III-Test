@@ -211,4 +211,5 @@ public class HumanState : CharacterState, IDamageable
 
         Gizmos.DrawWireSphere(attackPoint.position, humanData.attackRange);
     }
+    
 }

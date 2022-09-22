@@ -14,7 +14,6 @@ public class TestLevel : MonoBehaviour
             state = !state;
             enemies.SetActive(state);
         }
-     
 
         if (Input.GetKey(KeyCode.F2))
             SceneManager.LoadScene("Sebastian");
@@ -22,4 +21,6 @@ public class TestLevel : MonoBehaviour
         if (Input.GetKey(KeyCode.F4))
             Application.Quit();
     }
+    
+    
 }
