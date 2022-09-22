@@ -9,13 +9,13 @@ public class TestLevel : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKey(KeyCode.F1))
+        if (Input.GetKeyDown(KeyCode.F1))
         {
             state = !state;
             enemies.SetActive(state);
         }
 
-        if (Input.GetKey(KeyCode.F2))
+        if (Input.GetKeyDown(KeyCode.F2))
             SceneManager.LoadScene("Sebastian");
         
         if (Input.GetKey(KeyCode.F4))

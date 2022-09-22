@@ -1,6 +1,5 @@
 using UnityEngine;
-using UnityEngine.Events;
-
+using System;
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] FoxState foxState;
@@ -10,7 +9,7 @@ public class PlayerManager : MonoBehaviour
     float switchTimer;
 
     public PlayerData playerData;
-
+    public static event Action<float> OnHit; 
     public float currentHealth { get; set; }
 
     private void Awake()
@@ -22,6 +21,7 @@ public class PlayerManager : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+       OnHit?.Invoke(currentHealth);
     }
 
     private void Update()

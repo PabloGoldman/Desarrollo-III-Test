@@ -176,7 +176,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ae297123f091bbf4e8f1835eb98fb293, type: 3}
-  m_Color: {r: 0.6415094, g: 0.069597736, b: 0.069597736, a: 1}
+  m_Color: {r: 0.06274474, g: 0.33098525, b: 0.8867924, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -297,9 +297,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 384
-  maxHealth: 100
+  maxHealth: 50
   speed: 2.5
   fieldOfView: 2
-  distanceToAttack: 1.5
-  timeToAttack: 2
+  distanceToAttack: 1
+  timeToAttack: 0.5
   damage: 50
