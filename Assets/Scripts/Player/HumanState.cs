@@ -67,20 +67,18 @@ public class HumanState : CharacterState, IDamageable
         if (facingDirection > 0 && Input.GetKey(KeyCode.D))
         {
             //Wall Slide
-            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding());
-            animator.WallSlide(isWallSliding);
+            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) /*|| (wallSensorL1.IsColliding() && wallSensorL2.IsColliding())*/;
         }
         else if (facingDirection < 0 && Input.GetKey(KeyCode.A))
         {
             //Wall Slide
-            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding());
-            animator.WallSlide(isWallSliding);
+            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) /*|| (wallSensorL1.IsColliding() && wallSensorL2.IsColliding())*/;
         }
         else
         {
             isWallSliding = false;
-            animator.WallSlide(isWallSliding);
         }
+        animator.WallSlide(isWallSliding);
     }
 
     public override void SwitchState()
@@ -209,5 +207,5 @@ public class HumanState : CharacterState, IDamageable
 
         Gizmos.DrawWireSphere(attackPoint.position, humanData.attackRange);
     }
-    
+
 }

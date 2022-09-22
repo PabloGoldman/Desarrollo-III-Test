@@ -160,13 +160,13 @@ public class FoxState : CharacterState, IDamageable
         if (facingDirection > 0 && inputX > 0)
         {
             //Wall Slide
-            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding());
+            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding())/* || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding())*/;
 
         }
         else if (facingDirection < 0 && inputX < 0)
         {
             //Wall Slide
-            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding());
+            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()/*) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding()*/);
 
         }
         else
