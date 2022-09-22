@@ -100,7 +100,7 @@ public class FoxState : CharacterState, IDamageable
         jumpCount++;
     }
 
-    void Run()
+    public override void Run()
     {
         // Reset timer
         delayToIdle = 0.05f;

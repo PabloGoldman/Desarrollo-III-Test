@@ -38,6 +38,8 @@ public abstract class CharacterState : MonoBehaviour
     public abstract void SwitchState();
 
     public abstract void Respawn();
+
+    public abstract void Run();
         
     protected void OnAwake()
     {

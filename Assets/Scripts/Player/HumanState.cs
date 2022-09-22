@@ -139,7 +139,7 @@ public class HumanState : CharacterState, IDamageable
         groundSensor.Disable(0.2f);
     }
 
-    void Run()
+    public override void Run()
     {
         // Reset timer
         delayToIdle = 0.05f;

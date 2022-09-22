@@ -6,9 +6,9 @@ public class TestLevel : MonoBehaviour
     [SerializeField] private GameObject enemies;
     private bool state;
 
-
     private void Update()
     {
+
         if (Input.GetKey(KeyCode.F1))
         {
             state = !state;

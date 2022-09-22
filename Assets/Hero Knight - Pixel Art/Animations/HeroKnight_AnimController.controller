@@ -416,7 +416,7 @@ AnimatorStateMachine:
     m_Position: {x: 410, y: 530, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102418100664758852}
-    m_Position: {x: 430, y: 640, z: 0}
+    m_Position: {x: 400, y: 650, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 110121702}
@@ -816,9 +816,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.99242765
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0
+  m_ExitTime: 0.0000000038781054
   m_HasExitTime: 0
   m_HasFixedDuration: 0
   m_InterruptionSource: 2
@@ -887,9 +887,6 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Grounded
-    m_EventTreshold: 0
-  - m_ConditionMode: 4
-    m_ConditionEvent: AirSpeedY
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102418100664758852}
