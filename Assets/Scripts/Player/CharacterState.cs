@@ -40,7 +40,7 @@ public abstract class CharacterState : MonoBehaviour
     public abstract void Respawn();
 
     public abstract void Run();
-        
+
     protected void OnAwake()
     {
         if (!rb)
@@ -74,6 +74,11 @@ public abstract class CharacterState : MonoBehaviour
             transform.localScale = new Vector2(-1, transform.localScale.y);
             facingDirection = -1;
         }
+
+        if (Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
+        {
+            StartCoroutine(DisableWallSensorsCollidersCoroutine());
+        }
     }
 
     protected void ResetVariables()
@@ -81,6 +86,15 @@ public abstract class CharacterState : MonoBehaviour
         playerManager.currentHealth = playerManager.playerData.maxHealth;
         gameObject.SetActive(false);
         gameObject.SetActive(true);
+    }
+
+    IEnumerator DisableWallSensorsCollidersCoroutine()
+    {
+        wallSensorR1.gameObject.SetActive(false);
+        wallSensorR2.gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.1f);
+        wallSensorR1.gameObject.SetActive(true);
+        wallSensorR2.gameObject.SetActive(true);
     }
 
     // Animation Events

@@ -27,7 +27,7 @@ public class FoxState : CharacterState, IDamageable
 
     private float rollDuration = 8.0f / 14.0f;
     private float rollCurrentTime; //Tiempo en el que estas en el roll
-    
+
 
     private void Awake()
     {
@@ -40,6 +40,9 @@ public class FoxState : CharacterState, IDamageable
     {
         if (!isDead)
         {
+            HandleInputAndMovement();
+            WallSlide();
+
             jumpDelay -= Time.deltaTime;
 
             if (Input.GetKeyDown("space") && jumpCount < maxJumpsAvailable && jumpDelay <= 0)
@@ -63,9 +66,7 @@ public class FoxState : CharacterState, IDamageable
             }
 
             CheckIsGrounded();
-            HandleInputAndMovement();
             HandleTimers();
-            WallSlide();
 
             if (!isRolling)
             {
@@ -122,7 +123,6 @@ public class FoxState : CharacterState, IDamageable
         isRolling = true;
 
         rb.velocity = new Vector2(facingDirection * foxData.rollForce, 0.0f);
-       
 
         rollTimer = 0;
 
@@ -157,23 +157,24 @@ public class FoxState : CharacterState, IDamageable
             jumpCount = 1;
         }
 
-        if (facingDirection > 0 && Input.GetKey(KeyCode.D))
+        if (facingDirection > 0 && inputX > 0)
         {
             //Wall Slide
             isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding());
-            animator.WallSlide(isWallSliding);
+
         }
-        else if (facingDirection < 0 && Input.GetKey(KeyCode.A))
+        else if (facingDirection < 0 && inputX < 0)
         {
             //Wall Slide
             isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding());
-            animator.WallSlide(isWallSliding);
+
         }
         else
         {
             isWallSliding = false;
-            animator.WallSlide(isWallSliding);
         }
+
+        animator.WallSlide(isWallSliding);
     }
 
     public void TakeDamage(float damage)
