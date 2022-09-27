@@ -10,6 +10,8 @@ public class FoxState : CharacterState, IDamageable
 
     int jumpCount = 0;
 
+    float initialGravityScale;
+
     int maxJumpsAvailable = 2;
 
     [SerializeField] float timeBetweenJumps = 0.3f;
@@ -27,6 +29,8 @@ public class FoxState : CharacterState, IDamageable
     public override void Awake()
     {
         base.Awake();
+
+        initialGravityScale = rb.gravityScale;
     }
 
     // Update is called once per frame
@@ -65,7 +69,7 @@ public class FoxState : CharacterState, IDamageable
             if (!isRolling)
             {
                 rb.velocity = new Vector2(inputX * foxData.speed, rb.velocity.y);
-                rb.gravityScale = 1;
+                rb.gravityScale = initialGravityScale;
             }
             else
             {
@@ -139,29 +143,29 @@ public class FoxState : CharacterState, IDamageable
 
     void WallSlide()
     {
-        if (isWallSliding)
-        {
-            jumpCount = 1;
-        }
+        //if (isWallSliding)
+        //{
+        //    jumpCount = 1;
+        //}
 
-        if (facingDirection > 0 && inputX > 0)
-        {
-            //Wall Slide
-            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding())/* || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding())*/;
+        //if (facingDirection > 0 && inputX > 0)
+        //{
+        //    //Wall Slide
+        //    isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding())/* || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding())*/;
 
-        }
-        else if (facingDirection < 0 && inputX < 0)
-        {
-            //Wall Slide
-            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()/*) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding()*/);
+        //}
+        //else if (facingDirection < 0 && inputX < 0)
+        //{
+        //    //Wall Slide
+        //    isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()/*) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding()*/);
 
-        }
-        else
-        {
-            isWallSliding = false;
-        }
+        //}
+        //else
+        //{
+        //    isWallSliding = false;
+        //}
 
-        animator.WallSlide(isWallSliding);
+        //animator.WallSlide(isWallSliding);
     }
 
     public void TakeDamage(float damage)
