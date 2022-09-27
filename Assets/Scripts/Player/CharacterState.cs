@@ -4,18 +4,15 @@ using UnityEngine;
 
 public abstract class CharacterState : MonoBehaviour
 {
-    //HAY QUE ARMAR 1 SCRIPTABLE OBJECT DE LO BASE DEL PLAYER, Y DESPUES LOS OTROS DOS DE:
-    //HUMANO: DA�O DE ATAQUE, VELOCIDAD
-    //ZORRO: VELOCIDAD DE ROLL, VELOCIDAD NORMAL
-    //EL ZORRO TIENE Q TENER DOBLE SALTO
+    [HideInInspector] public PlayerAnimatorController animator;
+
+    Vector3 firstSpawnPosition;
 
     protected PlayerManager playerManager;
 
     [HideInInspector] public Sensor_HeroKnight groundSensor;
     [HideInInspector] public Sensor_HeroKnight wallSensorR1;
     [HideInInspector] public Sensor_HeroKnight wallSensorR2;
-    //[HideInInspector] public Sensor_HeroKnight wallSensorL1;
-    //[HideInInspector] public Sensor_HeroKnight wallSensorL2;
 
     public bool isGrounded;
 
@@ -35,27 +32,73 @@ public abstract class CharacterState : MonoBehaviour
 
     protected float inputX;
 
-    public abstract void SwitchState();
-
-    public abstract void Respawn();
-
-    public abstract void Run();
-
-    protected void OnAwake()
+    public virtual void Awake()
     {
         if (!rb)
         {
+            firstSpawnPosition = transform.position;
+
             rb = GetComponent<Rigidbody2D>();
 
             playerManager = GetComponentInParent<PlayerManager>();
 
+            animator = GetComponent<PlayerAnimatorController>();
+
             groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_HeroKnight>();
             wallSensorR1 = transform.Find("WallSensor_R1").GetComponent<Sensor_HeroKnight>();
             wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<Sensor_HeroKnight>();
-            //wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<Sensor_HeroKnight>();
-            //wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<Sensor_HeroKnight>();
         }
     }
+
+    public virtual void Idle()
+    {
+        // Prevents flickering transitions to idle
+        delayToIdle -= Time.deltaTime;
+        if (delayToIdle < 0)
+            animator.Idle();
+    }
+
+    public virtual void SwitchState()
+    {
+        animator.OnGround(isGrounded);
+    }
+
+    public virtual void Die()
+    {
+        rb.velocity = Vector2.zero;
+        animator.Death();
+        isDead = true;
+
+        Invoke(nameof(Respawn), timeToRespawn);
+    }
+
+    public virtual void Respawn()
+    {
+        isGrounded = true;
+        isDead = false;
+        animator.Idle();
+
+        if (playerManager.currentCheckPoint)
+        {
+            transform.position = playerManager.currentCheckPoint.transform.position;
+        }
+        else
+        {
+            transform.position = firstSpawnPosition;
+        }
+
+        ResetVariables();
+    }
+
+    public virtual void Jump()
+    {
+        animator.Jump(isGrounded);
+        isGrounded = false;
+        animator.OnGround(isGrounded);
+        groundSensor.Disable(0.2f);
+    }
+
+    public abstract void Run();
 
     protected void HandleInputAndMovement()
     {
@@ -86,6 +129,14 @@ public abstract class CharacterState : MonoBehaviour
         playerManager.currentHealth = playerManager.playerData.maxHealth;
         gameObject.SetActive(false);
         gameObject.SetActive(true);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Checkpoint"))
+        {
+            playerManager.currentCheckPoint = collision.GetComponent<Checkpoint>();
+        }
     }
 
     IEnumerator DisableWallSensorsCollidersCoroutine()

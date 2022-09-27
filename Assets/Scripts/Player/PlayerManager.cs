@@ -6,6 +6,9 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] HumanState humanState;
 
     [SerializeField] float timePerSwitch;
+
+    public Checkpoint currentCheckPoint;
+
     float switchTimer;
 
     public PlayerData playerData;

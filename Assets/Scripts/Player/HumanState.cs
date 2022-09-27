@@ -5,8 +5,6 @@ using UnityEngine.Events;
 [Serializable]
 public class HumanState : CharacterState, IDamageable
 {
-    [HideInInspector] public PlayerAnimatorController animator;
-
     [SerializeField] HumanData humanData;
 
     [SerializeField] Transform attackPoint;
@@ -17,10 +15,9 @@ public class HumanState : CharacterState, IDamageable
 
     private int currentAttack;
 
-    private void Awake()
+    public override void Awake()
     {
-        animator = GetComponent<PlayerAnimatorController>();
-        OnAwake();
+        base.Awake();
     }
 
     private void Update()
@@ -67,24 +64,18 @@ public class HumanState : CharacterState, IDamageable
         if (facingDirection > 0 && Input.GetKey(KeyCode.D))
         {
             //Wall Slide
-            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) /*|| (wallSensorL1.IsColliding() && wallSensorL2.IsColliding())*/;
+            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding());
         }
         else if (facingDirection < 0 && Input.GetKey(KeyCode.A))
         {
             //Wall Slide
-            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()) /*|| (wallSensorL1.IsColliding() && wallSensorL2.IsColliding())*/;
+            isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding());
         }
         else
         {
             isWallSliding = false;
         }
         animator.WallSlide(isWallSliding);
-    }
-
-    public override void SwitchState()
-    {
-        animator.OnGround(isGrounded);
-        //animator.Idle();
     }
 
     void Attack()
@@ -126,13 +117,16 @@ public class HumanState : CharacterState, IDamageable
         onThirdAttack?.Invoke();
     }
 
-    void Jump()
+    public override void SwitchState()
     {
-        animator.Jump(isGrounded);
-        isGrounded = false;
-        animator.OnGround(isGrounded);
+        base.SwitchState();
+    }
+
+    public override void Jump()
+    {
+        base.Jump();
+
         rb.velocity = new Vector2(rb.velocity.x, humanData.jumpForce);
-        groundSensor.Disable(0.2f);
     }
 
     public override void Run()
@@ -142,12 +136,9 @@ public class HumanState : CharacterState, IDamageable
         animator.Run();
     }
 
-    void Idle()
+    public override void Idle()
     {
-        // Prevents flickering transitions to idle
-        delayToIdle -= Time.deltaTime;
-        if (delayToIdle < 0)
-            animator.Idle();
+        base.Idle();
     }
 
     void CheckIsGrounded()
@@ -179,23 +170,14 @@ public class HumanState : CharacterState, IDamageable
         }
     }
 
-    void Die()
+    public override void Die()
     {
-        rb.velocity = Vector2.zero;
-        animator.Death();
-        isDead = true;
-
-        Invoke(nameof(Respawn), timeToRespawn);
+        base.Die();
     }
 
     public override void Respawn()
     {
-        isGrounded = true;
-        transform.position = Vector3.zero;
-        isDead = false;
-        animator.Idle();
-
-        ResetVariables();
+        base.Respawn();
     }
 
     private void OnDrawGizmosSelected()

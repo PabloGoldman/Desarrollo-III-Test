@@ -6,11 +6,7 @@ using System;
 [Serializable]
 public class FoxState : CharacterState, IDamageable
 {
-    [HideInInspector] public PlayerAnimatorController animator;
-
     [SerializeField] FoxData foxData;
-
-    bool enteredWallSlide;
 
     int jumpCount = 0;
 
@@ -28,11 +24,9 @@ public class FoxState : CharacterState, IDamageable
     private float rollDuration = 8.0f / 14.0f;
     private float rollCurrentTime; //Tiempo en el que estas en el roll
 
-
-    private void Awake()
+    public override void Awake()
     {
-        animator = GetComponent<PlayerAnimatorController>();
-        OnAwake();
+        base.Awake();
     }
 
     // Update is called once per frame
@@ -83,18 +77,14 @@ public class FoxState : CharacterState, IDamageable
 
     public override void SwitchState()
     {
-        animator.OnGround(isGrounded);
+        base.SwitchState();
     }
 
-    void Jump()
+    public override void Jump()
     {
-        animator.Jump(isGrounded);
-        isGrounded = false;
-        animator.OnGround(isGrounded);
-
+        base.Jump();
+        
         rb.velocity = new Vector2(rb.velocity.x, foxData.jumpForce);
-
-        groundSensor.Disable(0.2f);
 
         jumpDelay = timeBetweenJumps;
 
@@ -108,12 +98,9 @@ public class FoxState : CharacterState, IDamageable
         animator.Run();
     }
 
-    void Idle()
+    public override void Idle()
     {
-        // Prevents flickering transitions to idle
-        delayToIdle -= Time.deltaTime;
-        if (delayToIdle < 0)
-            animator.Idle();
+        base.Idle();
     }
 
     void Roll()
@@ -189,13 +176,9 @@ public class FoxState : CharacterState, IDamageable
         }
     }
 
-    void Die()
+    public override void Die()
     {
-        rb.velocity = Vector2.zero;
-        animator.Death();
-        isDead = true;
-
-        Invoke(nameof(Respawn), timeToRespawn);
+        base.Die();
     }
 
     void HandleTimers()
@@ -214,9 +197,6 @@ public class FoxState : CharacterState, IDamageable
 
     public override void Respawn()
     {
-        transform.position = Vector3.zero;
-        isDead = false;
-        animator.Idle();
-        ResetVariables();
+        base.Respawn();
     }
 }
