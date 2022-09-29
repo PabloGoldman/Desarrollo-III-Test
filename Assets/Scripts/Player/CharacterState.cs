@@ -50,6 +50,14 @@ public abstract class CharacterState : MonoBehaviour
         }
     }
 
+    protected void OnUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Die();
+        }
+    }
+
     public virtual void Idle()
     {
         // Prevents flickering transitions to idle

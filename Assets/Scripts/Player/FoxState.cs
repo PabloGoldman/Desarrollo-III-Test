@@ -36,15 +36,11 @@ public class FoxState : CharacterState, IDamageable
     // Update is called once per frame
     void Update()
     {
+        OnUpdate();
         if (!isDead)
         {
             HandleInputAndMovement();
             WallSlide();
-
-            if (rb.velocity.y < 0)
-            {
-                Debug.Log(rb.velocity.y);
-            }
 
             jumpDelay -= Time.deltaTime;
 

@@ -22,6 +22,7 @@ public class HumanState : CharacterState, IDamageable
 
     private void Update()
     {
+        OnUpdate();
         if (!isDead)
         {
             HandleInputAndMovement();
