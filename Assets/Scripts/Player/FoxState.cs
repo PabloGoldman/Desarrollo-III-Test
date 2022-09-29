@@ -41,6 +41,11 @@ public class FoxState : CharacterState, IDamageable
             HandleInputAndMovement();
             WallSlide();
 
+            if (rb.velocity.y < 0)
+            {
+                Debug.Log(rb.velocity.y);
+            }
+
             jumpDelay -= Time.deltaTime;
 
             if (Input.GetKeyDown("space") && jumpCount < maxJumpsAvailable && jumpDelay <= 0)
