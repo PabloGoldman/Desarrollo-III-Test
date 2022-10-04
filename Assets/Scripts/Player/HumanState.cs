@@ -15,6 +15,8 @@ public class HumanState : CharacterState, IDamageable
 
     private int currentAttack;
 
+    bool isAttacking;
+
     public override void Awake()
     {
         base.Awake();
@@ -25,17 +27,19 @@ public class HumanState : CharacterState, IDamageable
         OnUpdate();
         if (!isDead)
         {
-            HandleInputAndMovement();
+            if (timeSinceAttack > 0.4f)
+            {
+                HandleInputAndMovement();
+            }
+
             CheckIsGrounded();
-            WallSlide();
 
             rb.velocity = new Vector2(inputX * humanData.speed, rb.velocity.y);
-
             // Increase timer that controls attack combo
             timeSinceAttack += Time.deltaTime;
 
             //Attack
-            if (Input.GetMouseButtonDown(0) && timeSinceAttack > 0.25f)
+            if (Input.GetMouseButtonDown(0) && timeSinceAttack > 0.5f)
             {
                 Attack();
             }
@@ -60,46 +64,19 @@ public class HumanState : CharacterState, IDamageable
         }
     }
 
-    void WallSlide()
-    {
-        //if (facingDirection > 0 && Input.GetKey(KeyCode.D))
-        //{
-        //    //Wall Slide
-        //    isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding());
-        //}
-        //else if (facingDirection < 0 && Input.GetKey(KeyCode.A))
-        //{
-        //    //Wall Slide
-        //    isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding());
-        //}
-        //else
-        //{
-        //    isWallSliding = false;
-        //}
-        //animator.WallSlide(isWallSliding);
-    }
-
     void Attack()
     {
-        currentAttack++;
-
-        if (currentAttack == 3)
-        {
-            TriggerThirdAttack();
-        }
-
-        // Loop back to one after third attack
-        else if (currentAttack > 3)
-        {
-            currentAttack = 1;
-        }
+        isAttacking = true;
 
         // Reset Attack combo if time since last attack is too large
         if (timeSinceAttack > 1.0f)
+        {
             currentAttack = 1;
+            isAttacking = false;
+        }
 
         // Call one of three attack animations "Attack1", "Attack2", "Attack3"
-        animator.Attack(currentAttack);
+        animator.Attack(1);
 
         // Reset time
         timeSinceAttack = 0.0f;

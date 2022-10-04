@@ -125,11 +125,6 @@ public abstract class CharacterState : MonoBehaviour
             transform.localScale = new Vector2(-1, transform.localScale.y);
             facingDirection = -1;
         }
-
-        if (Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
-        {
-            StartCoroutine(DisableWallSensorsCollidersCoroutine());
-        }
     }
 
     protected void ResetVariables()

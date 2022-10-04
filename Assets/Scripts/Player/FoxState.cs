@@ -40,7 +40,6 @@ public class FoxState : CharacterState, IDamageable
         if (!isDead)
         {
             HandleInputAndMovement();
-            WallSlide();
 
             jumpDelay -= Time.deltaTime;
 
@@ -140,33 +139,6 @@ public class FoxState : CharacterState, IDamageable
             isGrounded = false;
             animator.OnGround(isGrounded);
         }
-    }
-
-    void WallSlide()
-    {
-        //if (isWallSliding)
-        //{
-        //    jumpCount = 1;
-        //}
-
-        //if (facingDirection > 0 && inputX > 0)
-        //{
-        //    //Wall Slide
-        //    isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding())/* || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding())*/;
-
-        //}
-        //else if (facingDirection < 0 && inputX < 0)
-        //{
-        //    //Wall Slide
-        //    isWallSliding = (wallSensorR1.IsColliding() && wallSensorR2.IsColliding()/*) || (wallSensorL1.IsColliding() && wallSensorL2.IsColliding()*/);
-
-        //}
-        //else
-        //{
-        //    isWallSliding = false;
-        //}
-
-        //animator.WallSlide(isWallSliding);
     }
 
     public void TakeDamage(float damage)
