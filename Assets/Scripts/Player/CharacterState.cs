@@ -24,7 +24,7 @@ public abstract class CharacterState : MonoBehaviour
 
     protected bool isWallSliding = false;
 
-    protected bool isDead;
+    public bool isDead { get ; protected set; }
 
     protected Rigidbody2D rb;
 

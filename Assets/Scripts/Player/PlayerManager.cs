@@ -12,7 +12,7 @@ public class PlayerManager : MonoBehaviour
     float switchTimer;
 
     public PlayerData playerData;
-    public static event Action<float> OnHit; 
+    public static event Action<float> OnHit;
     public float currentHealth { get; set; }
 
     private void Awake()
@@ -27,7 +27,7 @@ public class PlayerManager : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-       OnHit?.Invoke(currentHealth);
+        OnHit?.Invoke(currentHealth);
     }
 
     private void Update()
@@ -36,7 +36,7 @@ public class PlayerManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.LeftAlt))
             {
-                if (humanState.gameObject.activeInHierarchy)
+                if (humanState.gameObject.activeInHierarchy && !humanState.isDead)
                 {
 
                     humanState.gameObject.SetActive(false);
@@ -49,7 +49,7 @@ public class PlayerManager : MonoBehaviour
 
                     foxState.gameObject.transform.localScale = humanState.gameObject.transform.localScale;
                 }
-                else
+                else if (!foxState.isDead)
                 {
 
                     foxState.gameObject.SetActive(false);
