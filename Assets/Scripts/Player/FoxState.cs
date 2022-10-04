@@ -87,7 +87,7 @@ public class FoxState : CharacterState, IDamageable
     public override void Jump()
     {
         base.Jump();
-        
+
         rb.velocity = new Vector2(rb.velocity.x, foxData.jumpForce);
 
         jumpDelay = timeBetweenJumps;
@@ -145,11 +145,17 @@ public class FoxState : CharacterState, IDamageable
     {
         if (!isDead)
         {
-            animator.Hurt();
-
             playerManager.TakeDamage(damage * foxData.damageTakenMultiplier);
-            if (playerManager.currentHealth <= 0) Die();
-            Debug.Log("entro" + playerManager.currentHealth);
+
+            if (playerManager.currentHealth <= 0)
+            {
+                Die();
+                Debug.Log("entro" + playerManager.currentHealth);
+            }
+            else
+            {
+                animator.Hurt();
+            }
         }
     }
 

@@ -49,8 +49,8 @@ public class PlayerAnimatorController : MonoBehaviour
 
     public void Death()
     {
-        animator.SetBool("noBlood", false);
         animator.SetTrigger("Death");
+        Debug.Log("asdasdasd");
     }
 
     public void WallSliding(bool wallSliding)

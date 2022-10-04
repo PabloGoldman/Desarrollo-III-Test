@@ -85,7 +85,7 @@ public abstract class CharacterState : MonoBehaviour
         isGrounded = true;
         isDead = false;
         animator.Idle();
-
+            
         if (playerManager.currentCheckPoint)
         {
             transform.position = playerManager.currentCheckPoint.transform.position;
@@ -140,15 +140,6 @@ public abstract class CharacterState : MonoBehaviour
         {
             playerManager.currentCheckPoint = collision.GetComponent<Checkpoint>();
         }
-    }
-
-    IEnumerator DisableWallSensorsCollidersCoroutine()
-    {
-        wallSensorR1.gameObject.SetActive(false);
-        wallSensorR2.gameObject.SetActive(false);
-        yield return new WaitForSeconds(0.1f);
-        wallSensorR1.gameObject.SetActive(true);
-        wallSensorR2.gameObject.SetActive(true);
     }
 
     // Animation Events

@@ -13,8 +13,6 @@ public class HumanState : CharacterState, IDamageable
 
     private float timeSinceAttack = 0.0f;
 
-    private int currentAttack;
-
     bool isAttacking;
 
     public override void Awake()
@@ -71,7 +69,6 @@ public class HumanState : CharacterState, IDamageable
         // Reset Attack combo if time since last attack is too large
         if (timeSinceAttack > 1.0f)
         {
-            currentAttack = 1;
             isAttacking = false;
         }
 
@@ -141,10 +138,17 @@ public class HumanState : CharacterState, IDamageable
         if (!isDead)
         {
             playerManager.TakeDamage(damage);
-            animator.Hurt();
 
-            if (playerManager.currentHealth <= 0) Die();
-            Debug.Log("morir" + playerManager.currentHealth);
+            if (playerManager.currentHealth <= 0)
+            {
+                Die();
+                Debug.Log("morir" + playerManager.currentHealth);
+            }
+            else
+            {
+                animator.Hurt();
+            }
+
         }
     }
 
