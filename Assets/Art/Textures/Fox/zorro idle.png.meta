@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ba6e7817336634849a416a7b2aa5a21e
+guid: 88e8e7264e388024da4cb6853d5bcecc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,8 +45,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 7
+  spritePivot: {x: 0.5, y: 0}
   spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -101,6 +101,18 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -128,13 +140,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tanuk caminando_0
+      name: zorro idle_0
       rect:
         serializedVersion: 2
-        x: 126
-        y: 2253
-        width: 575
-        height: 380
+        x: 0
+        y: 3248
+        width: 1000
+        height: 752
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13e09b739fe306f41abc894ee6e344a3
-      internalID: 1097699199
+      spriteID: 05b434c7e95b8bc4682d5ecf574c6482
+      internalID: 1416668293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tanuk caminando_2
+      name: zorro idle_1
       rect:
         serializedVersion: 2
-        x: 1145
-        y: 2249
-        width: 575
-        height: 380
+        x: 1000
+        y: 3248
+        width: 1000
+        height: 752
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4579cde71765af4449e8ef594d2c136d
-      internalID: -116010955
+      spriteID: 3a243300afc8e4743bcbdec97ae799a0
+      internalID: 663151493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tanuk caminando_3
+      name: zorro idle_2
       rect:
         serializedVersion: 2
-        x: 2135
-        y: 2253
-        width: 575
-        height: 380
+        x: 2000
+        y: 3248
+        width: 1000
+        height: 752
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a696a9beea6536746a40ba869b1f67f9
-      internalID: 1860473611
+      spriteID: 7ed968ec21be01a448b07811c3a832e9
+      internalID: 1835231329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tanuk caminando_45
+      name: zorro idle_3
       rect:
         serializedVersion: 2
-        x: 128
-        y: 1239
-        width: 575
-        height: 380
+        x: 0
+        y: 2248
+        width: 1000
+        height: 752
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,41 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d15476d63c34ed0438a3a2b7f507c0d0
-      internalID: -425758622
+      spriteID: 169338abfa9a4654a8c5d98bcfa90bc1
+      internalID: -1034328852
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tanuk caminando_46
+      name: zorro idle_4
       rect:
         serializedVersion: 2
-        x: 1129
-        y: 1229
-        width: 575
-        height: 380
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b3afd7dcd502b642a48d937b0cb0fe5
-      internalID: -2054225884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tanuk caminando_47
-      rect:
-        serializedVersion: 2
-        x: 2111
-        y: 1242
-        width: 575
-        height: 380
+        x: 1000
+        y: 2248
+        width: 1000
+        height: 752
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +238,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24c79a9dd6feafd45b053e7602795722
-      internalID: 1927043270
+      spriteID: f1f9cbf8ad38e484ba2411b182b948f8
+      internalID: 2011940014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tanuk caminando_72
+      name: zorro idle_5
       rect:
         serializedVersion: 2
-        x: 130
-        y: 254
-        width: 575
-        height: 380
+        x: 2000
+        y: 2248
+        width: 1000
+        height: 752
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,20 +259,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48d2cf5d710aa9247b0a810ee0cff6b7
-      internalID: 1129163454
+      spriteID: 982190c40d53e9342b9f65cf785443f4
+      internalID: -829010384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tanuk caminando_1
+      name: zorro idle_6
       rect:
         serializedVersion: 2
-        x: 1147
-        y: 241
-        width: 575
-        height: 380
+        x: 0
+        y: 1248
+        width: 1000
+        height: 752
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,8 +280,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c26d6813864c67c40b2a5e9d12a7a6f4
-      internalID: 1417493741
+      spriteID: ef04d96812eaa564a8a859ee4512d1db
+      internalID: 942643721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zorro idle_7
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1248
+        width: 1000
+        height: 752
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df587da449dd7194981e9e63a2cb2339
+      internalID: -540407606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zorro idle_8
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1248
+        width: 1000
+        height: 752
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daacee3bdc9f21947beba1f9fb184943
+      internalID: 1261377560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zorro idle_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 248
+        width: 1000
+        height: 752
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d786ea59af819d4c90f3f78e5b9d9d0
+      internalID: -1150899350
       vertices: []
       indices: 
       edges: []
@@ -299,96 +353,23 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tanuk caminando_16: -1022967111
-      tanuk caminando_48: 1451303602
-      tanuk caminando_82: -259548117
-      tanuk caminando_74: -1784714615
-      tanuk caminando_66: -1153028872
-      tanuk caminando_14: -1960857081
-      tanuk caminando_43: 917867994
-      tanuk caminando_33: -2082205959
-      tanuk caminando_50: 1324586209
-      tanuk caminando_64: 1706261685
-      tanuk caminando_17: -1370194059
-      tanuk caminando_31: 782148528
-      tanuk caminando_55: -310364030
-      tanuk caminando_77: -1033620547
-      tanuk caminando_3: 1860473611
-      tanuk caminando_8: -1814388223
-      tanuk caminando_59: 128411298
-      tanuk caminando_4: 1167915739
-      tanuk caminando_57: -111038586
-      tanuk caminando_15: -1378012734
-      tanuk caminando_11: 663203412
-      tanuk caminando_19: -1500610891
-      tanuk caminando_61: 371118159
-      tanuk caminando_29: -179443752
-      tanuk caminando_52: 1313832057
-      tanuk caminando_69: -1205163168
-      tanuk caminando_39: 1592165415
-      tanuk caminando_62: 464640381
-      tanuk caminando_58: 824808058
-      tanuk caminando_20: -104221791
-      tanuk caminando_9: 2141163760
-      tanuk caminando_53: -931481244
-      tanuk caminando_28: 596531466
-      tanuk caminando_7: 1070421553
-      tanuk caminando_47: 1927043270
-      tanuk caminando_51: -926305569
-      tanuk caminando_45: -425758622
-      tanuk caminando_41: 527247840
-      tanuk caminando_72: 1129163454
-      tanuk caminando_75: -860491358
-      tanuk caminando_63: 1674101437
-      tanuk caminando_54: 497589844
-      tanuk caminando_6: 657035057
-      tanuk caminando_70: -1359736927
-      tanuk caminando_2: -116010955
-      tanuk caminando_76: -971908595
-      tanuk caminando_73: -1181280975
-      tanuk caminando_46: -2054225884
-      tanuk caminando_78: -1942534165
-      tanuk caminando_21: 1512486731
-      tanuk caminando_18: -154972828
-      tanuk caminando_38: -1694455842
-      tanuk caminando_27: -1458099718
-      tanuk caminando_65: 1994351026
-      tanuk caminando_71: -709485976
-      tanuk caminando_40: 414829546
-      tanuk caminando_10: 521319056
-      tanuk caminando_5: -781652293
-      tanuk caminando_36: 2059952843
-      tanuk caminando_30: 499971342
-      tanuk caminando_56: -286708696
-      tanuk caminando_60: 960803385
-      tanuk caminando_44: -1202170084
-      tanuk caminando_79: 1626813874
-      tanuk caminando_34: -144583189
-      tanuk caminando_68: -2121419436
-      tanuk caminando_26: -785342699
-      tanuk caminando_49: 139441610
-      tanuk caminando_12: -1078724078
-      tanuk caminando_81: -157062162
-      tanuk caminando_37: -2110014524
-      tanuk caminando_22: -2044404302
-      tanuk caminando_0: 1097699199
-      tanuk caminando_67: -195849284
-      tanuk caminando_35: 1336239047
-      tanuk caminando_24: 2142948270
-      tanuk caminando_32: 425988777
-      tanuk caminando_42: -1565174062
-      tanuk caminando_23: 265490995
-      tanuk caminando_25: -1126148453
-      tanuk caminando_1: 1417493741
-      tanuk caminando_13: -1791544530
-      tanuk caminando_80: -175364267
+      zorro idle_3: -1034328852
+      zorro idle_6: 942643721
+      zorro idle_9: -1150899350
+      zorro idle_7: -540407606
+      zorro idle_8: 1261377560
+      zorro idle_1: 663151493
+      zorro idle_2: 1835231329
+      zorro idle_5: -829010384
+      zorro idle_0: 1416668293
+      zorro idle_4: 2011940014
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
