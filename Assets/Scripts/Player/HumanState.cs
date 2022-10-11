@@ -15,6 +15,8 @@ public class HumanState : CharacterState, IDamageable
 
     bool isAttacking;
 
+    private int currentAttack;
+
     public override void Awake()
     {
         base.Awake();
@@ -64,16 +66,30 @@ public class HumanState : CharacterState, IDamageable
 
     void Attack()
     {
-        isAttacking = true;
+        currentAttack++;
+
+        if (currentAttack == 3)
+        {
+            TriggerThirdAttack();
+        }
+
+        // Loop back to one after third attack
+        else if (currentAttack > 3)
+        {
+            currentAttack = 1;
+        }
 
         // Reset Attack combo if time since last attack is too large
         if (timeSinceAttack > 1.0f)
         {
+            currentAttack = 1;
             isAttacking = false;
         }
 
         // Call one of three attack animations "Attack1", "Attack2", "Attack3"
-        animator.Attack(1);
+        animator.Attack(currentAttack);
+
+        isAttacking = true;
 
         // Reset time
         timeSinceAttack = 0.0f;
@@ -89,7 +105,7 @@ public class HumanState : CharacterState, IDamageable
 
     public void TriggerThirdAttack()
     {
-        onThirdAttack?.Invoke();
+        //onThirdAttack?.Invoke();
     }
 
     public override void SwitchState()
