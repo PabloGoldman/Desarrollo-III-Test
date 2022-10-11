@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4309845786736676090}
   m_Layer: 0
   m_Name: Rectangulo mediano flaco corto
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,6 +124,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4790568712946758391, guid: dc07acd3a78d01148b17d3939c0fb939, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc07acd3a78d01148b17d3939c0fb939, type: 3}
 --- !u!4 &1344508489311374834 stripped
@@ -141,6 +145,10 @@ PrefabInstance:
     - target: {fileID: 3838489505872265697, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_Name
       value: Platform_1_Grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 3838489505872265697, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5093890922372492584, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_DynamicOccludee
@@ -319,6 +327,10 @@ PrefabInstance:
     - target: {fileID: 1903605613426058875, guid: 753c279b12bec4c4080f0300c9c4ed26, type: 3}
       propertyPath: m_Name
       value: Platform_1_Under
+      objectReference: {fileID: 0}
+    - target: {fileID: 1903605613426058875, guid: 753c279b12bec4c4080f0300c9c4ed26, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3531243198710329626, guid: 753c279b12bec4c4080f0300c9c4ed26, type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.data[0].mode
