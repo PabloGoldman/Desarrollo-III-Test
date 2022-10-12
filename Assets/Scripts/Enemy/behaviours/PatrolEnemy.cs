@@ -10,7 +10,7 @@ public class PatrolEnemy : MonoBehaviour
     private Transform pointOfView;
    
    
-    private const float groundDistance = 1.5f;
+    private const float groundDistance = 0.5f;
 
     private void Awake()
     {
@@ -32,12 +32,14 @@ public class PatrolEnemy : MonoBehaviour
 
     private void Patrol()
     {
-        RaycastHit2D hit = Physics2D.Raycast(groundChecker.position, Vector2.down, groundDistance , enemyData.GroundLayer);
+        RaycastHit2D hitDown = Physics2D.Raycast(groundChecker.position, Vector2.down, groundDistance , enemyData.GroundLayer);
+        RaycastHit2D hitForward = Physics2D.Raycast(groundChecker.position, Vector2.right* enemyData.RayDirection, groundDistance , enemyData.GroundLayer);
 
-        if (hit) return;
+        if (hitDown && !hitForward) return;
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0); 
         enemyData.RayDirection *= -1;
         enemyData.Speed *= -1;
+
     }
     private void Follow()
     {
@@ -54,6 +56,7 @@ public class PatrolEnemy : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawLine(pointOfView.position, pointOfView.position + (Vector3.left * enemyData.RayDirection) * enemyData.FieldOfView);
         Gizmos.DrawLine(groundChecker.position, groundChecker.position + Vector3.down * groundDistance);
+        Gizmos.DrawLine(groundChecker.position, groundChecker.position + ( Vector3.right* enemyData.RayDirection) * groundDistance);
     }
 }
 

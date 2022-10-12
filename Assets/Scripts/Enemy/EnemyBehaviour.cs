@@ -34,12 +34,9 @@ public class EnemyBehaviour : MonoBehaviour
                 break;
             
             case TypeOfAttack.Distance:
-                //en desarrollo
+                gameObject.AddComponent<DistanceAttack>();
                 break;
-            
-            case TypeOfAttack.Burst:
-                gameObject.AddComponent<BurstAttack>();
-                break;
+
         }
     }
 }

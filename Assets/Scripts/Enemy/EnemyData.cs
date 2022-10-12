@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 public enum TypeOfMovement { Patrol, Flying}
- public enum TypeOfAttack { Melee, Distance, Burst}
+ public enum TypeOfAttack { Melee, Distance}
 public class EnemyData: MonoBehaviour
 {   
    
@@ -13,13 +13,16 @@ public class EnemyData: MonoBehaviour
     [SerializeField] private float distanceToAttack;
     [SerializeField] private float timeToAttack;
     [SerializeField] private float damage;
-    
+    [SerializeField] private GameObject model;
 
+    
     public float Speed
     {
         get => speed;
         set => speed= value;
     }
+    
+    public GameObject Model => model;
     public float FieldOfView=> fieldOfView;
     public LayerMask GroundLayer => groundLayer;
     
