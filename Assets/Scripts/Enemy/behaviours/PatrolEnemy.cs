@@ -8,6 +8,7 @@ public class PatrolEnemy : MonoBehaviour
     
     private Transform groundChecker;
     private Transform pointOfView;
+    private float speed;
    
    
     private const float groundDistance = 0.5f;
@@ -19,6 +20,8 @@ public class PatrolEnemy : MonoBehaviour
         enemyData = GetComponent<EnemyData>();
         groundChecker = transform.Find("CheckGround");
         pointOfView= transform.Find("FieldOfView");
+        speed = enemyData.Speed;
+        
     }
 
     private void Update()
@@ -38,8 +41,7 @@ public class PatrolEnemy : MonoBehaviour
         if (hitDown && !hitForward) return;
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0); 
         enemyData.RayDirection *= -1;
-        enemyData.Speed *= -1;
-
+        enemyData.Speed = speed * enemyData.RayDirection;
     }
     private void Follow()
     {

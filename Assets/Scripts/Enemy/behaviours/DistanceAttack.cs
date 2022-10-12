@@ -7,14 +7,13 @@ public class DistanceAttack : MonoBehaviour
    private Transform spawnPoint;
    private float time;
    private bool attack;
-   private int shootForce;
+  
    
 
    private void Awake()
    {
       attack = false;
       time = 0;
-      shootForce = 500;
       enemyData = GetComponent<EnemyData>();
       animator = GetComponent<Animator>();
       checkPlayer= transform.Find("CheckGround");
@@ -47,8 +46,8 @@ public class DistanceAttack : MonoBehaviour
           //animator.SetTrigger("Shoot");
          
          GameObject newBullet;
-         newBullet = Instantiate(enemyData.Model, spawnPoint.position, spawnPoint.rotation);
-         newBullet.GetComponent<Rigidbody2D>().AddForce(spawnPoint.right*shootForce);
+         newBullet = Instantiate(enemyData.Model, spawnPoint.position, enemyData.Model.transform.rotation,spawnPoint);
+         newBullet.GetComponent<Rigidbody2D>().AddForce(spawnPoint.right*enemyData.Force, ForceMode2D.Impulse);
          Destroy(newBullet,2.0f);
       }
      

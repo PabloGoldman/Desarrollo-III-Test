@@ -17,18 +17,22 @@ public class EnemyDie : MonoBehaviour, IDamageable
     public void TakeDamage(float damage)
     {
         enemyData.CurrentHealth -= damage;
-        animator.SetTrigger("take damage");
+        //animator.SetTrigger("take damage");
         if (enemyData.CurrentHealth <= 0) Die();
     }
-
     private void Die()
     {
-        animator.SetTrigger("die");
+        //animator.SetTrigger("die");
         col2D.enabled = false;
         enemyData.IsDie = true;
         
         Destroy(gameObject,timeToDestroy);
     }
 
-
+    private void OnCollisionEnter2D(Collision2D c)
+    {
+        if (c.transform.tag != "Player") return;
+            var obj = c.gameObject.GetComponent<IDamageable>();
+             obj?.TakeDamage(enemyData.AttackDamage);
+    }
 }

@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 267835835284390339}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -54,14 +54,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4858352482728307136}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.10452846, w: 0.9945219}
   m_LocalPosition: {x: 0.291, y: 0.097, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8075384006755407287}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 12}
 --- !u!1 &6636071739360608487
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3412502549371815999}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CheckGround
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -108,9 +108,9 @@ GameObject:
   - component: {fileID: 8075384006755407283}
   - component: {fileID: 8075384006755407284}
   - component: {fileID: 8075384006755407285}
-  m_Layer: 0
-  m_Name: SlimeEnemy
-  m_TagString: Untagged
+  m_Layer: 6
+  m_Name: SlimeDistance_N
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,7 +219,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8075384006755407290}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -231,7 +231,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6
 --- !u!114 &8075384006755407283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,9 +276,11 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 384
-  maxHealth: 100
-  speed: 4
-  fieldOfView: 1
+  maxHealth: 60
+  speed: 3
+  fieldOfView: 0.5
   distanceToAttack: 6
-  timeToAttack: 1
+  timeToAttack: 2.5
   damage: 20
+  model: {fileID: 2100951290410215112, guid: 2b66a2061ae0e7f43b5c5928f564a4de, type: 3}
+  force: 10

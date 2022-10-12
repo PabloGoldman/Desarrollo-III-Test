@@ -2,23 +2,20 @@ using UnityEngine;
 
 public class MeleeAttack : MonoBehaviour
 {
-    private Transform checkPlayer;
     private Transform attackPoint;
     private EnemyData enemyData;
     private Animator animator;
-    private float RadiusPunch;
-    private float time;
     private bool attack;
+    private Transform pointOfView;
+    private float speed;
 
     private void Awake()
     {
-        RadiusPunch = 0.7f;
         attack = false;
-        time = 0;
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         enemyData = GetComponent<EnemyData>();
-        attackPoint = transform.Find("AttackPoint");
-        checkPlayer= transform.Find("CheckGround");
+        pointOfView= transform.Find("FieldOfView");
+        speed = enemyData.Speed;
     }
 
     private void Update()
@@ -29,41 +26,35 @@ public class MeleeAttack : MonoBehaviour
 
     private void Attack()
     {
-        RaycastHit2D hit = Physics2D.Raycast(checkPlayer.position, Vector2.right * enemyData.RayDirection, enemyData.DistanceToAttack, enemyData.PlayerLayer);
-        
-        enemyData.IsAttack = hit;
-        animator.SetBool("run",!hit);
-        
-        if(attack) time += Time.deltaTime;
-        
-        if (time >= enemyData.TimeToAttack)
-        {
-            time = 0;
-            attack = false;
-        }
+        RaycastHit2D hit = Physics2D.Raycast(pointOfView.position, Vector2.right * enemyData.RayDirection, enemyData.DistanceToAttack, enemyData.PlayerLayer);
 
+        //animator.SetBool("run",!hit);
         if (!hit) return;
+        if (attack) return;
+        enemyData.Speed *= 4;
         attack = true;
-        if (time == 0)
-        {
-            animator.SetTrigger("attack");
-            CheckCollision();
-        }
-    }
-
-    private void CheckCollision()
-    {
-        Collider2D hitPlayer = Physics2D.OverlapCircle(attackPoint.position, RadiusPunch, enemyData.PlayerLayer);
-        
-            if (!hitPlayer) return;
-            var obj = hitPlayer.gameObject.GetComponent<IDamageable>();
-            obj?.TakeDamage(enemyData.AttackDamage);
+        Invoke(nameof(StopAttack),enemyData.TimeToAttack*3.5f);
     }
     
+    private void StopAttack()
+    {
+        attack = false;
+        enemyData.Speed = speed * enemyData.RayDirection;
+    }
+
+    private void OnCollisionEnter2D(Collision2D c)
+    {
+      
+    }
+
+    private void ResetAttack()
+    {
+        enemyData.IsAttack = false;
+    }
+
     private void OnDrawGizmos()
     {
-       Gizmos.color = Color.green;
-       Gizmos.DrawWireSphere(attackPoint.position,RadiusPunch);
-       Gizmos.DrawLine(checkPlayer.position, checkPlayer.position + (Vector3.right * enemyData.RayDirection) * enemyData.DistanceToAttack);
+       Gizmos.color = Color.blue;
+       Gizmos.DrawLine(pointOfView.position, pointOfView.position + (Vector3.right * enemyData.RayDirection) * enemyData.DistanceToAttack);
     }
 }
