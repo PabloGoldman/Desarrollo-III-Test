@@ -28,6 +28,8 @@ public abstract class CharacterState : MonoBehaviour
 
     protected Rigidbody2D rb;
 
+    protected BoxCollider2D col2d;
+
     public int facingDirection = 1;
 
     protected float inputX;
@@ -39,6 +41,8 @@ public abstract class CharacterState : MonoBehaviour
             firstSpawnPosition = transform.position;
 
             rb = GetComponent<Rigidbody2D>();
+
+            col2d = GetComponent<BoxCollider2D>();
 
             playerManager = GetComponentInParent<PlayerManager>();
 
@@ -140,6 +144,21 @@ public abstract class CharacterState : MonoBehaviour
         {
             playerManager.currentCheckPoint = collision.GetComponent<Checkpoint>();
         }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("enemy"))
+        {
+            StartCoroutine(DisableColliderCoroutine(collision.gameObject.GetComponent<BoxCollider2D>()));
+        }
+    }
+
+    protected IEnumerator DisableColliderCoroutine(Collider2D collider)
+    {
+        collider.enabled = false;
+        yield return new WaitForSeconds(3);
+        collider.enabled = true;
     }
 
     // Animation Events

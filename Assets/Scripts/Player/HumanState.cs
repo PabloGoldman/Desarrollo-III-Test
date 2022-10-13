@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -164,7 +165,6 @@ public class HumanState : CharacterState, IDamageable
             {
                 animator.Hurt();
             }
-
         }
     }
 

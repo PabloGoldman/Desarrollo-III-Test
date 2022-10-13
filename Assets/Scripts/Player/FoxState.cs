@@ -140,6 +140,7 @@ public class FoxState : CharacterState, IDamageable
             animator.OnGround(isGrounded);
         }
     }
+    
 
     public void TakeDamage(float damage)
     {
@@ -156,6 +157,8 @@ public class FoxState : CharacterState, IDamageable
             {
                 animator.Hurt();
             }
+
+
         }
     }
 
