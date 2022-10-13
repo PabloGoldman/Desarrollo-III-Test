@@ -82,19 +82,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5093890922372492584, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_LocalAABB.m_Center.x
-      value: -1.5556412
+      value: -1.697124
       objectReference: {fileID: 0}
     - target: {fileID: 5093890922372492584, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_LocalAABB.m_Center.y
-      value: 0.7391924
+      value: 0.6700112
       objectReference: {fileID: 0}
     - target: {fileID: 5093890922372492584, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_LocalAABB.m_Extent.x
-      value: 7.2547607
+      value: 7.032312
       objectReference: {fileID: 0}
     - target: {fileID: 5093890922372492584, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_LocalAABB.m_Extent.y
-      value: 0.9069747
+      value: 0.5377917
       objectReference: {fileID: 0}
     - target: {fileID: 5562940619463426423, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.size
@@ -113,16 +113,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5562940619463426423, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].height
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5562940619463426423, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].height
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5562940619463426423, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.data[2].height
-      value: 0.29
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 5562940619463426423, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.data[3].height
-      value: 0.29
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 5562940619463426423, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.data[4].height
-      value: 0.29
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 5562940619463426423, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.data[5].corner
@@ -130,7 +138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5562940619463426423, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.data[5].height
-      value: 0.23
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 5562940619463426423, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.data[6].corner
@@ -138,7 +146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5562940619463426423, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.data[6].height
-      value: 0.31
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 5562940619463426423, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.data[0].position.x
@@ -250,11 +258,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5562940619463426423, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.data[4].leftTangent.x
-      value: -0.81599236
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5562940619463426423, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.data[4].leftTangent.y
-      value: -0.019812644
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5562940619463426423, guid: 9bbfb3bfc14a84c458ea41a22292862b, type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.data[5].leftTangent.x
