@@ -261,7 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8848917422362515703}
-  - component: {fileID: 3932850947080505557}
+  - component: {fileID: -7010677449359480139}
   m_Layer: 8
   m_Name: GreenGrass_03
   m_TagString: ground
@@ -287,16 +287,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3932850947080505557
-BoxCollider:
+--- !u!61 &-7010677449359480139
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4493880122807892656}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 215.27676, y: -16.332794}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 69.36005, y: 2.3704987, z: 1}
-  m_Center: {x: 215.2789, y: -16.3224, z: 0}
+  m_Size: {x: 69.42656, y: 2.3493042}
+  m_EdgeRadius: 0

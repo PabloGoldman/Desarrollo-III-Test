@@ -80,15 +80,13 @@ public class HumanState : CharacterState, IDamageable
         // Reset Attack combo if time since last attack is too large
         if (timeSinceAttack > 1.0f)
         {
-            currentAttack = 1;
-            isAttacking = false;
+            currentAttack = 1;          
         }
 
         // Call one of three attack animations "Attack1", "Attack2", "Attack3"
         animator.Attack(currentAttack);
 
-        isAttacking = true;
-
+        
         // Reset time
         timeSinceAttack = 0.0f;
 

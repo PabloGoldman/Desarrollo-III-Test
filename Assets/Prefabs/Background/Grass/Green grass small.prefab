@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4548125990402301027}
   - component: {fileID: 4548125990402301026}
-  - component: {fileID: 2563274059927485222}
+  - component: {fileID: 7302363695422372449}
   m_Layer: 8
   m_Name: Green grass small
   m_TagString: ground
@@ -85,16 +85,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &2563274059927485222
-BoxCollider:
+--- !u!61 &7302363695422372449
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4548125990402301025}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 5.3163757, y: -0.4835627}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.172493, y: 3.28}
+    newSize: {x: 25.215616, y: 4.1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.8832397, y: 2.354653, z: 0.2}
-  m_Center: {x: 5.3257446, y: -0.46267343, z: 0}
+  m_Size: {x: 6.9796753, y: 2.3128743}
+  m_EdgeRadius: 0
