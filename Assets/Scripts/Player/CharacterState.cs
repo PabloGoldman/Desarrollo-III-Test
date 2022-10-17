@@ -27,6 +27,8 @@ public abstract class CharacterState : MonoBehaviour
 
     protected float inputX;
 
+    [SerializeField] float PostDamageInvincibleTime;
+
     public virtual void Awake()
     {
         if (!rb)
@@ -146,7 +148,7 @@ public abstract class CharacterState : MonoBehaviour
     protected IEnumerator DisableColliderCoroutine(Collider2D collider)
     {
         Physics2D.IgnoreLayerCollision(gameObject.layer, collider.gameObject.layer);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(PostDamageInvincibleTime);
         Physics2D.IgnoreLayerCollision(gameObject.layer, collider.gameObject.layer, false);
     }
 }
