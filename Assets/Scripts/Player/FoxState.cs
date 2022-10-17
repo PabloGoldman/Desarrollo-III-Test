@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
 
@@ -141,7 +139,6 @@ public class FoxState : CharacterState, IDamageable
         }
     }
     
-
     public void TakeDamage(float damage)
     {
         if (!isDead)
@@ -157,8 +154,6 @@ public class FoxState : CharacterState, IDamageable
             {
                 animator.Hurt();
             }
-
-
         }
     }
 

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class CharacterState : MonoBehaviour
@@ -11,14 +10,10 @@ public abstract class CharacterState : MonoBehaviour
     protected PlayerManager playerManager;
 
     [HideInInspector] public Sensor_HeroKnight groundSensor;
-    [HideInInspector] public Sensor_HeroKnight wallSensorR1;
-    [HideInInspector] public Sensor_HeroKnight wallSensorR2;
 
     public bool isGrounded;
 
     [HideInInspector] public float delayToIdle;
-
-    [SerializeField] GameObject slideDust;
 
     protected float timeToRespawn = 2.0f;
 
@@ -45,8 +40,6 @@ public abstract class CharacterState : MonoBehaviour
             animator = GetComponent<PlayerAnimatorController>();
 
             groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_HeroKnight>();
-            wallSensorR1 = transform.Find("WallSensor_R1").GetComponent<Sensor_HeroKnight>();
-            wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<Sensor_HeroKnight>();
         }
     }
 
@@ -141,21 +134,19 @@ public abstract class CharacterState : MonoBehaviour
             playerManager.currentCheckPoint = collision.GetComponent<Checkpoint>();
         }
     }
-    
-    // Animation Events
-    // Called in slide animation.
-    void AE_SlideDust()
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        Vector3 spawnPosition;
-
-        spawnPosition = wallSensorR2.transform.position;
-
-        if (slideDust != null)
+        if (collision.gameObject.CompareTag("enemy"))
         {
-            // Set correct arrow spawn position
-            GameObject dust = Instantiate(slideDust, spawnPosition, gameObject.transform.localRotation) as GameObject;
-            // Turn arrow in correct direction
-            dust.transform.localScale = new Vector3(facingDirection, 1, 1);
+            StartCoroutine(DisableColliderCoroutine(collision.gameObject.GetComponent<BoxCollider2D>()));
         }
+    }
+
+    protected IEnumerator DisableColliderCoroutine(Collider2D collider)
+    {
+        Physics2D.IgnoreLayerCollision(gameObject.layer, collider.gameObject.layer);
+        yield return new WaitForSeconds(3);
+        Physics2D.IgnoreLayerCollision(gameObject.layer, collider.gameObject.layer, false);
     }
 }

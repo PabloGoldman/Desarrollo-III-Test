@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,8 +12,6 @@ public class HumanState : CharacterState, IDamageable
     public UnityEvent onThirdAttack;
 
     private float timeSinceAttack = 0.0f;
-
-    bool isAttacking;
 
     private int currentAttack;
 
