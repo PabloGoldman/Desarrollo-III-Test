@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 0, z: -10}
+  m_BindingMode: 3
+  m_FollowOffset: {x: 0, y: 2.3, z: -10}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Follow: {fileID: 8309430171847568864}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 5
+    OrthographicSize: 8.5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -337,8 +337,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 0, z: -10}
+  m_BindingMode: 3
+  m_FollowOffset: {x: 0, y: 2.3, z: -10}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -404,7 +404,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550829637812236295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000002136454, y: -0.0000011920929, z: -10}
+  m_LocalPosition: {x: -0.000002136454, y: 2.3000019, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Follow: {fileID: 6519473220905085015}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 5
+    OrthographicSize: 8.5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -866,11 +866,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   groundSensor: {fileID: 0}
-  wallSensorR1: {fileID: 0}
-  wallSensorR2: {fileID: 0}
   isGrounded: 0
   delayToIdle: 0
-  slideDust: {fileID: 1038168246061390451, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
   facingDirection: 1
   foxData: {fileID: 11400000, guid: f077a8dadbce08e43ae996ff3c646415, type: 2}
   timeBetweenJumps: 0.3
@@ -1329,11 +1326,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   groundSensor: {fileID: 0}
-  wallSensorR1: {fileID: 0}
-  wallSensorR2: {fileID: 0}
   isGrounded: 0
   delayToIdle: 0
-  slideDust: {fileID: 1038168246061390451, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
   facingDirection: 1
   humanData: {fileID: 11400000, guid: 1446536fa21ed394a9906e825921cbf5, type: 2}
   attackPoint: {fileID: 1550829637568163185}
