@@ -251,6 +251,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5530279849070806213, guid: 6994b00ca0a599041ab04361c4df716e, type: 3}
+      propertyPath: orthographic size
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530279849070806213, guid: 6994b00ca0a599041ab04361c4df716e, type: 3}
       propertyPath: m_BackGroundColor.b
       value: 0.24857055
       objectReference: {fileID: 0}
@@ -620,9 +624,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1271669749100745600, guid: e0389422e40c44c4681ac77233dc8fcf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2006683588150042099, guid: e0389422e40c44c4681ac77233dc8fcf, type: 3}
+      propertyPath: m_Size.y
+      value: 95.84804
+      objectReference: {fileID: 0}
+    - target: {fileID: 2006683588150042099, guid: e0389422e40c44c4681ac77233dc8fcf, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.75001335
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967043763243250919, guid: e0389422e40c44c4681ac77233dc8fcf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684137952681169734, guid: e0389422e40c44c4681ac77233dc8fcf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3851037863199734470, guid: e0389422e40c44c4681ac77233dc8fcf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962602636597973125, guid: e0389422e40c44c4681ac77233dc8fcf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4054904743948583029, guid: e0389422e40c44c4681ac77233dc8fcf, type: 3}
       propertyPath: m_Name
       value: Rocks
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054904743948583029, guid: e0389422e40c44c4681ac77233dc8fcf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054904743948583029, guid: e0389422e40c44c4681ac77233dc8fcf, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 5037393912333786866, guid: e0389422e40c44c4681ac77233dc8fcf, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8282120281761670617, guid: e0389422e40c44c4681ac77233dc8fcf, type: 3}
       propertyPath: m_RootOrder
@@ -677,29 +721,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1550829636878800174, guid: 921ab3c49e721d24b83bae8565bbb7b2, type: 3}
-      propertyPath: m_BindingMode
+    - target: {fileID: 1550829636798857848, guid: 921ab3c49e721d24b83bae8565bbb7b2, type: 3}
+      propertyPath: PostDamageInvincibleTime
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1550829636878800174, guid: 921ab3c49e721d24b83bae8565bbb7b2, type: 3}
-      propertyPath: m_FollowOffset.y
-      value: 2.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1550829637140963188, guid: 921ab3c49e721d24b83bae8565bbb7b2, type: 3}
-      propertyPath: m_BindingMode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1550829637140963188, guid: 921ab3c49e721d24b83bae8565bbb7b2, type: 3}
-      propertyPath: m_FollowOffset.y
-      value: 2.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1550829637812236289, guid: 921ab3c49e721d24b83bae8565bbb7b2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.000002136454
-      objectReference: {fileID: 0}
-    - target: {fileID: 1550829637812236289, guid: 921ab3c49e721d24b83bae8565bbb7b2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.3000019
       objectReference: {fileID: 0}
     - target: {fileID: 1550829638407746441, guid: 921ab3c49e721d24b83bae8565bbb7b2, type: 3}
       propertyPath: m_Name
@@ -748,6 +772,10 @@ PrefabInstance:
     - target: {fileID: 1550829638407746443, guid: 921ab3c49e721d24b83bae8565bbb7b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901502279038687363, guid: 921ab3c49e721d24b83bae8565bbb7b2, type: 3}
+      propertyPath: PostDamageInvincibleTime
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 921ab3c49e721d24b83bae8565bbb7b2, type: 3}
@@ -1597,6 +1625,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4314331207629666435, guid: 34ea82a0f94a42b49b10390ef752688b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.53
+      objectReference: {fileID: 0}
     - target: {fileID: 6074610760794449044, guid: 34ea82a0f94a42b49b10390ef752688b, type: 3}
       propertyPath: m_Name
       value: Grass
