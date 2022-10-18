@@ -30,7 +30,7 @@ public class PatrolEnemy : MonoBehaviour
         if (enemyData.IsAttack || enemyData.IsDie) return;
         Patrol();
         Follow();
-        rb.MovePosition(new Vector2(rb.position.x + enemyData.Speed * Time.deltaTime, rb.position.y));
+        rb.velocity = new Vector2( enemyData.Speed , 0);
     }
 
     private void Patrol()
@@ -41,10 +41,11 @@ public class PatrolEnemy : MonoBehaviour
         if (hitDown && !hitForward) return;
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0); 
         enemyData.RayDirection *= -1;
-        enemyData.Speed = speed * enemyData.RayDirection;
+        enemyData.Speed *= -1;
     }
     private void Follow()
     {
+        if (enemyData.FieldOfView == 0) return;
         RaycastHit2D hit = Physics2D.Raycast(pointOfView.position, (Vector2.left * enemyData.RayDirection), enemyData.FieldOfView, enemyData.PlayerLayer);
 
         if (!hit) return;

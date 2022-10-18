@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class MeleeAttack : MonoBehaviour
@@ -12,7 +13,7 @@ public class MeleeAttack : MonoBehaviour
     private void Awake()
     {
         attack = false;
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         enemyData = GetComponent<EnemyData>();
         pointOfView= transform.Find("FieldOfView");
         speed = enemyData.Speed;
@@ -20,7 +21,7 @@ public class MeleeAttack : MonoBehaviour
 
     private void Update()
     {
-        if (enemyData.IsDie) return;
+       if (enemyData.IsDie) return;
         Attack();
     }
 
@@ -31,20 +32,15 @@ public class MeleeAttack : MonoBehaviour
         //animator.SetBool("run",!hit);
         if (!hit) return;
         if (attack) return;
-        enemyData.Speed *= 4;
         attack = true;
-        Invoke(nameof(StopAttack),enemyData.TimeToAttack*3.5f);
+        enemyData.Speed *= 5;
+        Invoke(nameof(StopAttack),enemyData.TimeToAttack);
     }
     
     private void StopAttack()
-    {
-        attack = false;
+    { 
+        attack  = false;
         enemyData.Speed = speed * enemyData.RayDirection;
-    }
-
-    private void OnCollisionEnter2D(Collision2D c)
-    {
-      
     }
 
     private void ResetAttack()
