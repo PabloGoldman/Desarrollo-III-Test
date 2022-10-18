@@ -9,6 +9,8 @@ public class PlayerManager : MonoBehaviour
 
     public Checkpoint currentCheckPoint;
 
+    [SerializeField] GameObject smokeParticles;
+
     float switchTimer;
 
     public PlayerData playerData;
@@ -64,6 +66,10 @@ public class PlayerManager : MonoBehaviour
                 }
 
                 switchTimer = timePerSwitch;
+
+                float offset = 1;
+                smokeParticles.transform.position = new Vector3( humanState.transform.position.x, humanState.transform.position.y + offset);
+                smokeParticles.GetComponent<ParticleSystem>().Play();
             }
         }
 
