@@ -9,10 +9,12 @@ public class MeleeAttack : MonoBehaviour
     private bool attack;
     private Transform pointOfView;
     private float speed;
+    private Rigidbody2D rb;
 
     private void Awake()
     {
         attack = false;
+        rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         enemyData = GetComponent<EnemyData>();
         pointOfView= transform.Find("FieldOfView");
@@ -34,6 +36,7 @@ public class MeleeAttack : MonoBehaviour
         if (attack) return;
         attack = true;
         enemyData.Speed *= 5;
+        rb.velocity = new Vector2( enemyData.Speed , 0);
         Invoke(nameof(StopAttack),enemyData.TimeToAttack);
     }
     
@@ -41,6 +44,7 @@ public class MeleeAttack : MonoBehaviour
     { 
         attack  = false;
         enemyData.Speed = speed * enemyData.RayDirection;
+        rb.velocity = new Vector2( enemyData.Speed , 0);
     }
 
     private void ResetAttack()

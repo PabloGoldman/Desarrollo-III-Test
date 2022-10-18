@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PatrolEnemy : MonoBehaviour
@@ -5,12 +6,10 @@ public class PatrolEnemy : MonoBehaviour
     private Rigidbody2D rb;
     private EnemyData enemyData;
     private Animator animator;
-    
     private Transform groundChecker;
     private Transform pointOfView;
     private float speed;
-   
-   
+
     private const float groundDistance = 0.5f;
 
     private void Awake()
@@ -21,16 +20,16 @@ public class PatrolEnemy : MonoBehaviour
         groundChecker = transform.Find("CheckGround");
         pointOfView= transform.Find("FieldOfView");
         speed = enemyData.Speed;
+        rb.velocity = new Vector2( enemyData.Speed , 0);
         
     }
 
     private void Update()
     {
-        
         if (enemyData.IsAttack || enemyData.IsDie) return;
         Patrol();
         Follow();
-        rb.velocity = new Vector2( enemyData.Speed , 0);
+        
     }
 
     private void Patrol()
@@ -42,6 +41,7 @@ public class PatrolEnemy : MonoBehaviour
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0); 
         enemyData.RayDirection *= -1;
         enemyData.Speed *= -1;
+        rb.velocity = new Vector2( enemyData.Speed , 0);
     }
     private void Follow()
     {

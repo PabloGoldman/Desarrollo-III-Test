@@ -3,26 +3,36 @@ using UnityEngine;
 public class EnemyDie : MonoBehaviour, IDamageable
 {
     private EnemyData enemyData;
-    private Animator animator;
+    private SpriteRenderer sr;
     Collider2D col2D;
-    private float timeToDestroy = 2.0f;
+    private float timeToDestroy = 1.0f;
+    [SerializeField] private Color32 hurtColor;
 
     private void Awake()
     {
         col2D = GetComponent<Collider2D>();
-        animator = GetComponent<Animator>();
         enemyData = GetComponent<EnemyData>();
+        sr = GetComponent<SpriteRenderer>();
     }
-
     public void TakeDamage(float damage)
     {
         enemyData.CurrentHealth -= damage;
-        //animator.SetTrigger("take damage");
+        ChangeColor();
         if (enemyData.CurrentHealth <= 0) Die();
+    }
+    
+    private void ChangeColor()
+    {
+        sr.color = hurtColor;
+        Invoke("OriginalColor",0.3f);
+    }
+
+    private void OriginalColor()
+    {
+        sr.color= Color.white;
     }
     private void Die()
     {
-        //animator.SetTrigger("die");
         col2D.enabled = false;
         enemyData.IsDie = true;
         
