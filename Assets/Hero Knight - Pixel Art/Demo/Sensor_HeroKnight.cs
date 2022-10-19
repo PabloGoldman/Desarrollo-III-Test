@@ -21,12 +21,18 @@ public class Sensor_HeroKnight : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        colCount++;
+        if (!other.gameObject.CompareTag("MapCollider"))
+        {
+            colCount++;
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        colCount--;
+        if (!other.gameObject.CompareTag("MapCollider"))
+        {
+            colCount--;
+        }
     }
 
     void Update()
