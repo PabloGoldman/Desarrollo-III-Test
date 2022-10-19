@@ -9,6 +9,7 @@ public class PatrolEnemy : MonoBehaviour
     private Transform groundChecker;
     private Transform pointOfView;
     private float speed;
+    private bool follow;
 
     private const float groundDistance = 0.5f;
 
@@ -48,12 +49,20 @@ public class PatrolEnemy : MonoBehaviour
         if (enemyData.FieldOfView == 0) return;
         RaycastHit2D hit = Physics2D.Raycast(pointOfView.position, (Vector2.left * enemyData.RayDirection), enemyData.FieldOfView, enemyData.PlayerLayer);
 
-        if (!hit) return;
+        if (!hit || follow) return;
+        follow = true;
         enemyData.RayDirection *= -1;
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
         enemyData.Speed *= -1;
-    }
+        rb.velocity = new Vector2( enemyData.Speed , 0);
+        Invoke("SetFollow",3.5f);
 
+    }
+    private void SetFollow()
+    {
+        follow = false;
+    }
+    
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
