@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 1550829637058287967}
   - component: {fileID: 1550829637058287961}
   - component: {fileID: 1550829637058287960}
+  - component: {fileID: 766900586}
   m_Layer: 0
   m_Name: Player Camera
   m_TagString: Untagged
@@ -252,6 +253,21 @@ MonoBehaviour:
     m_FrequencyGain: 1
     m_Duration: 1
     m_NoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!114 &766900586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550829637058287966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BoundingShape2D: {fileID: 0}
+  m_Damping: 0.5
+  m_MaxWindowSize: -1
 --- !u!1 &1550829637140963194
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,6 +405,7 @@ GameObject:
   - component: {fileID: 1550829637812236289}
   - component: {fileID: 1550829637812236288}
   - component: {fileID: 1550829637812236290}
+  - component: {fileID: 766900588}
   m_Layer: 0
   m_Name: Player Camera
   m_TagString: Untagged
@@ -473,6 +490,21 @@ MonoBehaviour:
     m_FrequencyGain: 1
     m_Duration: 1
     m_NoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!114 &766900588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550829637812236295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BoundingShape2D: {fileID: 0}
+  m_Damping: 0.5
+  m_MaxWindowSize: -1
 --- !u!1 &1550829638407746441
 GameObject:
   m_ObjectHideFlags: 0
