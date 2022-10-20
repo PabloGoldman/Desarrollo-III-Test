@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Interactor : MonoBehaviour
@@ -10,6 +8,9 @@ public class Interactor : MonoBehaviour
 
     private Collider2D[] colliders = new Collider2D[3];
     [SerializeField] private int numsFound;
+    [SerializeField] private InteractionPromptUI interactionPromptUI;
+
+    private IInteractable interactable;
 
     // Update is called once per frame
     void Update()
@@ -18,12 +19,25 @@ public class Interactor : MonoBehaviour
 
         if (numsFound > 0)
         {
-            var interactable = colliders[0].GetComponent<IInteractable>();
+            interactable = colliders[0].GetComponent<IInteractable>();
 
-            if (interactable != null && Input.GetKeyDown(KeyCode.E))
+            if (interactable != null)
             {
-                interactable.Interact(this);
+                if (!interactionPromptUI.isDisplayed)
+                {
+                    interactionPromptUI.SetUp(interactable.InteractionPrompt);
+                }
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    interactable.Interact(this);
+                }
             }
+        }
+        else if (interactable != null)
+        {
+            interactable = null;
+            interactionPromptUI.Close();
         }
     }
 }
