@@ -19,9 +19,15 @@ public class Statue : MonoBehaviour, IInteractable
     {
         if (isStatueAvailable)
         {
-            Debug.Log("Buying fragment");
-            SetAsUnable();
-            playerManager.BuyFragment();
+            if (playerManager.BuyFragment())
+            {
+                Debug.Log("Buying fragment");
+                SetAsUnable();
+            }
+            else
+            {
+                Debug.Log("You don't have enough soul fragments!");
+            }
         }
         else
         {

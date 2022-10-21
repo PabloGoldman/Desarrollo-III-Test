@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] int KeyFragmentPrice;
 
     int keyFragments = 0;
+
     int soulFragments = 0;
 
     float switchTimer;
@@ -37,13 +38,17 @@ public class PlayerManager : MonoBehaviour
         OnHit?.Invoke(currentHealth);
     }
 
-    public void BuyFragment()
+    public bool BuyFragment()
     {
-        //Poner un IF aca de si tiene lo necesario para conseguir el fragmento
         if (soulFragments >= KeyFragmentPrice)
         {
             soulFragments -= KeyFragmentPrice;
             keyFragments++;
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
