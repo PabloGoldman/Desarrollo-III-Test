@@ -11,6 +11,8 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField] GameObject smokeParticles;
 
+    int keyFragments = 0;
+
     float switchTimer;
 
     public PlayerData playerData;
@@ -30,6 +32,12 @@ public class PlayerManager : MonoBehaviour
     {
         currentHealth -= damage;
         OnHit?.Invoke(currentHealth);
+    }
+
+    public void BuyFragment()
+    {
+        //Poner un IF aca de si tiene lo necesario para conseguir el fragmento
+        keyFragments++;
     }
 
     private void Update()

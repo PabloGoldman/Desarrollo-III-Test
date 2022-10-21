@@ -45,6 +45,11 @@ public abstract class CharacterState : MonoBehaviour
         }
     }
 
+    public void BuyFragment()
+    {
+        playerManager.BuyFragment();
+    }
+
     protected void OnUpdate()
     {
         if (Input.GetKeyDown(KeyCode.L))

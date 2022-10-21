@@ -10,7 +10,14 @@ public class Interactor : MonoBehaviour
     [SerializeField] private int numsFound;
     [SerializeField] private InteractionPromptUI interactionPromptUI;
 
+    CharacterState characterState;
+
     private IInteractable interactable;
+
+    private void Start()
+    {
+        characterState = GetComponent<CharacterState>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -34,10 +41,16 @@ public class Interactor : MonoBehaviour
                 }
             }
         }
+
         else if (interactable != null)
         {
             interactable = null;
             interactionPromptUI.Close();
         }
+    }
+
+    public void BuyFragment()
+    {
+        characterState.BuyFragment();
     }
 }
