@@ -4,23 +4,20 @@ public class Statue : MonoBehaviour, IInteractable
 {
     [SerializeField] private string prompt;
 
-    [SerializeField] PlayerManager playerManager;
+    PlayerManager playerManager;
 
-    bool isPlayerAbleToBuy = true;
+    bool isStatueAvailable = true;
 
     public string InteractionPrompt => prompt;
 
     private void Start()
     {
-        if (!playerManager)
-        {
-            playerManager = FindObjectOfType<PlayerManager>();
-        }
+        playerManager = FindObjectOfType<PlayerManager>();
     }
 
     public bool Interact(Interactor interactor)
     {
-        if (isPlayerAbleToBuy)
+        if (isStatueAvailable)
         {
             Debug.Log("Buying fragment");
             SetAsUnable();
@@ -36,7 +33,7 @@ public class Statue : MonoBehaviour, IInteractable
 
     void SetAsUnable()
     {
-        isPlayerAbleToBuy = false;
+        isStatueAvailable = false;
         GetComponent<SpriteRenderer>().color = Color.red;
     }
 }

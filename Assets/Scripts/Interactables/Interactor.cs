@@ -7,7 +7,7 @@ public class Interactor : MonoBehaviour
     [SerializeField] private LayerMask interactableMask;
 
     private Collider2D[] colliders = new Collider2D[3];
-    [SerializeField] private int numsFound;
+    private int numsFound;
     [SerializeField] private InteractionPromptUI interactionPromptUI;
 
     CharacterState characterState;

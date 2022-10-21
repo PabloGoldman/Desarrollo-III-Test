@@ -11,7 +11,10 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField] GameObject smokeParticles;
 
+    [SerializeField] int KeyFragmentPrice;
+
     int keyFragments = 0;
+    int soulFragments = 0;
 
     float switchTimer;
 
@@ -37,7 +40,11 @@ public class PlayerManager : MonoBehaviour
     public void BuyFragment()
     {
         //Poner un IF aca de si tiene lo necesario para conseguir el fragmento
-        keyFragments++;
+        if (soulFragments >= KeyFragmentPrice)
+        {
+            soulFragments -= KeyFragmentPrice;
+            keyFragments++;
+        }
     }
 
     private void Update()
@@ -76,7 +83,7 @@ public class PlayerManager : MonoBehaviour
                 switchTimer = timePerSwitch;
 
                 float offset = 1;
-                smokeParticles.transform.position = new Vector3( humanState.transform.position.x, humanState.transform.position.y + offset);
+                smokeParticles.transform.position = new Vector3(humanState.transform.position.x, humanState.transform.position.y + offset);
                 smokeParticles.GetComponent<ParticleSystem>().Play();
             }
         }
