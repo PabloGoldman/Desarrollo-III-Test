@@ -7,8 +7,6 @@ public class DistanceAttack : MonoBehaviour
    private Transform spawnPoint;
    private float time;
    private bool attack;
-  
-   
 
    private void Awake()
    {

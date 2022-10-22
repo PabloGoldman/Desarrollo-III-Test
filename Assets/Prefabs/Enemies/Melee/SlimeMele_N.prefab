@@ -247,7 +247,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   maxHealth: 90
-  speed: 2
+  speed: 0
   fieldOfView: 0
   distanceToAttack: 10
   timeToAttack: 1.5
@@ -261,6 +261,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8075384006755407287}
     m_Modifications:
+    - target: {fileID: 3474319906250203790, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
+      propertyPath: TriggerModule.inside
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474319906250203790, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
+      propertyPath: TriggerModule.primitives.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474319907599397276, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
+      propertyPath: TriggerModule.inside
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474319907599397276, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
+      propertyPath: TriggerModule.primitives.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8535733173434426989, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
       propertyPath: m_Name
       value: Hurt

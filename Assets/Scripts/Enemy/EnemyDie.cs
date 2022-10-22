@@ -3,14 +3,16 @@ using UnityEngine;
 public class EnemyDie : MonoBehaviour, IDamageable
 {
     private EnemyData enemyData;
-    Collider2D col2D;
-    private float timeToDestroy = 0.4f;
+    private Collider2D col2D;
+    private SpriteRenderer mr;
+    private float timeToDestroy = 7;
     [SerializeField]private ParticleSystem hurt;
     
 
     private void Awake()
     {
         col2D = GetComponent<Collider2D>();
+        mr = GetComponent<SpriteRenderer>();
         enemyData = GetComponent<EnemyData>();
     }
     
@@ -24,6 +26,7 @@ public class EnemyDie : MonoBehaviour, IDamageable
     private void Die()
     {
         col2D.enabled = false;
+        mr.enabled = false;
         enemyData.IsDie = true;
         Destroy(gameObject,timeToDestroy);
     }
