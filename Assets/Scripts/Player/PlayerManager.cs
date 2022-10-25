@@ -23,7 +23,9 @@ public class PlayerManager : MonoBehaviour
     float switchTimer;
 
     public PlayerData playerData;
+
     public static event Action<float> OnHit;
+
     public float currentHealth { get; set; }
 
     private void Awake()
@@ -33,12 +35,19 @@ public class PlayerManager : MonoBehaviour
 
         foxState.transform.position = transform.position;
         humanState.transform.position = transform.position;
+
+        SoulFragment.OnHit += AddSoulFragment;
     }
 
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
         OnHit?.Invoke(currentHealth);
+    }
+
+    public void AddSoulFragment()
+    {
+        soulFragments++;
     }
 
     public bool CanUnlockEndDoor()
