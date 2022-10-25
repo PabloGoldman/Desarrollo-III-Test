@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E17E6A87-6EBB-4FDB-809B-1C3688830D3A}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{E17E6A87-6EBB-4FDB-809B-1C3688830D3A}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Ambiente" ID="{948B92F0-8CE6-41A9-AD18-CE0495E4CAC8}">
+					<ChildrenList>
+						<Action Name="" ID="{17A27BF3-CD69-4CA1-8C88-58380276DC04}" ShortID="657143623">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambiente_V2" ID="{3476FCC2-738C-4C2E-8A74-99C6A742E967}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_gameplay4" ID="{6FD83775-8A8E-4136-90F9-BB2DCA76198B}">
+					<ChildrenList>
+						<Action Name="" ID="{64DFF109-DAAA-40F9-874D-C56272EAA8DE}" ShortID="680925479">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="musica_playlist" ID="{296514B5-6F6A-4FA2-A532-26293D8BE58A}" WorkUnitID="{58D32851-573E-4DF8-BD95-2FB8F603227F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_FootSteps" ID="{F3FB46E1-9184-438C-A82A-F99C2D9309CE}">
+					<ChildrenList>
+						<Action Name="" ID="{8DAEDB4A-C8D4-431C-AFBA-B2D81C81B323}" ShortID="137631635">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Probability" Type="Real64" Value="71"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FootSteps" ID="{1F6DB27A-8FF7-4456-B206-DB4EFFCB2D9D}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{832380EE-162F-4519-B75F-80ADB398C8EE}" ShortID="532431785">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FootSteps" ID="{1F6DB27A-8FF7-4456-B206-DB4EFFCB2D9D}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Salto_TK" ID="{DB86C28E-FD30-4599-A2DC-B90063CBF9C7}">
+					<ChildrenList>
+						<Action Name="" ID="{2F35C219-C454-4829-B17D-0C4006912A49}" ShortID="727200201">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Salto_1" ID="{154BB459-D89D-4F9D-B16E-FBB7812B8B3A}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CD531A71-E9AF-4B46-8986-575720C265F0}" ShortID="1000882799">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="82"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Salto" ID="{F94D1292-3E98-4F4D-83E3-846AAFFFC973}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_2doSalto_FOX" ID="{B03DF41B-DC20-483D-8E31-1404BF6C2CB4}">
+					<ChildrenList>
+						<Action Name="" ID="{4889B040-38B2-4892-A57A-8ADAB8C34C2F}" ShortID="302639064">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Salto_2" ID="{C6E1D9FD-467A-4264-AB24-9533E05D4A1A}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Muerte_ENEMIGO" ID="{287AC601-B65E-45CC-A976-C80F7BDD56A0}">
+					<ChildrenList>
+						<Action Name="" ID="{D1310041-121F-4773-B8AB-71D12C218C3A}" ShortID="873231974">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FootSteps_ENEMIGO" ID="{76B4DAF7-40B8-4786-9DD5-FCE296B52EAB}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{66830546-CC7D-40BE-93F3-D13AB2481AFF}" ShortID="437435761">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Muerte_ENEMIGO" ID="{3EAD40AB-74E0-466E-98DA-9E1F7EB69967}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_FootSteps_ENEMIGO" ID="{FA3D14F0-1F0E-4302-8C1C-1DFEF8DFC63D}">
+					<ChildrenList>
+						<Action Name="" ID="{12155040-4655-4906-9B6D-92255331F136}" ShortID="443186203">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FootSteps_ENEMIGO" ID="{76B4DAF7-40B8-4786-9DD5-FCE296B52EAB}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FAE211E9-FD90-4812-BAD2-E200997F906B}" ShortID="715802522">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FootSteps_ENEMIGO" ID="{76B4DAF7-40B8-4786-9DD5-FCE296B52EAB}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ataque_ENEMIGO" ID="{6BE19A2E-D1B1-4263-8E3C-D7ECF8601A0D}">
+					<ChildrenList>
+						<Action Name="" ID="{EC9C9C11-69EF-4237-8ED9-AD6CBA45E663}" ShortID="490089176">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ataque_ENEMIGO" ID="{CEB3AB2E-C75D-4D59-A8F3-6CE50820B637}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_FootSteps_ENEMIGO" ID="{39C5E323-314C-4D72-8F8D-067ADA64A4D9}">
+					<ChildrenList>
+						<Action Name="" ID="{DF8C341B-CD79-4533-BCD9-D11117A88978}" ShortID="466504964">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FootSteps_ENEMIGO" ID="{76B4DAF7-40B8-4786-9DD5-FCE296B52EAB}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ataque_TK" ID="{E6D977D6-854B-4F60-A2E6-83EC7A8E6B4E}">
+					<ChildrenList>
+						<Action Name="" ID="{8A9D31F8-D475-4ACD-903E-CF21F096F449}" ShortID="475565341">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ataque" ID="{32469C9B-D1F3-4587-B253-9500A4CB9583}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{395A30D0-6D82-47E1-B07B-663BDCA9D715}" ShortID="600546190">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Probability" Type="Real64" Value="84"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Ataque" ID="{41E0967B-8F04-4DA7-B2E3-61C31D46639F}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7924E606-9E47-4DA3-B456-40B41B3335FD}" ShortID="200749812">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="84"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Ataque" ID="{41E0967B-8F04-4DA7-B2E3-61C31D46639F}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_1erSalto_FOX" ID="{19A8C0FB-C15C-4C63-950D-1774F1753554}">
+					<ChildrenList>
+						<Action Name="" ID="{0ACC2FC6-E6BB-4FEA-9CC5-C2E9C641821A}" ShortID="277057876">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Salto_1" ID="{154BB459-D89D-4F9D-B16E-FBB7812B8B3A}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
