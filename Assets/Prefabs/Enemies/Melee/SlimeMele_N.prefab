@@ -228,6 +228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hurt: {fileID: 8535733172154776900}
+  splashLeft: {fileID: 4607073942011206313}
+  splashRight: {fileID: 4607073941198096827}
 --- !u!114 &8075384006755407285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,6 +277,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3474319907599397276, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
       propertyPath: TriggerModule.primitives.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607073941152285058, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
+      propertyPath: SubModule.subEmitters.Array.data[0].emitProbability
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607073941965263504, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
+      propertyPath: SubModule.subEmitters.Array.data[0].emitProbability
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8535733173434426989, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
@@ -327,6 +337,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
+--- !u!198 &4607073941198096827 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4607073941965263504, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
+  m_PrefabInstance: {fileID: 1407064875}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4607073942011206313 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4607073941152285058, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
+  m_PrefabInstance: {fileID: 1407064875}
+  m_PrefabAsset: {fileID: 0}
 --- !u!198 &8535733172154776900 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8535733173434426991, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}

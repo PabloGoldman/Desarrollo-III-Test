@@ -260,6 +260,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hurt: {fileID: 8535733172894964246}
+  splashLeft: {fileID: 4607073942751477243}
+  splashRight: {fileID: 4607073941401628393}
 --- !u!114 &8075384006755407285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,6 +295,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8075384006755407287}
     m_Modifications:
+    - target: {fileID: 4607073941152285058, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
+      propertyPath: SubModule.subEmitters.Array.data[0].emitProbability
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607073941965263504, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
+      propertyPath: SubModule.subEmitters.Array.data[0].emitProbability
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8535733173434426989, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
       propertyPath: m_Name
       value: Hurt
@@ -343,6 +353,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
+--- !u!198 &4607073941401628393 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4607073941965263504, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
+  m_PrefabInstance: {fileID: 1744813177}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4607073942751477243 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4607073941152285058, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}
+  m_PrefabInstance: {fileID: 1744813177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!198 &8535733172894964246 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8535733173434426991, guid: 293e901ce84f26c42983cead60a22c9c, type: 3}

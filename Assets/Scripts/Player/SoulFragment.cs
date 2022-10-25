@@ -15,6 +15,7 @@ public class SoulFragment : MonoBehaviour
       ps = GetComponent<ParticleSystem>();
       ps.trigger.AddCollider(tanuk);
       ps.trigger.AddCollider(fox);
+      
    }
 
    private void OnParticleTrigger()

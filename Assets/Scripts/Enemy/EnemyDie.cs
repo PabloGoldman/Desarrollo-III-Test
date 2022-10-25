@@ -7,6 +7,8 @@ public class EnemyDie : MonoBehaviour, IDamageable
     private SpriteRenderer mr;
     private float timeToDestroy = 7;
     [SerializeField]private ParticleSystem hurt;
+    [SerializeField] private ParticleSystem splashLeft;
+    [SerializeField] private ParticleSystem splashRight;
     
 
     private void Awake()
@@ -19,10 +21,20 @@ public class EnemyDie : MonoBehaviour, IDamageable
     public void TakeDamage(float damage)
     {
         enemyData.CurrentHealth -= damage;
+        SpawnFragment();
         hurt.Play();
         if (enemyData.CurrentHealth <= 0) Die();
-    }    
-  
+    }
+
+    private void SpawnFragment()
+    {
+        if (enemyData.CurrentHealth < 30)
+        {
+            splashLeft.subEmitters.SetSubEmitterEmitProbability(0,1);
+            splashRight.subEmitters.SetSubEmitterEmitProbability(0,1);
+        }
+    }
+    
     private void Die()
     {
         col2D.enabled = false;
