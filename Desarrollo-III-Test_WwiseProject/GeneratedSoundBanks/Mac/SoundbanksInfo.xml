@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="2727197264">
+		<SoundBank Id="3161908922" Language="SFX" Hash="485332570">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -174,6 +174,54 @@
 						<File Id="865362117" Language="SFX">
 							<ShortName>Step_ENEMIGO.wav</ShortName>
 							<Path>SFX\Step_ENEMIGO_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4004670001" Name="Play_FS_Fox" ObjectPath="\Events\Default Work Unit\Play_FS_Fox" DurationType="OneShot" DurationMin="0.379093" DurationMax="0.618186">
+					<IncludedMemoryFiles>
+						<File Id="151425466" Language="SFX">
+							<ShortName>STEP_FOX4.wav</ShortName>
+							<Path>SFX\STEP_FOX4_10C4C929.wem</Path>
+						</File>
+						<File Id="485730286" Language="SFX">
+							<ShortName>STEP_FOX1.wav</ShortName>
+							<Path>SFX\STEP_FOX1_10C4C929.wem</Path>
+						</File>
+						<File Id="685472761" Language="SFX">
+							<ShortName>STEP_FOX2.wav</ShortName>
+							<Path>SFX\STEP_FOX2_10C4C929.wem</Path>
+						</File>
+						<File Id="968411142" Language="SFX">
+							<ShortName>STEP_FOX5.wav</ShortName>
+							<Path>SFX\STEP_FOX5_10C4C929.wem</Path>
+						</File>
+						<File Id="999384400" Language="SFX">
+							<ShortName>STEP_FOX3.wav</ShortName>
+							<Path>SFX\STEP_FOX3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3183323193" Name="Play_FS_TK" ObjectPath="\Events\Default Work Unit\Play_FS_TK" DurationType="OneShot" DurationMin="0.472903" DurationMax="1.453696">
+					<IncludedMemoryFiles>
+						<File Id="206356599" Language="SFX">
+							<ShortName>Step_TK3.wav</ShortName>
+							<Path>SFX\Step_TK3_10C4C929.wem</Path>
+						</File>
+						<File Id="756777783" Language="SFX">
+							<ShortName>Step_TK4.wav</ShortName>
+							<Path>SFX\Step_TK4_10C4C929.wem</Path>
+						</File>
+						<File Id="904242906" Language="SFX">
+							<ShortName>Step_TK1.wav</ShortName>
+							<Path>SFX\Step_TK1_10C4C929.wem</Path>
+						</File>
+						<File Id="1002805907" Language="SFX">
+							<ShortName>Step_TK5.wav</ShortName>
+							<Path>SFX\Step_TK5_10C4C929.wem</Path>
+						</File>
+						<File Id="1019914568" Language="SFX">
+							<ShortName>Step_TK2.wav</ShortName>
+							<Path>SFX\Step_TK2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

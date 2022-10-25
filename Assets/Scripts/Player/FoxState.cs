@@ -98,6 +98,7 @@ public class FoxState : CharacterState, IDamageable
         // Reset timer
         delayToIdle = 0.05f;
         animator.Run();
+        AkSoundEngine.PostEvent("Play_FS_Fox", gameObject);
     }
 
     public override void Idle()

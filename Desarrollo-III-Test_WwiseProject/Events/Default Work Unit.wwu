@@ -189,6 +189,48 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_FS_TK" ID="{F7FE1062-8209-43E5-BE7E-14CB3D33577F}">
+					<ChildrenList>
+						<Action Name="" ID="{F34682A1-E4F7-4ADB-8C06-FD54BABE4EA1}" ShortID="96652188">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FS_TK" ID="{FCDB619E-B5D0-44C8-AA60-50EAA710A032}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{57D49774-9508-42E1-8285-DDAD86AD5D60}" ShortID="224195185">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FS_TK" ID="{FCDB619E-B5D0-44C8-AA60-50EAA710A032}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_FS_Fox" ID="{50CCEEF0-DD57-4A38-91DD-A770B6872A6E}">
+					<ChildrenList>
+						<Action Name="" ID="{41862FE3-4E03-4942-AA14-E03A8D264221}" ShortID="156721947">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FS_Fox" ID="{D9E55A7F-BCB2-4CBA-9E6E-387CFEE7A542}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{625CB512-F407-41EA-8BAA-806897C466D4}" ShortID="466842684">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FS_Fox" ID="{D9E55A7F-BCB2-4CBA-9E6E-387CFEE7A542}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

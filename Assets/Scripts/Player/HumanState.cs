@@ -121,6 +121,14 @@ public class HumanState : CharacterState, IDamageable
         // Reset timer
         delayToIdle = 0.05f;
         animator.Run();
+        //Invoke(nameof(StartSoundWithDelay), 0.57f);
+
+
+
+    }
+    void StartSoundWithDelay()
+    {
+        AkSoundEngine.PostEvent("Play_FS_TK", gameObject);
     }
 
     public override void Idle()

@@ -20,6 +20,8 @@ namespace AK
         static const AkUniqueID PLAY_ATAQUE_TK = 3390788167U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_FOOTSTEPS_ENEMIGO = 3697655312U;
+        static const AkUniqueID PLAY_FS_FOX = 4004670001U;
+        static const AkUniqueID PLAY_FS_TK = 3183323193U;
         static const AkUniqueID PLAY_GAMEPLAY4 = 2811753234U;
         static const AkUniqueID PLAY_MUERTE_ENEMIGO = 715145019U;
         static const AkUniqueID PLAY_SALTO_TK = 2123649583U;
