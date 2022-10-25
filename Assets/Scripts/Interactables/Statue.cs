@@ -8,6 +8,8 @@ public class Statue : MonoBehaviour, IInteractable
 
     bool isStatueAvailable = true;
 
+    //Aca podria estar el costo de la estatua
+
     public string InteractionPrompt => prompt;
 
     private void Start()
@@ -15,7 +17,7 @@ public class Statue : MonoBehaviour, IInteractable
         playerManager = FindObjectOfType<PlayerManager>();
     }
 
-    public bool Interact(Interactor interactor)
+    public void Interact(Interactor interactor)
     {
         if (isStatueAvailable)
         {
@@ -33,13 +35,12 @@ public class Statue : MonoBehaviour, IInteractable
         {
             Debug.Log("Already bought on this statue");
         }
-
-        return true;
     }
 
     void SetAsUnable()
     {
         isStatueAvailable = false;
+        prompt = "Already purchased!";
         GetComponent<SpriteRenderer>().color = Color.red;
     }
 }

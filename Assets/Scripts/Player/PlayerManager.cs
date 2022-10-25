@@ -11,11 +11,11 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField] GameObject smokeParticles;
 
-    [SerializeField] int KeyFragmentPrice;
+    [SerializeField] int FragmentsPerKey; //Cantidad de fragmentos de llave necesarios para conseguir la llave
+    [SerializeField] int KeyFragmentPrice; //Precio del fragmento de llave
 
-    int keyFragments = 0;
-
-    int soulFragments = 0;
+    [SerializeField] int keyFragments = 0;
+    [SerializeField] int soulFragments = 0;
 
     float switchTimer;
 
@@ -36,6 +36,18 @@ public class PlayerManager : MonoBehaviour
     {
         currentHealth -= damage;
         OnHit?.Invoke(currentHealth);
+    }
+
+    public bool CanUnlockEndDoor()
+    {
+        if (keyFragments >= FragmentsPerKey)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public bool BuyFragment()
