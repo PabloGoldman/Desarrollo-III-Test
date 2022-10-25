@@ -12,11 +12,6 @@ public class Interactor : MonoBehaviour
 
     private IInteractable interactable;
 
-    private void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -36,6 +31,8 @@ public class Interactor : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     interactable.Interact(this);
+                    interactionPromptUI.Close();
+                    interactionPromptUI.SetUp(interactable.InteractionPrompt);
                 }
             }
         }

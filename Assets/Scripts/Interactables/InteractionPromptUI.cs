@@ -8,8 +8,6 @@ public class InteractionPromptUI : MonoBehaviour
     [SerializeField] private GameObject uiPanel;
     [SerializeField] private TextMeshProUGUI prompText;
 
-    //Cambiar el promp text por un "Already purchased" cuando compras la llave
-
     [SerializeField] GameObject player;
 
     public bool isDisplayed;

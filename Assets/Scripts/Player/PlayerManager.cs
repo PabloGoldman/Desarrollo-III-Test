@@ -11,8 +11,11 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField] GameObject smokeParticles;
 
-    [SerializeField] int FragmentsPerKey; //Cantidad de fragmentos de llave necesarios para conseguir la llave
-    [SerializeField] int KeyFragmentPrice; //Precio del fragmento de llave
+    [Tooltip("Key Fragments needed to unlock a Key")]
+    [SerializeField] int KeyFragmentsPerKey; //Cantidad de fragmentos de llave necesarios para conseguir la llave
+
+    [Tooltip("Price of the Key Fragment")]
+    [SerializeField] int SoulsPerKeyFragment; //Precio del fragmento de llave
 
     [SerializeField] int keyFragments = 0;
     [SerializeField] int soulFragments = 0;
@@ -40,21 +43,14 @@ public class PlayerManager : MonoBehaviour
 
     public bool CanUnlockEndDoor()
     {
-        if (keyFragments >= FragmentsPerKey)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return keyFragments >= KeyFragmentsPerKey;
     }
 
     public bool BuyFragment()
     {
-        if (soulFragments >= KeyFragmentPrice)
+        if (soulFragments >= SoulsPerKeyFragment)
         {
-            soulFragments -= KeyFragmentPrice;
+            soulFragments -= SoulsPerKeyFragment;
             keyFragments++;
             return true;
         }

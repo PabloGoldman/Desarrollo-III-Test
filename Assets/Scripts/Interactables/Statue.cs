@@ -2,11 +2,17 @@ using UnityEngine;
 
 public class Statue : MonoBehaviour, IInteractable
 {
-    [SerializeField] private string prompt;
+    string prompt;
+
+    [SerializeField] private string initialPrompt;
+
+    [SerializeField] private string notAvailablePrompt;
+
+    [SerializeField] private string promptAfterInteraction;
 
     PlayerManager playerManager;
 
-    bool isStatueAvailable = true;
+    bool isAvailable = true;
 
     //Aca podria estar el costo de la estatua
 
@@ -14,12 +20,13 @@ public class Statue : MonoBehaviour, IInteractable
 
     private void Start()
     {
+        prompt = initialPrompt;
         playerManager = FindObjectOfType<PlayerManager>();
     }
 
     public void Interact(Interactor interactor)
     {
-        if (isStatueAvailable)
+        if (isAvailable)
         {
             if (playerManager.BuyFragment())
             {
@@ -28,19 +35,27 @@ public class Statue : MonoBehaviour, IInteractable
             }
             else
             {
+                SetAsNotAvailable();
+                Invoke(nameof(SetAsAble), 0.1f);
                 Debug.Log("You don't have enough soul fragments!");
             }
         }
-        else
-        {
-            Debug.Log("Already bought on this statue");
-        }
+    }
+
+    void SetAsAble()
+    {
+        prompt = initialPrompt;
     }
 
     void SetAsUnable()
     {
-        isStatueAvailable = false;
-        prompt = "Already purchased!";
-        GetComponent<SpriteRenderer>().color = Color.red;
+        isAvailable = false;
+        prompt = promptAfterInteraction;
+        GetComponent<SpriteRenderer>().color = Color.gray;
+    }
+
+    void SetAsNotAvailable()
+    {
+        prompt = notAvailablePrompt;
     }
 }

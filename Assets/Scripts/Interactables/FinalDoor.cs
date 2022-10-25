@@ -4,31 +4,60 @@ using UnityEngine;
 
 public class FinalDoor : MonoBehaviour, IInteractable
 {
-    [SerializeField] private string prompt;
+    string prompt;
+
+    [SerializeField] private string initialPrompt;
+
+    [SerializeField] private string notAvailablePrompt;
 
     [SerializeField] private string promptAfterInteraction;
 
     public string InteractionPrompt => prompt;
 
+    bool isAvailable = true;
+
     PlayerManager playerManager;
 
     private void Start()
     {
+        prompt = initialPrompt;
         playerManager = FindObjectOfType<PlayerManager>();
     }
 
     public void Interact(Interactor interactor)
     {
-        if (playerManager.CanUnlockEndDoor())
+        if (isAvailable)
         {
-            SetAsUnable();
+            if (playerManager.CanUnlockEndDoor())
+            {
+                Debug.Log("Buying fragment");
+                SetAsUnable();
+            }
+            else
+            {
+                SetAsNotAvailable();
+                Invoke(nameof(SetAsAble), 0.1f);
+                Debug.Log("You don't have enough soul fragments!");
+            }
         }
+    }
+
+    void SetAsAble()
+    {
+        prompt = initialPrompt;
     }
 
     void SetAsUnable()
     {
+        isAvailable = false;
+        prompt = promptAfterInteraction;
+        GetComponent<SpriteRenderer>().color = Color.gray;
+        Destroy(GetComponent<BoxCollider2D>());
+    }
 
-        GetComponent<SpriteRenderer>().color = Color.clear;
+    void SetAsNotAvailable()
+    {
+        prompt = notAvailablePrompt;
     }
 
 }

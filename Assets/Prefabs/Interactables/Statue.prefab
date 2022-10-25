@@ -124,4 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6152471413702a4593439995e9fe8e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prompt: '[E] To interact'
+  initialPrompt: '[E] To interact'
+  notAvailablePrompt: You need more souls!
+  promptAfterInteraction: Already bought
