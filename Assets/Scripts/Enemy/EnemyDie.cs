@@ -5,7 +5,7 @@ public class EnemyDie : MonoBehaviour, IDamageable
     private EnemyData enemyData;
     private Collider2D col2D;
     private SpriteRenderer mr;
-    private float timeToDestroy = 7;
+    private float timeToDestroy = 6;
     [SerializeField]private ParticleSystem hurt;
     [SerializeField] private ParticleSystem splashLeft;
     [SerializeField] private ParticleSystem splashRight;
@@ -38,11 +38,14 @@ public class EnemyDie : MonoBehaviour, IDamageable
     private void Die()
     {
         col2D.enabled = false;
-        mr.enabled = false;
+        mr.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
         enemyData.IsDie = true;
-        Destroy(gameObject,timeToDestroy);
+        Invoke("SetActive",timeToDestroy);
     }
-    
+    private void SetActive()
+    {    
+        gameObject.SetActive(!enemyData.IsDie);
+    }
     
 
     private void OnCollisionEnter2D(Collision2D c)
