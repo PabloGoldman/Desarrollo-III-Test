@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4206923774514758325}
   - component: {fileID: 4206923774514758331}
   - component: {fileID: 4206923774514758330}
+  - component: {fileID: 5923297806969684716}
   m_Layer: 9
   m_Name: Statue
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,3 +128,15 @@ MonoBehaviour:
   initialPrompt: '[E] To interact'
   notAvailablePrompt: You need more souls!
   promptAfterInteraction: Already bought
+--- !u!114 &5923297806969684716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4206923774514758326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b3159647e2aa540a770953c25fa80f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
