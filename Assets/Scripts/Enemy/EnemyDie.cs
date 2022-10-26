@@ -38,7 +38,7 @@ public class EnemyDie : MonoBehaviour, IDamageable
     private void Die()
     {
         col2D.enabled = false;
-        mr.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+        mr.enabled = false;
         enemyData.IsDie = true;
         Invoke("SetActive",timeToDestroy);
     }
