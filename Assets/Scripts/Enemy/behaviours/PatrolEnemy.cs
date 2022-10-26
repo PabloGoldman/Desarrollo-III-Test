@@ -8,7 +8,6 @@ public class PatrolEnemy : MonoBehaviour
     private Animator animator;
     private Transform groundChecker;
     private Transform pointOfView;
-    private float speed;
     private bool follow;
 
     private const float groundDistance = 0.5f;
@@ -20,7 +19,6 @@ public class PatrolEnemy : MonoBehaviour
         enemyData = GetComponent<EnemyData>();
         groundChecker = transform.Find("CheckGround");
         pointOfView= transform.Find("FieldOfView");
-        speed = enemyData.Speed;
         rb.velocity = new Vector2( enemyData.Speed , 0);
         
     }

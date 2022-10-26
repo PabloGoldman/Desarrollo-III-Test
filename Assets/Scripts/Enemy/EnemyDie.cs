@@ -9,10 +9,11 @@ public class EnemyDie : MonoBehaviour, IDamageable
     [SerializeField]private ParticleSystem hurt;
     [SerializeField] private ParticleSystem splashLeft;
     [SerializeField] private ParticleSystem splashRight;
-    
+    private Rigidbody2D rb;
 
     private void Awake()
     {
+        rb = GetComponent<Rigidbody2D>();
         col2D = GetComponent<Collider2D>();
         mr = GetComponent<SpriteRenderer>();
         enemyData = GetComponent<EnemyData>();
@@ -37,6 +38,7 @@ public class EnemyDie : MonoBehaviour, IDamageable
     
     private void Die()
     {
+        rb.velocity = new Vector2( 0 , 0);
         col2D.enabled = false;
         mr.enabled = false;
         enemyData.IsDie = true;
@@ -46,7 +48,8 @@ public class EnemyDie : MonoBehaviour, IDamageable
     {    
         splashLeft.subEmitters.SetSubEmitterEmitProbability(0,0);
         splashRight.subEmitters.SetSubEmitterEmitProbability(0,0);
-        gameObject.SetActive(!enemyData.IsDie);
+        enemyData.ReSpawn = true;
+        gameObject.SetActive(false);
     }
     
 

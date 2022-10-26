@@ -17,7 +17,14 @@ public class EnemyData: MonoBehaviour
     [SerializeField] private float force;
     private Collider2D col2D;
     private SpriteRenderer mr;
-    
+    private Rigidbody2D rb;
+    private bool reSpawn;
+
+    public bool ReSpawn
+    {
+        get => reSpawn;
+        set => reSpawn = value;
+    }
     public float Speed
     {
         get => speed;
@@ -38,23 +45,26 @@ public class EnemyData: MonoBehaviour
 
     public void Awake()
     {
-        enabled = true;
+        reSpawn = false;
         RayDirection = 1;
         CurrentHealth = maxHealth;
         IsAttack = false;
         IsDie = false;
         col2D = GetComponent<Collider2D>();
         mr = GetComponent<SpriteRenderer>();
-    }
- 
+        rb = GetComponent<Rigidbody2D>();
 
-    public void ReSpawn()
+    }
+
+    public void Spawn()
     {
+        gameObject.SetActive(true);
+        reSpawn = false;
+        rb.velocity = new Vector2( speed , 0);
         col2D.enabled = true;
         mr.enabled = true;
         IsDie = false;
         CurrentHealth = maxHealth;
-        gameObject.SetActive(true);
     }
 
    

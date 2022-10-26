@@ -20,7 +20,7 @@ public class SpawnController : MonoBehaviour
    {
       foreach (var e in enemies)
       {
-         if (e.IsDie) e.ReSpawn();
+         if (e.ReSpawn) e.Spawn();
       }
    }
 
