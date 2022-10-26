@@ -17,8 +17,7 @@ public class EnemyData: MonoBehaviour
     [SerializeField] private float force;
     private Collider2D col2D;
     private SpriteRenderer mr;
-    private bool enabled;
-
+    
     public float Speed
     {
         get => speed;
@@ -47,30 +46,21 @@ public class EnemyData: MonoBehaviour
         col2D = GetComponent<Collider2D>();
         mr = GetComponent<SpriteRenderer>();
     }
-    
-    void OnBecameInvisible()
-    {
-        enabled = false;
-    }
-
-   
-    void OnBecameVisible()
-    {
-        enabled = true;
-    }
-
+ 
 
     public void ReSpawn()
     {
-        if (!enabled)
-        {
-            col2D.enabled = true;
-            mr.maskInteraction = SpriteMaskInteraction.None;
-            IsDie = false;
-            CurrentHealth = maxHealth;
-        }
-        else  gameObject.SetActive(false);
+        col2D.enabled = true;
+        mr.enabled = true;
+        IsDie = false;
+        CurrentHealth = maxHealth;
+        gameObject.SetActive(true);
     }
+
+   
+
+
+   
 
 }
 
