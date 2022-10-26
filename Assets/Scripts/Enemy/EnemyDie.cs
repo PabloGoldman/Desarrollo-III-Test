@@ -44,6 +44,8 @@ public class EnemyDie : MonoBehaviour, IDamageable
     }
     private void SetActive()
     {    
+        splashLeft.subEmitters.SetSubEmitterEmitProbability(0,0);
+        splashRight.subEmitters.SetSubEmitterEmitProbability(0,0);
         gameObject.SetActive(!enemyData.IsDie);
     }
     
