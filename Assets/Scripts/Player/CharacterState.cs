@@ -44,10 +44,16 @@ public abstract class CharacterState : MonoBehaviour
             animator = GetComponent<PlayerAnimatorController>();
 
             groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_HeroKnight>();
+
+            ResetVariables();
         }
     }
 
-    private void OnEnable() { isFootsteping = false; }
+    private void OnEnable()
+    {
+        isFootsteping = false;
+        Physics2D.IgnoreLayerCollision(gameObject.layer, 6, false);
+    }
 
 
     public void BuyFragment()
@@ -138,6 +144,7 @@ public abstract class CharacterState : MonoBehaviour
         playerManager.currentHealth = playerManager.playerData.maxHealth;
         gameObject.SetActive(false);
         gameObject.SetActive(true);
+        Physics2D.IgnoreLayerCollision(gameObject.layer, 6 , false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -159,6 +166,7 @@ public abstract class CharacterState : MonoBehaviour
     protected IEnumerator DisableColliderCoroutine(Collider2D collider)
     {
         Physics2D.IgnoreLayerCollision(gameObject.layer, collider.gameObject.layer);
+        Debug.Log(collider.gameObject.layer);
         yield return new WaitForSeconds(PostDamageInvincibleTime);
         Physics2D.IgnoreLayerCollision(gameObject.layer, collider.gameObject.layer, false);
     }
