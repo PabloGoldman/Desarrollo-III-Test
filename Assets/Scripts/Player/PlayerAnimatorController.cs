@@ -60,6 +60,8 @@ public class PlayerAnimatorController : MonoBehaviour
     public void Run()
     {
         animator.SetInteger("AnimState", 1);
+
+        //AkSoundEngine.PostEvent("Play_FS_Fox", gameObject);
     }
 
     public void Hurt()

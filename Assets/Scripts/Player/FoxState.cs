@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.Collections;
 
 [Serializable]
 public class FoxState : CharacterState, IDamageable
@@ -73,7 +74,6 @@ public class FoxState : CharacterState, IDamageable
             {
                 rb.gravityScale = 0;
             }
-
         }
     }
 
@@ -98,7 +98,19 @@ public class FoxState : CharacterState, IDamageable
         // Reset timer
         delayToIdle = 0.05f;
         animator.Run();
+
+        if (!isFootsteping)
+        {
+            StartCoroutine(TriggerFootstepCoroutine());
+        }
+    }
+
+    IEnumerator TriggerFootstepCoroutine()
+    {
+        isFootsteping = true;
         AkSoundEngine.PostEvent("Play_FS_Fox", gameObject);
+        yield return new WaitForSeconds(0.566f);
+        isFootsteping = false;
     }
 
     public override void Idle()
