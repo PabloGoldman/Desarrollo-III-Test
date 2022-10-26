@@ -19,7 +19,7 @@ public abstract class CharacterState : MonoBehaviour
 
     protected bool isWallSliding = false;
 
-    public bool isDead { get ; protected set; }
+    public bool isDead { get; protected set; }
 
     protected Rigidbody2D rb;
 
@@ -47,6 +47,9 @@ public abstract class CharacterState : MonoBehaviour
         }
     }
 
+    private void OnEnable() { isFootsteping = false; }
+
+
     public void BuyFragment()
     {
         playerManager.BuyFragment();
@@ -71,6 +74,7 @@ public abstract class CharacterState : MonoBehaviour
     public virtual void SwitchState()
     {
         animator.OnGround(isGrounded);
+        AkSoundEngine.PostEvent("Play_Transformacion", gameObject);
     }
 
     public virtual void Die()
@@ -87,7 +91,7 @@ public abstract class CharacterState : MonoBehaviour
         isGrounded = true;
         isDead = false;
         animator.Idle();
-            
+
         if (playerManager.currentCheckPoint)
         {
             transform.position = playerManager.currentCheckPoint.transform.position;

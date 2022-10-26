@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 533f30dba3b54e4f9938582f7daa768d
     GuidInternal: 
-    m_lastTime: -8585348654589882510
+    m_lastTime: -8585348884099295659
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9745ba4ff6db1f44811aa5b9a0c08c41
     GuidInternal: 
-    m_lastTime: -8585348654599445629
+    m_lastTime: -8585348884105224933
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 94af67ceb0e7dc4fb5e1e3b2b212a579
     GuidInternal: 
-    m_lastTime: -8585348654589932721
+    m_lastTime: -8585348884099345263
     List:
     - name: main
       guid: 8d6e94fa33b19e4dbdcaad50e7d4f589
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 876a7ee1bb6edb4f809b1c3688830d3a
     GuidInternal: 
-    m_lastTime: -8585348654602678154
+    m_lastTime: -8585348474505280243
     List:
     - name: Play_1erSalto_FOX
       guid: fbc0a8195cc1634c950d1774f1753554
@@ -111,8 +111,8 @@ MonoBehaviour:
         guid: fbc0a8195cc1634c950d1774f1753554
       Path: Events\Default Work Unit\Play_1erSalto_FOX
       maxAttenuation: 0
-      maxDuration: 1.782912
-      minDuration: 1.390788
+      maxDuration: 5.852528
+      minDuration: 4.565353
     - name: Play_2doSalto_FOX
       guid: 1bf43db020dc3d488e311404bf6c2cb4
       id: 1282247140
@@ -128,8 +128,8 @@ MonoBehaviour:
         guid: 1bf43db020dc3d488e311404bf6c2cb4
       Path: Events\Default Work Unit\Play_2doSalto_FOX
       maxAttenuation: 0
-      maxDuration: 4.246666
-      minDuration: 4.246666
+      maxDuration: 0.347083
+      minDuration: 0.347083
     - name: Play_Ambiente
       guid: f0928b94e68ca941ad18ce0495e4cac8
       id: 94063951
@@ -179,8 +179,25 @@ MonoBehaviour:
         guid: d677d9e64b85604fa2e683ec7a8e6b4e
       Path: Events\Default Work Unit\Play_Ataque_TK
       maxAttenuation: 0
-      maxDuration: 2.247619
-      minDuration: 1.117483
+      maxDuration: 0.778022
+      minDuration: 0.440323
+    - name: Play_Dash_FOX
+      guid: fdf74deb884c904c9d6d25bd0833a196
+      id: 2581559880
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Play_Dash_FOX
+        ObjectType: 3
+        guid: fdf74deb884c904c9d6d25bd0833a196
+      Path: Events\Default Work Unit\Play_Dash_FOX
+      maxAttenuation: 0
+      maxDuration: 0.575166
+      minDuration: 0.575166
     - name: Play_FootSteps
       guid: e146fbf384918c43a82af99c2d9309ce
       id: 3854155799
@@ -196,8 +213,8 @@ MonoBehaviour:
         guid: e146fbf384918c43a82af99c2d9309ce
       Path: Events\Default Work Unit\Play_FootSteps
       maxAttenuation: 0
-      maxDuration: 1.453696
-      minDuration: 0.379093
+      maxDuration: 0.566349
+      minDuration: 0.163574
     - name: Play_FootSteps_ENEMIGO
       guid: f0143dfa0e1f02438c1c1dfef8dfc63d
       id: 3697655312
@@ -230,8 +247,8 @@ MonoBehaviour:
         guid: f0eecc5057dd384a91dda770b6872a6e
       Path: Events\Default Work Unit\Play_FS_Fox
       maxAttenuation: 0
-      maxDuration: 0.618186
-      minDuration: 0.379093
+      maxDuration: 0.390427
+      minDuration: 0
     - name: Play_FS_TK
       guid: 6210fef70982e543be7e14cb3d33577f
       id: 3183323193
@@ -247,8 +264,8 @@ MonoBehaviour:
         guid: 6210fef70982e543be7e14cb3d33577f
       Path: Events\Default Work Unit\Play_FS_TK
       maxAttenuation: 0
-      maxDuration: 1.453696
-      minDuration: 0.472903
+      maxDuration: 1.066349
+      minDuration: 0
     - name: Play_gameplay4
       guid: 7537d86f8e8a364190f9bb2dca76198b
       id: 2811753234
@@ -298,8 +315,59 @@ MonoBehaviour:
         guid: 8ec286db30fd9945a2dcb90063cbf9c7
       Path: Events\Default Work Unit\Play_Salto_TK
       maxAttenuation: 0
-      maxDuration: 1.782912
-      minDuration: 1.390788
+      maxDuration: 5.852528
+      minDuration: 4.565353
+    - name: Play_SoulPlops
+      guid: ab2552b8f6e7474ea5fe639cffc32906
+      id: 3392808617
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Play_SoulPlops
+        ObjectType: 3
+        guid: ab2552b8f6e7474ea5fe639cffc32906
+      Path: Events\Default Work Unit\Play_SoulPlops
+      maxAttenuation: 0
+      maxDuration: 2.118118
+      minDuration: 0.634853
+    - name: Play_Totem_Compra
+      guid: fae445a7f3ab884ca890d9c9a956668a
+      id: 4028465998
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Play_Totem_Compra
+        ObjectType: 3
+        guid: fae445a7f3ab884ca890d9c9a956668a
+      Path: Events\Default Work Unit\Play_Totem_Compra
+      maxAttenuation: 0
+      maxDuration: 3.259471
+      minDuration: 3.259471
+    - name: Play_Transformacion
+      guid: 08c2e248486e6046b2e31c160ff0f988
+      id: 1671946780
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Play_Transformacion
+        ObjectType: 3
+        guid: 08c2e248486e6046b2e31c160ff0f988
+      Path: Events\Default Work Unit\Play_Transformacion
+      maxAttenuation: 0
+      maxDuration: 0.589001
+      minDuration: 0.589001
     - name: Stop_FootSteps_ENEMIGO
       guid: 23e3c5394c31724d8f8d067ada64a4d9
       id: 3318741046
@@ -329,7 +397,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: be5fcb74e5cb2d46a71fbe751968674d
     GuidInternal: 
-    m_lastTime: -8585348654602558278
+    m_lastTime: -8585348884111002140
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -343,7 +411,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 2d17fdd0991ad346870d77cca79b79f7
     GuidInternal: 
-    m_lastTime: -8585348654588823691
+    m_lastTime: -8585348884099320462
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -357,7 +425,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: a992a61b80777141a0f7e3f41d889a24
     GuidInternal: 
-    m_lastTime: -8585348654589912741
+    m_lastTime: -8585348884099310543
     List:
     - name: footsteps
       guid: 1c6579f64915ad48ae882f9d50a1b91d
@@ -471,7 +539,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: de49f118de135b4a81cad106e2ca5f67
     GuidInternal: 
-    m_lastTime: -8585348654589892767
+    m_lastTime: -8585348884099300625
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 

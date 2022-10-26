@@ -91,6 +91,7 @@ public class FoxState : CharacterState, IDamageable
         jumpDelay = timeBetweenJumps;
 
         jumpCount++;
+        AkSoundEngine.PostEvent("Play_1erSalto_FOX", gameObject);
     }
 
     public override void Run()
@@ -109,7 +110,7 @@ public class FoxState : CharacterState, IDamageable
     {
         isFootsteping = true;
         AkSoundEngine.PostEvent("Play_FS_Fox", gameObject);
-        yield return new WaitForSeconds(0.566f);
+        yield return new WaitForSeconds(0.3f);
         isFootsteping = false;
     }
 
@@ -129,6 +130,8 @@ public class FoxState : CharacterState, IDamageable
         rollTimer = 0;
 
         rollCurrentTime = 0;
+
+        AkSoundEngine.PostEvent("Play_Dash_FOX", gameObject);
     }
 
     void CheckIsGrounded()

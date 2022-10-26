@@ -32,6 +32,8 @@ public class Statue : MonoBehaviour, IInteractable
             {
                 Debug.Log("Buying fragment");
                 SetAsUnable();
+                AkSoundEngine.PostEvent("Play_Totem_Compra", gameObject);
+
             }
             else
             {

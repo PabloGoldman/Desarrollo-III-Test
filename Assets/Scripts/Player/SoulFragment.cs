@@ -23,6 +23,7 @@ public class SoulFragment : MonoBehaviour
       int numEnter = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
       for (int i = 0; i < numEnter; i++)
       {
+         AkSoundEngine.PostEvent("Play_SoulPlops", gameObject); 
          ParticleSystem.Particle p = enter[i];
          OnHit?.Invoke();
          p.remainingLifetime = 0;

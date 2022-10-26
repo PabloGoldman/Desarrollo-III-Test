@@ -148,6 +148,16 @@
 				</Event>
 				<Event Name="Play_Ataque_TK" ID="{E6D977D6-854B-4F60-A2E6-83EC7A8E6B4E}">
 					<ChildrenList>
+						<Action Name="" ID="{40FFAAF2-AA33-42AB-9B06-2A550A6E303E}" ShortID="961300880">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ataque" ID="{32469C9B-D1F3-4587-B253-9500A4CB9583}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{8A9D31F8-D475-4ACD-903E-CF21F096F449}" ShortID="475565341">
 							<ReferenceList>
 								<Reference Name="Target">
@@ -168,7 +178,7 @@
 						</Action>
 						<Action Name="" ID="{7924E606-9E47-4DA3-B456-40B41B3335FD}" ShortID="200749812">
 							<PropertyList>
-								<Property Name="Probability" Type="Real64" Value="84"/>
+								<Property Name="Probability" Type="Real64" Value="74"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -202,6 +212,22 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{57D49774-9508-42E1-8285-DDAD86AD5D60}" ShortID="224195185">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{A1FA4535-FF3B-489A-957D-D27A3DC34070}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.5"/>
+													<Property Name="Min" Type="Real64" Value="-0.5"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Probability" Type="Real64" Value="84"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="FS_TK" ID="{FCDB619E-B5D0-44C8-AA60-50EAA710A032}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
@@ -223,9 +249,70 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{625CB512-F407-41EA-8BAA-806897C466D4}" ShortID="466842684">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="81"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="FS_Fox" ID="{D9E55A7F-BCB2-4CBA-9E6E-387CFEE7A542}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Transformacion" ID="{48E2C208-6E48-4660-B2E3-1C160FF0F988}">
+					<ChildrenList>
+						<Action Name="" ID="{B072B550-A6AE-4A18-AC89-CD7B3AF61430}" ShortID="954151284">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Transformacion_V3" ID="{E5C2D01F-42CE-4516-8157-82274519BF8F}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4C28F378-E4EC-471A-9F2E-6039858D18DA}" ShortID="363044435">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="dust" ID="{88875530-988A-47F3-BD5F-15FF0435150F}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Totem_Compra" ID="{A745E4FA-ABF3-4C88-A890-D9C9A956668A}">
+					<ChildrenList>
+						<Action Name="" ID="{9C435BF1-4F7C-45C2-BE35-58D0294282E8}" ShortID="230293041">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Totem_Compra" ID="{4A726083-008B-4AA0-B9B0-B0B209A478A8}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F14A7BA9-3D7A-4452-9829-56040D15E510}" ShortID="736047985">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Totem_Hit" ID="{0677F5F5-36D7-47CB-8BA9-A57281FE1E4C}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Dash_FOX" ID="{EB4DF7FD-4C88-4C90-9D6D-25BD0833A196}">
+					<ChildrenList>
+						<Action Name="" ID="{9F2CA0EA-49BD-4D18-93FF-42B2AA652DB6}" ShortID="817342741">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dash_FOX" ID="{5936321E-108F-428F-AFEB-DD2A66335FCA}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SoulPlops" ID="{B85225AB-E7F6-4E47-A5FE-639CFFC32906}">
+					<ChildrenList>
+						<Action Name="" ID="{E973FD41-EE61-4598-B380-239F9CE297E8}" ShortID="786279449">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SoulPlops" ID="{75F0FCC5-B126-4D07-82E9-35BFB7D8151C}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

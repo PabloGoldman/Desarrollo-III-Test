@@ -65,6 +65,7 @@ public class HumanState : CharacterState, IDamageable
 
     void Attack()
     {
+        AkSoundEngine.PostEvent("Play_Ataque_TK", gameObject);
         currentAttack++;
 
         if (currentAttack == 3)
@@ -113,8 +114,8 @@ public class HumanState : CharacterState, IDamageable
     public override void Jump()
     {
         base.Jump();
-
         rb.velocity = new Vector2(rb.velocity.x, humanData.jumpForce);
+        AkSoundEngine.PostEvent("Play_Salto_TK", gameObject);
     }
 
     public override void Run()
@@ -132,8 +133,8 @@ public class HumanState : CharacterState, IDamageable
     IEnumerator TriggerFootstepCoroutine()
     {
         isFootsteping = true;
-        AkSoundEngine.PostEvent("Play_FS_Fox", gameObject);
-        yield return new WaitForSeconds(0.566f);
+        AkSoundEngine.PostEvent("Play_FS_TK", gameObject);
+        yield return new WaitForSeconds(0.3f);
         isFootsteping = false;
     }
 
