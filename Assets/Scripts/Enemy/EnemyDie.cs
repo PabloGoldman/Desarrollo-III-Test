@@ -38,12 +38,14 @@ public class EnemyDie : MonoBehaviour, IDamageable
     private void Die()
     {
         col2D.enabled = false;
-        mr.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+        mr.enabled = false;
         enemyData.IsDie = true;
         Invoke("SetActive",timeToDestroy);
     }
     private void SetActive()
     {    
+        splashLeft.subEmitters.SetSubEmitterEmitProbability(0,0);
+        splashRight.subEmitters.SetSubEmitterEmitProbability(0,0);
         gameObject.SetActive(!enemyData.IsDie);
     }
     
