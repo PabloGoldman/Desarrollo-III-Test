@@ -9,6 +9,7 @@ public class UI_Version : MonoBehaviour
     [SerializeField] private TextMeshProUGUI lifeText;
     [SerializeField] private TextMeshProUGUI soulText;
     private int souls;
+    
     private float currentLife;
     
     private void Awake()

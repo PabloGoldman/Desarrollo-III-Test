@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -122,19 +121,14 @@ public class HumanState : CharacterState, IDamageable
         // Reset timer
         delayToIdle = 0.05f;
         animator.Run();
+        //Invoke(nameof(StartSoundWithDelay), 0.57f);
 
-        if (!isFootsteping)
-        {
-            StartCoroutine(TriggerFootstepCoroutine());
-        }
+
+
     }
-
-    IEnumerator TriggerFootstepCoroutine()
+    void StartSoundWithDelay()
     {
-        isFootsteping = true;
-        AkSoundEngine.PostEvent("Play_FS_Fox", gameObject);
-        yield return new WaitForSeconds(0.566f);
-        isFootsteping = false;
+        AkSoundEngine.PostEvent("Play_FS_TK", gameObject);
     }
 
     public override void Idle()

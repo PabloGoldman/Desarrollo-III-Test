@@ -27,8 +27,6 @@ public abstract class CharacterState : MonoBehaviour
 
     protected float inputX;
 
-    protected bool isFootsteping = false;
-
     [SerializeField] float PostDamageInvincibleTime;
 
     public virtual void Awake()

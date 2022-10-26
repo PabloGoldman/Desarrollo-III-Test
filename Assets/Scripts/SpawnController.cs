@@ -4,23 +4,22 @@ using UnityEngine;
 public class SpawnController : MonoBehaviour
 {
    [SerializeField] private List<EnemyData> enemies;
-   
+   [SerializeField] private float timeToSpawn;
 
-   private void OnEnable()
+   private void Start()
    {
-      SpawnPoint.OnSpawn += Spawn;
+      InvokeRepeating("Spawn",0,timeToSpawn);
    }
 
-   private void OnDisable()
-   {
-      SpawnPoint.OnSpawn -= Spawn;
-   }
-   
    private void Spawn()
    {
       foreach (var e in enemies)
       {
-         if (e.IsDie) e.ReSpawn();
+         if (e.IsDie)
+         {  e.gameObject.SetActive(true);
+            e.ReSpawn();
+         }
+         
       }
    }
 
