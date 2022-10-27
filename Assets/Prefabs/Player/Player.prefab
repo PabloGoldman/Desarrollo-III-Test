@@ -483,7 +483,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550829637812236295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0000054929405, y: 2.3, z: -10}
+  m_LocalPosition: {x: 0.0000054929405, y: 2.3000095, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -619,8 +619,8 @@ MonoBehaviour:
   timePerSwitch: 1
   currentCheckPoint: {fileID: 0}
   smokeParticles: {fileID: 7561215679938745366}
-  KeyFragmentsPerKey: 0
-  SoulsPerKeyFragment: 0
+  KeyFragmentsPerKey: 7
+  SoulsPerKeyFragment: 20
   keyFragments: 0
   soulFragments: 0
   playerData: {fileID: 11400000, guid: 61ebe468801cd524bb39a8d5030ca380, type: 2}
@@ -1503,6 +1503,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 5787556221324632503}
+    - target: {fileID: 4749529581902192725, guid: c8190178c39a4554f90d6ac5b5ed8540, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4749529581902192728, guid: c8190178c39a4554f90d6ac5b5ed8540, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1846,6 +1850,10 @@ PrefabInstance:
     - target: {fileID: 4749529581902192725, guid: c8190178c39a4554f90d6ac5b5ed8540, type: 3}
       propertyPath: m_Camera
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749529581902192725, guid: c8190178c39a4554f90d6ac5b5ed8540, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4749529581902192728, guid: c8190178c39a4554f90d6ac5b5ed8540, type: 3}
       propertyPath: m_Pivot.x

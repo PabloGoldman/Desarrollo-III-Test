@@ -25,6 +25,7 @@ public class PlayerManager : MonoBehaviour
     public PlayerData playerData;
 
     public static event Action<float> OnHit;
+    public static event Action OnBuyKey;
 
     public float currentHealth { get; set; }
 
@@ -61,7 +62,7 @@ public class PlayerManager : MonoBehaviour
         {
             soulFragments -= SoulsPerKeyFragment;
             keyFragments++;
-            // llamr aca 
+            OnBuyKey?.Invoke();
             return true;
         }
         else
