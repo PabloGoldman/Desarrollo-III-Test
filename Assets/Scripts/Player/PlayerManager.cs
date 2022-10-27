@@ -61,6 +61,7 @@ public class PlayerManager : MonoBehaviour
         {
             soulFragments -= SoulsPerKeyFragment;
             keyFragments++;
+            // llamr aca 
             return true;
         }
         else
