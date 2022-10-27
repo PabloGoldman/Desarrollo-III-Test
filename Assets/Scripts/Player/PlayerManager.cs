@@ -1,5 +1,7 @@
 using UnityEngine;
 using System;
+using Unity.VisualScripting;
+
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] FoxState foxState;
@@ -39,7 +41,6 @@ public class PlayerManager : MonoBehaviour
 
         SoulFragment.OnHit += AddSoulFragment;
     }
-
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;

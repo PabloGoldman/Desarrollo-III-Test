@@ -42,9 +42,9 @@ public class MeleeAttack : MonoBehaviour
     
     private void StopAttack()
     { 
-        if (enemyData.IsDie) return;
         attack  = false;
         enemyData.Speed = speed * enemyData.RayDirection;
+        if (enemyData.IsDie) return;
         rb.velocity = new Vector2( enemyData.Speed , 0); 
     }
 
