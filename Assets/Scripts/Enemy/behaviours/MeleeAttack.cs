@@ -23,7 +23,7 @@ public class MeleeAttack : MonoBehaviour
 
     private void Update()
     {
-       if (enemyData.IsDie) return;
+       if (enemyData.IsDie || attack) return;
         Attack();
     }
 
