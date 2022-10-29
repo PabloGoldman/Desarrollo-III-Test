@@ -101,6 +101,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6419679338573129102, guid: 4d31a8f7265aa7f40bd08a03d17558e2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7270746187579578991, guid: 4d31a8f7265aa7f40bd08a03d17558e2, type: 3}
       propertyPath: m_Size.y
       value: 6.082756
@@ -715,6 +719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: YellowGrass_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6419679338573129102, guid: 4d31a8f7265aa7f40bd08a03d17558e2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7270746187579578991, guid: 4d31a8f7265aa7f40bd08a03d17558e2, type: 3}
       propertyPath: m_Size.x
       value: 65.36488
@@ -837,11 +845,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 997290702331743510, guid: d1e7a29836f13004e95c6f33db3f0d7c, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 997290702490908285, guid: d1e7a29836f13004e95c6f33db3f0d7c, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 997290703754714792, guid: d1e7a29836f13004e95c6f33db3f0d7c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4192691488621305892, guid: d1e7a29836f13004e95c6f33db3f0d7c, type: 3}
       propertyPath: m_RootOrder
