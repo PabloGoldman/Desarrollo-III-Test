@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5837984391012184363}
-  m_Layer: 0
+  - component: {fileID: 1940079085}
+  - component: {fileID: 1940079084}
+  m_Layer: 9
   m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,6 +35,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1940079085
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7795601626431414640}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -4.37603, y: -1.4836998}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.504196, y: 11.29129}
+  m_EdgeRadius: 0
+--- !u!114 &1940079084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7795601626431414640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3808eb4b742a74c4d8426c7eadabd095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialPrompt: '[E] To interact'
+  notAvailablePrompt: You need more key fragments!
+  promptAfterInteraction: Already bought
 --- !u!1001 &3284272818134341076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40,6 +83,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5837984391012184363}
     m_Modifications:
+    - target: {fileID: 3617048704830810276, guid: f7dad855b049b2b4db51f278a55450f4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3617048704830810277, guid: f7dad855b049b2b4db51f278a55450f4, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -88,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: puerta2
       objectReference: {fileID: 0}
+    - target: {fileID: 3617048704830810279, guid: f7dad855b049b2b4db51f278a55450f4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7dad855b049b2b4db51f278a55450f4, type: 3}
 --- !u!4 &2280582933177990513 stripped
@@ -106,9 +157,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: puerta
       objectReference: {fileID: 0}
+    - target: {fileID: 5342824642907204732, guid: 13a10d9816e3d4947887c1ad7c356ba9, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5342824642907204733, guid: 13a10d9816e3d4947887c1ad7c356ba9, type: 3}
       propertyPath: m_SortingOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5342824642907204734, guid: 13a10d9816e3d4947887c1ad7c356ba9, type: 3}
       propertyPath: m_RootOrder
