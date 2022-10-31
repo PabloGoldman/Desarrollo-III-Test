@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Plant_3
+  m_Name: Lava
   m_Shader: {fileID: -6465566751694194690, guid: 9141bf2daaacc9549afa0b02caad7464, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -25,11 +25,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GlowTex:
-        m_Texture: {fileID: 2800000, guid: 7e505ea4ae6e8454cb92fc37090aa8d8, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e3a3a13db1139864a9a00eee88548698, type: 3}
+        m_Texture: {fileID: 2800000, guid: c6aa0cefcfb11a745bfa04454545e5dd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -58,6 +58,6 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 0.6179863, g: 18.307844, b: 18.616837, a: 0}
+    - _GlowColor: {r: 0.70710677, g: 0.33830208, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
