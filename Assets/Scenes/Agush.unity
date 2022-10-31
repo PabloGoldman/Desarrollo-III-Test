@@ -1160,10 +1160,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6074610759877542561, guid: 34ea82a0f94a42b49b10390ef752688b, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6074610760794449044, guid: 34ea82a0f94a42b49b10390ef752688b, type: 3}
       propertyPath: m_Name
       value: Grass
@@ -1501,9 +1497,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vegetacion
       objectReference: {fileID: 0}
-    - target: {fileID: 3527270747479957073, guid: cdcbedc63586be44abbc2aa218c563f0, type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
+    - target: {fileID: 5139244484454045129, guid: cdcbedc63586be44abbc2aa218c563f0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.81438
+      objectReference: {fileID: 0}
+    - target: {fileID: 5139244485657070366, guid: cdcbedc63586be44abbc2aa218c563f0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.44075608
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdcbedc63586be44abbc2aa218c563f0, type: 3}
@@ -1514,14 +1514,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6113812913043232512, guid: 2c06c063abfdcc94abe4e4b09b0066c6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 6113812913043232512, guid: 2c06c063abfdcc94abe4e4b09b0066c6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -68.99
-      objectReference: {fileID: 0}
     - target: {fileID: 6113812913784966220, guid: 2c06c063abfdcc94abe4e4b09b0066c6, type: 3}
       propertyPath: m_RootOrder
       value: 9
