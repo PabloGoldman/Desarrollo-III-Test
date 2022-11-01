@@ -1,7 +1,11 @@
 Event	ID	Name			Wwise Object Path	Notes
 	94063951	Play_Ambiente			\Default Work Unit\Play_Ambiente	
+	333401299	Play_HURT_TK			\Default Work Unit\Play_HURT_TK	
+	365318234	Play_Respawn			\Default Work Unit\Play_Respawn	
 	715145019	Play_Muerte_ENEMIGO			\Default Work Unit\Play_Muerte_ENEMIGO	
+	1070575578	Play_Muerte_FOX			\Default Work Unit\Play_Muerte_FOX	
 	1282247140	Play_2doSalto_FOX			\Default Work Unit\Play_2doSalto_FOX	
+	1583493768	Play_Die_TK			\Default Work Unit\Play_Die_TK	
 	1671946780	Play_Transformacion			\Default Work Unit\Play_Transformacion	
 	2123649583	Play_Salto_TK			\Default Work Unit\Play_Salto_TK	
 	2541583543	Play_1erSalto_FOX			\Default Work Unit\Play_1erSalto_FOX	
@@ -16,54 +20,78 @@ Event	ID	Name			Wwise Object Path	Notes
 	3977950446	Play_Ataque_ENEMIGO			\Default Work Unit\Play_Ataque_ENEMIGO	
 	4004670001	Play_FS_Fox			\Default Work Unit\Play_FS_Fox	
 	4028465998	Play_Totem_Compra			\Default Work Unit\Play_Totem_Compra	
+	4289913803	Play_HURT_Fox			\Default Work Unit\Play_HURT_Fox	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	2385628198	footsteps			\Default Work Unit\footsteps	
+	3535913461	hurts			\Default Work Unit\hurts	
 
 Switch	ID	Name	Switch Group			Notes
 	795715770	FS_FOX	footsteps			
 	3866151752	FS_TK	footsteps			
+	1580675200	Hurt_Fox	hurts			
+	3582750806	Hurt_TK	hurts			
 
 Effect plug-ins	ID	Name	Type				Notes
 	2648499661	Hall_Medium_Dark	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	22608004	Dash_FOX	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Dash_V2_5F8BA950.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Dash_FOX		101524
+	338119	Herida_FOX5	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Herida_FOX5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_Fox\Herida_FOX5		61776
+	22608004	Dash_FOX	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Dash_V2_46765D2D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Dash_FOX		101524
+	22870322	Herida_TK3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Herida_TK3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_TK\Herida_TK3		75724
+	25284358	AtaqueEspada(v2)2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\AtaqueEspada(v2)2_489B40C4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Ataque\AtaqueEspada(v2)2		86096
+	88885702	Herida_FOX3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Herida_FOX3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_Fox\Herida_FOX3		51044
 	111109569	Step_ENEMIGO3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Step_ENEMIGO3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Footsteps\FootSteps_ENEMIGO\Step_ENEMIGO3		218992
 	123341009	AtaqueVO1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\AtaqueVO1_D2B9DF1A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\VO_Ataque\AtaqueVO1		23730
+	124916253	Step_FOX(v2)2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Step_FOX(v2)2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\FS_Fox(v2)\Step_FOX(v2)2		23472
 	144379592	Muerte_ENEMIGO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Muerte_ENEMIGO_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Muerte_ENEMIGO		35260
 	149865471	Ataque_ENEMIGO2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Ataque_ENEMIGO2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo2\Ataque_ENEMIGO\Ataque_ENEMIGO2		174956
-	151425466	STEP_FOX4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\STEP_FOX4_CA64DA9B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\STEP_FOX4		34036
-	206356599	Step_TK3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Step_TK3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_TK\Step_TK3		83484
-	223207985	Totem_Compra	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\218070__meaxx__vinyl-loop-4_C8105BF6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Stinger_Compra\Totem_Compra		101352
+	178880946	Muerte_VO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Muerte_VO_6CAD3810.wem		\Actor-Mixer Hierarchy\Default Work Unit\Die_TK\Muerte_VO		37062
+	188209767	Herida_TK2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Herida_TK2_95683631.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_TK\Herida_TK2		59444
+	206356599	Step_TK2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Step_TK3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_TK\Step_TK2		83484
+	223207985	Totem_Compra	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\218070__meaxx__vinyl-loop-4_84464CBE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Stinger_Compra\Totem_Compra		101352
 	262994346	SaltoVO1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\SaltoVO1_F15C9380.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\VO_Salto\SaltoVO1		22480
+	272634102	Step_FOX(v2)3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Step_FOX(v2)3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\FS_Fox(v2)\Step_FOX(v2)3		23472
 	307417217	soulPlops4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\soulPlops4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\SoulPlops\soulPlops4		56058
+	319901284	Step_FOX(v2)5	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Step_FOX(v2)5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\FS_Fox(v2)\Step_FOX(v2)5		26388
+	320627458	Herida_TK1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Herida_TK1_F378D7E4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_TK\Herida_TK1		40692
+	376958580	Herida_TK4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Herida_TK4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_TK\Herida_TK4		58072
 	398596614	SaltoVO3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\SaltoVO3_DCAD7829.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\VO_Salto\SaltoVO3		17520
-	407331852	AtaqueEspada_2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\AtaqueEspada_2_792C0C5C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Ataque\AtaqueEspada_2		137308
-	410457736	AtaqueEspada_3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\AtaqueEspada_3_65C2725D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Ataque\AtaqueEspada_3		77736
-	425953085	Salto_1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\dust_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Salto_1		932116
 	438242352	Ambiente_V2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Ambiente_V2_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiente\Ambiente_V2		10674912
-	442313033	AtaqueEspada_1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\AtaqueEspada_1_9A887C56.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Ataque\AtaqueEspada_1		88768
+	460795742	Herida_FOX4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Herida_FOX4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_Fox\Herida_FOX4		69824
 	471345910	Ataque_ENEMIGO3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Ataque_ENEMIGO3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo2\Ataque_ENEMIGO\Ataque_ENEMIGO3		205644
 	485730286	STEP_FOX1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\STEP_FOX1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\STEP_FOX1		66936
+	485840987	Herida_FOX2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Herida_FOX2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_Fox\Herida_FOX2		67140
 	486031866	Step_ENEMIGO4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Step_ENEMIGO4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Footsteps\FootSteps_ENEMIGO\Step_ENEMIGO4		268392
 	543725496	soulPlops2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\soulPlops2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\SoulPlops\soulPlops2		186882
+	553447055	Herida_FOX1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Herida_FOX1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_Fox\Herida_FOX1		72508
 	605611026	SaltoVO2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\SaltoVO2_EFD87D40.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\VO_Salto\SaltoVO2		21328
+	631623576	Step_TK3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Step_TK3_D3E03920.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_TK\Step_TK3		39416
 	644621851	Ataque_ENEMIGO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Ataque_ENEMIGO_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo2\Ataque_ENEMIGO\Ataque_ENEMIGO		138140
+	665556587	Salto_1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Salto_1_DF52F0D8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Salto_1		57400
 	666200866	gameplay4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\gameplay4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\musica_playlist\gameplay4\gameplay4		8948204
+	679388924	AtaqueEspada(v2)1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\AtaqueEspada(v2)1_C3D5C84A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Ataque\AtaqueEspada(v2)1		99768
 	685472761	STEP_FOX2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\STEP_FOX2_2A94C7F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\STEP_FOX2		36448
 	690264321	Step_ENEMIGO2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Step_ENEMIGO2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Footsteps\FootSteps_ENEMIGO\Step_ENEMIGO2		205352
+	714975435	Respawn	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Respawn_22C2EF0F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Respawn		204184
+	717662119	Herida_FOX6	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Herida_FOX6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_Fox\Herida_FOX6		45676
 	727976397	soulPlops1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\soulPlops1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\SoulPlops\soulPlops1		185914
 	778434346	AtaqueVO3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\AtaqueVO3_8A70FFCE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\VO_Ataque\AtaqueVO3		24220
-	795924118	Transformacion_V3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Transformacion_V3_D5B3D13C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Transformacion_V3		103964
+	795924118	Transformacion_V3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Transformacion_V3_71357C38.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Transformacion_V3		103964
+	806610922	Step_FOX(v2)4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Step_FOX(v2)4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\FS_Fox(v2)\Step_FOX(v2)4		23472
+	810772537	Herida_TK6	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Herida_TK6_F9A0E95B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_TK\Herida_TK6		33448
 	814705303	AtaqueVO2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\AtaqueVO2_958206DD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\VO_Ataque\AtaqueVO2		22988
 	815288819	soulPlops3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\soulPlops3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\SoulPlops\soulPlops3		172230
+	828330120	Muerte	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Muerte_945A0BE8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Die_TK\Muerte		402864
+	835148751	Step_FOX(v2)1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Step_FOX(v2)1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\FS_Fox(v2)\Step_FOX(v2)1		34672
+	839745643	Herida_TK5	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Herida_TK5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_TK\Herida_TK5		53028
 	840243345	Ataque_ENEMIGO4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Ataque_ENEMIGO4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo2\Ataque_ENEMIGO\Ataque_ENEMIGO4		205644
-	865362117	Step_ENEMIGO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Step_ENEMIGO_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Footsteps\FootSteps_ENEMIGO\Step_ENEMIGO		157660
+	865362117	Step_ENEMIGO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Step_ENEMIGO_26E0235F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Footsteps\FootSteps_ENEMIGO\Step_ENEMIGO		111196
 	904242906	Step_TK1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Step_TK1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_TK\Step_TK1		99968
+	957712776	AtaqueEspada(v2)3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\AtaqueEspada(v2)3_119BF34D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Ataque\AtaqueEspada(v2)3		104828
 	968411142	STEP_FOX5	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\STEP_FOX5_40A90280.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\STEP_FOX5		49616
-	969591977	dust	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\dust_63775C10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\dust		95284
-	987495973	Totem_Hit	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Totem_Hit_13216C98.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Stinger_Compra\Totem_Hit		287550
+	969591977	dust	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\dust_FD5ECABE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\dust		126652
+	987495973	Totem_Hit	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Totem_Hit_6F042435.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Stinger_Compra\Totem_Hit		287550
 	999384400	STEP_FOX3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\STEP_FOX3_8FA11BDF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\STEP_FOX3		19224
 	1002805907	Step_TK4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Step_TK5_C76B2866.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_TK\Step_TK4		86364
 	1055121107	Salto_2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Salto_2_8FB1A414.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Salto_2		61288

@@ -16,16 +16,16 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1533694780">
+		<SoundBank Id="3161908922" Language="SFX" Hash="646303814">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2541583543" Name="Play_1erSalto_FOX" ObjectPath="\Events\Default Work Unit\Play_1erSalto_FOX" DurationType="OneShot" DurationMin="4.565353" DurationMax="5.852528">
+				<Event Id="2541583543" Name="Play_1erSalto_FOX" ObjectPath="\Events\Default Work Unit\Play_1erSalto_FOX" DurationType="OneShot" DurationMin="0.280832" DurationMax="0.360011">
 					<IncludedMemoryFiles>
-						<File Id="425953085" Language="SFX">
-							<ShortName>dust.wav</ShortName>
-							<Path>SFX\dust_10C4C929.wem</Path>
+						<File Id="665556587" Language="SFX">
+							<ShortName>Salto_1.wav</ShortName>
+							<Path>SFX\Salto_1_DF52F0D8.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -65,23 +65,19 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3390788167" Name="Play_Ataque_TK" ObjectPath="\Events\Default Work Unit\Play_Ataque_TK" DurationType="OneShot" DurationMin="0.440323" DurationMax="0.778022">
+				<Event Id="3390788167" Name="Play_Ataque_TK" ObjectPath="\Events\Default Work Unit\Play_Ataque_TK" DurationType="OneShot" DurationMin="0.487706" DurationMax="0.59389">
 					<IncludedMemoryFiles>
+						<File Id="25284358" Language="SFX">
+							<ShortName>AtaqueEspada(v2)2.wav</ShortName>
+							<Path>SFX\AtaqueEspada(v2)2_489B40C4.wem</Path>
+						</File>
 						<File Id="123341009" Language="SFX">
 							<ShortName>AtaqueVO1.wav</ShortName>
 							<Path>SFX\AtaqueVO1_D2B9DF1A.wem</Path>
 						</File>
-						<File Id="407331852" Language="SFX">
-							<ShortName>AtaqueEspada_2.wav</ShortName>
-							<Path>SFX\AtaqueEspada_2_792C0C5C.wem</Path>
-						</File>
-						<File Id="410457736" Language="SFX">
-							<ShortName>AtaqueEspada_3.wav</ShortName>
-							<Path>SFX\AtaqueEspada_3_65C2725D.wem</Path>
-						</File>
-						<File Id="442313033" Language="SFX">
-							<ShortName>AtaqueEspada_1.wav</ShortName>
-							<Path>SFX\AtaqueEspada_1_9A887C56.wem</Path>
+						<File Id="679388924" Language="SFX">
+							<ShortName>AtaqueEspada(v2)1.wav</ShortName>
+							<Path>SFX\AtaqueEspada(v2)1_C3D5C84A.wem</Path>
 						</File>
 						<File Id="778434346" Language="SFX">
 							<ShortName>AtaqueVO3.wav</ShortName>
@@ -91,33 +87,69 @@
 							<ShortName>AtaqueVO2.wav</ShortName>
 							<Path>SFX\AtaqueVO2_958206DD.wem</Path>
 						</File>
+						<File Id="957712776" Language="SFX">
+							<ShortName>AtaqueEspada(v2)3.wav</ShortName>
+							<Path>SFX\AtaqueEspada(v2)3_119BF34D.wem</Path>
+						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2581559880" Name="Play_Dash_FOX" ObjectPath="\Events\Default Work Unit\Play_Dash_FOX" DurationType="OneShot" DurationMin="0.575166" DurationMax="0.575166">
 					<IncludedMemoryFiles>
 						<File Id="22608004" Language="SFX">
 							<ShortName>Dash_V2.wav</ShortName>
-							<Path>SFX\Dash_V2_5F8BA950.wem</Path>
+							<Path>SFX\Dash_V2_46765D2D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3854155799" Name="Play_FootSteps" ObjectPath="\Events\Default Work Unit\Play_FootSteps" DurationType="OneShot" DurationMin="0.163574" DurationMax="0.566349">
+				<Event Id="1583493768" Name="Play_Die_TK" ObjectPath="\Events\Default Work Unit\Play_Die_TK" DurationType="OneShot" DurationMin="2.283448" DurationMax="2.283448">
 					<IncludedMemoryFiles>
-						<File Id="151425466" Language="SFX">
-							<ShortName>STEP_FOX4.wav</ShortName>
-							<Path>SFX\STEP_FOX4_CA64DA9B.wem</Path>
+						<File Id="178880946" Language="SFX">
+							<ShortName>Muerte_VO.wav</ShortName>
+							<Path>SFX\Muerte_VO_6CAD3810.wem</Path>
+						</File>
+						<File Id="828330120" Language="SFX">
+							<ShortName>Muerte.wav</ShortName>
+							<Path>SFX\Muerte_945A0BE8.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3854155799" Name="Play_FootSteps" ObjectPath="\Events\Default Work Unit\Play_FootSteps" DurationType="OneShot" DurationMin="0.093453" DurationMax="0.566349">
+					<IncludedMemoryFiles>
+						<File Id="124916253" Language="SFX">
+							<ShortName>Step_FOX(v2)2.wav</ShortName>
+							<Path>SFX\Step_FOX(v2)2_10C4C929.wem</Path>
 						</File>
 						<File Id="206356599" Language="SFX">
 							<ShortName>Step_TK3.wav</ShortName>
 							<Path>SFX\Step_TK3_10C4C929.wem</Path>
 						</File>
+						<File Id="272634102" Language="SFX">
+							<ShortName>Step_FOX(v2)3.wav</ShortName>
+							<Path>SFX\Step_FOX(v2)3_10C4C929.wem</Path>
+						</File>
+						<File Id="319901284" Language="SFX">
+							<ShortName>Step_FOX(v2)5.wav</ShortName>
+							<Path>SFX\Step_FOX(v2)5_10C4C929.wem</Path>
+						</File>
 						<File Id="485730286" Language="SFX">
 							<ShortName>STEP_FOX1.wav</ShortName>
 							<Path>SFX\STEP_FOX1_10C4C929.wem</Path>
 						</File>
+						<File Id="631623576" Language="SFX">
+							<ShortName>Step_TK3.wav</ShortName>
+							<Path>SFX\Step_TK3_D3E03920.wem</Path>
+						</File>
 						<File Id="685472761" Language="SFX">
 							<ShortName>STEP_FOX2.wav</ShortName>
 							<Path>SFX\STEP_FOX2_2A94C7F9.wem</Path>
+						</File>
+						<File Id="806610922" Language="SFX">
+							<ShortName>Step_FOX(v2)4.wav</ShortName>
+							<Path>SFX\Step_FOX(v2)4_10C4C929.wem</Path>
+						</File>
+						<File Id="835148751" Language="SFX">
+							<ShortName>Step_FOX(v2)1.wav</ShortName>
+							<Path>SFX\Step_FOX(v2)1_10C4C929.wem</Path>
 						</File>
 						<File Id="904242906" Language="SFX">
 							<ShortName>Step_TK1.wav</ShortName>
@@ -140,15 +172,20 @@
 						<SwitchContainer SwitchValue="{66E97A26-5719-47ED-921C-3A9B3E8DF830}">
 							<Media>
 								<File Id="206356599"/>
+								<File Id="631623576"/>
 								<File Id="904242906"/>
 								<File Id="1002805907"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{E3FC98C6-88FE-4068-99CA-24CC62164CA8}">
 							<Media>
-								<File Id="151425466"/>
+								<File Id="124916253"/>
+								<File Id="272634102"/>
+								<File Id="319901284"/>
 								<File Id="485730286"/>
 								<File Id="685472761"/>
+								<File Id="806610922"/>
+								<File Id="835148751"/>
 								<File Id="968411142"/>
 								<File Id="999384400"/>
 							</Media>
@@ -171,31 +208,31 @@
 						</File>
 						<File Id="865362117" Language="SFX">
 							<ShortName>Step_ENEMIGO.wav</ShortName>
-							<Path>SFX\Step_ENEMIGO_10C4C929.wem</Path>
+							<Path>SFX\Step_ENEMIGO_26E0235F.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4004670001" Name="Play_FS_Fox" ObjectPath="\Events\Default Work Unit\Play_FS_Fox" DurationType="OneShot" DurationMin="0." DurationMax="0.390427">
+				<Event Id="4004670001" Name="Play_FS_Fox" ObjectPath="\Events\Default Work Unit\Play_FS_Fox" DurationType="OneShot" DurationMin="0.093453" DurationMax="0.237252">
 					<IncludedMemoryFiles>
-						<File Id="151425466" Language="SFX">
-							<ShortName>STEP_FOX4.wav</ShortName>
-							<Path>SFX\STEP_FOX4_CA64DA9B.wem</Path>
+						<File Id="124916253" Language="SFX">
+							<ShortName>Step_FOX(v2)2.wav</ShortName>
+							<Path>SFX\Step_FOX(v2)2_10C4C929.wem</Path>
 						</File>
-						<File Id="485730286" Language="SFX">
-							<ShortName>STEP_FOX1.wav</ShortName>
-							<Path>SFX\STEP_FOX1_10C4C929.wem</Path>
+						<File Id="272634102" Language="SFX">
+							<ShortName>Step_FOX(v2)3.wav</ShortName>
+							<Path>SFX\Step_FOX(v2)3_10C4C929.wem</Path>
 						</File>
-						<File Id="685472761" Language="SFX">
-							<ShortName>STEP_FOX2.wav</ShortName>
-							<Path>SFX\STEP_FOX2_2A94C7F9.wem</Path>
+						<File Id="319901284" Language="SFX">
+							<ShortName>Step_FOX(v2)5.wav</ShortName>
+							<Path>SFX\Step_FOX(v2)5_10C4C929.wem</Path>
 						</File>
-						<File Id="968411142" Language="SFX">
-							<ShortName>STEP_FOX5.wav</ShortName>
-							<Path>SFX\STEP_FOX5_40A90280.wem</Path>
+						<File Id="806610922" Language="SFX">
+							<ShortName>Step_FOX(v2)4.wav</ShortName>
+							<Path>SFX\Step_FOX(v2)4_10C4C929.wem</Path>
 						</File>
-						<File Id="999384400" Language="SFX">
-							<ShortName>STEP_FOX3.wav</ShortName>
-							<Path>SFX\STEP_FOX3_8FA11BDF.wem</Path>
+						<File Id="835148751" Language="SFX">
+							<ShortName>Step_FOX(v2)1.wav</ShortName>
+							<Path>SFX\Step_FOX(v2)1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -204,6 +241,10 @@
 						<File Id="206356599" Language="SFX">
 							<ShortName>Step_TK3.wav</ShortName>
 							<Path>SFX\Step_TK3_10C4C929.wem</Path>
+						</File>
+						<File Id="631623576" Language="SFX">
+							<ShortName>Step_TK3.wav</ShortName>
+							<Path>SFX\Step_TK3_D3E03920.wem</Path>
 						</File>
 						<File Id="904242906" Language="SFX">
 							<ShortName>Step_TK1.wav</ShortName>
@@ -223,6 +264,62 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="4289913803" Name="Play_HURT_Fox" ObjectPath="\Events\Default Work Unit\Play_HURT_Fox" DurationType="OneShot" DurationMin="0.220212" DurationMax="0.461506">
+					<IncludedMemoryFiles>
+						<File Id="338119" Language="SFX">
+							<ShortName>Herida_FOX5.wav</ShortName>
+							<Path>SFX\Herida_FOX5_10C4C929.wem</Path>
+						</File>
+						<File Id="88885702" Language="SFX">
+							<ShortName>Herida_FOX3.wav</ShortName>
+							<Path>SFX\Herida_FOX3_10C4C929.wem</Path>
+						</File>
+						<File Id="460795742" Language="SFX">
+							<ShortName>Herida_FOX4.wav</ShortName>
+							<Path>SFX\Herida_FOX4_10C4C929.wem</Path>
+						</File>
+						<File Id="485840987" Language="SFX">
+							<ShortName>Herida_FOX2.wav</ShortName>
+							<Path>SFX\Herida_FOX2_10C4C929.wem</Path>
+						</File>
+						<File Id="553447055" Language="SFX">
+							<ShortName>Herida_FOX1.wav</ShortName>
+							<Path>SFX\Herida_FOX1_10C4C929.wem</Path>
+						</File>
+						<File Id="717662119" Language="SFX">
+							<ShortName>Herida_FOX6.wav</ShortName>
+							<Path>SFX\Herida_FOX6_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="333401299" Name="Play_HURT_TK" ObjectPath="\Events\Default Work Unit\Play_HURT_TK" DurationType="OneShot" DurationMin="0.189251" DurationMax="0.428912">
+					<IncludedMemoryFiles>
+						<File Id="22870322" Language="SFX">
+							<ShortName>Herida_TK3.wav</ShortName>
+							<Path>SFX\Herida_TK3_10C4C929.wem</Path>
+						</File>
+						<File Id="188209767" Language="SFX">
+							<ShortName>Herida_TK2.wav</ShortName>
+							<Path>SFX\Herida_TK2_95683631.wem</Path>
+						</File>
+						<File Id="320627458" Language="SFX">
+							<ShortName>Herida_TK1.wav</ShortName>
+							<Path>SFX\Herida_TK1_F378D7E4.wem</Path>
+						</File>
+						<File Id="376958580" Language="SFX">
+							<ShortName>Herida_TK4.wav</ShortName>
+							<Path>SFX\Herida_TK4_10C4C929.wem</Path>
+						</File>
+						<File Id="810772537" Language="SFX">
+							<ShortName>Herida_TK6.wav</ShortName>
+							<Path>SFX\Herida_TK6_F9A0E95B.wem</Path>
+						</File>
+						<File Id="839745643" Language="SFX">
+							<ShortName>Herida_TK5.wav</ShortName>
+							<Path>SFX\Herida_TK5_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="715145019" Name="Play_Muerte_ENEMIGO" ObjectPath="\Events\Default Work Unit\Play_Muerte_ENEMIGO" DurationType="OneShot" DurationMin="0.199524" DurationMax="0.199524">
 					<IncludedMemoryFiles>
 						<File Id="144379592" Language="SFX">
@@ -231,7 +328,23 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2123649583" Name="Play_Salto_TK" ObjectPath="\Events\Default Work Unit\Play_Salto_TK" DurationType="OneShot" DurationMin="4.565353" DurationMax="5.852528">
+				<Event Id="1070575578" Name="Play_Muerte_FOX" ObjectPath="\Events\Default Work Unit\Play_Muerte_FOX" DurationType="OneShot" DurationMin="2.283448" DurationMax="2.283448">
+					<IncludedMemoryFiles>
+						<File Id="828330120" Language="SFX">
+							<ShortName>Muerte.wav</ShortName>
+							<Path>SFX\Muerte_945A0BE8.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="365318234" Name="Play_Respawn" ObjectPath="\Events\Default Work Unit\Play_Respawn" DurationType="OneShot" DurationMin="1.157151" DurationMax="1.157151">
+					<IncludedMemoryFiles>
+						<File Id="714975435" Language="SFX">
+							<ShortName>Respawn.wav</ShortName>
+							<Path>SFX\Respawn_22C2EF0F.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2123649583" Name="Play_Salto_TK" ObjectPath="\Events\Default Work Unit\Play_Salto_TK" DurationType="OneShot" DurationMin="0.280832" DurationMax="0.360011">
 					<IncludedMemoryFiles>
 						<File Id="262994346" Language="SFX">
 							<ShortName>SaltoVO1.wav</ShortName>
@@ -241,13 +354,13 @@
 							<ShortName>SaltoVO3.wav</ShortName>
 							<Path>SFX\SaltoVO3_DCAD7829.wem</Path>
 						</File>
-						<File Id="425953085" Language="SFX">
-							<ShortName>dust.wav</ShortName>
-							<Path>SFX\dust_10C4C929.wem</Path>
-						</File>
 						<File Id="605611026" Language="SFX">
 							<ShortName>SaltoVO2.wav</ShortName>
 							<Path>SFX\SaltoVO2_EFD87D40.wem</Path>
+						</File>
+						<File Id="665556587" Language="SFX">
+							<ShortName>Salto_1.wav</ShortName>
+							<Path>SFX\Salto_1_DF52F0D8.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -275,23 +388,23 @@
 					<IncludedMemoryFiles>
 						<File Id="223207985" Language="SFX">
 							<ShortName>218070__meaxx__vinyl-loop-4.wav</ShortName>
-							<Path>SFX\218070__meaxx__vinyl-loop-4_C8105BF6.wem</Path>
+							<Path>SFX\218070__meaxx__vinyl-loop-4_84464CBE.wem</Path>
 						</File>
 						<File Id="987495973" Language="SFX">
 							<ShortName>Totem_Hit.wav</ShortName>
-							<Path>SFX\Totem_Hit_13216C98.wem</Path>
+							<Path>SFX\Totem_Hit_6F042435.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1671946780" Name="Play_Transformacion" ObjectPath="\Events\Default Work Unit\Play_Transformacion" DurationType="OneShot" DurationMin="0.589001" DurationMax="0.589001">
+				<Event Id="1671946780" Name="Play_Transformacion" ObjectPath="\Events\Default Work Unit\Play_Transformacion" DurationType="OneShot" DurationMin="0.963462" DurationMax="0.963462">
 					<IncludedMemoryFiles>
 						<File Id="795924118" Language="SFX">
 							<ShortName>Transformacion_V3.wav</ShortName>
-							<Path>SFX\Transformacion_V3_D5B3D13C.wem</Path>
+							<Path>SFX\Transformacion_V3_71357C38.wem</Path>
 						</File>
 						<File Id="969591977" Language="SFX">
 							<ShortName>dust.wav</ShortName>
-							<Path>SFX\dust_63775C10.wem</Path>
+							<Path>SFX\dust_FD5ECABE.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -302,6 +415,12 @@
 					<Switches>
 						<Switch Id="3866151752" Name="FS_TK" ObjectPath="\Switches\Default Work Unit\footsteps\FS_TK" GUID="{66E97A26-5719-47ED-921C-3A9B3E8DF830}"/>
 						<Switch Id="795715770" Name="FS_FOX" ObjectPath="\Switches\Default Work Unit\footsteps\FS_FOX" GUID="{E3FC98C6-88FE-4068-99CA-24CC62164CA8}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3535913461" Name="hurts" ObjectPath="\Switches\Default Work Unit\hurts" GUID="{987DDCB7-EE53-4C7F-9184-C55BEAE3E535}">
+					<Switches>
+						<Switch Id="1580675200" Name="Hurt_Fox" ObjectPath="\Switches\Default Work Unit\hurts\Hurt_Fox" GUID="{358A04B8-357D-42B9-B703-31E4D23E5C67}"/>
+						<Switch Id="3582750806" Name="Hurt_TK" ObjectPath="\Switches\Default Work Unit\hurts\Hurt_TK" GUID="{B9685A84-E4AF-471B-8441-AA6CCC5161B3}"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>

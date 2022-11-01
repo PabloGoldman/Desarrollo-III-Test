@@ -169,6 +169,9 @@ public class FoxState : CharacterState, IDamageable
             else
             {
                 animator.Hurt();
+                AkSoundEngine.PostEvent("Play_HURT_Fox", gameObject);
+
+
             }
         }
     }
@@ -176,6 +179,8 @@ public class FoxState : CharacterState, IDamageable
     public override void Die()
     {
         base.Die();
+        AkSoundEngine.PostEvent("Play_Muerte_FOX", gameObject);
+        
     }
 
     void HandleTimers()
@@ -195,5 +200,7 @@ public class FoxState : CharacterState, IDamageable
     public override void Respawn()
     {
         base.Respawn();
+        AkSoundEngine.PostEvent("Play_Respawn", gameObject);
+
     }
 }

@@ -238,23 +238,10 @@
 				</Event>
 				<Event Name="Play_FS_Fox" ID="{50CCEEF0-DD57-4A38-91DD-A770B6872A6E}">
 					<ChildrenList>
-						<Action Name="" ID="{41862FE3-4E03-4942-AA14-E03A8D264221}" ShortID="156721947">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="FS_Fox" ID="{D9E55A7F-BCB2-4CBA-9E6E-387CFEE7A542}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{625CB512-F407-41EA-8BAA-806897C466D4}" ShortID="466842684">
-							<PropertyList>
-								<Property Name="Probability" Type="Real64" Value="81"/>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="FS_Fox" ID="{D9E55A7F-BCB2-4CBA-9E6E-387CFEE7A542}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+									<ObjectRef Name="FS_Fox(v2)" ID="{F00F3E05-9726-4291-93CD-C0F4E0A9F83E}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -313,6 +300,61 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SoulPlops" ID="{75F0FCC5-B126-4D07-82E9-35BFB7D8151C}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_HURT_TK" ID="{19A54746-8168-4862-BC7D-F167FFAD3465}">
+					<ChildrenList>
+						<Action Name="" ID="{EA9E4C0E-9C9B-4B05-A724-5C28A0CF9A14}" ShortID="261263789">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="HURT_TK" ID="{21F812E3-D9FF-4FC1-B646-53E92598E4E1}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Respawn" ID="{1D3BD1FE-E2C0-4B48-A6F1-CB1A2A6D2B55}">
+					<ChildrenList>
+						<Action Name="" ID="{A845B2C6-95A3-4C29-B452-DAF4C76D4305}" ShortID="429608919">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Respawn" ID="{712D0997-9FA1-4EF0-8A3F-4D7A3B1175F0}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Die_TK" ID="{809C7345-05A7-4C59-A1D8-7FC592A9BA78}">
+					<ChildrenList>
+						<Action Name="" ID="{298F1023-BD52-4DC5-9806-02A18222A48D}" ShortID="356307275">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Die_TK" ID="{8E80474A-EFCB-4129-8F75-17D24D1742F7}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_HURT_Fox" ID="{1A78A1B2-1974-4350-915F-67143DCE0591}">
+					<ChildrenList>
+						<Action Name="" ID="{74D2B6C9-5AEA-4C52-9D66-8E38740A887C}" ShortID="609949302">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="HURT_Fox" ID="{3D3E8E94-3646-4A2F-9935-C8CF10E31FDB}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Muerte_FOX" ID="{0B1707DA-288D-4234-AB13-44E7AF4A7723}">
+					<ChildrenList>
+						<Action Name="" ID="{E03627C6-D495-4C23-B8A9-59AD2659C592}" ShortID="322173535">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Muerte" ID="{133F2F8D-82BD-4ECE-BEBE-EC35CD733BCC}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

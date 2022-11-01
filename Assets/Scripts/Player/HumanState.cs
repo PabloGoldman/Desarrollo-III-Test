@@ -165,14 +165,17 @@ public class HumanState : CharacterState, IDamageable
         if (!isDead)
         {
             playerManager.TakeDamage(damage);
+            
 
             if (playerManager.currentHealth <= 0)
             {
                 Die();
+                AkSoundEngine.PostEvent("Play_Die_TK", gameObject);
                 Debug.Log("morir" + playerManager.currentHealth);
             }
             else
             {
+                AkSoundEngine.PostEvent("Play_HURT_TK", gameObject);
                 animator.Hurt();
             }
         }
@@ -186,6 +189,8 @@ public class HumanState : CharacterState, IDamageable
     public override void Respawn()
     {
         base.Respawn();
+        AkSoundEngine.PostEvent("Play_Respawn", gameObject);
+
     }
 
     private void OnDrawGizmosSelected()

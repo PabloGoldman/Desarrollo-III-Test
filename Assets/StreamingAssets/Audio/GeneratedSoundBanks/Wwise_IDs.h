@@ -19,12 +19,17 @@ namespace AK
         static const AkUniqueID PLAY_ATAQUE_ENEMIGO = 3977950446U;
         static const AkUniqueID PLAY_ATAQUE_TK = 3390788167U;
         static const AkUniqueID PLAY_DASH_FOX = 2581559880U;
+        static const AkUniqueID PLAY_DIE_TK = 1583493768U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_FOOTSTEPS_ENEMIGO = 3697655312U;
         static const AkUniqueID PLAY_FS_FOX = 4004670001U;
         static const AkUniqueID PLAY_FS_TK = 3183323193U;
         static const AkUniqueID PLAY_GAMEPLAY4 = 2811753234U;
+        static const AkUniqueID PLAY_HURT_FOX = 4289913803U;
+        static const AkUniqueID PLAY_HURT_TK = 333401299U;
         static const AkUniqueID PLAY_MUERTE_ENEMIGO = 715145019U;
+        static const AkUniqueID PLAY_MUERTE_FOX = 1070575578U;
+        static const AkUniqueID PLAY_RESPAWN = 365318234U;
         static const AkUniqueID PLAY_SALTO_TK = 2123649583U;
         static const AkUniqueID PLAY_SOULPLOPS = 3392808617U;
         static const AkUniqueID PLAY_TOTEM_COMPRA = 4028465998U;
