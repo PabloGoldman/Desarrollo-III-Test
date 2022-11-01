@@ -96,7 +96,7 @@ public abstract class CharacterState : MonoBehaviour
     {
         isGrounded = true;
         isDead = false;
-        animator.Idle();
+        //animator.Idle();
 
         if (playerManager.currentCheckPoint)
         {
@@ -161,6 +161,14 @@ public abstract class CharacterState : MonoBehaviour
         {
             StartCoroutine(DisableColliderCoroutine(collision.gameObject.GetComponent<BoxCollider2D>()));
         }
+    }
+
+    protected IEnumerator TriggerFootstepCoroutine()
+    {
+        isFootsteping = true;
+        AkSoundEngine.PostEvent("Play_FS_TK", gameObject);
+        yield return new WaitForSeconds(0.3f);
+        isFootsteping = false;
     }
 
     protected IEnumerator DisableColliderCoroutine(Collider2D collider)

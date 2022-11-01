@@ -106,14 +106,6 @@ public class FoxState : CharacterState, IDamageable
         }
     }
 
-    IEnumerator TriggerFootstepCoroutine()
-    {
-        isFootsteping = true;
-        AkSoundEngine.PostEvent("Play_FS_Fox", gameObject);
-        yield return new WaitForSeconds(0.3f);
-        isFootsteping = false;
-    }
-
     public override void Idle()
     {
         base.Idle();
