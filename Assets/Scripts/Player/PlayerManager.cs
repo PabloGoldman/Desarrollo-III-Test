@@ -107,7 +107,7 @@ public class PlayerManager : MonoBehaviour
 
                 switchTimer = timePerSwitch;
 
-                float offset = 1;
+                float offset = 2;
                 smokeParticles.transform.position = new Vector3(humanState.transform.position.x, humanState.transform.position.y + offset);
                 smokeParticles.GetComponent<ParticleSystem>().Play();
             }
