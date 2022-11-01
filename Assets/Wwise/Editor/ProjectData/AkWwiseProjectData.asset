@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 876a7ee1bb6edb4f809b1c3688830d3a
     GuidInternal: 
-    m_lastTime: -8585348316342853924
+    m_lastTime: -8585343128790306605
     List:
     - name: Play_1erSalto_FOX
       guid: fbc0a8195cc1634c950d1774f1753554
@@ -111,8 +111,8 @@ MonoBehaviour:
         guid: fbc0a8195cc1634c950d1774f1753554
       Path: Events\Default Work Unit\Play_1erSalto_FOX
       maxAttenuation: 0
-      maxDuration: 5.852528
-      minDuration: 4.565353
+      maxDuration: 0.360011
+      minDuration: 0.280832
     - name: Play_2doSalto_FOX
       guid: 1bf43db020dc3d488e311404bf6c2cb4
       id: 1282247140
@@ -179,8 +179,8 @@ MonoBehaviour:
         guid: d677d9e64b85604fa2e683ec7a8e6b4e
       Path: Events\Default Work Unit\Play_Ataque_TK
       maxAttenuation: 0
-      maxDuration: 0.778022
-      minDuration: 0.440323
+      maxDuration: 0.59389
+      minDuration: 0.487706
     - name: Play_Dash_FOX
       guid: fdf74deb884c904c9d6d25bd0833a196
       id: 2581559880
@@ -198,6 +198,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.575166
       minDuration: 0.575166
+    - name: Play_Die_TK
+      guid: 45739c80a705594ca1d87fc592a9ba78
+      id: 1583493768
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Play_Die_TK
+        ObjectType: 3
+        guid: 45739c80a705594ca1d87fc592a9ba78
+      Path: Events\Default Work Unit\Play_Die_TK
+      maxAttenuation: 0
+      maxDuration: 2.283448
+      minDuration: 2.283448
     - name: Play_FootSteps
       guid: e146fbf384918c43a82af99c2d9309ce
       id: 3854155799
@@ -214,7 +231,7 @@ MonoBehaviour:
       Path: Events\Default Work Unit\Play_FootSteps
       maxAttenuation: 0
       maxDuration: 0.566349
-      minDuration: 0.163574
+      minDuration: 0.093453
     - name: Play_FootSteps_ENEMIGO
       guid: f0143dfa0e1f02438c1c1dfef8dfc63d
       id: 3697655312
@@ -247,8 +264,8 @@ MonoBehaviour:
         guid: f0eecc5057dd384a91dda770b6872a6e
       Path: Events\Default Work Unit\Play_FS_Fox
       maxAttenuation: 0
-      maxDuration: 0.390427
-      minDuration: 0
+      maxDuration: 0.237252
+      minDuration: 0.093453
     - name: Play_FS_TK
       guid: 6210fef70982e543be7e14cb3d33577f
       id: 3183323193
@@ -283,6 +300,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_HURT_Fox
+      guid: b2a1781a74195043915f67143dce0591
+      id: 4289913803
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Play_HURT_Fox
+        ObjectType: 3
+        guid: b2a1781a74195043915f67143dce0591
+      Path: Events\Default Work Unit\Play_HURT_Fox
+      maxAttenuation: 0
+      maxDuration: 0.461506
+      minDuration: 0.220212
+    - name: Play_HURT_TK
+      guid: 4647a51968816248bc7df167ffad3465
+      id: 333401299
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Play_HURT_TK
+        ObjectType: 3
+        guid: 4647a51968816248bc7df167ffad3465
+      Path: Events\Default Work Unit\Play_HURT_TK
+      maxAttenuation: 0
+      maxDuration: 0.428912
+      minDuration: 0.189251
     - name: Play_Muerte_ENEMIGO
       guid: 01c67a285eb6cc45a976c80f7bdd56a0
       id: 715145019
@@ -300,6 +351,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.199524
       minDuration: 0.199524
+    - name: Play_Muerte_FOX
+      guid: da07170b8d283442ab1344e7af4a7723
+      id: 1070575578
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Play_Muerte_FOX
+        ObjectType: 3
+        guid: da07170b8d283442ab1344e7af4a7723
+      Path: Events\Default Work Unit\Play_Muerte_FOX
+      maxAttenuation: 0
+      maxDuration: 2.283448
+      minDuration: 2.283448
+    - name: Play_Respawn
+      guid: fed13b1dc0e2484ba6f1cb1a2a6d2b55
+      id: 365318234
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Play_Respawn
+        ObjectType: 3
+        guid: fed13b1dc0e2484ba6f1cb1a2a6d2b55
+      Path: Events\Default Work Unit\Play_Respawn
+      maxAttenuation: 0
+      maxDuration: 1.157151
+      minDuration: 1.157151
     - name: Play_Salto_TK
       guid: 8ec286db30fd9945a2dcb90063cbf9c7
       id: 2123649583
@@ -315,8 +400,8 @@ MonoBehaviour:
         guid: 8ec286db30fd9945a2dcb90063cbf9c7
       Path: Events\Default Work Unit\Play_Salto_TK
       maxAttenuation: 0
-      maxDuration: 5.852528
-      minDuration: 4.565353
+      maxDuration: 0.360011
+      minDuration: 0.280832
     - name: Play_SoulPlops
       guid: ab2552b8f6e7474ea5fe639cffc32906
       id: 3392808617
@@ -366,8 +451,8 @@ MonoBehaviour:
         guid: 08c2e248486e6046b2e31c160ff0f988
       Path: Events\Default Work Unit\Play_Transformacion
       maxAttenuation: 0
-      maxDuration: 0.589001
-      minDuration: 0.589001
+      maxDuration: 0.963462
+      minDuration: 0.963462
     - name: Stop_FootSteps_ENEMIGO
       guid: 23e3c5394c31724d8f8d067ada64a4d9
       id: 3318741046
