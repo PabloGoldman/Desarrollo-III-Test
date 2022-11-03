@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Menu : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI currentVersion;
     [SerializeField] private GameObject startGame;
     [SerializeField] private GameObject options;
     [SerializeField] private GameObject credits;
@@ -16,6 +18,7 @@ public class Menu : MonoBehaviour
         activeCredits = false;
         activeOptions = false;
         activeStartGame = false;
+         Show();
     }
 
     public void StarGame()
@@ -44,5 +47,10 @@ public class Menu : MonoBehaviour
     public void NewGame()
     {
         SceneManager.LoadScene("Sebastian");
+    }
+    
+    private void Show()
+    {
+            currentVersion.text = "V" + Application.version;
     }
 }

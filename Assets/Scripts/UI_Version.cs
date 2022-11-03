@@ -5,11 +5,9 @@ using TMPro;
 
 public class UI_Version : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI currentVersion;
     [SerializeField] private TextMeshProUGUI lifeText;
     [SerializeField] private TextMeshProUGUI soulText;
-    [SerializeField] private TextMeshProUGUI keyText;
-    [SerializeField] private GameObject background;
+    [SerializeField] private TextMeshProUGUI keyText;   
     
     private int souls;
     private int keys;
@@ -21,8 +19,7 @@ public class UI_Version : MonoBehaviour
         keys = 0;
         souls=0;
         currentLife = 100;
-        lifeText.text = "" + currentLife;
-        Show();
+        lifeText.text = "" + currentLife;      
     }
 
     private void OnEnable()
@@ -40,14 +37,7 @@ public class UI_Version : MonoBehaviour
         PlayerManager.OnBuyKey -= Keys;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            back = !back;
-            background.SetActive(back);
-        }
-    }
+   
 
     private void Souls()
     {
@@ -71,8 +61,4 @@ public class UI_Version : MonoBehaviour
         lifeText.text = "" + currentLife;
     }
 
-    private void Show()
-    {
-        currentVersion.text = "V" + Application.version;
-    }
 }
