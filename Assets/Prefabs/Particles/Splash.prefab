@@ -4843,9 +4843,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingLayerID: -278940311
+  m_SortingLayer: 12
+  m_SortingOrder: 20
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -4886,6 +4886,18 @@ PrefabInstance:
     - target: {fileID: 2279404235896356885, guid: fd05d06af9e864b4dbaccf2ebd9e41f5, type: 3}
       propertyPath: m_Name
       value: SoulFragment (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6530612037586523847, guid: fd05d06af9e864b4dbaccf2ebd9e41f5, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6530612037586523847, guid: fd05d06af9e864b4dbaccf2ebd9e41f5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6530612037586523847, guid: fd05d06af9e864b4dbaccf2ebd9e41f5, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8979608180263077130, guid: fd05d06af9e864b4dbaccf2ebd9e41f5, type: 3}
       propertyPath: m_RootOrder

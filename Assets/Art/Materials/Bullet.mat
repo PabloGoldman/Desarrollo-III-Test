@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Plant_2
+  m_Name: Bullet
   m_Shader: {fileID: -6465566751694194690, guid: 9141bf2daaacc9549afa0b02caad7464, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -25,11 +25,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GlowTex:
-        m_Texture: {fileID: 2800000, guid: 02bf315b4a25980479ee0c7bc5e0e060, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 6f6d1938adab05046bf4278637e702f4, type: 3}
+        m_Texture: {fileID: 2800000, guid: c4c0496cd744e394f8227da54a9b71d3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -58,6 +58,6 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 4.114903, g: 11.227806, b: 3.7621973, a: 0}
+    - _GlowColor: {r: 0.24212761, g: 0.02477585, b: 0.14527658, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
