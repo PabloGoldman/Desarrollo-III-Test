@@ -25,7 +25,7 @@ public class EnemyBehaviour : MonoBehaviour
     protected IEnumerator TriggerFootstepCoroutine()
     {
         isFootsteping = true;
-        AkSoundEngine.PostEvent("Play_FS_TK", gameObject);
+        //AkSoundEngine.PostEvent("Play_FS_TK", gameObject);
         yield return new WaitForSeconds(0.3f);
         isFootsteping = false;
     }
