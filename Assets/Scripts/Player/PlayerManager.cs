@@ -36,8 +36,8 @@ public class PlayerManager : MonoBehaviour
         currentHealth = playerData.maxHealth;
         switchTimer = 0;
 
-        foxState.transform.position = transform.position;
-        humanState.transform.position = transform.position;
+        //foxState.transform.position = transform.position;
+        //humanState.transform.position = transform.position;
 
         SoulFragment.OnHit += AddSoulFragment;
     }
