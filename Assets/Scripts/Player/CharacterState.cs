@@ -161,6 +161,11 @@ public abstract class CharacterState : MonoBehaviour
         {
             StartCoroutine(DisableColliderCoroutine(collision.gameObject.GetComponent<BoxCollider2D>()));
         }
+
+        if (collision.gameObject.CompareTag("Lava"))
+        {
+            Die();
+        }
     }
 
     protected IEnumerator DisableColliderCoroutine(Collider2D collider)
@@ -170,4 +175,5 @@ public abstract class CharacterState : MonoBehaviour
         yield return new WaitForSeconds(PostDamageInvincibleTime);
         Physics2D.IgnoreLayerCollision(gameObject.layer, collider.gameObject.layer, false);
     }
+
 }
