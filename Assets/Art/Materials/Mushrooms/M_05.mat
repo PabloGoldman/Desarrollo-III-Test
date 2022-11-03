@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OutLine
-  m_Shader: {fileID: -6465566751694194690, guid: 6d96d9d6b5d39e6458f874f7a37a110a, type: 3}
+  m_Name: M_05
+  m_Shader: {fileID: -6465566751694194690, guid: 9141bf2daaacc9549afa0b02caad7464, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -24,8 +24,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _GlowTex:
+        m_Texture: {fileID: 2800000, guid: a5400677280798e4f92e0351ab56ccfd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 79382720660ecc44cb5e6e131f72d56e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -34,10 +38,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _estatua:
-        m_Texture: {fileID: 2800000, guid: addea528f60773e4c83b42a1d3691759, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -55,9 +55,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _Float: 0.95
     m_Colors:
-    - _Color: {r: 766.9961, g: 566.2118, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowColor: {r: 0, g: 23.526829, b: 34.29675, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
