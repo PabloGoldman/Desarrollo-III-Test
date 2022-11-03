@@ -47,7 +47,7 @@ public class FoxState : CharacterState, IDamageable
                 Jump();
             }
 
-            else if (Input.GetMouseButtonDown(0) && rollTimer >= timeBetweenRolls)
+            else if (Input.GetKeyDown(KeyCode.LeftShift) && rollTimer >= timeBetweenRolls)
             {
                 Roll();
             }
