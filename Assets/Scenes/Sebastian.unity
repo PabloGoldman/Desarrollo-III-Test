@@ -1482,11 +1482,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5530279849070806074, guid: 6994b00ca0a599041ab04361c4df716e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 166.29001
+      value: 200.29001
       objectReference: {fileID: 0}
     - target: {fileID: 5530279849070806074, guid: 6994b00ca0a599041ab04361c4df716e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 126.700005
+      value: -28
       objectReference: {fileID: 0}
     - target: {fileID: 5530279849070806074, guid: 6994b00ca0a599041ab04361c4df716e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8259,7 +8259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1550829637812236289, guid: 921ab3c49e721d24b83bae8565bbb7b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3000019
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 1550829638407746441, guid: 921ab3c49e721d24b83bae8565bbb7b2, type: 3}
       propertyPath: m_Name
@@ -8275,11 +8275,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1550829638407746443, guid: 921ab3c49e721d24b83bae8565bbb7b2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 166.3
+      value: 200.3
       objectReference: {fileID: 0}
     - target: {fileID: 1550829638407746443, guid: 921ab3c49e721d24b83bae8565bbb7b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 124.8
+      value: -29.9
       objectReference: {fileID: 0}
     - target: {fileID: 1550829638407746443, guid: 921ab3c49e721d24b83bae8565bbb7b2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15752,6 +15752,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1940079084, guid: bceed4b517cb3484191147698c950769, type: 3}
+      propertyPath: finalDoorColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940079084, guid: bceed4b517cb3484191147698c950769, type: 3}
+      propertyPath: finalDoorColor.b
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940079084, guid: bceed4b517cb3484191147698c950769, type: 3}
+      propertyPath: finalDoorColor.g
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940079084, guid: bceed4b517cb3484191147698c950769, type: 3}
+      propertyPath: finalDoorColor.r
+      value: 0.8039216
+      objectReference: {fileID: 0}
     - target: {fileID: 5837984391012184363, guid: bceed4b517cb3484191147698c950769, type: 3}
       propertyPath: m_RootOrder
       value: 16

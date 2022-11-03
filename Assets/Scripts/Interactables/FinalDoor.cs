@@ -18,6 +18,8 @@ public class FinalDoor : MonoBehaviour, IInteractable
 
     PlayerManager playerManager;
 
+    [SerializeField] Color finalDoorColor;
+
     private void Start()
     {
         prompt = initialPrompt;
@@ -51,7 +53,14 @@ public class FinalDoor : MonoBehaviour, IInteractable
     {
         isAvailable = false;
         prompt = promptAfterInteraction;
-        GetComponent<SpriteRenderer>().color = Color.gray;
+
+        SpriteRenderer[] renderer = GetComponentsInChildren<SpriteRenderer>();
+
+        foreach (SpriteRenderer aux in renderer)
+        {
+            aux.color = finalDoorColor;
+        }
+
         Destroy(GetComponent<BoxCollider2D>());
     }
 
