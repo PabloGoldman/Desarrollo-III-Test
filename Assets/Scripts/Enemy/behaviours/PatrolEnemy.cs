@@ -9,6 +9,7 @@ public class PatrolEnemy : MonoBehaviour
     private Transform groundChecker;
     private Transform pointOfView;
     private bool follow;
+    
 
     private const float groundDistance = 0.5f;
 

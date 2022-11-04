@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class FinalDoor : MonoBehaviour, IInteractable
     PlayerManager playerManager;
 
     [SerializeField] Color finalDoorColor;
+    public static event Action OnUseKey;
 
     private void Start()
     {
@@ -60,7 +62,8 @@ public class FinalDoor : MonoBehaviour, IInteractable
         {
             aux.color = finalDoorColor;
         }
-
+        
+        OnUseKey?.Invoke();
         Destroy(GetComponent<BoxCollider2D>());
     }
 
