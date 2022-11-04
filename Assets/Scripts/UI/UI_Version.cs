@@ -10,6 +10,7 @@ public class UI_Version : MonoBehaviour
     [SerializeField] private TextMeshProUGUI soulText;
     [SerializeField] private TextMeshProUGUI keyText;
     [SerializeField] private GameObject Key;
+    [SerializeField] private GameObject End;
     
     private int souls;
     private int keys;
@@ -31,7 +32,7 @@ public class UI_Version : MonoBehaviour
         SoulFragment.OnHit += Souls;
         PlayerManager.OnBuyKey += Keys;
         FinalDoor.OnUseKey += EnableKey;
-
+        Meteorite.OnEndGame += DestroyMeteorite;
     }
 
     private void OnDisable()
@@ -40,6 +41,7 @@ public class UI_Version : MonoBehaviour
         SoulFragment.OnHit -=Souls ;
         PlayerManager.OnBuyKey -= Keys;
         FinalDoor.OnUseKey -= EnableKey;
+        Meteorite.OnEndGame -= DestroyMeteorite;
     }
 
     private void Update()
@@ -47,6 +49,10 @@ public class UI_Version : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F4)) SceneManager.LoadScene("Menu");
     }
 
+    private void DestroyMeteorite()
+    {
+        End.SetActive(true);
+    }
     private void EnableKey()
     {
         Key.SetActive(false);
