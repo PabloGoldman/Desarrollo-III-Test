@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Spore
-  m_Shader: {fileID: -6465566751694194690, guid: 9141bf2daaacc9549afa0b02caad7464, type: 3}
+  m_Name: Fog
+  m_Shader: {fileID: -6465566751694194690, guid: 4101ee7c99229d04fad164645d84941b, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -24,12 +24,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _GlowTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b2cab3b26815d124d95181147d889656, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -55,9 +51,13 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
+    - _Size: 50
+    - _Speed2: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.34729353, g: 0.4056604, b: 0.33103418, a: 1}
+    - _Color_2: {r: 0.32358673, g: 0.6603774, b: 0.31461376, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 24.61296, g: 25.688938, b: 0, a: 0.85882354}
+    - _FogSpeed: {r: 0.03, g: 0, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Spped2: {r: -0.03, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
