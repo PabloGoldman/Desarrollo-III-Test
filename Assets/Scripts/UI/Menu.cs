@@ -46,7 +46,7 @@ public class Menu : MonoBehaviour
 
     public void NewGame()
     {
-        SceneManager.LoadScene("Sebastian");
+        SceneManager.LoadScene("Intro");
     }
     
     private void Show()
