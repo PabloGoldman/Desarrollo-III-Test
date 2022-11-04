@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -30,6 +31,7 @@ public abstract class CharacterState : MonoBehaviour
     protected bool isFootsteping = false;
 
     [SerializeField] float PostDamageInvincibleTime;
+    public static event Action OnDeath;
 
     public virtual void Awake()
     {
@@ -164,6 +166,7 @@ public abstract class CharacterState : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Lava"))
         {
+            OnDeath?.Invoke();
             Die();
         }
     }

@@ -33,6 +33,7 @@ public class UI_Version : MonoBehaviour
         PlayerManager.OnBuyKey += Keys;
         FinalDoor.OnUseKey += EnableKey;
         Meteorite.OnEndGame += DestroyMeteorite;
+        CharacterState.OnDeath += Dead;
     }
 
     private void OnDisable()
@@ -42,6 +43,7 @@ public class UI_Version : MonoBehaviour
         PlayerManager.OnBuyKey -= Keys;
         FinalDoor.OnUseKey -= EnableKey;
         Meteorite.OnEndGame -= DestroyMeteorite;
+        CharacterState.OnDeath -= Dead;
     }
 
     private void Update()
@@ -79,5 +81,12 @@ public class UI_Version : MonoBehaviour
         if (currentLife <= 0) currentLife = 150;
         lifeText.text = "" + currentLife;
     }
+
+    private void Dead()
+    {
+        currentLife = 150;
+        lifeText.text = "" + currentLife;
+    }
+    
 
 }
