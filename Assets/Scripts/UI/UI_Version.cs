@@ -48,7 +48,12 @@ public class UI_Version : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F4)) SceneManager.LoadScene("Menu");
+        if (Input.GetKeyDown(KeyCode.F4))
+        {
+            AkSoundEngine.PostEvent("Stop_Musica", gameObject);
+            AkSoundEngine.PostEvent("Stop_Ambiente_V2", gameObject);
+            SceneManager.LoadScene("Menu");
+    }
     }
 
     private void DestroyMeteorite()

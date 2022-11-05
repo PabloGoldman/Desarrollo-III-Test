@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	94063951	Play_Ambiente			\Default Work Unit\Play_Ambiente	
+	154595976	Stop_Ambiente_V2			\Default Work Unit\Stop_Ambiente_V2	
 	333401299	Play_HURT_TK			\Default Work Unit\Play_HURT_TK	
 	365318234	Play_Respawn			\Default Work Unit\Play_Respawn	
 	715145019	Play_Muerte_ENEMIGO			\Default Work Unit\Play_Muerte_ENEMIGO	
@@ -15,19 +16,24 @@ Event	ID	Name			Wwise Object Path	Notes
 	2282323690	Play_hurt_Enemigo			\Default Work Unit\Play_hurt_Enemigo	
 	2541583543	Play_1erSalto_FOX			\Default Work Unit\Play_1erSalto_FOX	
 	2581559880	Play_Dash_FOX			\Default Work Unit\Play_Dash_FOX	
+	2734701852	Stop_Musica_Menu			\Default Work Unit\Stop_Musica_Menu	
 	2771980854	Play_Shoots			\Default Work Unit\Play_Shoots	
+	3034517274	Stop_Musica			\Default Work Unit\Stop_Musica	
 	3103472528	Play_intro			\Default Work Unit\Play_intro	
 	3183323193	Play_FS_TK			\Default Work Unit\Play_FS_TK	
 	3203222876	Play_Burns			\Default Work Unit\Play_Burns	
+	3296908948	Play_UI_ENTER1			\Default Work Unit\Play_UI_ENTER1	
 	3318741046	Stop_FootSteps_ENEMIGO			\Default Work Unit\Stop_FootSteps_ENEMIGO	
 	3390788167	Play_Ataque_TK			\Default Work Unit\Play_Ataque_TK	
 	3392808617	Play_SoulPlops			\Default Work Unit\Play_SoulPlops	
 	3433753921	Play_Magic_Key4			\Default Work Unit\Play_Magic_Key4	
+	3438766119	Play_Puerta			\Default Work Unit\Play_Puerta	
 	3697655312	Play_FootSteps_ENEMIGO			\Default Work Unit\Play_FootSteps_ENEMIGO	
 	3854155799	Play_FootSteps			\Default Work Unit\Play_FootSteps	
 	3977950446	Play_Ataque_ENEMIGO			\Default Work Unit\Play_Ataque_ENEMIGO	
 	4004670001	Play_FS_Fox			\Default Work Unit\Play_FS_Fox	
 	4028465998	Play_Totem_Compra			\Default Work Unit\Play_Totem_Compra	
+	4098647122	Play_Musica_Menu			\Default Work Unit\Play_Musica_Menu	
 	4151061776	Play_Lava			\Default Work Unit\Play_Lava	
 	4237703276	Play_Musica			\Default Work Unit\Play_Musica	
 	4289913803	Play_HURT_Fox			\Default Work Unit\Play_HURT_Fox	
@@ -51,7 +57,6 @@ State	ID	Name	State Group			Notes
 	3830703117	Musica4	EstadosMusica			
 
 Effect plug-ins	ID	Name	Type				Notes
-	292323659	Wwise Meter (Custom)	Wwise Meter			
 	2648499661	Hall_Medium_Dark	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
@@ -84,17 +89,20 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	320627458	Herida_TK1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Herida_TK1_F378D7E4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_TK\Herida_TK1		40692
 	331523314	bajo	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\bajo_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Musica3\Musica3\bajo		17880608
 	346970474	Lava	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Lava_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiente\Lava		1803296
-	374255773	VO_Dato1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\VO_Dato1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\Datos\VO_Dato1		1211344
+	374255773	VO_Dato1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\VO_Dato1_A8A97C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\Datos\VO_Dato1		1141464
+	374422522	Magic_Key(V2)	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Magic_Key(V2)_D830516A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puerta\Magic_Key(V2)		204688
 	376958580	Herida_TK4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Herida_TK4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_TK\Herida_TK4		58072
 	387731682	VO_Dato2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\VO_Dato2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\Datos\VO_Dato2		1262616
 	398596614	SaltoVO3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\SaltoVO3_DCAD7829.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\VO_Salto\SaltoVO3		17520
 	438242352	Ambiente_V2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Ambiente_V2_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiente\Ambiente_V2		10674912
+	453180255	Roca_Arrastrada3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Roca_Arrastrada2_974EB648.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puerta\Roca_Arrastrada3		495760
 	460795742	Herida_FOX4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Herida_FOX4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_Fox\Herida_FOX4		69824
 	471345910	Ataque_ENEMIGO3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Ataque_ENEMIGO3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo2\Ataque_ENEMIGO\Ataque_ENEMIGO\Ataque_ENEMIGO3		205644
 	479982341	Woosh_20	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Woosh_20_EADD680F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo2\Ataque_ENEMIGO\Woosh\Woosh_20		162224
 	485840987	Herida_FOX2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Herida_FOX2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_Fox\Herida_FOX2		67140
 	486031866	Step_ENEMIGO4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Step_ENEMIGO4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Footsteps\FootSteps_ENEMIGO\Step_ENEMIGO4		268392
 	487301456	Woosh_Ataque_ENEMIGO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Woosh_Ataque_ENEMIGO_C571346D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo2\Ataque_ENEMIGO\Woosh\Woosh_Ataque_ENEMIGO		88264
+	492361992	UI_ENTER1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\UI_ENTER1_B189007B.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_ENTER1		23124
 	543725496	soulPlops2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\soulPlops2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\SoulPlops\soulPlops2		186882
 	545366040	Totem_NO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Totem_NO_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\Totem_NO		445132
 	553447055	Herida_FOX1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Windows\SFX\Herida_FOX1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_Fox\Herida_FOX1		72508

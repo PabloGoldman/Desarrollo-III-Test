@@ -36,7 +36,7 @@ public class FinalDoor : MonoBehaviour, IInteractable
             {
                 Debug.Log("Buying fragment");
                 SetAsUnable();
-                AkSoundEngine.PostEvent("Play_Magic_Key4", gameObject);
+                AkSoundEngine.PostEvent("Play_Puerta", gameObject);
 
             }
             else

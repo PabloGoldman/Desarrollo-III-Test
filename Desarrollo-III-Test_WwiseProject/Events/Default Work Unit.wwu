@@ -388,6 +388,9 @@
 				<Event Name="Play_Musica" ID="{66042954-32A4-4297-8AA3-BF2A557866E4}">
 					<ChildrenList>
 						<Action Name="" ID="{44775FC7-E4F5-4280-977A-683374D25A4D}" ShortID="1057972470">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Musica" ID="{ABC0CEE0-675A-4925-9580-72CBC51767B5}" WorkUnitID="{58D32851-573E-4DF8-BD95-2FB8F603227F}"/>
@@ -464,6 +467,9 @@
 				<Event Name="Play_intro" ID="{B51B337E-C236-4A0B-8BDB-1EB6D9D9FED8}">
 					<ChildrenList>
 						<Action Name="" ID="{808D5C07-F8CB-4984-BC24-15E064970FBD}" ShortID="1050044546">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="1.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="VO_CinematicaIntro(V2)" ID="{7FCF7B31-8540-4F36-A618-2D1101610E00}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
@@ -503,6 +509,88 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Intro" ID="{ECA8EB70-984B-45BF-9D89-47CEBCE63ED2}" WorkUnitID="{58D32851-573E-4DF8-BD95-2FB8F603227F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UI_ENTER1" ID="{6AEE83F4-90A4-4F92-B422-FE0C0E237AC5}">
+					<ChildrenList>
+						<Action Name="" ID="{21599BD3-0A5D-421E-B649-6D15E0133F6E}" ShortID="491142216">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_ENTER1" ID="{B3E8D342-4F73-4A46-B1B5-614EC04BC54F}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Musica" ID="{3FA1F52A-7D8C-43B7-97D1-1A9D5D050B25}">
+					<ChildrenList>
+						<Action Name="" ID="{0744FFBC-70ED-4D36-93FA-DB6A66D15AFC}" ShortID="665729907">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musica" ID="{ABC0CEE0-675A-4925-9580-72CBC51767B5}" WorkUnitID="{58D32851-573E-4DF8-BD95-2FB8F603227F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Ambiente_V2" ID="{F0DD6F14-F2FF-4638-B1CF-4B2713BF0F54}">
+					<ChildrenList>
+						<Action Name="" ID="{DD7B8C7F-E6E0-468C-83D0-868786ACE7CD}" ShortID="656714997">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambiente_V2" ID="{3476FCC2-738C-4C2E-8A74-99C6A742E967}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Puerta" ID="{76221C9C-4B3A-4EBC-AA47-8CC843D9ED2F}">
+					<ChildrenList>
+						<Action Name="" ID="{A81111B7-10C3-4FA1-80C3-6856457935FA}" ShortID="836661383">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puerta" ID="{C1B3AD7F-4AEE-42A3-B1CE-259C5983FFB9}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Musica_Menu" ID="{014C07EA-990C-455F-A6F4-18070B6AD503}">
+					<ChildrenList>
+						<Action Name="" ID="{171D1ADD-0556-48A9-9E55-F9819BA4B7E4}" ShortID="569997752">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musica Menu" ID="{73917CFB-FFA9-477B-97C0-16F9910BE9DC}" WorkUnitID="{58D32851-573E-4DF8-BD95-2FB8F603227F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Musica_Menu" ID="{AFB98E58-2C6C-42FB-99BF-2FF477801E13}">
+					<ChildrenList>
+						<Action Name="" ID="{A566F1AA-0DB7-462B-9B3A-0FA24CF8A359}" ShortID="1021662782">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musica Menu" ID="{73917CFB-FFA9-477B-97C0-16F9910BE9DC}" WorkUnitID="{58D32851-573E-4DF8-BD95-2FB8F603227F}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

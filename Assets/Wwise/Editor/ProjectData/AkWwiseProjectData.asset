@@ -38,11 +38,11 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9745ba4ff6db1f44811aa5b9a0c08c41
     GuidInternal: 
-    m_lastTime: -8585339932073548413
+    m_lastTime: -8585339813577519041
     List:
-    - name: BGM_AMB
-      guid: 0908b003cdd179468ffdd0d70b8d0a3a
-      id: 2194287968
+    - name: BGM_ambiente
+      guid: 44527fec7b161140a62ddd67e2f07612
+      id: 2455481389
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
         ObjectType: 5
@@ -53,10 +53,10 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
-      - ElementName: BGM_AMB
+      - ElementName: BGM_ambiente
         ObjectType: 2
-        guid: 0908b003cdd179468ffdd0d70b8d0a3a
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\BGM_AMB
+        guid: 44527fec7b161140a62ddd67e2f07612
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\BGM_ambiente
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -72,7 +72,7 @@ MonoBehaviour:
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
     - name: Voz
-      guid: 9e92dd01ad1495439c1a1d4cde171333
+      guid: 3a76d3aa8e7ac04fbda378b6d30a8ede
       id: 543694038
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
@@ -86,7 +86,7 @@ MonoBehaviour:
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       - ElementName: Voz
         ObjectType: 2
-        guid: 9e92dd01ad1495439c1a1d4cde171333
+        guid: 3a76d3aa8e7ac04fbda378b6d30a8ede
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Voz
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 876a7ee1bb6edb4f809b1c3688830d3a
     GuidInternal: 
-    m_lastTime: -8585339857353072330
+    m_lastTime: -8585339794018582737
     List:
     - name: Play_1erSalto_FOX
       guid: fbc0a8195cc1634c950d1774f1753554
@@ -487,6 +487,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Musica_Menu
+      guid: ea074c010c995f45a6f418070b6ad503
+      id: 4098647122
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Play_Musica_Menu
+        ObjectType: 3
+        guid: ea074c010c995f45a6f418070b6ad503
+      Path: Events\Default Work Unit\Play_Musica_Menu
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Puerta
+      guid: 9c1c22763a4bbc4eaa478cc843d9ed2f
+      id: 3438766119
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Play_Puerta
+        ObjectType: 3
+        guid: 9c1c22763a4bbc4eaa478cc843d9ed2f
+      Path: Events\Default Work Unit\Play_Puerta
+      maxAttenuation: 0
+      maxDuration: 2.581743
+      minDuration: 2.581743
     - name: Play_Puerta_No
       guid: 687083c4ada3914ebbf9e0b35f4a13a0
       id: 2129522703
@@ -623,6 +657,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.818516
       minDuration: 0.818516
+    - name: Play_UI_ENTER1
+      guid: f483ee6aa490924fb422fe0c0e237ac5
+      id: 3296908948
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Play_UI_ENTER1
+        ObjectType: 3
+        guid: f483ee6aa490924fb422fe0c0e237ac5
+      Path: Events\Default Work Unit\Play_UI_ENTER1
+      maxAttenuation: 0
+      maxDuration: 0.13072
+      minDuration: 0.13072
     - name: Play_VO_Entrega
       guid: 4ffcadbeda67a247be084d1da18b5d4d
       id: 2009611870
@@ -640,6 +691,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 10.575792
       minDuration: 7.137688
+    - name: Stop_Ambiente_V2
+      guid: 146fddf0fff23846b1cf4b2713bf0f54
+      id: 154595976
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Stop_Ambiente_V2
+        ObjectType: 3
+        guid: 146fddf0fff23846b1cf4b2713bf0f54
+      Path: Events\Default Work Unit\Stop_Ambiente_V2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_FootSteps_ENEMIGO
       guid: 23e3c5394c31724d8f8d067ada64a4d9
       id: 3318741046
@@ -674,6 +742,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Musica
+      guid: 2af5a13f8c7db74397d11a9d5d050b25
+      id: 3034517274
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Stop_Musica
+        ObjectType: 3
+        guid: 2af5a13f8c7db74397d11a9d5d050b25
+      Path: Events\Default Work Unit\Stop_Musica
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Musica_Menu
+      guid: 588eb9af6c2cfb4299bf2ff477801e13
+      id: 2734701852
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Stop_Musica_Menu
+        ObjectType: 3
+        guid: 588eb9af6c2cfb4299bf2ff477801e13
+      Path: Events\Default Work Unit\Stop_Musica_Menu
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -686,7 +788,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: be5fcb74e5cb2d46a71fbe751968674d
     GuidInternal: 
-    m_lastTime: -8585339932073622718
+    m_lastTime: -8585339818821848397
     List:
     - name: SC_Voz
       guid: ed1253a8a4c720418fe51184acd6ff47
@@ -909,7 +1011,7 @@ MonoBehaviour:
     m_lastTime: -8585348884099300625
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 050000000600000007000000290000002a000000
+  ExpandedWaapiItemIds: 050000000600000007000000290000002a0000002b0000002c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

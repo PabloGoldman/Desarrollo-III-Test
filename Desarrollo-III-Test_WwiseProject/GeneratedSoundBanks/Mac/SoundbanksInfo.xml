@@ -11,15 +11,12 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="471472722">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3117790158">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
-			<GameParameters>
-				<GameParameter Id="4286849023" Name="SC_Voz" ObjectPath="\Game Parameters\Default Work Unit\SC_Voz"/>
-			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="747524667">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3696490868">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -391,6 +388,26 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="4098647122" Name="Play_Musica_Menu" ObjectPath="\Events\Default Work Unit\Play_Musica_Menu" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="40124472" Language="SFX">
+							<ShortName>pianoCuerdas.wav</ShortName>
+							<Path>SFX\pianoCuerdas_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3438766119" Name="Play_Puerta" ObjectPath="\Events\Default Work Unit\Play_Puerta" DurationType="OneShot" DurationMin="2.581743" DurationMax="2.581743">
+					<IncludedMemoryFiles>
+						<File Id="374422522" Language="SFX">
+							<ShortName>Magic_Key(V2).wav</ShortName>
+							<Path>SFX\Magic_Key(V2)_D830516A.wem</Path>
+						</File>
+						<File Id="453180255" Language="SFX">
+							<ShortName>Roca_Arrastrada2.wav</ShortName>
+							<Path>SFX\Roca_Arrastrada2_974EB648.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2129522703" Name="Play_Puerta_No" ObjectPath="\Events\Default Work Unit\Play_Puerta_No" DurationType="OneShot" DurationMin="2.180021" DurationMax="2.598493">
 					<IncludedMemoryFiles>
 						<File Id="545366040" Language="SFX">
@@ -519,6 +536,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3296908948" Name="Play_UI_ENTER1" ObjectPath="\Events\Default Work Unit\Play_UI_ENTER1" DurationType="OneShot" DurationMin="0.13072" DurationMax="0.13072">
+					<IncludedMemoryFiles>
+						<File Id="492361992" Language="SFX">
+							<ShortName>UI_ENTER1.wav</ShortName>
+							<Path>SFX\UI_ENTER1_B189007B.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2009611870" Name="Play_VO_Entrega" ObjectPath="\Events\Default Work Unit\Play_VO_Entrega" DurationType="OneShot" DurationMin="7.137688" DurationMax="10.575792">
 					<IncludedMemoryFiles>
 						<File Id="179404595" Language="SFX">
@@ -527,7 +552,7 @@
 						</File>
 						<File Id="374255773" Language="SFX">
 							<ShortName>VO_Dato1.wav</ShortName>
-							<Path>SFX\VO_Dato1_10C4C929.wem</Path>
+							<Path>SFX\VO_Dato1_A8A97C19.wem</Path>
 						</File>
 						<File Id="387731682" Language="SFX">
 							<ShortName>VO_Dato2.wav</ShortName>
@@ -555,8 +580,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="154595976" Name="Stop_Ambiente_V2" ObjectPath="\Events\Default Work Unit\Stop_Ambiente_V2" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3318741046" Name="Stop_FootSteps_ENEMIGO" ObjectPath="\Events\Default Work Unit\Stop_FootSteps_ENEMIGO" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="1837763790" Name="Stop_intro" ObjectPath="\Events\Default Work Unit\Stop_intro" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3034517274" Name="Stop_Musica" ObjectPath="\Events\Default Work Unit\Stop_Musica" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2734701852" Name="Stop_Musica_Menu" ObjectPath="\Events\Default Work Unit\Stop_Musica_Menu" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<StateGroups>
 				<StateGroup Id="4212154828" Name="EstadosMusica" ObjectPath="\States\Default Work Unit\EstadosMusica" GUID="{BF6140A5-2B54-41DF-9401-CE01DA4D7FD3}">

@@ -19,7 +19,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="BGM_AMB" ID="{03B00809-D1CD-4679-8FFD-D0D70B8D0A3A}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -47,11 +47,6 @@
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
 										<Value>-530</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>6</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -101,7 +96,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-4</Value>
+										<Value>-6</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1594,7 +1589,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>3</Value>
+										<Value>-9</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1633,6 +1628,11 @@
 											<Modifier Name="" ID="{DED20EB2-925F-4D90-AA12-55DAAD02F5F0}"/>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -1673,7 +1673,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-6</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -1792,6 +1792,13 @@
 							<ObjectLists/>
 						</RandomSequenceContainer>
 						<BlendContainer Name="Stinger_Compra" ID="{CB9D496A-875E-4268-AA37-1944ED5DF1A8}" ShortID="911739326">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
@@ -3621,7 +3628,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Voz" ID="{01DD929E-14AD-4395-9C1A-1D4CDE171333}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+									<ObjectRef Name="Voz" ID="{AAD3763A-7A8E-4FC0-BDA3-78B6D30A8EDE}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3690,23 +3697,14 @@
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="AT_Totem" ID="{956DE46A-6597-45CB-8EA6-12CA37BA5B40}" WorkUnitID="{A0C9C4F2-7205-44D1-A7F2-38C4C1C41AC3}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
 								</Reference>
-								<Reference Name="Effect0">
-									<Custom>
-										<Effect Name="Wwise Meter (Custom)" ID="{3CFB208C-4AF4-439F-8842-AB7890F1FDCE}" ShortID="292323659" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
-											<PropertyList>
-												<Property Name="MeterMode" Type="int32" Value="1"/>
-											</PropertyList>
-											<PluginData>
-	<GameParameter Name="SC_Voz" ID="{A85312ED-C7A4-4120-8FE5-1184ACD6FF47}"/>
-</PluginData>
-										</Effect>
-									</Custom>
-								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Voz" ID="{01DD929E-14AD-4395-9C1A-1D4CDE171333}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+									<ObjectRef Name="Voz" ID="{AAD3763A-7A8E-4FC0-BDA3-78B6D30A8EDE}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3721,6 +3719,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="VO_Dato1" ID="{34B3F5EE-CDB0-42D4-B5AA-DFB52367D46F}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.189565805288462"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.363966346153846"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>VO_Dato1.wav</AudioFile>
 											<MediaIDList>
@@ -3884,12 +3887,19 @@
 							</Playlist>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="No Tienes" ID="{703A07E5-944C-48BD-B6DB-B3B9C8401691}" ShortID="618346715">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Voz" ID="{01DD929E-14AD-4395-9C1A-1D4CDE171333}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+									<ObjectRef Name="Voz" ID="{AAD3763A-7A8E-4FC0-BDA3-78B6D30A8EDE}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3986,7 +3996,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Voz" ID="{01DD929E-14AD-4395-9C1A-1D4CDE171333}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+									<ObjectRef Name="Voz" ID="{AAD3763A-7A8E-4FC0-BDA3-78B6D30A8EDE}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4025,6 +4035,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="UI_ENTER1" ID="{D453CC61-1DE4-4B68-91BD-47B823C50EBE}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.00449208529565672"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.026054094714809"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0651352367870225"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.195854918890633"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>UI_ENTER1.wav</AudioFile>
 									<MediaIDList>
@@ -4060,6 +4077,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="UI_ENTER2" ID="{33AE77EC-DF99-4CC1-A979-E8D0269522D5}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.00729837127158556"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0138284929356358"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0875804552590267"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.167862539246468"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>UI_ENTER2.wav</AudioFile>
 									<MediaIDList>
@@ -4318,192 +4342,6 @@
 								<ActiveSource Name="Roca_Arrastrada2" ID="{C3EE1633-B3A0-4756-9276-4028E148F8CA}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<BlendContainer Name="New Blend Container" ID="{C1B3AD7F-4AEE-42A3-B1CE-259C5983FFB9}" ShortID="477216701">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>2</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="Magic_Key4" ID="{0BD77287-8062-4640-880D-56178FB83A7D}" ShortID="1069673535">
-									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>11</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-560</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-9</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Magic_Key4" ID="{ACED7492-ADE0-49E1-8EC3-18B4594A0F36}">
-											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.391821371060501"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="1.18568821409401"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="1.17091213699651"/>
-												<Property Name="TrimEnd" Type="Real64" Value="2.98320815121539"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Magic_Key4.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="344887418"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Magic_Key4" ID="{ACED7492-ADE0-49E1-8EC3-18B4594A0F36}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Roca_Arrastrada1" ID="{27C87E00-8BD0-45DE-BF57-CA3D703E7BDE}" ShortID="702169259">
-									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Roca_Arrastrada1" ID="{D8B6450B-DB98-4B9B-BC6C-BAD5FC1EC976}">
-											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.476028325320513"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="1.41837011217949"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.636323577724359"/>
-												<Property Name="TrimEnd" Type="Real64" Value="2.71044699519231"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Roca_Arrastrada1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="949907507"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Roca_Arrastrada1" ID="{D8B6450B-DB98-4B9B-BC6C-BAD5FC1EC976}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Magic_Key(V2)" ID="{10F2D575-4552-4F0D-9050-E57977C55F97}" ShortID="262610480">
-									<PropertyList>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>8</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-400</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-2</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Magic_Key(V2)" ID="{AB4B0FCE-4CAD-464F-9B2D-68ABC1D6E235}">
-											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.275625"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.498421875"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.691359375"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.757109375"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Magic_Key(V2).wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="374422522"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Magic_Key(V2)" ID="{AB4B0FCE-4CAD-464F-9B2D-68ABC1D6E235}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Roca_Arrastrada3" ID="{819E35B3-7574-4237-877B-9595D8596DE1}" ShortID="12440391">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Roca_Arrastrada2" ID="{F5F058C8-0800-4F31-84F2-CBDD2BDA37A8}">
-											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="1.48717948717949"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.630564102564104"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="5.36574358974359"/>
-												<Property Name="TrimEnd" Type="Real64" Value="7.94748717948719"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Roca_Arrastrada2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="453180255"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Roca_Arrastrada2" ID="{F5F058C8-0800-4F31-84F2-CBDD2BDA37A8}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-							<ObjectLists/>
-						</BlendContainer>
 					</ChildrenList>
 					<ObjectLists/>
 				</RandomSequenceContainer>
@@ -4541,6 +4379,192 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<BlendContainer Name="Puerta" ID="{C1B3AD7F-4AEE-42A3-B1CE-259C5983FFB9}" ShortID="477216701">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Magic_Key4" ID="{0BD77287-8062-4640-880D-56178FB83A7D}" ShortID="1069673535">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>11</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-560</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Magic_Key4" ID="{ACED7492-ADE0-49E1-8EC3-18B4594A0F36}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.391821371060501"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.18568821409401"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.17091213699651"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.98320815121539"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Magic_Key4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="344887418"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Magic_Key4" ID="{ACED7492-ADE0-49E1-8EC3-18B4594A0F36}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Roca_Arrastrada1" ID="{27C87E00-8BD0-45DE-BF57-CA3D703E7BDE}" ShortID="702169259">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Roca_Arrastrada1" ID="{D8B6450B-DB98-4B9B-BC6C-BAD5FC1EC976}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.476028325320513"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.41837011217949"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.636323577724359"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.71044699519231"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Roca_Arrastrada1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="949907507"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Roca_Arrastrada1" ID="{D8B6450B-DB98-4B9B-BC6C-BAD5FC1EC976}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Magic_Key(V2)" ID="{10F2D575-4552-4F0D-9050-E57977C55F97}" ShortID="262610480">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-400</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Magic_Key(V2)" ID="{AB4B0FCE-4CAD-464F-9B2D-68ABC1D6E235}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.275625"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.498421875"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.691359375"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.757109375"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Magic_Key(V2).wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="374422522"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Magic_Key(V2)" ID="{AB4B0FCE-4CAD-464F-9B2D-68ABC1D6E235}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Roca_Arrastrada3" ID="{819E35B3-7574-4237-877B-9595D8596DE1}" ShortID="12440391">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Roca_Arrastrada2" ID="{F5F058C8-0800-4F31-84F2-CBDD2BDA37A8}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.48717948717949"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.630564102564104"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="5.36574358974359"/>
+										<Property Name="TrimEnd" Type="Real64" Value="7.94748717948719"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Roca_Arrastrada2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="453180255"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Roca_Arrastrada2" ID="{F5F058C8-0800-4F31-84F2-CBDD2BDA37A8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</BlendContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

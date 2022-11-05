@@ -34,6 +34,8 @@ namespace AK
         static const AkUniqueID PLAY_MUERTE_ENEMIGO = 715145019U;
         static const AkUniqueID PLAY_MUERTE_FOX = 1070575578U;
         static const AkUniqueID PLAY_MUSICA = 4237703276U;
+        static const AkUniqueID PLAY_MUSICA_MENU = 4098647122U;
+        static const AkUniqueID PLAY_PUERTA = 3438766119U;
         static const AkUniqueID PLAY_PUERTA_NO = 2129522703U;
         static const AkUniqueID PLAY_RESPAWN = 365318234U;
         static const AkUniqueID PLAY_SALTO_TK = 2123649583U;
@@ -42,9 +44,13 @@ namespace AK
         static const AkUniqueID PLAY_TOTEM_COMPRA = 4028465998U;
         static const AkUniqueID PLAY_TOTEM_NO = 1389624661U;
         static const AkUniqueID PLAY_TRANSFORMACION = 1671946780U;
+        static const AkUniqueID PLAY_UI_ENTER1 = 3296908948U;
         static const AkUniqueID PLAY_VO_ENTREGA = 2009611870U;
+        static const AkUniqueID STOP_AMBIENTE_V2 = 154595976U;
         static const AkUniqueID STOP_FOOTSTEPS_ENEMIGO = 3318741046U;
         static const AkUniqueID STOP_INTRO = 1837763790U;
+        static const AkUniqueID STOP_MUSICA = 3034517274U;
+        static const AkUniqueID STOP_MUSICA_MENU = 2734701852U;
     } // namespace EVENTS
 
     namespace STATES
@@ -94,7 +100,7 @@ namespace AK
 
     namespace BUSSES
     {
-        static const AkUniqueID BGM_AMB = 2194287968U;
+        static const AkUniqueID BGM_AMBIENTE = 2455481389U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID VOZ = 543694038U;
     } // namespace BUSSES
