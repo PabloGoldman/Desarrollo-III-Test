@@ -43,7 +43,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8803798074094802776, guid: ada01a3a1aad8144b93c33d603fb4888, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8803798074094802776, guid: ada01a3a1aad8144b93c33d603fb4888, type: 3}
       propertyPath: m_SortingLayerID
@@ -97,6 +97,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: arbol izquierda
       objectReference: {fileID: 0}
+    - target: {fileID: 8803798074891635251, guid: ada01a3a1aad8144b93c33d603fb4888, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ada01a3a1aad8144b93c33d603fb4888, type: 3}
 --- !u!4 &6376938273858294150 stripped
@@ -111,6 +115,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3272851495205568374}
     m_Modifications:
+    - target: {fileID: 8142662026134905264, guid: 94511d658c042484f865a7281cb03353, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8142662026280820040, guid: 94511d658c042484f865a7281cb03353, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -173,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8142662026280820047, guid: 94511d658c042484f865a7281cb03353, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8142662026280820047, guid: 94511d658c042484f865a7281cb03353, type: 3}
       propertyPath: m_SortingOrder
@@ -243,7 +251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4489126793087220039, guid: 0e084244e70ff4a4d93224020925c75d, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4489126793087220039, guid: 0e084244e70ff4a4d93224020925c75d, type: 3}
       propertyPath: m_SortingLayerID
@@ -252,6 +260,10 @@ PrefabInstance:
     - target: {fileID: 4489126793087220056, guid: 0e084244e70ff4a4d93224020925c75d, type: 3}
       propertyPath: m_Name
       value: arbol medio
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489126793449728511, guid: 0e084244e70ff4a4d93224020925c75d, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e084244e70ff4a4d93224020925c75d, type: 3}

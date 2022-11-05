@@ -7,6 +7,8 @@ public class Sensor_HeroKnight : MonoBehaviour
 
     private float disableTimer;
 
+    [SerializeField] LayerMask groundLayer;
+
     private void OnEnable()
     {
         colCount = 0;
@@ -21,18 +23,27 @@ public class Sensor_HeroKnight : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.gameObject.CompareTag("MapCollider"))
+        if (other.gameObject.CompareTag("ground"))
         {
             colCount++;
         }
+
+        //if (!other.gameObject.CompareTag("MapCollider"))
+        //{
+        //}
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (!other.gameObject.CompareTag("MapCollider"))
+        if (other.gameObject.CompareTag("ground"))
         {
             colCount--;
         }
+
+        //if (!other.gameObject.CompareTag("MapCollider"))
+        //{
+        //    colCount--;
+        //}
     }
 
     void Update()
