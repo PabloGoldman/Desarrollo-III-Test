@@ -3,9 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class Intro : MonoBehaviour
 {
+    [SerializeField] private float TimeToChangeScene;
     private void Awake()
     {
-        Invoke("InitGame", 40);
+  
+        Invoke("InitGame", TimeToChangeScene);
     }
 
     private void InitGame()

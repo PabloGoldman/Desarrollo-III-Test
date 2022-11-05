@@ -236,6 +236,82 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!1 &55040610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 55040611}
+  - component: {fileID: 55040613}
+  - component: {fileID: 55040612}
+  m_Layer: 5
+  m_Name: mask 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &55040611
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55040610}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1370916097}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &55040612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55040610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 14717ed156518bd4fb7b91a5a193e4bf, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &55040613
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55040610}
+  m_CullTransparentMesh: 1
 --- !u!1 &144440114
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +348,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -428.0885}
-  m_SizeDelta: {x: 1920, y: 223.8293}
+  m_SizeDelta: {x: 1710.645, y: 223.8293}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &144440116
 MonoBehaviour:
@@ -370,9 +446,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Hace mucho tiempo atr\xE1s, un misterioso meteorito cay\xF3, y de \xE9l
-    fue creada la poderosa espada que portas, y fue custodiada por tus ancestros
-    durante a\xF1os."
+  m_text: "Mucho tiempo atr\xE1s, un misterioso meteorito cay\xF3, y de \xE9l fue
+    creada la poderosa espada que portas, y fue custodiada por tus ancestros durante
+    a\xF1os."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8abafb2694dab1946a09547656b94408, type: 2}
   m_sharedMaterial: {fileID: 7235602231668759834, guid: 8abafb2694dab1946a09547656b94408, type: 2}
@@ -381,7 +457,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 1409286143
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -584,9 +660,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tus antepasados te ayudar\xE1n en esta misi\xF3n, manifestandose en el
-    cuerpo de un zorro sagrado.\r\nLucha con tu espada y destruye la fuente de toda
-    esa maldad para liberar a este mundo."
+  m_text: "Tus antepasados te ayudar\xE1n en esta misi\xF3n, manifest\xE1ndose en
+    el cuerpo de un zorro sagrado.\r\nLucha con tu espada y destruye la fuente de
+    toda esa maldad para liberar a este mundo."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8abafb2694dab1946a09547656b94408, type: 2}
   m_sharedMaterial: {fileID: 7235602231668759834, guid: 8abafb2694dab1946a09547656b94408, type: 2}
@@ -595,7 +671,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 100663295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -984,6 +1060,7 @@ RectTransform:
   - {fileID: 365980095}
   - {fileID: 2136379970}
   - {fileID: 144440115}
+  - {fileID: 55040611}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1024,6 +1101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c142279d655dc409f4d0cb7777e4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeToChangeScene: 57
 --- !u!1 &1783351508
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,7 +1439,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
