@@ -28,6 +28,7 @@ namespace AK
         static const AkUniqueID PLAY_HURT_ENEMIGO = 2282323690U;
         static const AkUniqueID PLAY_HURT_FOX = 4289913803U;
         static const AkUniqueID PLAY_HURT_TK = 333401299U;
+        static const AkUniqueID PLAY_INTRO = 3103472528U;
         static const AkUniqueID PLAY_LAVA = 4151061776U;
         static const AkUniqueID PLAY_MAGIC_KEY4 = 3433753921U;
         static const AkUniqueID PLAY_MUERTE_ENEMIGO = 715145019U;
@@ -40,10 +41,10 @@ namespace AK
         static const AkUniqueID PLAY_SOULPLOPS = 3392808617U;
         static const AkUniqueID PLAY_TOTEM_COMPRA = 4028465998U;
         static const AkUniqueID PLAY_TOTEM_NO = 1389624661U;
-        static const AkUniqueID PLAY_TOTEM_NO_V2_ = 1568134367U;
         static const AkUniqueID PLAY_TRANSFORMACION = 1671946780U;
         static const AkUniqueID PLAY_VO_ENTREGA = 2009611870U;
         static const AkUniqueID STOP_FOOTSTEPS_ENEMIGO = 3318741046U;
+        static const AkUniqueID STOP_INTRO = 1837763790U;
     } // namespace EVENTS
 
     namespace STATES

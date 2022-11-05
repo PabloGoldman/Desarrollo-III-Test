@@ -1253,7 +1253,65 @@
 				</MusicSwitchContainer>
 				<Folder Name="Cinematica" ID="{36ECF2BC-4B3C-49F3-9CC3-1824C78B0014}" ShortID="863232713">
 					<ChildrenList>
-						<MusicSegment Name="cinematicas" ID="{7BC6AE36-2715-41AC-80AA-9E172F34A790}" ShortID="722575442">
+						<MusicPlaylistContainer Name="Musica_Intro" ID="{6613C5E4-3242-4FEA-B82D-C8D2BB644F7C}" ShortID="851017237">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+								</Reference>
+							</ReferenceList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{C5329BA1-7DA3-4F04-814C-49682F17F2C8}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{CEC37BDB-9089-40D6-970C-601778EB15CB}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{AB7C8A69-017F-4D44-9AB1-92AF0C992037}" ShortID="333114326">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+										<Property Name="PlayMode" Type="int16" Value="1"/>
+									</PropertyList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+					</ChildrenList>
+				</Folder>
+				<MusicPlaylistContainer Name="Intro" ID="{ECA8EB70-984B-45BF-9D89-47CEBCE63ED2}" ShortID="956177421">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-9</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="cinematicas" ID="{BCE7BE6D-371B-4273-B9C0-C3C6EFCEED83}" ShortID="358902214">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="35043.6281179138"/>
 							</PropertyList>
@@ -1266,14 +1324,14 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="cinematicas" ID="{9F901882-1C2B-42C0-950C-442B1CDB84A8}" ShortID="610017745">
+								<MusicTrack Name="cinematicas" ID="{ACB0CB6C-77EF-44DE-A139-34ED7F3C838C}" ShortID="458738445">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="cinematicas" ID="{647F20B7-E3CC-4525-BD49-34FC03D311B2}">
+										<AudioFileSource Name="cinematicas" ID="{3BB0CC27-7B50-4426-8CE5-BD15AE6E4375}">
 											<Language>SFX</Language>
 											<AudioFile>cinematicas.wav</AudioFile>
 											<MediaIDList>
@@ -1282,7 +1340,7 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{5912EB0F-A9DA-4983-B904-4CF58ABBCF6B}">
+										<MusicTransition Name="Root" ID="{24A6A556-9682-4220-BAC0-06FD9DA1EEC2}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -1293,18 +1351,18 @@
 										<ObjectList Name="Sequences">
 											<Reference>
 												<Local>
-													<MusicTrackSequence Name="" ID="{9A64D78F-80FA-4FE9-A806-A44EEE7DA150}">
+													<MusicTrackSequence Name="" ID="{F0893661-6091-405B-9142-9CFADDCD2EFF}">
 														<ObjectLists>
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClip Name="cinematicas" ID="{69796ADA-C9A1-44CC-AE2A-5192887EDA30}">
+																		<MusicClip Name="cinematicas" ID="{C04E6375-4507-4A73-A785-755CBB97187A}">
 																			<PropertyList>
 																				<Property Name="EndTrimOffset" Type="Real64" Value="35043.6281179138"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="cinematicas" ID="{647F20B7-E3CC-4525-BD49-34FC03D311B2}"/>
+																			<AudioSourceRef Name="cinematicas" ID="{3BB0CC27-7B50-4426-8CE5-BD15AE6E4375}"/>
 																		</MusicClip>
 																	</Local>
 																</Reference>
@@ -1321,12 +1379,12 @@
 								<ObjectList Name="Cues">
 									<Reference>
 										<Local>
-											<MusicCue Name="Entry Cue" ID="{D27678CA-5BC9-4B2D-BF88-584878B88B08}"/>
+											<MusicCue Name="Entry Cue" ID="{386D91CB-CEC9-4C3B-8C35-3192AFADE303}"/>
 										</Local>
 									</Reference>
 									<Reference>
 										<Local>
-											<MusicCue Name="Exit Cue" ID="{29E18F7B-B42F-4C00-897D-987AD85B9DE7}">
+											<MusicCue Name="Exit Cue" ID="{41C423B6-46C6-4337-9433-117CD0CF2814}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
 													<Property Name="TimeMs" Type="Real64" Value="35043.6281179138"/>
@@ -1337,7 +1395,7 @@
 								</ObjectList>
 							</ObjectLists>
 						</MusicSegment>
-						<MusicSegment Name="cinematicas2" ID="{C3965997-6A22-45AA-BE39-B59E40BB1DB1}" ShortID="709505365">
+						<MusicSegment Name="cinematicas2" ID="{F5FE7FB6-B626-445C-A6CF-1F5F4BF9D1FB}" ShortID="792269494">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="35043.6281179138"/>
 							</PropertyList>
@@ -1350,14 +1408,14 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="cinematicas2" ID="{947BC955-475F-4528-8FC3-EC24982EB602}" ShortID="67458938">
+								<MusicTrack Name="cinematicas2" ID="{B4AD84C8-C903-4E4F-8261-AFADDE055514}" ShortID="821487160">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="cinematicas2" ID="{41D71096-D1D5-4D63-906F-5E4845A6D6B1}">
+										<AudioFileSource Name="cinematicas2" ID="{9C1B2A2B-E88C-4749-938F-9E68639FC519}">
 											<Language>SFX</Language>
 											<AudioFile>cinematicas2.wav</AudioFile>
 											<MediaIDList>
@@ -1366,7 +1424,7 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{E68EA3FD-4995-4297-BF63-1DDD1F107D30}">
+										<MusicTransition Name="Root" ID="{7C452595-9AA0-4FAD-8ECA-C63AFD9F1024}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -1377,18 +1435,18 @@
 										<ObjectList Name="Sequences">
 											<Reference>
 												<Local>
-													<MusicTrackSequence Name="" ID="{AEBE0E7D-D07F-465E-A11F-24407D9623AC}">
+													<MusicTrackSequence Name="" ID="{EC1B7393-7E61-4A70-A236-0A17A8BAF203}">
 														<ObjectLists>
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClip Name="cinematicas2" ID="{B53FC8D0-3F94-438B-8D42-C4998F5ABC34}">
+																		<MusicClip Name="cinematicas2" ID="{9E41D434-8382-4B7A-8C69-108BD6B404F0}">
 																			<PropertyList>
 																				<Property Name="EndTrimOffset" Type="Real64" Value="35043.6281179138"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="cinematicas2" ID="{41D71096-D1D5-4D63-906F-5E4845A6D6B1}"/>
+																			<AudioSourceRef Name="cinematicas2" ID="{9C1B2A2B-E88C-4749-938F-9E68639FC519}"/>
 																		</MusicClip>
 																	</Local>
 																</Reference>
@@ -1405,12 +1463,12 @@
 								<ObjectList Name="Cues">
 									<Reference>
 										<Local>
-											<MusicCue Name="Entry Cue" ID="{5D8C9007-342F-4596-A7C8-994CB0AD06B2}"/>
+											<MusicCue Name="Entry Cue" ID="{AB203F36-55A0-47E3-97BB-678A57534F6D}"/>
 										</Local>
 									</Reference>
 									<Reference>
 										<Local>
-											<MusicCue Name="Exit Cue" ID="{2EB7DB34-E527-404E-9540-2376B5BE8B12}">
+											<MusicCue Name="Exit Cue" ID="{5FE29009-5AF3-4FE2-8AD1-48A21D5B3CCE}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
 													<Property Name="TimeMs" Type="Real64" Value="35043.6281179138"/>
@@ -1422,7 +1480,42 @@
 							</ObjectLists>
 						</MusicSegment>
 					</ChildrenList>
-				</Folder>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{F648EDCC-FCF8-491F-9982-18C3EFC285B2}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{37359AFA-A308-47E8-8E90-D4FD89657673}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ObjectLists/>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{C899F9B4-04BB-4858-AA37-FCF9C78953EE}" ShortID="865059700">
+							<PropertyList>
+								<Property Name="LoopCount" Type="int16" Value="0"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{E2D8D8F4-B8E2-49E9-B970-A6F786C44147}" ShortID="499025068">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="cinematicas" ID="{BCE7BE6D-371B-4273-B9C0-C3C6EFCEED83}"/>
+								</MusicPlaylistItem>
+								<MusicPlaylistItem Name="" ID="{048ECD83-78EB-4868-95B8-14129B22CFF7}" ShortID="1037281751">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="cinematicas2" ID="{F5FE7FB6-B626-445C-A6CF-1F5F4BF9D1FB}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</InteractiveMusic>

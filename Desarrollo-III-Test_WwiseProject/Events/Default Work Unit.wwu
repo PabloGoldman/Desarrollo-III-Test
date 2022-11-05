@@ -396,17 +396,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Totem_NO_v2_" ID="{FFCA9873-6375-403F-8487-CB6B3F94D778}">
-					<ChildrenList>
-						<Action Name="" ID="{C641DF81-E164-4357-B040-2C4310E692BD}" ShortID="265728165">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Totem_NO(v2)" ID="{96DB367F-311F-4F06-B605-71769DDFB8C7}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_Lava" ID="{B1890A53-961A-407B-B78E-BC0859995937}">
 					<ChildrenList>
 						<Action Name="" ID="{BE16E930-97BB-40E7-B808-081C6746889B}" ShortID="585388566">
@@ -467,6 +456,53 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Totem_NO" ID="{FECA5073-3473-4602-ADA8-83F6A8EA0687}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_intro" ID="{B51B337E-C236-4A0B-8BDB-1EB6D9D9FED8}">
+					<ChildrenList>
+						<Action Name="" ID="{808D5C07-F8CB-4984-BC24-15E064970FBD}" ShortID="1050044546">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_CinematicaIntro(V2)" ID="{7FCF7B31-8540-4F36-A618-2D1101610E00}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FFD9F18C-CD5F-4609-85FF-02AEC2DAFF0A}" ShortID="1014754549">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Intro" ID="{ECA8EB70-984B-45BF-9D89-47CEBCE63ED2}" WorkUnitID="{58D32851-573E-4DF8-BD95-2FB8F603227F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_intro" ID="{F5B958F9-C07B-446F-A8C6-39140982C03F}">
+					<ChildrenList>
+						<Action Name="" ID="{20475D24-E7C8-4D42-AAFB-CEB2B489067E}" ShortID="551504754">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_CinematicaIntro(V2)" ID="{7FCF7B31-8540-4F36-A618-2D1101610E00}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AA5DA907-9AC3-4217-B7CD-B6303FDED1D0}" ShortID="767403640">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Intro" ID="{ECA8EB70-984B-45BF-9D89-47CEBCE63ED2}" WorkUnitID="{58D32851-573E-4DF8-BD95-2FB8F603227F}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
