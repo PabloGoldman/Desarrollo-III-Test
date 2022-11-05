@@ -5,94 +5,138 @@ Event	ID	Name			Wwise Object Path	Notes
 	715145019	Play_Muerte_ENEMIGO			\Default Work Unit\Play_Muerte_ENEMIGO	
 	1070575578	Play_Muerte_FOX			\Default Work Unit\Play_Muerte_FOX	
 	1282247140	Play_2doSalto_FOX			\Default Work Unit\Play_2doSalto_FOX	
+	1389624661	Play_Totem_NO			\Default Work Unit\Play_Totem_NO	
+	1568134367	Play_Totem_NO_v2_			\Default Work Unit\Play_Totem_NO_v2_	
 	1583493768	Play_Die_TK			\Default Work Unit\Play_Die_TK	
 	1671946780	Play_Transformacion			\Default Work Unit\Play_Transformacion	
+	2009611870	Play_VO_Entrega			\Default Work Unit\Play_VO_Entrega	
 	2123649583	Play_Salto_TK			\Default Work Unit\Play_Salto_TK	
+	2129522703	Play_Puerta_No			\Default Work Unit\Play_Puerta_No	
+	2282323690	Play_hurt_Enemigo			\Default Work Unit\Play_hurt_Enemigo	
 	2541583543	Play_1erSalto_FOX			\Default Work Unit\Play_1erSalto_FOX	
 	2581559880	Play_Dash_FOX			\Default Work Unit\Play_Dash_FOX	
-	2811753234	Play_gameplay4			\Default Work Unit\Play_gameplay4	
+	2771980854	Play_Shoots			\Default Work Unit\Play_Shoots	
 	3183323193	Play_FS_TK			\Default Work Unit\Play_FS_TK	
+	3203222876	Play_Burns			\Default Work Unit\Play_Burns	
 	3318741046	Stop_FootSteps_ENEMIGO			\Default Work Unit\Stop_FootSteps_ENEMIGO	
 	3390788167	Play_Ataque_TK			\Default Work Unit\Play_Ataque_TK	
 	3392808617	Play_SoulPlops			\Default Work Unit\Play_SoulPlops	
+	3433753921	Play_Magic_Key4			\Default Work Unit\Play_Magic_Key4	
 	3697655312	Play_FootSteps_ENEMIGO			\Default Work Unit\Play_FootSteps_ENEMIGO	
 	3854155799	Play_FootSteps			\Default Work Unit\Play_FootSteps	
 	3977950446	Play_Ataque_ENEMIGO			\Default Work Unit\Play_Ataque_ENEMIGO	
 	4004670001	Play_FS_Fox			\Default Work Unit\Play_FS_Fox	
 	4028465998	Play_Totem_Compra			\Default Work Unit\Play_Totem_Compra	
+	4151061776	Play_Lava			\Default Work Unit\Play_Lava	
+	4237703276	Play_Musica			\Default Work Unit\Play_Musica	
 	4289913803	Play_HURT_Fox			\Default Work Unit\Play_HURT_Fox	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
-	2385628198	footsteps			\Default Work Unit\footsteps	
 	3535913461	hurts			\Default Work Unit\hurts	
 
 Switch	ID	Name	Switch Group			Notes
-	795715770	FS_FOX	footsteps			
-	3866151752	FS_TK	footsteps			
 	1580675200	Hurt_Fox	hurts			
 	3582750806	Hurt_TK	hurts			
 
+State Group	ID	Name			Wwise Object Path	Notes
+	4212154828	EstadosMusica			\Default Work Unit\EstadosMusica	
+
+State	ID	Name	State Group			Notes
+	748895195	None	EstadosMusica			
+	1157818151	MusicaPausa	EstadosMusica			
+	3830703112	Musica1	EstadosMusica			
+	3830703114	Musica3	EstadosMusica			
+	3830703115	Musica2	EstadosMusica			
+	3830703117	Musica4	EstadosMusica			
+
 Effect plug-ins	ID	Name	Type				Notes
+	292323659	Wwise Meter (Custom)	Wwise Meter			
 	2648499661	Hall_Medium_Dark	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	338119	Herida_FOX5	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Herida_FOX5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_Fox\Herida_FOX5		61776
+	16684020	VO_No tienes	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\VO_No tienes_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\No Tienes\VO_No tienes		1035732
 	22608004	Dash_FOX	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Dash_V2_46765D2D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Dash_FOX		101524
 	22870322	Herida_TK3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Herida_TK3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_TK\Herida_TK3		75724
 	25284358	AtaqueEspada(v2)2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\AtaqueEspada(v2)2_489B40C4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Ataque\AtaqueEspada(v2)2		86096
+	40124472	pianoCuerdas	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\pianoCuerdas_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Musica2\Musica2\pianoCuerdas		17880608
 	88885702	Herida_FOX3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Herida_FOX3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_Fox\Herida_FOX3		51044
+	107180922	hurt_Enemigo	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\golpe1_B282492E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\hurt_Enemigo		52696
 	111109569	Step_ENEMIGO3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Step_ENEMIGO3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Footsteps\FootSteps_ENEMIGO\Step_ENEMIGO3		218992
 	123341009	AtaqueVO1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\AtaqueVO1_D2B9DF1A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\VO_Ataque\AtaqueVO1		23730
 	124916253	Step_FOX(v2)2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Step_FOX(v2)2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\FS_Fox(v2)\Step_FOX(v2)2		23472
 	144379592	Muerte_ENEMIGO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Muerte_ENEMIGO_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Muerte_ENEMIGO		35260
-	149865471	Ataque_ENEMIGO2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Ataque_ENEMIGO2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo2\Ataque_ENEMIGO\Ataque_ENEMIGO2		174956
-	178880946	Muerte_VO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Muerte_VO_6CAD3810.wem		\Actor-Mixer Hierarchy\Default Work Unit\Die_TK\Muerte_VO		37062
+	149865471	Ataque_ENEMIGO2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Ataque_ENEMIGO2_88D059B8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo2\Ataque_ENEMIGO\Ataque_ENEMIGO\Ataque_ENEMIGO2		97836
+	178880946	Muerte_VO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Muerte_VO_6CAD3810.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Die_TK\Muerte_VO		37062
+	179404595	VO_Dato3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\VO_Dato3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\Datos\VO_Dato3		602500
 	188209767	Herida_TK2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Herida_TK2_95683631.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_TK\Herida_TK2		59444
+	190489171	VO_No tienes 2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\VO_No tienes 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\No Tienes\VO_No tienes 2		769184
+	194626184	Shoot_ENEMIGO2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Shoot_ENEMIGO2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Shoots\Shoot_ENEMIGO2		30840
 	206356599	Step_TK2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Step_TK3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_TK\Step_TK2		83484
 	223207985	Totem_Compra	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\218070__meaxx__vinyl-loop-4_84464CBE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Stinger_Compra\Totem_Compra		101352
+	246798736	perc	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\perc_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Musica4\Musica4\perc		17880608
 	262994346	SaltoVO1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\SaltoVO1_F15C9380.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\VO_Salto\SaltoVO1		22480
 	272634102	Step_FOX(v2)3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Step_FOX(v2)3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\FS_Fox(v2)\Step_FOX(v2)3		23472
 	307417217	soulPlops4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\soulPlops4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\SoulPlops\soulPlops4		56058
 	319901284	Step_FOX(v2)5	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Step_FOX(v2)5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\FS_Fox(v2)\Step_FOX(v2)5		26388
 	320627458	Herida_TK1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Herida_TK1_F378D7E4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_TK\Herida_TK1		40692
+	331523314	bajo	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\bajo_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Musica3\Musica3\bajo		17880608
+	344887418	Magic_Key4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Magic_Key4_54E1E7AE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Magic_Key4		436244
+	346970474	Lava	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Lava_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiente\Lava		1803296
+	374255773	VO_Dato1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\VO_Dato1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\Datos\VO_Dato1		1211344
 	376958580	Herida_TK4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Herida_TK4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_TK\Herida_TK4		58072
+	387731682	VO_Dato2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\VO_Dato2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\Datos\VO_Dato2		1262616
 	398596614	SaltoVO3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\SaltoVO3_DCAD7829.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\VO_Salto\SaltoVO3		17520
 	438242352	Ambiente_V2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Ambiente_V2_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiente\Ambiente_V2		10674912
 	460795742	Herida_FOX4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Herida_FOX4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_Fox\Herida_FOX4		69824
-	471345910	Ataque_ENEMIGO3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Ataque_ENEMIGO3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo2\Ataque_ENEMIGO\Ataque_ENEMIGO3		205644
-	485730286	STEP_FOX1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\STEP_FOX1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\STEP_FOX1		66936
+	471345910	Ataque_ENEMIGO3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Ataque_ENEMIGO3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo2\Ataque_ENEMIGO\Ataque_ENEMIGO\Ataque_ENEMIGO3		205644
+	479982341	Woosh_20	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Woosh_20_EADD680F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo2\Ataque_ENEMIGO\Woosh\Woosh_20		162224
 	485840987	Herida_FOX2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Herida_FOX2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_Fox\Herida_FOX2		67140
 	486031866	Step_ENEMIGO4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Step_ENEMIGO4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Footsteps\FootSteps_ENEMIGO\Step_ENEMIGO4		268392
+	487301456	Woosh_Ataque_ENEMIGO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Woosh_Ataque_ENEMIGO_C571346D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo2\Ataque_ENEMIGO\Woosh\Woosh_Ataque_ENEMIGO		88264
 	543725496	soulPlops2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\soulPlops2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\SoulPlops\soulPlops2		186882
+	545366040	Totem_NO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Totem_NO_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\Totem_NO		445132
 	553447055	Herida_FOX1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Herida_FOX1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_Fox\Herida_FOX1		72508
+	558204353	VO_Entrega	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\VO_Entrega_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\VO_Entrega		753488
+	568105989	Burn1(V2)	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Burn1(V2)_62F695D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Burns\Burns\Burn1(V2)		87316
 	605611026	SaltoVO2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\SaltoVO2_EFD87D40.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\VO_Salto\SaltoVO2		21328
+	620472275	Burn4(V2)	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Burn4(V2)_EE245A86.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Burns\Burns\Burn4(V2)		52668
 	631623576	Step_TK3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Step_TK3_D3E03920.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_TK\Step_TK3		39416
-	644621851	Ataque_ENEMIGO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Ataque_ENEMIGO_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo2\Ataque_ENEMIGO\Ataque_ENEMIGO		138140
 	665556587	Salto_1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Salto_1_DF52F0D8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Salto_1		57400
-	666200866	gameplay4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\gameplay4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\musica_playlist\gameplay4\gameplay4		8948204
 	679388924	AtaqueEspada(v2)1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\AtaqueEspada(v2)1_C3D5C84A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Ataque\AtaqueEspada(v2)1		99768
-	685472761	STEP_FOX2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\STEP_FOX2_2A94C7F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\STEP_FOX2		36448
 	690264321	Step_ENEMIGO2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Step_ENEMIGO2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Footsteps\FootSteps_ENEMIGO\Step_ENEMIGO2		205352
+	696332723	Shoot_ENEMIGO6	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Shoot_ENEMIGO6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Shoots\Shoot_ENEMIGO6		23608
+	699496663	Shoot_ENEMIGO4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Shoot_ENEMIGO4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Shoots\Shoot_ENEMIGO4		34548
 	714975435	Respawn	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Respawn_22C2EF0F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Respawn		204184
 	717662119	Herida_FOX6	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Herida_FOX6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_Fox\Herida_FOX6		45676
 	727976397	soulPlops1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\soulPlops1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\SoulPlops\soulPlops1		185914
+	766935063	VO_No tienes 3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\VO_No tienes 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\No Tienes\VO_No tienes 3		667160
 	778434346	AtaqueVO3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\AtaqueVO3_8A70FFCE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\VO_Ataque\AtaqueVO3		24220
+	792859095	VO_Dato7	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\VO_Dato7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\Datos\VO_Dato7		832980
 	795924118	Transformacion_V3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Transformacion_V3_71357C38.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Transformacion_V3		103964
 	806610922	Step_FOX(v2)4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Step_FOX(v2)4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\FS_Fox(v2)\Step_FOX(v2)4		23472
 	810772537	Herida_TK6	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Herida_TK6_F9A0E95B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_TK\Herida_TK6		33448
 	814705303	AtaqueVO2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\AtaqueVO2_958206DD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\VO_Ataque\AtaqueVO2		22988
 	815288819	soulPlops3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\soulPlops3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\SoulPlops\soulPlops3		172230
-	828330120	Muerte	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Muerte_945A0BE8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Die_TK\Muerte		402864
+	828330120	Muerte	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Muerte_945A0BE8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Die_TK\Muerte		402864
 	835148751	Step_FOX(v2)1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Step_FOX(v2)1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\FS_Fox(v2)\Step_FOX(v2)1		34672
 	839745643	Herida_TK5	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Herida_TK5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_TK\Herida_TK5		53028
-	840243345	Ataque_ENEMIGO4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Ataque_ENEMIGO4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo2\Ataque_ENEMIGO\Ataque_ENEMIGO4		205644
-	865362117	Step_ENEMIGO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Step_ENEMIGO_26E0235F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Footsteps\FootSteps_ENEMIGO\Step_ENEMIGO		111196
+	840243345	Ataque_ENEMIGO4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Ataque_ENEMIGO4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo2\Ataque_ENEMIGO\Ataque_ENEMIGO\Ataque_ENEMIGO4		205644
+	865362117	Step_ENEMIGO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Step_ENEMIGO_14DC582C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Footsteps\FootSteps_ENEMIGO\Step_ENEMIGO		65816
+	873115555	Shoot_ENEMIGO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Shoot_ENEMIGO_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Shoots\Shoot_ENEMIGO		41072
+	901730523	Burn2(V2)	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Burn2(V2)_46AA1D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Burns\Burns\Burn2(V2)		116576
 	904242906	Step_TK1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Step_TK1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_TK\Step_TK1		99968
+	945439716	VO_Dato4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\VO_Dato4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\Datos\VO_Dato4		638628
+	957296576	VO_Dato6	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\VO_Dato6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\Datos\VO_Dato6		1054476
 	957712776	AtaqueEspada(v2)3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\AtaqueEspada(v2)3_119BF34D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Ataque\AtaqueEspada(v2)3		104828
-	968411142	STEP_FOX5	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\STEP_FOX5_40A90280.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\STEP_FOX5		49616
-	969591977	dust	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\dust_E3952B24.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\dust		126652
+	969591977	dust	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\dust_E42FCFAA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\dust		107608
 	987495973	Totem_Hit	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Totem_Hit_6F042435.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Stinger_Compra\Totem_Hit		287550
-	999384400	STEP_FOX3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\STEP_FOX3_8FA11BDF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_Fox\STEP_FOX3		19224
+	988495650	pianoSolo (2)	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\pianoSolo (2)_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\MusicaPausa\MusicaPausa\pianoSolo (2)		17872368
 	1002805907	Step_TK4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Step_TK5_C76B2866.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_TK\Step_TK4		86364
+	1017476060	VO_Dato5	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\VO_Dato5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\Datos\VO_Dato5		743496
+	1036229226	Shoot_ENEMIGO3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Shoot_ENEMIGO3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Shoots\Shoot_ENEMIGO3		23608
+	1040449565	Burn3(V2)	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Burn3(V2)_0B480BF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Burns\Burns\Burn3(V2)		53880
+	1048882793	base	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\base_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Musica\Musica2\Musica2\base		17880608
+	1050248645	Shoot_ENEMIGO5	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Shoot_ENEMIGO5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Shoots\Shoot_ENEMIGO5		23472
 	1055121107	Salto_2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Salto_2_8FB1A414.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Salto_2		61288
 
