@@ -92,6 +92,8 @@ public class FoxState : CharacterState, IDamageable
 
         jumpCount++;
         AkSoundEngine.PostEvent("Play_1erSalto_FOX", gameObject);
+        
+
     }
 
     public override void Run()

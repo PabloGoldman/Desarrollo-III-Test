@@ -4,11 +4,90 @@
 		<WorkUnit Name="Default Work Unit" ID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{E5965BA4-FA24-46D9-914B-960956D01522}" ShortID="61832083">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="SC_Voz" ID="{A85312ED-C7A4-4120-8FE5-1184ACD6FF47}" WorkUnitID="{74CB5FBE-CBE5-462D-A71F-BE751968674D}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{87CFE5C8-750F-4F07-9C6F-1F67F75BA05D}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>-24</XPos>
+												<YPos>0</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>-8.5</XPos>
+												<YPos>0</YPos>
+												<Flags>0</Flags>
+												<SegmentShape>Log1</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>0.1</XPos>
+												<YPos>-3.36809</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{C94642B3-ADF5-42DF-82CF-B840FF657335}" WorkUnitID="{5585C53B-DD89-467F-9AF1-55C7DC74A41F}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="Voz" ID="{01DD929E-14AD-4395-9C1A-1D4CDE171333}">
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="BGM_AMB" ID="{03B00809-D1CD-4679-8FFD-D0D70B8D0A3A}">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{00D1DBE0-D66E-453B-92C2-1447A4FA8922}" ShortID="702164224">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="SC_Voz" ID="{A85312ED-C7A4-4120-8FE5-1184ACD6FF47}" WorkUnitID="{74CB5FBE-CBE5-462D-A71F-BE751968674D}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{63F768FB-51F7-4E72-A329-7A2FDB041663}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>-24</XPos>
+														<YPos>-0.11454</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>-6.24608150470219</XPos>
+														<YPos>-0.0300148089024127</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>0.1</XPos>
+														<YPos>-4.21233</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ObjectLists/>
+						</Bus>
+					</ChildrenList>
 					<ObjectLists/>
 				</Bus>
 			</ChildrenList>

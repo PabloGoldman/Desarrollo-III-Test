@@ -18,38 +18,55 @@ namespace AK
         static const AkUniqueID PLAY_AMBIENTE = 94063951U;
         static const AkUniqueID PLAY_ATAQUE_ENEMIGO = 3977950446U;
         static const AkUniqueID PLAY_ATAQUE_TK = 3390788167U;
+        static const AkUniqueID PLAY_BURNS = 3203222876U;
         static const AkUniqueID PLAY_DASH_FOX = 2581559880U;
         static const AkUniqueID PLAY_DIE_TK = 1583493768U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_FOOTSTEPS_ENEMIGO = 3697655312U;
         static const AkUniqueID PLAY_FS_FOX = 4004670001U;
         static const AkUniqueID PLAY_FS_TK = 3183323193U;
-        static const AkUniqueID PLAY_GAMEPLAY4 = 2811753234U;
+        static const AkUniqueID PLAY_HURT_ENEMIGO = 2282323690U;
         static const AkUniqueID PLAY_HURT_FOX = 4289913803U;
         static const AkUniqueID PLAY_HURT_TK = 333401299U;
+        static const AkUniqueID PLAY_LAVA = 4151061776U;
+        static const AkUniqueID PLAY_MAGIC_KEY4 = 3433753921U;
         static const AkUniqueID PLAY_MUERTE_ENEMIGO = 715145019U;
         static const AkUniqueID PLAY_MUERTE_FOX = 1070575578U;
+        static const AkUniqueID PLAY_MUSICA = 4237703276U;
+        static const AkUniqueID PLAY_PUERTA_NO = 2129522703U;
         static const AkUniqueID PLAY_RESPAWN = 365318234U;
         static const AkUniqueID PLAY_SALTO_TK = 2123649583U;
+        static const AkUniqueID PLAY_SHOOTS = 2771980854U;
         static const AkUniqueID PLAY_SOULPLOPS = 3392808617U;
         static const AkUniqueID PLAY_TOTEM_COMPRA = 4028465998U;
+        static const AkUniqueID PLAY_TOTEM_NO = 1389624661U;
+        static const AkUniqueID PLAY_TOTEM_NO_V2_ = 1568134367U;
         static const AkUniqueID PLAY_TRANSFORMACION = 1671946780U;
+        static const AkUniqueID PLAY_VO_ENTREGA = 2009611870U;
         static const AkUniqueID STOP_FOOTSTEPS_ENEMIGO = 3318741046U;
     } // namespace EVENTS
 
+    namespace STATES
+    {
+        namespace ESTADOSMUSICA
+        {
+            static const AkUniqueID GROUP = 4212154828U;
+
+            namespace STATE
+            {
+                static const AkUniqueID MUSICA1 = 3830703112U;
+                static const AkUniqueID MUSICA2 = 3830703115U;
+                static const AkUniqueID MUSICA3 = 3830703114U;
+                static const AkUniqueID MUSICA4 = 3830703117U;
+                static const AkUniqueID MUSICAPAUSA = 1157818151U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace ESTADOSMUSICA
+
+    } // namespace STATES
+
     namespace SWITCHES
     {
-        namespace FOOTSTEPS
-        {
-            static const AkUniqueID GROUP = 2385628198U;
-
-            namespace SWITCH
-            {
-                static const AkUniqueID FS_FOX = 795715770U;
-                static const AkUniqueID FS_TK = 3866151752U;
-            } // namespace SWITCH
-        } // namespace FOOTSTEPS
-
         namespace HURTS
         {
             static const AkUniqueID GROUP = 3535913461U;
@@ -63,6 +80,11 @@ namespace AK
 
     } // namespace SWITCHES
 
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID SC_VOZ = 4286849023U;
+    } // namespace GAME_PARAMETERS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
@@ -71,7 +93,9 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID BGM_AMB = 2194287968U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID VOZ = 543694038U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

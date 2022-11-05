@@ -114,6 +114,39 @@ public class PlayerManager : MonoBehaviour
         }
 
         switchTimer -= Time.deltaTime;
+
+        switch (keyFragments)
+        {
+            case 0:
+                AkSoundEngine.SetState("EstadosMusica", "Musica1");
+                break;
+            case 1:
+                AkSoundEngine.SetState("EstadosMusica", "Musica1");
+                break;
+            case 2:
+                AkSoundEngine.SetState("EstadosMusica", "Musica2");
+                break;
+            case 3:
+                AkSoundEngine.SetState("EstadosMusica", "Musica2");
+                break;
+            case 4:
+                AkSoundEngine.SetState("EstadosMusica", "Musica3");
+                break;
+            case 5:
+                AkSoundEngine.SetState("EstadosMusica", "Musica3");
+                break;
+            case 6:
+                AkSoundEngine.SetState("EstadosMusica", "Musica4");
+                break;
+            case 7:
+                AkSoundEngine.SetState("EstadosMusica", "Musica4");
+                break;
+
+        }
+
+
+
+        
     }
 
 }

@@ -35,6 +35,7 @@ public class MeleeAttack : MonoBehaviour
         if (!hit) return;
         if (attack) return;
         attack = true;
+        AkSoundEngine.PostEvent("Play_Ataque_ENEMIGO", gameObject);
         enemyData.Speed *= 5;
         rb.velocity = new Vector2( enemyData.Speed , 0);
         Invoke(nameof(StopAttack),enemyData.TimeToAttack);

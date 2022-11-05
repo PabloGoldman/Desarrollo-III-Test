@@ -33,6 +33,7 @@ public class Statue : MonoBehaviour, IInteractable
                 Debug.Log("Buying fragment");
                 SetAsUnable();
                 AkSoundEngine.PostEvent("Play_Totem_Compra", gameObject);
+                AkSoundEngine.PostEvent("Play_VO_Entrega", gameObject);
 
             }
             else
@@ -40,6 +41,8 @@ public class Statue : MonoBehaviour, IInteractable
                 SetAsNotAvailable();
                 Invoke(nameof(SetAsAble), 0.1f);
                 Debug.Log("You don't have enough soul fragments!");
+                AkSoundEngine.PostEvent("Play_Totem_NO", gameObject);
+
             }
         }
     }

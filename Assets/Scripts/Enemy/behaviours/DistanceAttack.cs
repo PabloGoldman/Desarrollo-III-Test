@@ -22,14 +22,17 @@ public class DistanceAttack : MonoBehaviour
    {
       if (enemyData.IsDie) return;
       Shoot();
-   }
+      
+
+    }
    private void Shoot()
    {
       RaycastHit2D hit = Physics2D.Raycast(checkPlayer.position, Vector2.right * enemyData.RayDirection, enemyData.DistanceToAttack, enemyData.PlayerLayer);
 
       enemyData.IsAttack = hit;
+      
 
-      if(attack) time += Time.deltaTime;
+      if (attack) time += Time.deltaTime;
       
       if (time >= enemyData.TimeToAttack)
       {
@@ -39,18 +42,20 @@ public class DistanceAttack : MonoBehaviour
 
       if (!hit) return;
       attack = true;
+      
       if (time == 0)
       {
-          //animator.SetTrigger("Shoot");
+            //animator.SetTrigger("Shoot");
          
          GameObject newBullet;
          newBullet = Instantiate(enemyData.Model, spawnPoint.position, enemyData.Model.transform.rotation,spawnPoint);
          newBullet.GetComponent<Rigidbody2D>().AddForce(spawnPoint.right*enemyData.Force, ForceMode2D.Impulse);
          Destroy(newBullet,2.0f);
-      }
-     
-      
-   }
+            AkSoundEngine.PostEvent("Play_Shoots", gameObject);
+        }
+       
+
+    }
 
    private void OnDrawGizmos()
    {

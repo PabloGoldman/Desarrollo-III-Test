@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{74CB5FBE-CBE5-462D-A71F-BE751968674D}" SchemaVersion="103">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{74CB5FBE-CBE5-462D-A71F-BE751968674D}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{74CB5FBE-CBE5-462D-A71F-BE751968674D}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="SC_Voz" ID="{A85312ED-C7A4-4120-8FE5-1184ACD6FF47}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0.1"/>
+						<Property Name="Max" Type="Real64" Value="0.1"/>
+						<Property Name="Min" Type="Real64" Value="-24"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

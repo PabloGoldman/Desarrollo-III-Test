@@ -36,12 +36,16 @@ public class FinalDoor : MonoBehaviour, IInteractable
             {
                 Debug.Log("Buying fragment");
                 SetAsUnable();
+                AkSoundEngine.PostEvent("Play_Magic_Key4", gameObject);
+
             }
             else
             {
                 SetAsNotAvailable();
                 Invoke(nameof(SetAsAble), 0.1f);
                 Debug.Log("You don't have enough soul fragments!");
+                AkSoundEngine.PostEvent("Play_Puerta_No", gameObject);
+
             }
         }
     }
