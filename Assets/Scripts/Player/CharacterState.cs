@@ -91,11 +91,14 @@ public abstract class CharacterState : MonoBehaviour
         animator.Death();
         isDead = true;
 
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+
         Invoke(nameof(Respawn), timeToRespawn);
     }
 
     public virtual void Respawn()
     {
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         isGrounded = true;
         isDead = false;
         animator.Idle();
