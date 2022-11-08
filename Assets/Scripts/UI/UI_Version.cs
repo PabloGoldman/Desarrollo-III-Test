@@ -53,7 +53,8 @@ public class UI_Version : MonoBehaviour
             AkSoundEngine.PostEvent("Stop_Musica", gameObject);
             AkSoundEngine.PostEvent("Stop_Ambiente_V2", gameObject);
             SceneManager.LoadScene("Menu");
-    }
+            
+        }
     }
 
     private void DestroyMeteorite()
@@ -75,7 +76,12 @@ public class UI_Version : MonoBehaviour
         souls -=30;
         soulText.text = ""+souls;
         keys++;
-        if (keys == AmountKeysToWin) Key.SetActive(true);
+        if (keys == AmountKeysToWin)
+        {
+            Key.SetActive(true);
+            keys = 0;
+        }
+        
         keyText.text = ""+keys;
     }
     
