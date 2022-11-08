@@ -162,7 +162,7 @@ public class HumanState : CharacterState, IDamageable
 
     public void TakeDamage(float damage)
     {
-        if (!isDead)
+        if (!isDead && timeSinceAttack > 0.2f)
         {
             playerManager.TakeDamage(damage);
             
