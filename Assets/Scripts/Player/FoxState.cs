@@ -11,7 +11,7 @@ public class FoxState : CharacterState, IDamageable
 
     float initialGravityScale;
 
-    int maxJumpsAvailable = 2;
+    int maxJumpsAvailable = 1;
 
     [SerializeField] float timeBetweenJumps = 0.3f;
     float jumpDelay;
@@ -92,8 +92,6 @@ public class FoxState : CharacterState, IDamageable
 
         jumpCount++;
         AkSoundEngine.PostEvent("Play_1erSalto_FOX", gameObject);
-        
-
     }
 
     public override void Run()
