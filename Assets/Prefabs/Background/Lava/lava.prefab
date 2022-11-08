@@ -97,7 +97,6 @@ GameObject:
   - component: {fileID: 1598440573113753551}
   - component: {fileID: 3583402602933632811}
   - component: {fileID: 7340228416050801996}
-  - component: {fileID: 1272614321113390765}
   m_Layer: 0
   m_Name: collider
   m_TagString: Lava
@@ -197,16 +196,3 @@ MonoBehaviour:
   eventIdInternal: 0
   valueGuidInternal: 
   m_callbackDataInternal: {fileID: 0}
---- !u!114 &1272614321113390765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155596288119595135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baa79c25532548a4a9a819cf5f72da05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerObject: {fileID: 1550829638407746441, guid: 921ab3c49e721d24b83bae8565bbb7b2, type: 3}

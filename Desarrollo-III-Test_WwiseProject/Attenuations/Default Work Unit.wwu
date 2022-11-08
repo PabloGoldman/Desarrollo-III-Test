@@ -103,7 +103,7 @@
 				</Attenuation>
 				<Attenuation Name="AT_Totem" ID="{956DE46A-6597-45CB-8EA6-12CA37BA5B40}" ShortID="25520221">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="25"/>
+						<Property Name="RadiusMax" Type="Real64" Value="200"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -119,7 +119,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>25</XPos>
+											<XPos>200</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
