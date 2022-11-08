@@ -1,9 +1,15 @@
-
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet : MonoBehaviour,IDamageable
 {
     [SerializeField] private int damage;
+    [SerializeField] private ParticleSystem destroy;
+
+    public void TakeDamage(float damage)
+    {
+       destroy.Play();
+    }
+    
     private void OnCollisionEnter2D(Collision2D c)
     {
         switch (c.gameObject.tag)
