@@ -107,7 +107,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -4940,6 +4940,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6251979897841524148, guid: 06443791189367444b5a7ba47f93f6c2, type: 3}
       propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251979897841524148, guid: 06443791189367444b5a7ba47f93f6c2, type: 3}
+      propertyPath: moveWithTransform
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6251979897841524148, guid: 06443791189367444b5a7ba47f93f6c2, type: 3}
