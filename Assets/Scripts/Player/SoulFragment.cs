@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class SoulFragment : MonoBehaviour
 {
-   [SerializeField] private Collider2D tanuk;
-   [SerializeField] private Collider2D fox;
+   private Collider2D character;
    private ParticleSystem ps;
    private List<ParticleSystem.Particle> enter = new List<ParticleSystem.Particle>();
    public static event Action OnHit;
 
-   private void OnEnable()
+   private void Awake()
    {
       ps = GetComponent<ParticleSystem>();
-      ps.trigger.AddCollider(tanuk);
-      ps.trigger.AddCollider(fox);
+      var t =GameObject.FindWithTag("CheckTanuk");
+      character = t.GetComponent<Collider2D>();
+      ps.trigger.AddCollider(character);
       
    }
 
