@@ -76,6 +76,7 @@ MonoBehaviour:
   initialPrompt: '[E] To interact'
   notAvailablePrompt: You need more key fragments!
   promptAfterInteraction: Already bought
+  finalDoorColor: {r: 0.8039216, g: 0.78431374, b: 0.78431374, a: 1}
 --- !u!1001 &3284272818134341076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85,7 +86,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3617048704830810276, guid: f7dad855b049b2b4db51f278a55450f4, type: 3}
       propertyPath: m_SortingLayer
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3617048704830810276, guid: f7dad855b049b2b4db51f278a55450f4, type: 3}
       propertyPath: m_SortingOrder
@@ -171,7 +172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5342824642907204733, guid: 13a10d9816e3d4947887c1ad7c356ba9, type: 3}
       propertyPath: m_SortingLayer
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5342824642907204733, guid: 13a10d9816e3d4947887c1ad7c356ba9, type: 3}
       propertyPath: m_SortingOrder
