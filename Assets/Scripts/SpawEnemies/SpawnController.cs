@@ -1,12 +1,21 @@
+using System;
 using UnityEngine;
 
 public class SpawnController : MonoBehaviour
 {
-  private Collider2D col;
-  
-
-  private void Awake()
-  {
+    [SerializeField] private float timeToSpawn;
+    public static event Action OnTimeSpawn;
     
-  }
+    
+    private void Start()
+    {
+       InvokeRepeating("Spawn",timeToSpawn,timeToSpawn);
+    }
+
+    private void Spawn()
+    {
+        OnTimeSpawn?.Invoke();
+    }
+    
+    
 }

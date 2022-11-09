@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 public enum TypeOfMovement { Patrol, Flying}
  public enum TypeOfAttack { Melee, Distance}
 public class EnemyData: MonoBehaviour
@@ -53,11 +54,18 @@ public class EnemyData: MonoBehaviour
         col2D = GetComponent<Collider2D>();
         mr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        SpawnController.OnTimeSpawn += Spawn;
 
     }
 
-    public void Spawn()
+    private void OnDestroy()
     {
+        SpawnController.OnTimeSpawn -= Spawn;
+    }
+
+    public void Spawn()
+    { Debug.Log("entro");
+        if (!reSpawn) return;
         gameObject.SetActive(true);
         reSpawn = false;
         rb.velocity = new Vector2( speed , 0);
