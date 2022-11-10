@@ -4,23 +4,20 @@ using TMPro;
 
 public class Menu : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI currentVersion;
-    [SerializeField] private GameObject startGame;
+    [SerializeField] private TextMeshProUGUI currentVersion;    
     [SerializeField] private GameObject options;
     [SerializeField] private GameObject credits;
     [SerializeField] private GameObject howToPlay;
 
     private bool activeOptions;
-    private bool activeCredits;
-    private bool activeStartGame;
+    private bool activeCredits;    
     private bool activeHowToPlay;
 
     private void Awake()
     {
         //AkSoundEngine.PostEvent("Play_Musica_Menu", gameObject);
         activeCredits = false;
-        activeOptions = false;
-        activeStartGame = false;
+        activeOptions = false;        
         activeHowToPlay=false;
         Show();
     }
@@ -35,8 +32,8 @@ public class Menu : MonoBehaviour
     public void StarGame()
     {
         AkSoundEngine.PostEvent("Play_UI_ENTER1", gameObject);
-        activeStartGame = !activeStartGame;
-        startGame.SetActive(activeStartGame);
+        //AkSoundEngine.PostEvent("Stop_Musica_Menu", gameObject);
+        SceneManager.LoadScene("Intro");
 
     }
     
@@ -60,12 +57,7 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
 
-    public void NewGame()
-    {
-       AkSoundEngine.PostEvent("Play_UI_ENTER1", gameObject);
-       //AkSoundEngine.PostEvent("Stop_Musica_Menu", gameObject);
-       SceneManager.LoadScene("Intro");
-    }
+   
     
     private void Show()
     {
