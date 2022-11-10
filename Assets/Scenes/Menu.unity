@@ -2745,7 +2745,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1678981776}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: Credits
+        m_MethodName: HowToPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4956,6 +4956,7 @@ GameObject:
   - component: {fileID: 1484065583}
   - component: {fileID: 1484065586}
   - component: {fileID: 1484065585}
+  - component: {fileID: 1484065587}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5057,6 +5058,39 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &1484065587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484065581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1557114636
 GameObject:
   m_ObjectHideFlags: 0
@@ -5302,7 +5336,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1678981776}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: Options
+        m_MethodName: HowToPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5620,6 +5654,7 @@ MonoBehaviour:
   startGame: {fileID: 2064278362}
   options: {fileID: 534703748}
   credits: {fileID: 1301726620}
+  howToPlay: {fileID: 1072342300}
 --- !u!1 &1682266729
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,6 +21,10 @@ public class Intro : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F1)) SceneManager.LoadScene("Sebastian");
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            AkSoundEngine.PostEvent("Stop_intro", gameObject);
+            SceneManager.LoadScene("Sebastian");
+        }
     }
 }

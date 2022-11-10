@@ -8,18 +8,28 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject startGame;
     [SerializeField] private GameObject options;
     [SerializeField] private GameObject credits;
+    [SerializeField] private GameObject howToPlay;
 
     private bool activeOptions;
     private bool activeCredits;
     private bool activeStartGame;
+    private bool activeHowToPlay;
 
     private void Awake()
     {
-        AkSoundEngine.PostEvent("Play_Musica_Menu", gameObject);
+        //AkSoundEngine.PostEvent("Play_Musica_Menu", gameObject);
         activeCredits = false;
         activeOptions = false;
         activeStartGame = false;
-         Show();
+        activeHowToPlay=false;
+        Show();
+    }
+
+    public void HowToPlay()
+    {
+       AkSoundEngine.PostEvent("Play_UI_ENTER1", gameObject);
+        activeHowToPlay = !activeHowToPlay;
+        howToPlay.SetActive(activeHowToPlay);
     }
 
     public void StarGame()
@@ -52,14 +62,13 @@ public class Menu : MonoBehaviour
 
     public void NewGame()
     {
-        AkSoundEngine.PostEvent("Play_UI_ENTER1", gameObject);
-        AkSoundEngine.PostEvent("Stop_Musica_Menu", gameObject);
-
-        SceneManager.LoadScene("Intro");
+       AkSoundEngine.PostEvent("Play_UI_ENTER1", gameObject);
+       //AkSoundEngine.PostEvent("Stop_Musica_Menu", gameObject);
+       SceneManager.LoadScene("Intro");
     }
     
     private void Show()
     {
-            currentVersion.text = "V" + Application.version;
+        currentVersion.text = "V" + Application.version;
     }
 }
