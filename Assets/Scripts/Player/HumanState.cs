@@ -124,7 +124,7 @@ public class HumanState : CharacterState, IDamageable
         delayToIdle = 0.05f;
         animator.Run();
 
-        if (!isFootsteping)
+        if (!isFootsteping && isGrounded)
         {
             StartCoroutine(TriggerFootstepCoroutine());
         }
