@@ -1,6 +1,5 @@
 using UnityEngine;
 using System;
-using Unity.VisualScripting;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -44,6 +43,11 @@ public class PlayerManager : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            if (soulFragments > 10) soulFragments -= 10;
+            else soulFragments = 0;
+        }
         OnHit?.Invoke(currentHealth);
     }
 

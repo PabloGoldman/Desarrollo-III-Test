@@ -81,7 +81,14 @@ public class UI_Version : MonoBehaviour
     private void Life(float life)
     {
         currentLife = life;
-        if (currentLife <= 0) currentLife = 150;
+        if (currentLife <= 0)
+        {
+            currentLife = 150;
+            if (souls > 10) souls -= 10;
+            else souls = 0;
+            soulText.text = ""+souls;
+            
+        }
         lifeText.text = "" + currentLife;
     }
 
