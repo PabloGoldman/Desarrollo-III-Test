@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Game
 {
@@ -47,7 +48,7 @@ namespace Game
         public void ReturnToProfile()
         {
             Resume();
-            //GameManager.instance.ChangeToMenu();
+            SceneManager.LoadScene(0);
         }
     }
 }
