@@ -10,13 +10,11 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject howToPlay;
 
     private bool activeOptions;
-    private bool activeCredits;    
     private bool activeHowToPlay;
 
     private void Awake()
     {
         //AkSoundEngine.PostEvent("Play_Musica_Menu", gameObject);
-        activeCredits = false;
         activeOptions = false;        
         activeHowToPlay=false;
         Show();
@@ -47,8 +45,7 @@ public class Menu : MonoBehaviour
     public void Credits()
     {
         AkSoundEngine.PostEvent("Play_UI_ENTER1", gameObject);
-        activeCredits = !activeCredits;
-        credits.SetActive(activeCredits);
+        SceneManager.LoadScene("Credits");
     }
 
     public void Exit()
