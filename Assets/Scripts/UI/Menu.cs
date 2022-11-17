@@ -11,7 +11,7 @@ public class Menu : MonoBehaviour
 
     private bool activeOptions;
     private bool activeHowToPlay;
-
+    
     private void Awake()
     {
         Cursor.visible = true;
