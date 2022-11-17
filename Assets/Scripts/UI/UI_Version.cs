@@ -87,7 +87,6 @@ public class UI_Version : MonoBehaviour
             if (souls > 10) souls -= 10;
             else souls = 0;
             soulText.text = ""+souls;
-            
         }
         lifeText.text = "" + currentLife;
     }
@@ -95,6 +94,9 @@ public class UI_Version : MonoBehaviour
     private void Dead()
     {
         currentLife = 150;
+        if (souls > 10) souls -= 10;
+        else souls = 0;
+        soulText.text = ""+souls;
         lifeText.text = "" + currentLife;
     }
     

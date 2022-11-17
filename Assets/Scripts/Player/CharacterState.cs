@@ -170,6 +170,8 @@ public abstract class CharacterState : MonoBehaviour
         if (collision.gameObject.CompareTag("Lava"))
         {
             OnDeath?.Invoke();
+            if (playerManager.SoulFragments > 10) playerManager.SoulFragments -= 10;
+            else playerManager.SoulFragments = 0;
             Die();
         }
     }

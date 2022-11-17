@@ -21,6 +21,12 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] int keyFragments = 0;
     [SerializeField] int soulFragments = 0;
 
+    public int SoulFragments
+    {
+        get => soulFragments;
+        set => soulFragments = value;
+    }
+
     float switchTimer;
 
     public PlayerData playerData;

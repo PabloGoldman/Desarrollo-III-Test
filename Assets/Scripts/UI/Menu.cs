@@ -15,7 +15,7 @@ public class Menu : MonoBehaviour
     private void Awake()
     {
         Cursor.visible = true;
-        //AkSoundEngine.PostEvent("Play_Musica_Menu", gameObject);
+        AkSoundEngine.PostEvent("Play_Musica_Menu", gameObject);
         activeOptions = false;        
         activeHowToPlay=false;
         Show();
@@ -31,7 +31,7 @@ public class Menu : MonoBehaviour
     public void StarGame()
     {
         AkSoundEngine.PostEvent("Play_UI_ENTER1", gameObject);
-        //AkSoundEngine.PostEvent("Stop_Musica_Menu", gameObject);
+        AkSoundEngine.PostEvent("Stop_Musica_Menu", gameObject);
         SceneManager.LoadScene("Intro");
 
     }
@@ -46,6 +46,7 @@ public class Menu : MonoBehaviour
     public void Credits()
     {
         AkSoundEngine.PostEvent("Play_UI_ENTER1", gameObject);
+        AkSoundEngine.PostEvent("Stop_Musica_Menu", gameObject);
         SceneManager.LoadScene("Credits");
     }
 
