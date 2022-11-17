@@ -101,8 +101,12 @@ public class PlayerManager : MonoBehaviour
                     foxState.gameObject.transform.position = humanState.gameObject.transform.position;
 
                     foxState.gameObject.transform.localScale = humanState.gameObject.transform.localScale;
+
+                    //float offset = 2;
+                    smokeParticles.transform.position = new Vector3(humanState.transform.position.x, humanState.transform.position.y/* + offset*/);
+                    smokeParticles.GetComponent<ParticleSystem>().Play();
                 }
-                else if (!foxState.isDead)
+                else if (foxState.gameObject.activeInHierarchy && !foxState.isDead)
                 {
 
                     foxState.gameObject.SetActive(false);
@@ -114,13 +118,15 @@ public class PlayerManager : MonoBehaviour
                     humanState.gameObject.transform.position = foxState.gameObject.transform.position;
 
                     humanState.gameObject.transform.localScale = foxState.gameObject.transform.localScale;
+
+                    //float offset = 2;
+                    smokeParticles.transform.position = new Vector3(humanState.transform.position.x, humanState.transform.position.y/* + offset*/);
+                    smokeParticles.GetComponent<ParticleSystem>().Play();
                 }
 
                 switchTimer = timePerSwitch;
 
-                //float offset = 2;
-                smokeParticles.transform.position = new Vector3(humanState.transform.position.x, humanState.transform.position.y/* + offset*/);
-                smokeParticles.GetComponent<ParticleSystem>().Play();
+               
             }
         }
 
