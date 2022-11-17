@@ -32,6 +32,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake()
     {
+        Cursor.visible = false;
         currentHealth = playerData.maxHealth;
         switchTimer = 0;
 

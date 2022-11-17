@@ -38,7 +38,7 @@ public class HumanState : CharacterState, IDamageable
             timeSinceAttack += Time.deltaTime;
 
             //Attack
-            if (Input.GetMouseButtonDown(0) && timeSinceAttack > 0.5f)
+            if (Input.GetKeyDown(KeyCode.LeftShift) && timeSinceAttack > 0.5f)
             {
                 Attack();
             }

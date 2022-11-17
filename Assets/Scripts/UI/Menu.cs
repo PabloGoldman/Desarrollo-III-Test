@@ -14,6 +14,7 @@ public class Menu : MonoBehaviour
 
     private void Awake()
     {
+        Cursor.visible = true;
         //AkSoundEngine.PostEvent("Play_Musica_Menu", gameObject);
         activeOptions = false;        
         activeHowToPlay=false;
