@@ -9,15 +9,22 @@ namespace Game
         public AudioMixer SFXMixer;
 
         private const string volumeKey = "Volume";
+        private const string sfxKey = "SFX";
+        private const string masterKey = "Master";
 
         public void SetMusicVolume(float volume)
         {
-            audioMixer.SetFloat(volumeKey, Mathf.Log10(volume) * 20);
+            AkSoundEngine.SetRTPCValue(volumeKey, volume);
         }
 
         public void SetSFXVolume(float volume)
         {
-            SFXMixer.SetFloat(volumeKey, Mathf.Log10(volume) * 20);
+            AkSoundEngine.SetRTPCValue(sfxKey, volume);
+        }
+
+        public void SetMasterVolume(float volume)
+        {
+            AkSoundEngine.SetRTPCValue(masterKey, volume);
         }
     }
 }
