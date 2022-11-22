@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Statue : MonoBehaviour, IInteractable
@@ -5,17 +6,19 @@ public class Statue : MonoBehaviour, IInteractable
     string prompt;
 
     [SerializeField] private string initialPrompt;
-
     [SerializeField] private string notAvailablePrompt;
-
     [SerializeField] private string promptAfterInteraction;
+    [SerializeField] private int id;
+
+    public int ID
+    {
+        get => id;
+        set => id = value;
+    }
 
     PlayerManager playerManager;
-
     bool isAvailable = true;
-
-    //Aca podria estar el costo de la estatua
-
+    public static event Action<int> SendID;
     public string InteractionPrompt => prompt;
 
     private void Start()
@@ -34,7 +37,7 @@ public class Statue : MonoBehaviour, IInteractable
                 SetAsUnable();
                 AkSoundEngine.PostEvent("Play_Totem_Compra", gameObject);
                 AkSoundEngine.PostEvent("Play_VO_Entrega", gameObject);
-
+                SendID?.Invoke(id);
             }
             else
             {
