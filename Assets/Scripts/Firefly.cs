@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class Firefly : MonoBehaviour
 {
@@ -18,9 +19,6 @@ public class Firefly : MonoBehaviour
         Statue.SendID += DiscardStatue;
         agent = GetComponent<NavMeshAgent>();
         sr = GetComponent<SpriteRenderer>();
-        if(tanuk.gameObject.activeInHierarchy)  gameObject.transform.position = tanuk.position;
-        else if (fox.gameObject.activeInHierarchy) gameObject.transform.position = fox.position;
-        
     }
 
     private void OnDestroy()
@@ -33,23 +31,31 @@ public class Firefly : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         Invoke( nameof(SetActive),TimeToSpawn);
-        
+
     }
 
     private void SetActive()
     {
+        if(tanuk.gameObject.activeInHierarchy)  gameObject.transform.localPosition = tanuk.localPosition;
+        else if (fox.gameObject.activeInHierarchy) gameObject.transform.localPosition = fox.localPosition;
         sr.enabled = true;
-        agent.isStopped = false;
-        agent.SetDestination(targets[0].transform.position);
+        agent.enabled = true;
+        agent.SetDestination( SelectStatue().transform.position);
+       
     }
 
+    private Statue SelectStatue()
+    {
+        return targets[Random.Range(0,targets.Count)];
+    }
     private void SetInactive()
     {
+        if(tanuk.gameObject.activeInHierarchy)  gameObject.transform.localPosition = tanuk.localPosition;
+        else if (fox.gameObject.activeInHierarchy) gameObject.transform.localPosition = fox.localPosition;
+        agent.enabled = false;
         sr.enabled = false;
-        if(tanuk.gameObject.activeInHierarchy)  gameObject.transform.position = tanuk.position;
-        else if (fox.gameObject.activeInHierarchy) gameObject.transform.position = fox.position;
-        agent.isStopped = true;
     }
+
 
     private void DiscardStatue(int id)
     {
@@ -60,8 +66,8 @@ public class Firefly : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D c)
     {
         if (!c.CompareTag("Checkpoint")) return;
+        Debug.Log("entro");
         SetInactive();
         Invoke( nameof(SetActive),TimeToSpawn);
-
     }
 }
