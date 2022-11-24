@@ -12,7 +12,7 @@ namespace Game
 
         private void Awake()
         {
-            optionsMenu = transform.Find("OptionsPanel").gameObject;
+            //optionsMenu = transform.Find("OptionsPanel").gameObject;
         }
 
         void Update()
@@ -33,7 +33,10 @@ namespace Game
         public void Pause()
         {
             Time.timeScale = 0;
+
             inGamePause.SetActive(true);
+            optionsMenu.SetActive(false);
+
             inPause = true;
         }
 
