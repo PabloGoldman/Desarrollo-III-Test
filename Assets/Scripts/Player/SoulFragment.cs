@@ -14,7 +14,7 @@ public class SoulFragment : MonoBehaviour
       ps = GetComponent<ParticleSystem>();
       var t =GameObject.FindWithTag("CheckTanuk");
       character = t.GetComponent<Collider2D>();
-      ps.trigger.AddCollider(character);
+      ps.trigger.AddCollider(character); //Añade el objeto a colisionar con la particula
       
    }
 
@@ -25,7 +25,7 @@ public class SoulFragment : MonoBehaviour
       {
          AkSoundEngine.PostEvent("Play_SoulPlops", gameObject); 
          ParticleSystem.Particle p = enter[i];
-         OnHit?.Invoke();
+         OnHit?.Invoke(); //Colisiona la particula con el player
          p.remainingLifetime = 0;
          enter[i] = p;
       }
