@@ -32,6 +32,7 @@ namespace Game
 
         public void Pause()
         {
+            Cursor.visible = true;
             Time.timeScale = 0;
 
             inGamePause.SetActive(true);
@@ -42,6 +43,7 @@ namespace Game
 
         public void Resume()
         {
+            Cursor.visible = false;
             Time.timeScale = 1;
             inGamePause.SetActive(false);
             optionsMenu.SetActive(false);
