@@ -13,18 +13,10 @@ public class Intro : MonoBehaviour
         AkSoundEngine.PostEvent("Play_intro", gameObject);
     }
 
-    private void InitGame()
+    public void InitGame()
     {
         AkSoundEngine.PostEvent("Stop_intro", gameObject);
-        SceneManager.LoadScene("Sebastian");
+        SceneManager.LoadScene("GamePlay");
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F1))
-        {
-            AkSoundEngine.PostEvent("Stop_intro", gameObject);
-            SceneManager.LoadScene("Sebastian");
-        }
-    }
 }
