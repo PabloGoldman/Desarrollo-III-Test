@@ -19,6 +19,8 @@ public class Firefly : MonoBehaviour
         Statue.SendID += DiscardStatue;
         agent = GetComponent<NavMeshAgent>();
         sr = GetComponent<SpriteRenderer>();
+       agent.enabled = false;
+       sr.enabled = false;
     }
 
     private void OnDestroy()

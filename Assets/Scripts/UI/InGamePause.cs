@@ -52,6 +52,8 @@ namespace Game
 
         public void ReturnToProfile()
         {
+            AkSoundEngine.PostEvent("Stop_Musica", gameObject);
+            AkSoundEngine.PostEvent("Stop_Ambiente_V2", gameObject);
             Resume();
             SceneManager.LoadScene(0);
         }
