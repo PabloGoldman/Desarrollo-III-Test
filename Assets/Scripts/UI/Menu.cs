@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -15,10 +16,14 @@ public class Menu : MonoBehaviour
     private void Awake()
     {
         Cursor.visible = true;
-        AkSoundEngine.PostEvent("Play_Musica_Menu", gameObject);
         activeOptions = false;        
         activeHowToPlay=false;
         Show();
+    }
+
+    private void Start()
+    {
+        AkSoundEngine.PostEvent("Play_Musica_Menu", gameObject);
     }
 
     public void HowToPlay()
