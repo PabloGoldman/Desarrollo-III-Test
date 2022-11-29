@@ -10,6 +10,7 @@ public class Firefly : MonoBehaviour
     [SerializeField] private Transform fox;
     [SerializeField] private List<Statue> targets;
     [SerializeField] private float TimeToSpawn;
+    [SerializeField] private ParticleSystem Trail;
 
     private NavMeshAgent agent;
     private SpriteRenderer sr;
@@ -42,6 +43,7 @@ public class Firefly : MonoBehaviour
         else if (fox.gameObject.activeInHierarchy) gameObject.transform.localPosition = fox.localPosition;
         sr.enabled = true;
         agent.enabled = true;
+        Trail.Play();
         agent.SetDestination( SelectStatue().transform.position);
        
     }
@@ -54,6 +56,7 @@ public class Firefly : MonoBehaviour
     {
         if(tanuk.gameObject.activeInHierarchy)  gameObject.transform.localPosition = tanuk.localPosition;
         else if (fox.gameObject.activeInHierarchy) gameObject.transform.localPosition = fox.localPosition;
+        Trail.Stop();
         agent.enabled = false;
         sr.enabled = false;
     }
