@@ -2,7 +2,7 @@
 <img src="logo.png" alt="PONER NOMBRE DEL JUEGO ACA"/>
 </p>
 
-# PONER NOMBRE DEL JUEGO ACA
+Tanuk the Corruption Purifier
 
 PONER LA DESCRIPCION LARGA DEL JUEGO ACA.
 
@@ -17,14 +17,19 @@ This is a game being developed by students from <a href="https://www.imagecampus
 
 ## Credits
 
-- **Nombre Apellido (ORDENAR IGUAL QUE CREDITOS EN JUEGO)** - *Programming*
-- **Nombre Apellido** - *Programming*
-- **Nombre Apellido** - *Art*
-- **Nombre Apellido** - *Art*
-- **Nombre Apellido** - *Audio*
-- **Nombre Apellido** - *Audio*
-- **Nombre Apellido** - *Testing*
-- **Nombre Apellido** - *Testing*
+- **Pablo Goldman Arca** - *Programming*
+- **Juan Sebastian Gomez** - *Programming*
+- **Guadalupe Ferreira Le Roi** - *Art*
+- **María Agustina Marega** - *Art*
+- **Joaquín Baamonde** - *Audio*
+- **Julian Mazzeo** - *Audio*
+- **Paula Quadrelli** - *Audio*
+- **Lucas Santiago Medina** - *Testing*
+- **Nicolas Tejerizo** - *Testing*
+- **Nicole Rodríguez** - *Testing*
+- **Patricio Serrano** - *Testing*
+
+
 
 
 This game was also possible thanks to the support of these professors:
@@ -32,17 +37,12 @@ This game was also possible thanks to the support of these professors:
 - **Sergio Baretto**
 - **Ramiro Cabrera**
 - **Ignacio Mosconi**
-- **Lucía Inés Patetta**
-- **Nazareno Rivero**
-- **Eugenio Taboada**
 
 
 ## Acknowledgements
 
-- **Ramón Bunge**
-- **Juan Cruz Tourret**
-- **Nicolás Jimenez Lamberti**
-- **Federico Olivé**
+- ** **
+
 
 OTRAS PERSONAS A LAS QUE QUIERAN AGRADECERLES ACÁ, SINO SACAR ESTE TEXTO
 
