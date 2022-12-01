@@ -2856,6 +2856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 841549596}
   - component: {fileID: 841549597}
+  - component: {fileID: 841549598}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -2936,7 +2937,35 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 841549598}
+        m_TargetAssemblyTypeName: Game.AudioSettings, Assembly-CSharp
+        m_MethodName: SetSpecificVolume
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Master
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &841549598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841549595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f42629b9e141114f9235edd37ecc4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisSlider: {fileID: 841549597}
+  masterVolume: 0
+  musicVolume: 0
+  SFXVolume: 0
 --- !u!1 &902674914
 GameObject:
   m_ObjectHideFlags: 0
@@ -3099,6 +3128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000477460}
   - component: {fileID: 1000477461}
+  - component: {fileID: 1000477462}
   m_Layer: 5
   m_Name: Slider (2)
   m_TagString: Untagged
@@ -3179,7 +3209,35 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1000477462}
+        m_TargetAssemblyTypeName: Game.AudioSettings, Assembly-CSharp
+        m_MethodName: SetSpecificVolume
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Sounds
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1000477462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000477459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f42629b9e141114f9235edd37ecc4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisSlider: {fileID: 1000477461}
+  masterVolume: 0
+  musicVolume: 0
+  SFXVolume: 0
 --- !u!1 &1058925443
 GameObject:
   m_ObjectHideFlags: 0
@@ -3812,6 +3870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1386728232}
   - component: {fileID: 1386728233}
+  - component: {fileID: 1386728234}
   m_Layer: 5
   m_Name: Slider (1)
   m_TagString: Untagged
@@ -3892,7 +3951,35 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1386728234}
+        m_TargetAssemblyTypeName: Game.AudioSettings, Assembly-CSharp
+        m_MethodName: SetSpecificVolume
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Music
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1386728234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386728231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f42629b9e141114f9235edd37ecc4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisSlider: {fileID: 1386728233}
+  masterVolume: 0
+  musicVolume: 0
+  SFXVolume: 0
 --- !u!1 &1389233075
 GameObject:
   m_ObjectHideFlags: 0
