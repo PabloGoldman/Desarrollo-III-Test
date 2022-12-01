@@ -6853,7 +6853,7 @@ MonoBehaviour:
   - {fileID: 1692540472}
   - {fileID: 402645304}
   - {fileID: 656795471}
-  TimeToSpawn: 5
+  TimeToSpawn: 180
   Trail: {fileID: 96028813}
 --- !u!212 &202326247
 SpriteRenderer:
@@ -7887,6 +7887,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8623975942891049241, guid: dcdf50164050dfd4da54c1a34dd4101f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623975943108416419, guid: dcdf50164050dfd4da54c1a34dd4101f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623975943143450350, guid: dcdf50164050dfd4da54c1a34dd4101f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8623975943156422722, guid: dcdf50164050dfd4da54c1a34dd4101f, type: 3}
       propertyPath: Key
       value: 
@@ -7978,6 +7990,10 @@ PrefabInstance:
     - target: {fileID: 8623975943156422749, guid: dcdf50164050dfd4da54c1a34dd4101f, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623975943396126587, guid: dcdf50164050dfd4da54c1a34dd4101f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8623975943156422723, guid: dcdf50164050dfd4da54c1a34dd4101f, type: 3}
