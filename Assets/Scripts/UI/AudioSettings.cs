@@ -5,9 +5,6 @@ namespace Game
 {
     public class AudioSettings : MonoBehaviour  //Interactua con los audioMixers
     {
-        public AudioMixer audioMixer;
-        public AudioMixer SFXMixer;
-
         private const string volumeKey = "Volumen_Musica";
         private const string sfxKey = "Volumen_SFX";
         private const string masterKey = "Volumen_Master";
