@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WindEffect
+  m_Name: WindEffectPlants
   m_Shader: {fileID: -6465566751694194690, guid: e8c31e4f27f1392449fd738a21d3b960, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -51,7 +51,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _WindIntensity: 1
+    - _WindIntensity: 0.4
     - _WindSpeed: 0.3
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
