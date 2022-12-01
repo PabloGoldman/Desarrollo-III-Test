@@ -50,7 +50,7 @@ namespace Game
             inPause = false;
         }
 
-        public void ReturnToProfile()
+        public void ReturnToMenu()
         {
             AkSoundEngine.PostEvent("Stop_Musica", gameObject);
             AkSoundEngine.PostEvent("Stop_Ambiente_V2", gameObject);
