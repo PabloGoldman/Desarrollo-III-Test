@@ -8,9 +8,9 @@ namespace Game
         public AudioMixer audioMixer;
         public AudioMixer SFXMixer;
 
-        private const string volumeKey = "Volume";
-        private const string sfxKey = "SFX";
-        private const string masterKey = "Master";
+        private const string volumeKey = "Volumen_Musica";
+        private const string sfxKey = "Volumen_SFX";
+        private const string masterKey = "Volumen_Master";
 
         public void SetMusicVolume(float volume)
         {
