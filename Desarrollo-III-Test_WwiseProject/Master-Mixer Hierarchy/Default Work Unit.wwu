@@ -4,6 +4,36 @@
 		<WorkUnit Name="Default Work Unit" ID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{6558B19F-E76F-4413-B0C5-CF87C5D6CAAF}" ShortID="34586515">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Volumen_Master" ID="{9D90C886-1EFC-419A-BA2B-C169B5B204F1}" WorkUnitID="{74CB5FBE-CBE5-462D-A71F-BE751968674D}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{C47982BF-04D2-4583-BF20-E04401DC773A}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{C94642B3-ADF5-42DF-82CF-B840FF657335}" WorkUnitID="{5585C53B-DD89-467F-9AF1-55C7DC74A41F}"/>
@@ -11,24 +41,87 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="BGM_ambiente" ID="{EC7F5244-167B-4011-A62D-DD67E2F07612}">
-							<ObjectLists/>
-						</Bus>
-						<Bus Name="Voz" ID="{AAD3763A-7A8E-4FC0-BDA3-78B6D30A8EDE}">
 							<PropertyList>
-								<Property Name="RecoveryTime" Type="Real64" Value="0.5"/>
+								<Property Name="OutputBusVolume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{928D7805-CC27-49F6-9868-63860DF96163}" ShortID="38909159">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Volumen_Musica" ID="{9F3E4E1B-2E81-43C5-856A-0DABFF43254D}" WorkUnitID="{74CB5FBE-CBE5-462D-A71F-BE751968674D}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{194CB9B3-7AC9-4B12-AA53-1B93DBA77D83}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 							</PropertyList>
 							<ObjectLists/>
-							<DuckingList>
-								<DuckItem>
-									<BusRef Name="BGM_ambiente" ID="{EC7F5244-167B-4011-A62D-DD67E2F07612}"/>
-									<DuckingParam>
-										<Volume>-6</Volume>
-										<FadeInTime>0.5</FadeInTime>
-										<FadeOutTime>0.5</FadeOutTime>
-										<FadeCurve>FadeLinear</FadeCurve>
-									</DuckingParam>
-								</DuckItem>
-							</DuckingList>
+						</Bus>
+						<Bus Name="Voz + SFX" ID="{AAD3763A-7A8E-4FC0-BDA3-78B6D30A8EDE}">
+							<PropertyList>
+								<Property Name="OutputBusVolume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{E05253AA-B77F-4496-BA50-4241F5438975}" ShortID="948717448">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Volumen_SFX" ID="{E6BD893E-D4DB-419E-8F88-547B43AF36AC}" WorkUnitID="{74CB5FBE-CBE5-462D-A71F-BE751968674D}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{6EE14105-9ADC-4C5B-9B4C-DAD58BF64722}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="RecoveryTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ChildrenList>
+								<Bus Name="Voces" ID="{9F273C50-1321-49DE-A633-76015DF2A267}">
+									<ObjectLists/>
+									<DuckingList>
+										<DuckItem>
+											<BusRef Name="BGM_ambiente" ID="{EC7F5244-167B-4011-A62D-DD67E2F07612}"/>
+											<DuckingParam>
+												<Volume>-9</Volume>
+												<FadeInTime>1</FadeInTime>
+												<FadeOutTime>1</FadeOutTime>
+												<FadeCurve>FadeLinear</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+									</DuckingList>
+								</Bus>
+							</ChildrenList>
+							<ObjectLists/>
 						</Bus>
 					</ChildrenList>
 					<ObjectLists/>
