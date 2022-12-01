@@ -23,7 +23,7 @@ namespace Game
             {
                 case "Master":
                     masterVolume = thisSlider.value;
-                    AkSoundEngine.SetRTPCValue(volumeKey, masterVolume);
+                    AkSoundEngine.SetRTPCValue(masterKey, masterVolume);
                     break;
                 case "Music":
                     musicVolume = thisSlider.value;
@@ -31,7 +31,7 @@ namespace Game
                     break;
                 case "Sounds":
                     SFXVolume = thisSlider.value;
-                    AkSoundEngine.SetRTPCValue(volumeKey, SFXVolume);
+                    AkSoundEngine.SetRTPCValue(sfxKey, SFXVolume);
                     break;
                 default:
                     break;
