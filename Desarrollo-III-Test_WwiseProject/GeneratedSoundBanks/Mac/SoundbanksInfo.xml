@@ -11,12 +11,17 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3117790158">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1136248550">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="1384037596" Name="Volumen_Master" ObjectPath="\Game Parameters\Default Work Unit\Volumen\Volumen_Master"/>
+				<GameParameter Id="2916995675" Name="Volumen_SFX" ObjectPath="\Game Parameters\Default Work Unit\Volumen\Volumen_SFX"/>
+				<GameParameter Id="2975884740" Name="Volumen_Musica" ObjectPath="\Game Parameters\Default Work Unit\Volumen\Volumen_Musica"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1518624154">
+		<SoundBank Id="3161908922" Language="SFX" Hash="518977116">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -42,6 +47,42 @@
 						<File Id="438242352" Language="SFX">
 							<ShortName>Ambiente_V2.wav</ShortName>
 							<Path>SFX\Ambiente_V2_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="469805671" Name="Play_Asteroid_CRITICAL" ObjectPath="\Events\Default Work Unit\Play_Asteroid_CRITICAL" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="1004528242" Language="SFX">
+							<ShortName>Asteroid_CRITICAL.wav</ShortName>
+							<Path>SFX\Asteroid_CRITICAL_F15A37A4.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="20767442" Name="Play_Asteroid_DEATH" ObjectPath="\Events\Default Work Unit\Play_Asteroid_DEATH" DurationType="OneShot" DurationMin="8.986125" DurationMax="8.986125">
+					<IncludedMemoryFiles>
+						<File Id="561134222" Language="SFX">
+							<ShortName>Asteroid_DEATH.wav</ShortName>
+							<Path>SFX\Asteroid_DEATH_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="500012636" Name="Play_AsteroidHit" ObjectPath="\Events\Default Work Unit\Play_AsteroidHit" DurationType="OneShot" DurationMin="0.620339" DurationMax="0.951436">
+					<IncludedMemoryFiles>
+						<File Id="71336981" Language="SFX">
+							<ShortName>Asteroid_HIT4.wav</ShortName>
+							<Path>SFX\Asteroid_HIT4_C45298D9.wem</Path>
+						</File>
+						<File Id="171589597" Language="SFX">
+							<ShortName>Asteroid_HIT3.wav</ShortName>
+							<Path>SFX\Asteroid_HIT3_9C94BD1B.wem</Path>
+						</File>
+						<File Id="192832996" Language="SFX">
+							<ShortName>Asteroid_HIT2.wav</ShortName>
+							<Path>SFX\Asteroid_HIT2_1F19D246.wem</Path>
+						</File>
+						<File Id="911897036" Language="SFX">
+							<ShortName>Asteroid_HIT.wav</ShortName>
+							<Path>SFX\Asteroid_HIT_F281EBF4.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -314,7 +355,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3433753921" Name="Play_Magic_Key4" ObjectPath="\Events\Default Work Unit\Play_Magic_Key4" DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3433753921" Name="Play_Magic_Key4" ObjectPath="\Events\Default Work Unit\Play_Magic_Key4" DurationType="OneShot" DurationMin="2.504435" DurationMax="2.504435">
+					<IncludedMemoryFiles>
+						<File Id="344887418" Language="SFX">
+							<ShortName>Magic_Key4.wav</ShortName>
+							<Path>SFX\Magic_Key4_16A63ADC.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="715145019" Name="Play_Muerte_ENEMIGO" ObjectPath="\Events\Default Work Unit\Play_Muerte_ENEMIGO" DurationType="OneShot" DurationMin="0.199524" DurationMax="0.199524">
 					<IncludedMemoryFiles>
 						<File Id="144379592" Language="SFX">
@@ -398,6 +446,10 @@
 				</Event>
 				<Event Id="3438766119" Name="Play_Puerta" ObjectPath="\Events\Default Work Unit\Play_Puerta" DurationType="OneShot" DurationMin="2.581743" DurationMax="2.581743">
 					<IncludedMemoryFiles>
+						<File Id="344887418" Language="SFX">
+							<ShortName>Magic_Key4.wav</ShortName>
+							<Path>SFX\Magic_Key4_16A63ADC.wem</Path>
+						</File>
 						<File Id="374422522" Language="SFX">
 							<ShortName>Magic_Key(V2).wav</ShortName>
 							<Path>SFX\Magic_Key(V2)_2BE6EFFF.wem</Path>
@@ -405,6 +457,10 @@
 						<File Id="453180255" Language="SFX">
 							<ShortName>Roca_Arrastrada2.wav</ShortName>
 							<Path>SFX\Roca_Arrastrada2_1819DC12.wem</Path>
+						</File>
+						<File Id="949907507" Language="SFX">
+							<ShortName>Roca_Arrastrada1.wav</ShortName>
+							<Path>SFX\Roca_Arrastrada1_1C88EAFB.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -489,6 +545,14 @@
 						<File Id="815288819" Language="SFX">
 							<ShortName>soulPlops3.wav</ShortName>
 							<Path>SFX\soulPlops3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="470132223" Name="Play_Stinger_Win" ObjectPath="\Events\Default Work Unit\Play_Stinger_Win" DurationType="OneShot" DurationMin="10.181814" DurationMax="10.181814">
+					<IncludedMemoryFiles>
+						<File Id="1022347622" Language="SFX">
+							<ShortName>stinger4.wav</ShortName>
+							<Path>SFX\stinger4_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

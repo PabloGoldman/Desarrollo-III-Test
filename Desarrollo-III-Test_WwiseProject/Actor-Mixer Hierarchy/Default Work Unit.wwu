@@ -4507,241 +4507,259 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</BlendContainer>
-				<Sound Name="Asteroid_CRITICAL" ID="{D00AAE8A-1937-4BFB-9A93-6774C9BC20E8}" ShortID="317824781">
-					<PropertyList>
-						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-						<Property Name="Pitch" Type="int32">
-							<ValueList>
-								<Value>-150</Value>
-							</ValueList>
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{B070F37F-8928-4959-B539-934471D8BCBD}">
-										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="1895"/>
-											<Property Name="Min" Type="Real64" Value="-177"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-6</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
-						</Reference>
-					</ReferenceList>
+				<Folder Name="Asteroid" ID="{CC0F3A87-A26F-4C22-8804-0A9320A0013A}" ShortID="868029438">
 					<ChildrenList>
-						<AudioFileSource Name="Asteroid_CRITICAL" ID="{644EC444-4F01-41D9-8E1D-A78F295592D5}">
+						<RandomSequenceContainer Name="AsteroidHit" ID="{5A2498F8-FC1B-4399-B785-EDCF5A5B8D66}" ShortID="560052251">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voz + SFX" ID="{AAD3763A-7A8E-4FC0-BDA3-78B6D30A8EDE}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Asteroid_HIT" ID="{93484BE8-AD43-4DD6-9A24-6AAD1A88520F}" ShortID="569720836">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>18</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Asteroid_HIT" ID="{741856AB-42A1-4BB0-86AD-823719D94DBD}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.069293200408998"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.435557259713701"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.07239476823449"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Asteroid_HIT.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="911897036"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Asteroid_HIT" ID="{741856AB-42A1-4BB0-86AD-823719D94DBD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Asteroid_HIT2" ID="{7925D94E-DECC-4C3A-9F72-152B7EDC3EEE}" ShortID="970712586">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Asteroid_HIT2" ID="{4413E297-E222-454F-8AD9-B0ECB5377B17}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.102048790487905"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.349308111792774"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.48176324149744"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.4331997273347"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Asteroid_HIT2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="192832996"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Asteroid_HIT2" ID="{4413E297-E222-454F-8AD9-B0ECB5377B17}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Asteroid_HIT3" ID="{E1928CF9-6228-4ECE-BD05-3169E40E5644}" ShortID="138063718">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Asteroid_HIT3" ID="{8ECAFBB2-55AF-482C-9A25-B4B36103DC35}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.16131799591002"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.799868396387184"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.61990154226312"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Asteroid_HIT3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="171589597"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Asteroid_HIT3" ID="{8ECAFBB2-55AF-482C-9A25-B4B36103DC35}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Asteroid_HIT4" ID="{3A63FC07-89B9-487D-ACFD-602596C15800}" ShortID="863177752">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Asteroid_HIT4" ID="{20A0E2AB-2E26-4258-8FE9-2B32A56986F3}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.102289962508521"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.442156612133606"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.06249573960464"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Asteroid_HIT4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="71336981"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Asteroid_HIT4" ID="{20A0E2AB-2E26-4258-8FE9-2B32A56986F3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<Sound Name="Asteroid_CRITICAL" ID="{D00AAE8A-1937-4BFB-9A93-6774C9BC20E8}" ShortID="317824781">
 							<PropertyList>
-								<Property Name="CrossfadeDuration" Type="Real64" Value="483.342"/>
-								<Property Name="FadeInDuration" Type="Real64" Value="0.3"/>
-								<Property Name="LoopBegin" Type="Real64" Value="7.0559789536469"/>
-								<Property Name="LoopEnd" Type="Real64" Value="9.87300477164281"/>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-								<Property Name="TrimBegin" Type="Real64" Value="5.92916862644854"/>
-								<Property Name="TrimEnd" Type="Real64" Value="11.8851660702113"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-150</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{B070F37F-8928-4959-B539-934471D8BCBD}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1895"/>
+													<Property Name="Min" Type="Real64" Value="-177"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>Asteroid_CRITICAL.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="1004528242"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ObjectLists/>
-					<ActiveSourceList>
-						<ActiveSource Name="Asteroid_CRITICAL" ID="{644EC444-4F01-41D9-8E1D-A78F295592D5}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Asteroid_DEATH" ID="{6FF4BB47-3734-41D8-AEE9-8EDD8678CE69}" ShortID="53684945">
-					<PropertyList>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-3</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Asteroid_DEATH" ID="{C3C3E66C-EBA1-472F-A6E8-CE6725F14384}">
-							<Language>SFX</Language>
-							<AudioFile>Asteroid_DEATH.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="561134222"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ObjectLists/>
-					<ActiveSourceList>
-						<ActiveSource Name="Asteroid_DEATH" ID="{C3C3E66C-EBA1-472F-A6E8-CE6725F14384}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Asteroid_HIT2" ID="{7925D94E-DECC-4C3A-9F72-152B7EDC3EEE}" ShortID="970712586">
-					<PropertyList>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-4</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Asteroid_HIT2" ID="{4413E297-E222-454F-8AD9-B0ECB5377B17}">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voz + SFX" ID="{AAD3763A-7A8E-4FC0-BDA3-78B6D30A8EDE}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Asteroid_CRITICAL" ID="{644EC444-4F01-41D9-8E1D-A78F295592D5}">
+									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="483.342"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.3"/>
+										<Property Name="LoopBegin" Type="Real64" Value="7.0559789536469"/>
+										<Property Name="LoopEnd" Type="Real64" Value="9.87300477164281"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="5.92916862644854"/>
+										<Property Name="TrimEnd" Type="Real64" Value="11.8851660702113"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Asteroid_CRITICAL.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1004528242"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Asteroid_CRITICAL" ID="{644EC444-4F01-41D9-8E1D-A78F295592D5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Asteroid_DEATH" ID="{6FF4BB47-3734-41D8-AEE9-8EDD8678CE69}" ShortID="53684945">
 							<PropertyList>
-								<Property Name="FadeOutDuration" Type="Real64" Value="0.349308111792774"/>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-								<Property Name="TrimBegin" Type="Real64" Value="2.20563122017723"/>
-								<Property Name="TrimEnd" Type="Real64" Value="3.4331997273347"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>Asteroid_HIT2.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="192832996"/>
-							</MediaIDList>
-						</AudioFileSource>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Voz + SFX" ID="{AAD3763A-7A8E-4FC0-BDA3-78B6D30A8EDE}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Asteroid_DEATH" ID="{C3C3E66C-EBA1-472F-A6E8-CE6725F14384}">
+									<Language>SFX</Language>
+									<AudioFile>Asteroid_DEATH.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="561134222"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Asteroid_DEATH" ID="{C3C3E66C-EBA1-472F-A6E8-CE6725F14384}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-					<ObjectLists/>
-					<ActiveSourceList>
-						<ActiveSource Name="Asteroid_HIT2" ID="{4413E297-E222-454F-8AD9-B0ECB5377B17}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Asteroid_HIT3" ID="{E1928CF9-6228-4ECE-BD05-3169E40E5644}" ShortID="138063718">
-					<PropertyList>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-4</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Asteroid_HIT3" ID="{8ECAFBB2-55AF-482C-9A25-B4B36103DC35}">
-							<PropertyList>
-								<Property Name="FadeOutDuration" Type="Real64" Value="0.16131799591002"/>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-								<Property Name="TrimBegin" Type="Real64" Value="0.799868396387184"/>
-								<Property Name="TrimEnd" Type="Real64" Value="1.61990154226312"/>
-							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>Asteroid_HIT3.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="171589597"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ObjectLists/>
-					<ActiveSourceList>
-						<ActiveSource Name="Asteroid_HIT3" ID="{8ECAFBB2-55AF-482C-9A25-B4B36103DC35}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Asteroid_HIT4" ID="{3A63FC07-89B9-487D-ACFD-602596C15800}" ShortID="863177752">
-					<PropertyList>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-4</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Asteroid_HIT4" ID="{20A0E2AB-2E26-4258-8FE9-2B32A56986F3}">
-							<PropertyList>
-								<Property Name="FadeInDuration" Type="Real64" Value="0.102289962508521"/>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-								<Property Name="TrimBegin" Type="Real64" Value="0.442156612133606"/>
-								<Property Name="TrimEnd" Type="Real64" Value="1.06249573960464"/>
-							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>Asteroid_HIT4.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="71336981"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ObjectLists/>
-					<ActiveSourceList>
-						<ActiveSource Name="Asteroid_HIT4" ID="{20A0E2AB-2E26-4258-8FE9-2B32A56986F3}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Asteroid_HIT" ID="{93484BE8-AD43-4DD6-9A24-6AAD1A88520F}" ShortID="569720836">
-					<PropertyList>
-						<Property Name="Lowpass" Type="int16">
-							<ValueList>
-								<Value>18</Value>
-							</ValueList>
-						</Property>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-4</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Asteroid_HIT" ID="{741856AB-42A1-4BB0-86AD-823719D94DBD}">
-							<PropertyList>
-								<Property Name="FadeInDuration" Type="Real64" Value="0.069293200408998"/>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-								<Property Name="TrimBegin" Type="Real64" Value="0.435557259713701"/>
-								<Property Name="TrimEnd" Type="Real64" Value="1.07239476823449"/>
-							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>Asteroid_HIT.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="911897036"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ObjectLists/>
-					<ActiveSourceList>
-						<ActiveSource Name="Asteroid_HIT" ID="{741856AB-42A1-4BB0-86AD-823719D94DBD}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

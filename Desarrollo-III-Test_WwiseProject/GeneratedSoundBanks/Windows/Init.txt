@@ -9,9 +9,15 @@ State	ID	Name	State Group			Notes
 	3830703115	Musica2	EstadosMusica			
 	3830703117	Musica4	EstadosMusica			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1384037596	Volumen_Master			\Default Work Unit\Volumen\Volumen_Master	
+	2916995675	Volumen_SFX			\Default Work Unit\Volumen\Volumen_SFX	
+	2975884740	Volumen_Musica			\Default Work Unit\Volumen\Volumen_Musica	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	543694038	Voz			\Default Work Unit\Master Audio Bus\Voz	
+	1446859332	Voz + SFX			\Default Work Unit\Master Audio Bus\Voz + SFX	
 	2455481389	BGM_ambiente			\Default Work Unit\Master Audio Bus\BGM_ambiente	
+	3071032539	Voces			\Default Work Unit\Master Audio Bus\Voz + SFX\Voces	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 Audio Devices	ID	Name	Type				Notes

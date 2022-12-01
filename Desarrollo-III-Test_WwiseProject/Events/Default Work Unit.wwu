@@ -596,6 +596,63 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_AsteroidHit" ID="{05986428-DB55-4FD1-8B56-2A31F64600B3}">
+					<ChildrenList>
+						<Action Name="" ID="{A07840D2-1AE1-44C9-9C11-E069781364ED}" ShortID="140746026">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AsteroidHit" ID="{5A2498F8-FC1B-4399-B785-EDCF5A5B8D66}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Asteroid_DEATH" ID="{B471C7B9-2879-42BA-9E76-B56A6DA592AF}">
+					<ChildrenList>
+						<Action Name="" ID="{543FA54E-6955-4CCA-96B0-96FD6C2C01C6}" ShortID="1070183934">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Asteroid_DEATH" ID="{6FF4BB47-3734-41D8-AEE9-8EDD8678CE69}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Asteroid_CRITICAL" ID="{2BF9BA8E-6A97-4F55-ADEF-78028D54C55F}">
+					<ChildrenList>
+						<Action Name="" ID="{235A760D-B001-4E1F-8551-063EA8DD3A84}" ShortID="256737409">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Asteroid_CRITICAL" ID="{D00AAE8A-1937-4BFB-9A93-6774C9BC20E8}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Stinger_Win" ID="{A50A5D02-B0C0-43C9-B0E2-459884ED8F0D}">
+					<ChildrenList>
+						<Action Name="" ID="{9F843106-7E63-4FCF-B4D7-CBC132151331}" ShortID="585873058">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musica" ID="{ABC0CEE0-675A-4925-9580-72CBC51767B5}" WorkUnitID="{58D32851-573E-4DF8-BD95-2FB8F603227F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BCC8349D-4A2D-45D2-AC72-7B7CF8067166}" ShortID="561745648">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Stinger Win" ID="{F0970326-FCEF-4254-B874-896FA4500686}" WorkUnitID="{58D32851-573E-4DF8-BD95-2FB8F603227F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

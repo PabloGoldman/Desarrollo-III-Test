@@ -20,6 +20,7 @@ public class Meteorite : MonoBehaviour, IDamageable
 
     public void TakeDamage(float damage)
     {
+        AkSoundEngine.PostEvent("Play_AsteroidHit", gameObject);
         life -= damage;
 
         hurt.Play();
@@ -28,9 +29,10 @@ public class Meteorite : MonoBehaviour, IDamageable
 
         if (life <= 0)
         {
+            AkSoundEngine.PostEvent("Play_Stinger_Win", gameObject); 
             AkSoundEngine.PostEvent("Stop_Musica", gameObject);
             AkSoundEngine.PostEvent("Stop_Ambiente_V2", gameObject);
-            FinalScreen.SetActive(true);
+           // FinalScreen.SetActive(true);
             Invoke("Credits", timeToEnd);
         }
     }
