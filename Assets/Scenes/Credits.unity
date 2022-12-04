@@ -301,19 +301,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<color=#00ff00ff><size=70><b>DEVELOPMENT\r</b></size></color>\n\n\n\n\n\r<b>Juan
-    Sebastian Gomez \r</b>\n\nDeveloper\r\nVFX\r\nGame designer\r\n\r\n\r\n<b>Pablo
-    Goldman Arca\r</b>\n\nProject manager\r\nDeveloper\r\nGame designer\r\n\r\n\n\n\n<color=#00ff00ff><size=70><b>ART</b></size></color>\n\n\n\n\n<b>Guadalupe
+  m_text: "<color=#00ff00ff><size=70><b>DEVELOPMENT\r</b></size></color>\n \n\n\n\n\r<b>Pablo
+    Goldman Arca\r</b>\n\nProject manager\r\nDeveloper\r\nGame designer\r\n\r\r\n\r\n<b>Juan
+    Sebastian Gomez\r</b>\n\nDeveloper\r\nVFX\r\nGame designer\r\n\n\n\n\n<color=#00ff00ff><size=70><b>ART</b></size></color>\n\n\n\n\n<b>Guadalupe
     Ferreira Le Roi </b>\n\nConcept art\r\nBackground \r\nEnemies designer\r\nStorytelling
     Artist\r\nMarket research analyst\r\n\n\n<b>Mar\xEDa Agustina Marega</b>\n\r\nUX
     & UI\r\nGame designer\r\nConcept art\r\nTechnical artist\r\nMain character designer
-    & animations\r\nBackground\r\n\n\n\n\n<color=#00ff00ff><size=70><b>SFX & MUSIC</b></size></color>\n\n\n\n\n<b>
-    Javier G\xF3mez</b>\n\nVoice over\n\n\n\r<b>Joaqu\xEDn Baamonde \r</b>\n\nSfx,
-    recording & audio implementation\r\n\n\r\n\r<b>Julian Mazzeo \r</b>\n\nSfx &
-    audio implementation \r\n\n\r\n\r<b>Paula Quadrelli \r</b>\n\nMusic & audio implementation
-    \r\n\n\n\n\n<color=#00ff00ff><size=70><b> QA</b></size></color>\n\n\n\n\n\r<b>
-    Lucas Santiago Medina\r</b>\n\n<b> Nicolas Tejerizo\r</b>\n\n<b> Nicole Rodr\xEDguez
-    \r</b>\n\n<b> Patricio Serrano \r</b>\n\n\n\n\n"
+    & animations\r\nBackground\r\n\n\n\n\n<color=#00ff00ff><size=70><b>SFX & MUSIC</b></size></color>\n\n\n\n\n\r<b>Joaqu\xEDn
+    Baamonde \r</b>\n\nSfx, recording & audio implementation\r\n\n\n<b> Javier G\xF3mez</b>\n\nVoice
+    over\n\n\r\n\r<b>Julian Mazzeo \r</b>\n\nSfx & audio implementation \r\n\n\r\n\r<b>Paula
+    Quadrelli \r</b>\n\nMusic & audio implementation \r\n\n\n\n\n<color=#00ff00ff><size=70><b>
+    QA</b></size></color>\n\n\n\n\n\r<b> Lucas Santiago Medina\r</b>\n\n<b> Nicole
+    Rodr\xEDguez \r</b>\n\n<b> Patricio Serrano \r</b>\n\n<b> Nicolas Tejerizo\r</b>\n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8abafb2694dab1946a09547656b94408, type: 2}
   m_sharedMaterial: {fileID: 7235602231668759834, guid: 8abafb2694dab1946a09547656b94408, type: 2}
@@ -909,6 +908,7 @@ GameObject:
   - component: {fileID: 2018451158}
   - component: {fileID: 2018451161}
   - component: {fileID: 2018451160}
+  - component: {fileID: 2018451162}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1010,6 +1010,39 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &2018451162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018451156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &2071355535
 GameObject:
   m_ObjectHideFlags: 0
