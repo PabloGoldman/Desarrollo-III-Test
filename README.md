@@ -37,16 +37,19 @@ This game was also possible thanks to the support of these professors:
 - **Sergio Baretto**
 - **Ramiro Cabrera**
 - **Ignacio Mosconi**
-
+- **Lucía Inés Patetta**
+- **Nazareno Rivero**
+- **Eugenio Taboada**
 
 ## Acknowledgements
 
-- ** **
+- **Ramón Bunge**
+- **Juan Cruz Tourret**
+- **Nicolás Jimenez Lamberti**
+- **Federico Olivé**
 
-
-OTRAS PERSONAS A LAS QUE QUIERAN AGRADECERLES ACÁ, SINO SACAR ESTE TEXTO
 
 
 ## Links
 
-Download it from itch.io: PONER LINK AL JUEGO DE ITCH ACA
+Download it from itch.io: https://tanukgame.itch.io/tanuk
