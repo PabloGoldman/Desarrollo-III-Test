@@ -1,3 +1,4 @@
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class EnemyDie : MonoBehaviour, IDamageable
@@ -10,11 +11,13 @@ public class EnemyDie : MonoBehaviour, IDamageable
     [SerializeField] private ParticleSystem splashLeft;
     [SerializeField] private ParticleSystem splashRight;
     private Rigidbody2D rb;
+    private Animator animator;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         col2D = GetComponent<Collider2D>();
+        animator = GetComponent<Animator>();
         mr = GetComponent<SpriteRenderer>();
         enemyData = GetComponent<EnemyData>();
     }
@@ -23,6 +26,7 @@ public class EnemyDie : MonoBehaviour, IDamageable
     {
         enemyData.CurrentHealth -= damage;
         SpawnFragment();
+        animator.SetTrigger("Hurt");
         hurt.Play();
         if (enemyData.CurrentHealth <= 0) Die();
     }
