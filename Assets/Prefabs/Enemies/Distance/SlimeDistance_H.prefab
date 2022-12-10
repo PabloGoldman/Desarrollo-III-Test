@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 8075384006755407283}
   - component: {fileID: 8075384006755407284}
   - component: {fileID: 8075384006755407285}
+  - component: {fileID: 6321789798999430018}
   m_Layer: 6
   m_Name: SlimeDistance_H
   m_TagString: enemy
@@ -288,6 +289,26 @@ MonoBehaviour:
   damage: 20
   model: {fileID: 2100951290410215112, guid: 2b66a2061ae0e7f43b5c5928f564a4de, type: 3}
   force: 10
+--- !u!95 &6321789798999430018
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8075384006755407290}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aea2c721024803f49851563b80db8a55, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1744813177
 PrefabInstance:
   m_ObjectHideFlags: 0
