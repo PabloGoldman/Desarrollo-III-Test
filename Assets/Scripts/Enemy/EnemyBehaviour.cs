@@ -39,7 +39,7 @@ public class EnemyBehaviour : MonoBehaviour
                 break;
             
             case TypeOfMovement.Flying:
-                //en desarrollo
+                gameObject.AddComponent<FlyingEnemy>();
                 break;
         }
     }
@@ -54,6 +54,10 @@ public class EnemyBehaviour : MonoBehaviour
             
             case TypeOfAttack.Distance:
                 gameObject.AddComponent<DistanceAttack>();
+                break;
+            
+            case TypeOfAttack.Flying:
+                gameObject.AddComponent<MeleeFlying>();
                 break;
 
         }

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 public enum TypeOfMovement { Patrol, Flying}
- public enum TypeOfAttack { Melee, Distance}
+ public enum TypeOfAttack { Melee, Distance,Flying}
 public class EnemyData: MonoBehaviour
 {   
    
