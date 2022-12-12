@@ -16,6 +16,9 @@ GameObject:
   - component: {fileID: 8503652660271348521}
   - component: {fileID: 8503652660271348520}
   - component: {fileID: 8503652660271348519}
+  - component: {fileID: 1978570250}
+  - component: {fileID: 1978570248}
+  - component: {fileID: 1978570249}
   m_Layer: 6
   m_Name: Bee
   m_TagString: enemy
@@ -79,7 +82,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -278940311
   m_SortingLayer: 17
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -855557964, guid: c5a4299cbb16207428ffb3d2577810a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121,10 +124,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07913971, y: -0.11395645}
+  m_Offset: {x: -0.09, y: -0.11395645}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -135,7 +138,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7702179, y: 0.8888016}
+  m_Size: {x: 10, y: 6}
   m_EdgeRadius: 0
 --- !u!50 &8503652660271348522
 Rigidbody2D:
@@ -213,6 +216,59 @@ MonoBehaviour:
   damage: 20
   model: {fileID: 0}
   force: 10
+--- !u!58 &1978570250
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8503652660271348515}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.025266647, y: -0.09069443}
+  serializedVersion: 2
+  m_Radius: 0.48103523
+--- !u!114 &1978570248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8503652660271348515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cebe56144b4f3447b2755bc60c4a317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tanuk: {fileID: 0}
+  fox: {fileID: 0}
+  TimeToUnfollow: 3
+--- !u!195 &1978570249
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8503652660271348515}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5655426
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.2433333
+  m_BaseOffset: 0.62166667
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &8503652660339988586
 PrefabInstance:
   m_ObjectHideFlags: 0

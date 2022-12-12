@@ -39,7 +39,7 @@ public class EnemyBehaviour : MonoBehaviour
                 break;
             
             case TypeOfMovement.Flying:
-                gameObject.AddComponent<FlyingEnemy>();
+               // gameObject.AddComponent<FlyingEnemy>();
                 break;
         }
     }
