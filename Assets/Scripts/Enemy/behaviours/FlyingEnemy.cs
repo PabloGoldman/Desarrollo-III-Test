@@ -5,6 +5,7 @@ public class FlyingEnemy : MonoBehaviour
 {
     private NavMeshAgent agent;
     private SpriteRenderer sr;
+    private Animator animator;
     [SerializeField] private Transform tanuk;
     [SerializeField] private Transform fox;
     [SerializeField] private float TimeToUnfollow;
@@ -13,6 +14,7 @@ public class FlyingEnemy : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         sr = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -50,6 +52,12 @@ public class FlyingEnemy : MonoBehaviour
         CancelInvoke();
         agent.isStopped = false;
        
+    }
+    
+    private void OnCollisionEnter2D(Collision2D c)
+    {
+        if (!c.transform.CompareTag("Player")) return;
+        animator.SetTrigger("Attack");
     }
 
     private void OnTriggerExit2D(Collider2D c)

@@ -56,6 +56,7 @@ public class EnemyDie : MonoBehaviour, IDamageable
         gameObject.SetActive(false);
     }
     
+    
 
     private void OnCollisionEnter2D(Collision2D c)
     {

@@ -5,7 +5,6 @@ public class PatrolEnemy : MonoBehaviour
 {
     private Rigidbody2D rb;
     private EnemyData enemyData;
-    private Animator animator;
     private Transform groundChecker;
     private Transform pointOfView;
     private bool follow;
@@ -16,7 +15,6 @@ public class PatrolEnemy : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
         enemyData = GetComponent<EnemyData>();
         groundChecker = transform.Find("CheckGround");
         pointOfView= transform.Find("FieldOfView");
@@ -29,7 +27,6 @@ public class PatrolEnemy : MonoBehaviour
         if (enemyData.IsAttack || enemyData.IsDie) return;
         Patrol();
         Follow();
-        
     }
 
     private void Patrol()

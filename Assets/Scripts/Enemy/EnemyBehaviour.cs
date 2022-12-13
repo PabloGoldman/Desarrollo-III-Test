@@ -57,7 +57,7 @@ public class EnemyBehaviour : MonoBehaviour
                 break;
             
             case TypeOfAttack.Flying:
-                gameObject.AddComponent<MeleeFlying>();
+                
                 break;
 
         }
