@@ -19,6 +19,8 @@ public class HumanState : CharacterState, IDamageable
     public override void Awake()
     {
         base.Awake();
+
+        MeteoriteFragment.OnMeteoriteFragmentHit += TakeDamage;
     }
 
     private void Update()

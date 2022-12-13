@@ -29,6 +29,8 @@ public class FoxState : CharacterState, IDamageable
     {
         base.Awake();
 
+        MeteoriteFragment.OnMeteoriteFragmentHit += TakeDamage;
+
         initialGravityScale = rb.gravityScale;
     }
 
