@@ -8,7 +8,7 @@ namespace Game
         [SerializeField] GameObject inGamePause;
         [SerializeField] GameObject optionsMenu;
 
-        bool inPause = false;
+        public static bool inPause = false;
 
         private void Awake()
         {

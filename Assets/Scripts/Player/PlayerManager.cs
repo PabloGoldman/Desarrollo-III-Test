@@ -87,46 +87,50 @@ public class PlayerManager : MonoBehaviour
     {
         if (switchTimer < 0)
         {
-            if (Input.GetKeyDown(KeyCode.LeftAlt))
+            if (!Game.InGamePause.inPause)
             {
-                if (humanState.gameObject.activeInHierarchy && !humanState.isDead)
+                if (Input.GetKeyDown(KeyCode.LeftAlt))
                 {
+                    if (humanState.gameObject.activeInHierarchy && !humanState.isDead)
+                    {
 
-                    humanState.gameObject.SetActive(false);
+                        humanState.gameObject.SetActive(false);
 
-                    foxState.gameObject.SetActive(true);
+                        foxState.gameObject.SetActive(true);
 
-                    foxState.SwitchState();
+                        foxState.SwitchState();
 
-                    foxState.gameObject.transform.position = humanState.gameObject.transform.position;
+                        foxState.gameObject.transform.position = humanState.gameObject.transform.position;
 
-                    foxState.gameObject.transform.localScale = humanState.gameObject.transform.localScale;
+                        foxState.gameObject.transform.localScale = humanState.gameObject.transform.localScale;
 
-                    //float offset = 2;
-                    smokeParticles.transform.position = new Vector3(humanState.transform.position.x, humanState.transform.position.y/* + offset*/);
-                    smokeParticles.GetComponent<ParticleSystem>().Play();
+                        //float offset = 2;
+                        smokeParticles.transform.position = new Vector3(humanState.transform.position.x, humanState.transform.position.y/* + offset*/);
+                        smokeParticles.GetComponent<ParticleSystem>().Play();
+                    }
+                    else if (foxState.gameObject.activeInHierarchy && !foxState.isDead)
+                    {
+
+                        foxState.gameObject.SetActive(false);
+
+                        humanState.gameObject.SetActive(true);
+
+                        humanState.SwitchState();
+
+                        humanState.gameObject.transform.position = foxState.gameObject.transform.position;
+
+                        humanState.gameObject.transform.localScale = foxState.gameObject.transform.localScale;
+
+                        //float offset = 2;
+                        smokeParticles.transform.position = new Vector3(humanState.transform.position.x, humanState.transform.position.y/* + offset*/);
+                        smokeParticles.GetComponent<ParticleSystem>().Play();
+                    }
+
+                    switchTimer = timePerSwitch;
+
+
                 }
-                else if (foxState.gameObject.activeInHierarchy && !foxState.isDead)
-                {
 
-                    foxState.gameObject.SetActive(false);
-
-                    humanState.gameObject.SetActive(true);
-
-                    humanState.SwitchState();
-
-                    humanState.gameObject.transform.position = foxState.gameObject.transform.position;
-
-                    humanState.gameObject.transform.localScale = foxState.gameObject.transform.localScale;
-
-                    //float offset = 2;
-                    smokeParticles.transform.position = new Vector3(humanState.transform.position.x, humanState.transform.position.y/* + offset*/);
-                    smokeParticles.GetComponent<ParticleSystem>().Play();
-                }
-
-                switchTimer = timePerSwitch;
-
-               
             }
         }
 
@@ -160,10 +164,6 @@ public class PlayerManager : MonoBehaviour
                 break;
 
         }
-
-
-
-        
     }
 
 }
