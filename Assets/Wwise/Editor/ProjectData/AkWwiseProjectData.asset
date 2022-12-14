@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9745ba4ff6db1f44811aa5b9a0c08c41
     GuidInternal: 
-    m_lastTime: -8585318447034162129
+    m_lastTime: -8585317446373242965
     List:
     - name: BGM_ambiente
       guid: 44527fec7b161140a62ddd67e2f07612
@@ -148,7 +148,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 876a7ee1bb6edb4f809b1c3688830d3a
     GuidInternal: 
-    m_lastTime: -8585339794018582737
+    m_lastTime: -8585317431642420648
     List:
     - name: Play_1erSalto_FOX
       guid: fbc0a8195cc1634c950d1774f1753554
@@ -201,6 +201,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Asteroid_CRITICAL
+      guid: 8ebaf92b976a554fadef78028d54c55f
+      id: 469805671
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Play_Asteroid_CRITICAL
+        ObjectType: 3
+        guid: 8ebaf92b976a554fadef78028d54c55f
+      Path: Events\Default Work Unit\Play_Asteroid_CRITICAL
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Asteroid_DEATH
+      guid: b9c771b47928ba429e76b56a6da592af
+      id: 20767442
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Play_Asteroid_DEATH
+        ObjectType: 3
+        guid: b9c771b47928ba429e76b56a6da592af
+      Path: Events\Default Work Unit\Play_Asteroid_DEATH
+      maxAttenuation: 0
+      maxDuration: 8.986125
+      minDuration: 8.986125
+    - name: Play_AsteroidHit
+      guid: 2864980555dbd14f8b562a31f64600b3
+      id: 500012636
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Play_AsteroidHit
+        ObjectType: 3
+        guid: 2864980555dbd14f8b562a31f64600b3
+      Path: Events\Default Work Unit\Play_AsteroidHit
+      maxAttenuation: 0
+      maxDuration: 0.951436
+      minDuration: 0.620339
     - name: Play_Ataque_ENEMIGO
       guid: 2e9ae16bb1d163428e3cd7ecf8601a0d
       id: 3977950446
@@ -454,8 +505,8 @@ MonoBehaviour:
         guid: 89d0e7ff7f3060478ec016b29e4b7ac5
       Path: Events\Default Work Unit\Play_Magic_Key4
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 2.504435
+      minDuration: 2.504435
     - name: Play_Muerte_ENEMIGO
       guid: 01c67a285eb6cc45a976c80f7bdd56a0
       id: 715145019
@@ -626,6 +677,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.118118
       minDuration: 0.634853
+    - name: Play_Stinger_Win
+      guid: 025d0aa5c0b0c943b0e2459884ed8f0d
+      id: 470132223
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Play_Stinger_Win
+        ObjectType: 3
+        guid: 025d0aa5c0b0c943b0e2459884ed8f0d
+      Path: Events\Default Work Unit\Play_Stinger_Win
+      maxAttenuation: 0
+      maxDuration: 10.181814
+      minDuration: 10.181814
     - name: Play_Totem_Compra
       guid: fae445a7f3ab884ca890d9c9a956668a
       id: 4028465998
@@ -808,7 +876,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: be5fcb74e5cb2d46a71fbe751968674d
     GuidInternal: 
-    m_lastTime: -8585321349577623938
+    m_lastTime: -8585317446373044566
     List:
     - name: SC_Voz
       guid: ed1253a8a4c720418fe51184acd6ff47

@@ -653,6 +653,31 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Abejas" ID="{01BF9A6E-C4D2-468E-9A73-4B257EE431D7}">
+					<ChildrenList>
+						<Action Name="" ID="{20E299F3-B9D3-48A6-B040-7A8EA00E9063}" ShortID="1041682533">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Abejas" ID="{C7BB04BB-3A39-4032-8BB3-121FF5135E76}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Abejas" ID="{87B50B6D-82B9-4C06-8494-CB1DE456FA33}">
+					<ChildrenList>
+						<Action Name="" ID="{3449983C-6A96-4342-83C7-82557AB38E36}" ShortID="796516428">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Abejas" ID="{C7BB04BB-3A39-4032-8BB3-121FF5135E76}" WorkUnitID="{4F9CF912-EA6C-4D0E-A35F-4AF9B75387B3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
