@@ -37395,6 +37395,30 @@ PrefabInstance:
       propertyPath: m_TagString
       value: enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1669113733424341844, guid: e6b82ada12bbd794182311f08868c001, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.5922968
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669113733424341844, guid: e6b82ada12bbd794182311f08868c001, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5922968
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669113733424341844, guid: e6b82ada12bbd794182311f08868c001, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.38624412
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669113733424341844, guid: e6b82ada12bbd794182311f08868c001, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.38624412
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669113733424341844, guid: e6b82ada12bbd794182311f08868c001, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669113733424341844, guid: e6b82ada12bbd794182311f08868c001, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -293.78198
+      objectReference: {fileID: 0}
     - target: {fileID: 1669113733424341850, guid: e6b82ada12bbd794182311f08868c001, type: 3}
       propertyPath: m_SortingLayer
       value: 17
@@ -37416,16 +37440,28 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1669113733424341851, guid: e6b82ada12bbd794182311f08868c001, type: 3}
+      propertyPath: ShapeModule.arc.value
+      value: 29.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669113733424341851, guid: e6b82ada12bbd794182311f08868c001, type: 3}
       propertyPath: TriggerModule.enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1669113733424341851, guid: e6b82ada12bbd794182311f08868c001, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 10.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669113733424341851, guid: e6b82ada12bbd794182311f08868c001, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669113733424341851, guid: e6b82ada12bbd794182311f08868c001, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 26
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 1669113733424341851, guid: e6b82ada12bbd794182311f08868c001, type: 3}
       propertyPath: InitialModule.startSpeed.minScalar
-      value: 18
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 1669113733424341851, guid: e6b82ada12bbd794182311f08868c001, type: 3}
       propertyPath: CollisionModule.collidesWith.m_Bits
@@ -37469,19 +37505,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2563756111239499139, guid: e6b82ada12bbd794182311f08868c001, type: 3}
       propertyPath: ShapeModule.arc.value
-      value: 80
+      value: 29.1
       objectReference: {fileID: 0}
     - target: {fileID: 2563756111239499139, guid: e6b82ada12bbd794182311f08868c001, type: 3}
       propertyPath: TriggerModule.enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2563756111239499139, guid: e6b82ada12bbd794182311f08868c001, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 10.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563756111239499139, guid: e6b82ada12bbd794182311f08868c001, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563756111239499139, guid: e6b82ada12bbd794182311f08868c001, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 26
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 2563756111239499139, guid: e6b82ada12bbd794182311f08868c001, type: 3}
       propertyPath: InitialModule.startSpeed.minScalar
-      value: 18
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 2563756111239499139, guid: e6b82ada12bbd794182311f08868c001, type: 3}
       propertyPath: CollisionModule.collidesWith.m_Bits
@@ -37495,6 +37539,18 @@ PrefabInstance:
       propertyPath: SubModule.subEmitters.Array.data[0].emitter
       value: 
       objectReference: {fileID: 547249213}
+    - target: {fileID: 2563756111239499148, guid: e6b82ada12bbd794182311f08868c001, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563756111239499148, guid: e6b82ada12bbd794182311f08868c001, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563756111239499148, guid: e6b82ada12bbd794182311f08868c001, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.22
+      objectReference: {fileID: 0}
     - target: {fileID: 2898216635693019300, guid: e6b82ada12bbd794182311f08868c001, type: 3}
       propertyPath: TriggerModule.enter
       value: 2
