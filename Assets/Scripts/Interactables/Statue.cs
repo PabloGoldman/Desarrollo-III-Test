@@ -29,23 +29,26 @@ public class Statue : MonoBehaviour, IInteractable
 
     public void Interact(Interactor interactor)
     {
-        if (isAvailable)
+        if (gameObject.name != "MeteoriteTriggerPrompt")
         {
-            if (playerManager.BuyFragment())
+            if (isAvailable)
             {
-                Debug.Log("Buying fragment");
-                SetAsUnable();
-                AkSoundEngine.PostEvent("Play_Totem_Compra", gameObject);
-                AkSoundEngine.PostEvent("Play_VO_Entrega", gameObject);
-                SendID?.Invoke(id);
-            }
-            else
-            {
-                SetAsNotAvailable();
-                Invoke(nameof(SetAsAble), 0.1f);
-                Debug.Log("You don't have enough soul fragments!");
-                AkSoundEngine.PostEvent("Play_Totem_NO", gameObject);
+                if (playerManager.BuyFragment())
+                {
+                    Debug.Log("Buying fragment");
+                    SetAsUnable();
+                    AkSoundEngine.PostEvent("Play_Totem_Compra", gameObject);
+                    AkSoundEngine.PostEvent("Play_VO_Entrega", gameObject);
+                    SendID?.Invoke(id);
+                }
+                else
+                {
+                    SetAsNotAvailable();
+                    Invoke(nameof(SetAsAble), 0.1f);
+                    Debug.Log("You don't have enough soul fragments!");
+                    AkSoundEngine.PostEvent("Play_Totem_NO", gameObject);
 
+                }
             }
         }
     }
