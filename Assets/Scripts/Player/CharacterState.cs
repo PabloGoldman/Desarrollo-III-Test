@@ -51,7 +51,7 @@ public abstract class CharacterState : MonoBehaviour
         }
     }
 
-    private void OnEnable()
+    public virtual void OnEnable()
     {
         isFootsteping = false;
         Physics2D.IgnoreLayerCollision(gameObject.layer, 6, false);

@@ -18,6 +18,14 @@ public class Meteorite : MonoBehaviour, IDamageable
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F5))
+        {
+            TakeDamage(1);
+        }
+    }
+
     public void TakeDamage(float damage)
     {
         AkSoundEngine.PostEvent("Play_AsteroidHit", gameObject);

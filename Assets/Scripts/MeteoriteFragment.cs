@@ -26,6 +26,7 @@ public class MeteoriteFragment : MonoBehaviour
         int numEnter = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
         for (int i = 0; i < numEnter; i++)
         {
+            Debug.Log("Meteorite Fragment collision");
             AkSoundEngine.PostEvent("Play_SoulPlops", gameObject);
             ParticleSystem.Particle p = enter[i];
             OnMeteoriteFragmentHit?.Invoke(meteoriteDamage); //Colisiona la particula con el player
