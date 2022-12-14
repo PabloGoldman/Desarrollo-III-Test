@@ -40,7 +40,7 @@ public class Meteorite : MonoBehaviour, IDamageable
             AkSoundEngine.PostEvent("Play_Stinger_Win", gameObject); 
             AkSoundEngine.PostEvent("Stop_Musica", gameObject);
             AkSoundEngine.PostEvent("Stop_Ambiente_V2", gameObject);
-           // FinalScreen.SetActive(true);
+            FinalScreen.SetActive(true);
             Invoke("Credits", timeToEnd);
         }
     }
