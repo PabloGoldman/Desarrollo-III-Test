@@ -4,7 +4,9 @@
 
 Tanuk the Corruption Purifier
 
-PONER LA DESCRIPCION LARGA DEL JUEGO ACA.
+A meteor crashed into the Earth, destroying the land and corrupting its people.
+Our protagonist, a tanuki, is the current owner of a powerful and ancient sword, and managed to survive thanks to the power of his weapon.
+Guide our brave warrior with this newfound power, and call upon the help of generations of warriors before him.
 
 This is a game being developed by students from <a href="https://www.imagecampus.edu.ar/">Image Campus</a>
 
