@@ -127,8 +127,6 @@ public class PlayerManager : MonoBehaviour
                     }
 
                     switchTimer = timePerSwitch;
-
-
                 }
 
             }
@@ -162,7 +160,6 @@ public class PlayerManager : MonoBehaviour
             case 7:
                 AkSoundEngine.SetState("EstadosMusica", "Musica4");
                 break;
-
         }
     }
 
