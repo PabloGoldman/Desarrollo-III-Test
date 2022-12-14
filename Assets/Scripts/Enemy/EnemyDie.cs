@@ -15,7 +15,7 @@ public class EnemyDie : MonoBehaviour, IDamageable
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        col2D = GetComponent<Collider2D>();
+        col2D = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         mr = GetComponent<SpriteRenderer>();
         enemyData = GetComponent<EnemyData>();

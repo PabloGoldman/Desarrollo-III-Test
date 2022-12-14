@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -6,15 +7,19 @@ public class FlyingEnemy : MonoBehaviour
     private NavMeshAgent agent;
     private SpriteRenderer sr;
     private Animator animator;
+    private EnemyData enemyData;
     [SerializeField] private Transform tanuk;
     [SerializeField] private Transform fox;
     [SerializeField] private float TimeToUnfollow;
+    private Rigidbody2D rb;
     
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        enemyData = GetComponent<EnemyData>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
@@ -24,12 +29,25 @@ public class FlyingEnemy : MonoBehaviour
         agent.isStopped = true;
     }
 
+    private void OnEnable()
+    {
+        agent.isStopped = true;
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+    }
+
+
     private void Update()
     {
+        if (enemyData.IsDie)
+        {
+            CancelInvoke();
+            agent.isStopped = true;
+            
+        }
+        
         Flip();
         if(tanuk.gameObject.activeInHierarchy) agent.SetDestination( tanuk.position);
         else if (fox.gameObject.activeInHierarchy) agent.SetDestination( fox.position);
-        
     }
 
     private void Flip()
