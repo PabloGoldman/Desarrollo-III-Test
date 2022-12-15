@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - enemy
+  - ground
+  - Checkpoint
+  - bullet
+  - MapCollider
+  - Soul
+  - Lava
+  - CheckTanuk
   layers:
   - Default
   - TransparentFX
@@ -11,12 +19,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Player
+  - Ground
+  - Interactable
+  - Post
+  - lava
   - 
   - 
   - 
@@ -40,4 +48,61 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: backgrounds
+    uniqueID: 2891519027
+    locked: 0
+  - name: grassBack
+    uniqueID: 2124517199
+    locked: 0
+  - name: BackGround_2
+    uniqueID: 1805848453
+    locked: 0
+  - name: BackGroundCaves
+    uniqueID: 1331311889
+    locked: 0
+  - name: ' mushrooms'
+    uniqueID: 3935789355
+    locked: 0
+  - name: Plants
+    uniqueID: 3737457437
+    locked: 0
+  - name: Lava
+    uniqueID: 3141644647
+    locked: 0
+  - name: Arboles
+    uniqueID: 2473296437
+    locked: 0
+  - name: caves
+    uniqueID: 213253323
+    locked: 0
+  - name: Grass
+    uniqueID: 1526751779
+    locked: 0
+  - name: GrassCaves
+    uniqueID: 4123458425
+    locked: 0
+  - name: platforms
+    uniqueID: 3126244643
+    locked: 0
+  - name: Foreground
+    uniqueID: 3748846657
+    locked: 0
+  - name: DoorBack
+    uniqueID: 3995661745
+    locked: 0
+  - name: estatuas
+    uniqueID: 1107189721
+    locked: 0
+  - name: Meteoro
+    uniqueID: 3333752515
+    locked: 0
+  - name: Characters
+    uniqueID: 4016026985
+    locked: 0
+  - name: DoorFront
+    uniqueID: 2337865261
+    locked: 0
+  - name: GrassFront
+    uniqueID: 3102188851
     locked: 0

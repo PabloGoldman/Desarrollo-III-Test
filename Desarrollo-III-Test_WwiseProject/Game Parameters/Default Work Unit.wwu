@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{74CB5FBE-CBE5-462D-A71F-BE751968674D}" SchemaVersion="103">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{74CB5FBE-CBE5-462D-A71F-BE751968674D}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="SC_Voz" ID="{A85312ED-C7A4-4120-8FE5-1184ACD6FF47}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="-3"/>
+						<Property Name="Max" Type="Real64" Value="-3"/>
+						<Property Name="Min" Type="Real64" Value="-24"/>
+					</PropertyList>
+				</GameParameter>
+				<Folder Name="Volumen" ID="{2F4C4E84-F02A-46F9-9CE3-209D76C98B23}" ShortID="318074075">
+					<ChildrenList>
+						<GameParameter Name="Volumen_Master" ID="{9D90C886-1EFC-419A-BA2B-C169B5B204F1}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="1"/>
+								<Property Name="Max" Type="Real64" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Volumen_Musica" ID="{9F3E4E1B-2E81-43C5-856A-0DABFF43254D}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="1"/>
+								<Property Name="Max" Type="Real64" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Volumen_SFX" ID="{E6BD893E-D4DB-419E-8F88-547B43AF36AC}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="1"/>
+								<Property Name="Max" Type="Real64" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

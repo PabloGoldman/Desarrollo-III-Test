@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{45E5A961-05F9-40F0-A2E2-35CCEC791A1A}" SchemaVersion="103">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{45E5A961-05F9-40F0-A2E2-35CCEC791A1A}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="New Soundcaster Session" ID="{70CFCA20-DCE5-48F2-8850-43AB107BA566}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_intro" ID="{B51B337E-C236-4A0B-8BDB-1EB6D9D9FED8}" WorkUnitID="{E17E6A87-6EBB-4FDB-809B-1C3688830D3A}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="SC_Voz" ID="{A85312ED-C7A4-4120-8FE5-1184ACD6FF47}"/>
+							<Value>-3</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Volumen_Master" ID="{9D90C886-1EFC-419A-BA2B-C169B5B204F1}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Volumen_SFX" ID="{E6BD893E-D4DB-419E-8F88-547B43AF36AC}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Volumen_Musica" ID="{9F3E4E1B-2E81-43C5-856A-0DABFF43254D}"/>
+							<Value>1</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Musica4" ID="{78090E59-69C5-4426-AD67-5FDD0D016B6A}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Hurt_Fox" ID="{358A04B8-357D-42B9-B703-31E4D23E5C67}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>
