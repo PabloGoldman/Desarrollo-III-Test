@@ -20,7 +20,7 @@ public class FlyingEnemy : MonoBehaviour
         animator = GetComponent<Animator>();
         enemyData = GetComponent<EnemyData>();
         rb = GetComponent<Rigidbody2D>();
-        AkSoundEngine.PostEvent("Play_Abejas", gameObject);
+        
     }
 
     private void Start()
@@ -28,6 +28,7 @@ public class FlyingEnemy : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         agent.isStopped = true;
+        AkSoundEngine.PostEvent("Play_Abejas", gameObject);
     }
 
     private void OnEnable()

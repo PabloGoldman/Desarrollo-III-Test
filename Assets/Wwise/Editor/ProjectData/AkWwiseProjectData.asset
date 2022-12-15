@@ -148,7 +148,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 876a7ee1bb6edb4f809b1c3688830d3a
     GuidInternal: 
-    m_lastTime: -8585317431642420648
+    m_lastTime: -8585307183914613001
     List:
     - name: Play_1erSalto_FOX
       guid: fbc0a8195cc1634c950d1774f1753554
@@ -184,6 +184,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.347083
       minDuration: 0.347083
+    - name: Play_Abejas
+      guid: 6e9abf01d2c48e469a734b257ee431d7
+      id: 509040942
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Play_Abejas
+        ObjectType: 3
+        guid: 6e9abf01d2c48e469a734b257ee431d7
+      Path: Events\Default Work Unit\Play_Abejas
+      maxAttenuation: 20
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Ambiente
       guid: f0928b94e68ca941ad18ce0495e4cac8
       id: 94063951
@@ -779,6 +796,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 10.575792
       minDuration: 7.137688
+    - name: Stop_Abejas
+      guid: 6d0bb587b982064c8494cb1de456fa33
+      id: 18684128
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 876a7ee1bb6edb4f809b1c3688830d3a
+      - ElementName: Stop_Abejas
+        ObjectType: 3
+        guid: 6d0bb587b982064c8494cb1de456fa33
+      Path: Events\Default Work Unit\Stop_Abejas
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Ambiente_V2
       guid: 146fddf0fff23846b1cf4b2713bf0f54
       id: 154595976

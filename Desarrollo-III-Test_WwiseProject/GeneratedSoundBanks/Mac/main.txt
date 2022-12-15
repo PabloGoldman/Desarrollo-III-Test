@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	18684128	Stop_Abejas			\Default Work Unit\Stop_Abejas	
 	20767442	Play_Asteroid_DEATH			\Default Work Unit\Play_Asteroid_DEATH	
 	94063951	Play_Ambiente			\Default Work Unit\Play_Ambiente	
 	154595976	Stop_Ambiente_V2			\Default Work Unit\Stop_Ambiente_V2	
@@ -7,6 +8,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	469805671	Play_Asteroid_CRITICAL			\Default Work Unit\Play_Asteroid_CRITICAL	
 	470132223	Play_Stinger_Win			\Default Work Unit\Play_Stinger_Win	
 	500012636	Play_AsteroidHit			\Default Work Unit\Play_AsteroidHit	
+	509040942	Play_Abejas			\Default Work Unit\Play_Abejas	
 	715145019	Play_Muerte_ENEMIGO			\Default Work Unit\Play_Muerte_ENEMIGO	
 	1070575578	Play_Muerte_FOX			\Default Work Unit\Play_Muerte_FOX	
 	1282247140	Play_2doSalto_FOX			\Default Work Unit\Play_2doSalto_FOX	
@@ -83,7 +85,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	179404595	VO_Dato3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\VO_Dato3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\Datos\VO_Dato3		602500
 	188209767	Herida_TK2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Herida_TK2_95683631.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Burns\HURT_TK(BURN)\Herida_TK2		59444
 	190489171	VO_No tienes 2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\VO_No tienes 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\No Tienes\VO_No tienes 2		769184
-	192832996	Asteroid_HIT2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Asteroid_HIT2_1F19D246.wem		\Actor-Mixer Hierarchy\Default Work Unit\Asteroid\AsteroidHit\Asteroid_HIT2		182740
+	192832996	Asteroid_HIT2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Asteroid_HIT2_FBA13661.wem		\Actor-Mixer Hierarchy\Default Work Unit\Asteroid\AsteroidHit\Asteroid_HIT2		182740
 	194626184	Shoot_ENEMIGO2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Shoot_ENEMIGO2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Shoots\Shoot_ENEMIGO2		30840
 	206356599	Step_TK2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Step_TK3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_TK\Step_TK2		83484
 	223207985	Totem_Compra	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\218070__meaxx__vinyl-loop-4_84464CBE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Stinger_Compra\Totem_Compra		101352
@@ -102,6 +104,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	376958580	Herida_TK4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Herida_TK4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Burns\HURT_TK(BURN)\Herida_TK4		58072
 	387731682	VO_Dato2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\VO_Dato2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\Datos\VO_Dato2		1262616
 	398596614	SaltoVO3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\SaltoVO3_DCAD7829.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\VO_Salto\SaltoVO3		17520
+	402686366	Bee_3_2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Bee_3.2_A0529860.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abejas\Abejas\Bee_3_2		1209340
 	438242352	Ambiente_V2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Ambiente_V2_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiente\Ambiente_V2		10674912
 	453180255	Roca_Arrastrada3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Roca_Arrastrada2_1819DC12.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puerta\Roca_Arrastrada3		495760
 	460795742	Herida_FOX4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Herida_FOX4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_Fox\Herida_FOX4		69824
@@ -129,6 +132,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	714975435	Respawn	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Respawn_22C2EF0F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Respawn		204184
 	717662119	Herida_FOX6	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Herida_FOX6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Hurts\HURT_Fox\Herida_FOX6		45676
 	727976397	soulPlops1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\soulPlops1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\SoulPlops\soulPlops1		185914
+	741228856	Bee_2_2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Bee_2.2_D7B76571.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abejas\Abejas\Bee_2_2		1380828
 	758788756	VO_CinematicaIntro(V2)	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\VO_CinematicaIntro(V2)_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\(VO)Intro\VO_CinematicaIntro(V2)		11447572
 	766935063	VO_No tienes 3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\VO_No tienes 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\No Tienes\VO_No tienes 3		667160
 	778434346	AtaqueVO3	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\AtaqueVO3_8A70FFCE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\VO_Ataque\AtaqueVO3		24220
@@ -145,6 +149,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	865362117	Step_ENEMIGO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Step_ENEMIGO_14DC582C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Footsteps\FootSteps_ENEMIGO\Step_ENEMIGO		65816
 	873115555	Shoot_ENEMIGO	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Shoot_ENEMIGO_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemigo\Shoots\Shoot_ENEMIGO		41072
 	901730523	Burn2(V2)	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Burn2(V2)_46AA1D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Burns\Burns\Burn2(V2)		116576
+	901808950	Bee_1_2	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Bee_1.2_65BF1B5C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abejas\Abejas\Bee_1_2		1701800
 	904242906	Step_TK1	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Step_TK1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\FootSteps\FS_TK\Step_TK1		99968
 	911897036	Asteroid_HIT	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\Asteroid_HIT_F281EBF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Asteroid\AsteroidHit\Asteroid_HIT		122336
 	945439716	VO_Dato4	C:\Users\Msi\Documents\GitHub\Desarrollo-III-Test\Desarrollo-III-Test_WwiseProject\.cache\Mac\SFX\VO_Dato4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totems\Datos\VO_Dato4		638628

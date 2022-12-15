@@ -4764,27 +4764,38 @@
 					<ChildrenList>
 						<RandomSequenceContainer Name="Abejas" ID="{C7BB04BB-3A39-4032-8BB3-121FF5135E76}" ShortID="23615267">
 							<PropertyList>
+								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-9</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="Distancia_Enemigo" ID="{4A95047D-0F26-4127-A9CE-8C53F59DF01E}" WorkUnitID="{A0C9C4F2-7205-44D1-A7F2-38C4C1C41AC3}"/>
+									<ObjectRef Name="Distancia_Abeja" ID="{3E6AFF75-7837-45FB-ACB0-0430E4D06175}" WorkUnitID="{A0C9C4F2-7205-44D1-A7F2-38C4C1C41AC3}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94EADE3D-70BE-4E81-B6E3-4C885C044521}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
+									<ObjectRef Name="Voz + SFX" ID="{AAD3763A-7A8E-4FC0-BDA3-78B6D30A8EDE}" WorkUnitID="{4FBA4597-DBF6-441F-811A-A5B9A0C08C41}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="Bee_1_2" ID="{08DA114B-EDFC-40D8-9663-1A8BA9D5F038}" ShortID="303049302">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>31</Value>
+											</ValueList>
+										</Property>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -4819,6 +4830,11 @@
 								<Sound Name="Bee_2_2" ID="{39F7A4E1-21D2-4706-920B-7AD387020FF2}" ShortID="492701568">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -4852,6 +4868,11 @@
 								</Sound>
 								<Sound Name="Bee_3_2-1" ID="{D58EF376-09B4-45A5-A2EF-9DC3336875D8}" ShortID="883432251">
 									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -4892,6 +4913,11 @@
 								<Sound Name="Bee_3_2" ID="{3CA30933-E976-4CDD-A104-81070B486774}" ShortID="523434802">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">

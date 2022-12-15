@@ -21,7 +21,7 @@
 				<GameParameter Id="2975884740" Name="Volumen_Musica" ObjectPath="\Game Parameters\Default Work Unit\Volumen\Volumen_Musica"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="518977116">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1099650383">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -39,6 +39,22 @@
 						<File Id="1055121107" Language="SFX">
 							<ShortName>Salto_2.wav</ShortName>
 							<Path>SFX\Salto_2_8FB1A414.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="509040942" Name="Play_Abejas" ObjectPath="\Events\Default Work Unit\Play_Abejas" MaxAttenuation="20." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="402686366" Language="SFX">
+							<ShortName>Bee_3.2.wav</ShortName>
+							<Path>SFX\Bee_3.2_A0529860.wem</Path>
+						</File>
+						<File Id="741228856" Language="SFX">
+							<ShortName>Bee_2.2.wav</ShortName>
+							<Path>SFX\Bee_2.2_D7B76571.wem</Path>
+						</File>
+						<File Id="901808950" Language="SFX">
+							<ShortName>Bee_1.2.wav</ShortName>
+							<Path>SFX\Bee_1.2_65BF1B5C.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -78,7 +94,7 @@
 						</File>
 						<File Id="192832996" Language="SFX">
 							<ShortName>Asteroid_HIT2.wav</ShortName>
-							<Path>SFX\Asteroid_HIT2_1F19D246.wem</Path>
+							<Path>SFX\Asteroid_HIT2_FBA13661.wem</Path>
 						</File>
 						<File Id="911897036" Language="SFX">
 							<ShortName>Asteroid_HIT.wav</ShortName>
@@ -644,6 +660,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="18684128" Name="Stop_Abejas" ObjectPath="\Events\Default Work Unit\Stop_Abejas" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="154595976" Name="Stop_Ambiente_V2" ObjectPath="\Events\Default Work Unit\Stop_Ambiente_V2" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3318741046" Name="Stop_FootSteps_ENEMIGO" ObjectPath="\Events\Default Work Unit\Stop_FootSteps_ENEMIGO" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="1837763790" Name="Stop_intro" ObjectPath="\Events\Default Work Unit\Stop_intro" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
