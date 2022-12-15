@@ -43,7 +43,6 @@ public class EnemyStalactite : MonoBehaviour
         hurt.Play();
         mr.enabled = false;
         col2D.enabled = false;
-       
         Destroy(gameObject,5);
     }
 
