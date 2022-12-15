@@ -45,6 +45,7 @@ public class EnemyDie : MonoBehaviour, IDamageable
         col2D.enabled = false;
         mr.enabled = false;
         enemyData.IsDie = true;
+        AkSoundEngine.PostEvent("Stop_Abejas", gameObject);
         Invoke("SetActive",timeToDestroy);
     }
     private void SetActive()
